@@ -20,6 +20,8 @@ namespace risovalka
         private void button1_Click(object sender, EventArgs e)
         {
             //1
+            //22
+            //33
         }
     }
 }
