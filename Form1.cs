@@ -17,11 +17,15 @@ namespace risovalka
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        
+
+        
+
+        private void Form1_Load(object sender, EventArgs e)
         {
-            //1
-            //22
-            //33
+
         }
+
+       
     }
 }
