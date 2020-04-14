@@ -32,13 +32,12 @@ namespace risovalka
 
                 if (length == 0)
                 {
-                    //Painter.pointer.SetPixel(x1, y1, Color.Red);
-                    //pictureBox.Image = Painter.pointer;
+
                     Canvas.DrawPixel(x1, y1, Color.Red);
                     pictureBox.Image = Canvas.currentBitmap;
                 }
 
-                else //if (lengthY <= lengthX)
+                else 
                 {
                     double dx = (double)(x2 - x1) / (double)length;
                     double dy = (double)(y2 - y1) / (double)length;
