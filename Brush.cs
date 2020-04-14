@@ -14,6 +14,24 @@ namespace risovalka
 
         public static int x1, y1;                             // Стартовые координаты при рисовании мышкой, первоначально значения присваивается из mousedown;
      
+
+        
+        private static int size = 1;
+
+        public static int Size
+        {
+            get
+            {
+                return size;
+            }
+            set
+            {
+                if (value >= 1 && value <= 4)
+                {
+                    size = value;
+                }
+            }
+        }
         public static void DrawMouseLine(MouseEventArgs e, PictureBox pictureBox)
         {
             DrawLine(x1, y1, e.X, e.Y, pictureBox);
@@ -28,28 +46,29 @@ namespace risovalka
                 int lengthY = Math.Abs(y2 - y1);
 
                 int length = Math.Max(lengthX, lengthY);
-
+                
 
                 if (length == 0)
                 {
-                    //Painter.pointer.SetPixel(x1, y1, Color.Red);
-                    //pictureBox.Image = Painter.pointer;
-                    Canvas.DrawPixel(x1, y1, Color.Red);
+
+                    //Canvas.DrawPixel(x1, y1, Color.Red);
+                    Pen();
                     pictureBox.Image = Canvas.currentBitmap;
                 }
 
-                else //if (lengthY <= lengthX)
+                else 
                 {
                     double dx = (double)(x2 - x1) / (double)length;
                     double dy = (double)(y2 - y1) / (double)length;
                     double x = x1;
                     double y = y1;
 
-
+                    
 
                     while (length + 1 != 0)
                     {
-                        Canvas.DrawPixel((int)x, (int)y, Color.Red);
+                        //Canvas.DrawPixel((int)x, (int)y, Color.Red);
+                        Pen();
                         pictureBox.Image = Canvas.currentBitmap;
 
                         x += dx;
@@ -59,6 +78,49 @@ namespace risovalka
                 }
 
             }
+        }
+        public static void Pen()
+        {
+            switch(Size)
+            {
+                case 1:
+                    Canvas.DrawPixel(x1, y1, Color.Red);
+                    break;
+                
+                case 2:
+                    Canvas.DrawPixel(x1 - 1, y1 - 1, Color.Red);
+                    Canvas.DrawPixel(x1, y1 - 1, Color.Red);
+                    Canvas.DrawPixel(x1 - 1, y1, Color.Red);
+                    Canvas.DrawPixel(x1, y1, Color.Red);
+                    break;
+                case 3:
+                    Canvas.DrawPixel(x1, y1, Color.Red);
+                    Canvas.DrawPixel(x1 - 1, y1, Color.Red);
+                    Canvas.DrawPixel(x1 + 1, y1, Color.Red);
+                    Canvas.DrawPixel(x1, y1 - 1, Color.Red);
+                    Canvas.DrawPixel(x1, y1 + 1, Color.Red);
+                    break;
+                case 4:
+                    Canvas.DrawPixel(x1 - 1, y1 - 1, Color.Red);
+                    Canvas.DrawPixel(x1, y1 - 1, Color.Red);
+                    Canvas.DrawPixel(x1 - 1, y1, Color.Red);
+                    Canvas.DrawPixel(x1, y1, Color.Red);
+
+                    Canvas.DrawPixel(x1 - 2, y1, Color.Red);
+                    Canvas.DrawPixel(x1 - 2, y1 - 1, Color.Red);
+
+                    Canvas.DrawPixel(x1 - 1, y1 - 2, Color.Red);
+                    Canvas.DrawPixel(x1, y1 - 2, Color.Red);
+
+                    Canvas.DrawPixel(x1 + 1, y1 - 1, Color.Red);
+                    Canvas.DrawPixel(x1 +1, y1, Color.Red);
+
+                    Canvas.DrawPixel(x1 - 1, y1 + 1, Color.Red);
+                    Canvas.DrawPixel(x1, y1 + 1, Color.Red);
+                    break;
+                    
+            }
+                
         }
     }
 }
