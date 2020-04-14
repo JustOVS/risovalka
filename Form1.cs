@@ -23,5 +23,10 @@ namespace risovalka
             //2
             //4
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //Tanya
+        }
     }
 }
