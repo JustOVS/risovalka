@@ -16,7 +16,7 @@ namespace risovalka
      
 
         
-        private static int size = 1;
+        private static int size = 2;
 
         public static int Size
         {
@@ -52,7 +52,7 @@ namespace risovalka
                 {
 
                     //Canvas.DrawPixel(x1, y1, Color.Red);
-                    Pen();
+                    Pen(x1, y1);
                     pictureBox.Image = Canvas.currentBitmap;
                 }
 
@@ -68,7 +68,7 @@ namespace risovalka
                     while (length + 1 != 0)
                     {
                         //Canvas.DrawPixel((int)x, (int)y, Color.Red);
-                        Pen();
+                        Pen((int)x, (int)y);
                         pictureBox.Image = Canvas.currentBitmap;
 
                         x += dx;
@@ -79,7 +79,7 @@ namespace risovalka
 
             }
         }
-        public static void Pen()
+        public static void Pen(int x1, int y1)
         {
             switch(Size)
             {
