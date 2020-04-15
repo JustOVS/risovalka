@@ -16,9 +16,9 @@ namespace risovalka
      
 
         
-        private static int size = 1;
+        private static int size = 1;         //размер кисти, используем через свойство Size
 
-        public static int Size
+        public static int Size               //надо прикрутить к бегунку 4 положения для переключения размера
         {
             get
             {
@@ -32,6 +32,8 @@ namespace risovalka
                 }
             }
         }
+
+        public static Color currentColor = Color.Black;
         public static void DrawMouseLine(MouseEventArgs e, PictureBox pictureBox)
         {
             DrawLine(x1, y1, e.X, e.Y, pictureBox);
@@ -79,48 +81,57 @@ namespace risovalka
 
             }
         }
-        public static void Pen()
-        {
+        public static void Pen()                  
+        {                                                           
             switch(Size)
             {
                 case 1:
-                    Canvas.DrawPixel(x1, y1, Color.Red);
+                    Canvas.DrawPixel(x1, y1, currentColor);
                     break;
                 
                 case 2:
-                    Canvas.DrawPixel(x1 - 1, y1 - 1, Color.Red);
-                    Canvas.DrawPixel(x1, y1 - 1, Color.Red);
-                    Canvas.DrawPixel(x1 - 1, y1, Color.Red);
-                    Canvas.DrawPixel(x1, y1, Color.Red);
+                    Canvas.DrawPixel(x1 - 1, y1 - 1, currentColor);
+                    Canvas.DrawPixel(x1, y1 - 1, currentColor);
+                    Canvas.DrawPixel(x1 - 1, y1, currentColor);
+                    Canvas.DrawPixel(x1, y1, currentColor);
                     break;
                 case 3:
-                    Canvas.DrawPixel(x1, y1, Color.Red);
-                    Canvas.DrawPixel(x1 - 1, y1, Color.Red);
-                    Canvas.DrawPixel(x1 + 1, y1, Color.Red);
-                    Canvas.DrawPixel(x1, y1 - 1, Color.Red);
-                    Canvas.DrawPixel(x1, y1 + 1, Color.Red);
+                    Canvas.DrawPixel(x1, y1, currentColor);
+                    Canvas.DrawPixel(x1 - 1, y1, currentColor);
+                    Canvas.DrawPixel(x1 + 1, y1, currentColor);
+                    Canvas.DrawPixel(x1, y1 - 1, currentColor);
+                    Canvas.DrawPixel(x1, y1 + 1, currentColor);
                     break;
                 case 4:
-                    Canvas.DrawPixel(x1 - 1, y1 - 1, Color.Red);
-                    Canvas.DrawPixel(x1, y1 - 1, Color.Red);
-                    Canvas.DrawPixel(x1 - 1, y1, Color.Red);
-                    Canvas.DrawPixel(x1, y1, Color.Red);
+                    Canvas.DrawPixel(x1 - 1, y1 - 1, currentColor);
+                    Canvas.DrawPixel(x1, y1 - 1, currentColor);
+                    Canvas.DrawPixel(x1 - 1, y1, currentColor);
+                    Canvas.DrawPixel(x1, y1, currentColor);
 
-                    Canvas.DrawPixel(x1 - 2, y1, Color.Red);
-                    Canvas.DrawPixel(x1 - 2, y1 - 1, Color.Red);
+                    Canvas.DrawPixel(x1 - 2, y1, currentColor);
+                    Canvas.DrawPixel(x1 - 2, y1 - 1, currentColor);
 
-                    Canvas.DrawPixel(x1 - 1, y1 - 2, Color.Red);
-                    Canvas.DrawPixel(x1, y1 - 2, Color.Red);
+                    Canvas.DrawPixel(x1 - 1, y1 - 2, currentColor);
 
-                    Canvas.DrawPixel(x1 + 1, y1 - 1, Color.Red);
-                    Canvas.DrawPixel(x1 +1, y1, Color.Red);
+                    Canvas.DrawPixel(x1 + 1, y1 - 1, currentColor);
+                    Canvas.DrawPixel(x1 +1, y1, currentColor);
 
-                    Canvas.DrawPixel(x1 - 1, y1 + 1, Color.Red);
-                    Canvas.DrawPixel(x1, y1 + 1, Color.Red);
+                    Canvas.DrawPixel(x1 - 1, y1 + 1, currentColor);
+                    Canvas.DrawPixel(x1, y1 + 1, currentColor);
                     break;
                     
             }
                 
+        }
+
+        public static void EraseLine(MouseEventArgs e, PictureBox pictureBox)   
+        {
+            Color tmpColor = currentColor;
+            currentColor = pictureBox.BackColor;
+            DrawLine(x1, y1, e.X, e.Y, pictureBox);
+            x1 = e.X;
+            y1 = e.Y;
+            currentColor = tmpColor;
         }
     }
 }
