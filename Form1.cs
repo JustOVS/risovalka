@@ -47,18 +47,19 @@ namespace risovalka
 
         private void palette_Click(object sender, EventArgs e)
         {
-            ColorDialog MyDialog = new ColorDialog();
+            // ColorDialog MyDialog = new ColorDialog();
 
-            Color currentColor = Color.Black;
-            // расширенное окно для выбора цвета
-            MyDialog.FullOpen = true;
-            // установка начального цвета для colorDialog
-            MyDialog.Color =currentColor;
+            // Color currentColor = Color.Black;
+            // // расширенное окно для выбора цвета
+            // MyDialog.FullOpen = true;
+            // // установка начального цвета для colorDialog
+            // MyDialog.Color =currentColor;
 
-            if (MyDialog.ShowDialog() == DialogResult.Cancel)
-                return;
-            // установка цвета формы
-           //currentColor = MyDialog.Color;
+            // if (MyDialog.ShowDialog() == DialogResult.Cancel)
+            //     return;
+            // // установка цвета формы
+            ////currentColor = MyDialog.Color;
+            Brush.ChooseColor();
         }
 
         private void size1_Click(object sender, EventArgs e)
