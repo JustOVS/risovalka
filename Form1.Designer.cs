@@ -75,8 +75,8 @@
             this.size2 = new System.Windows.Forms.ToolStripMenuItem();
             this.size3 = new System.Windows.Forms.ToolStripMenuItem();
             this.size4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.palette = new System.Windows.Forms.ToolStripButton();
+            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -438,26 +438,40 @@
             // size1
             // 
             this.size1.Name = "size1";
-            this.size1.Size = new System.Drawing.Size(110, 22);
+            this.size1.Size = new System.Drawing.Size(180, 22);
             this.size1.Text = "0,2 см";
+            this.size1.Click += new System.EventHandler(this.size1_Click);
             // 
             // size2
             // 
             this.size2.Name = "size2";
-            this.size2.Size = new System.Drawing.Size(110, 22);
+            this.size2.Size = new System.Drawing.Size(180, 22);
             this.size2.Text = "0,5 см";
+            this.size2.Click += new System.EventHandler(this.size2_Click);
             // 
             // size3
             // 
             this.size3.Name = "size3";
-            this.size3.Size = new System.Drawing.Size(110, 22);
+            this.size3.Size = new System.Drawing.Size(180, 22);
             this.size3.Text = "1 см";
+            this.size3.Click += new System.EventHandler(this.size3_Click);
             // 
             // size4
             // 
             this.size4.Name = "size4";
-            this.size4.Size = new System.Drawing.Size(110, 22);
+            this.size4.Size = new System.Drawing.Size(180, 22);
             this.size4.Text = "1, 2 см";
+            this.size4.Click += new System.EventHandler(this.size4_Click);
+            // 
+            // palette
+            // 
+            this.palette.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.palette.Image = ((System.Drawing.Image)(resources.GetObject("palette.Image")));
+            this.palette.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.palette.Name = "palette";
+            this.palette.Size = new System.Drawing.Size(23, 22);
+            this.palette.Text = "palette";
+            this.palette.Click += new System.EventHandler(this.palette_Click);
             // 
             // toolStripContainer1
             // 
@@ -470,16 +484,6 @@
             this.toolStripContainer1.Name = "toolStripContainer1";
             this.toolStripContainer1.Size = new System.Drawing.Size(150, 175);
             this.toolStripContainer1.TabIndex = 0;
-            // 
-            // palette
-            // 
-            this.palette.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.palette.Image = ((System.Drawing.Image)(resources.GetObject("palette.Image")));
-            this.palette.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.palette.Name = "palette";
-            this.palette.Size = new System.Drawing.Size(23, 22);
-            this.palette.Text = "palette";
-            this.palette.Click += new System.EventHandler(this.palette_Click);
             // 
             // Form1
             // 
