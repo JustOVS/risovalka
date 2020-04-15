@@ -10,7 +10,7 @@ namespace risovalka
 {
     public interface IPainter
     {
-        void DrawFigue(int x1, int y1, int x2, int y2, PictureBox pictureBox);
+        void DrawFigure(int x1, int y1, int x2, int y2, PictureBox pictureBox);
         void DrawDynamicFigure(MouseEventArgs e, PictureBox pictureBox);
     }
 }

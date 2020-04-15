@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace risovalka
 {
@@ -12,17 +13,22 @@ namespace risovalka
         
         public void DrawDynamicFigure(MouseEventArgs e, PictureBox pictureBox)
         {
-            Canvas.tmpBitmap = Canvas.currentBitmap;
-            DrawFigue(Brush.x1, Brush.y1, e.X, e.Y, pictureBox);
-            
             if (Brush.drawStartFinishFlag == true)
             {
-                Canvas.currentBitmap = Canvas.tmpBitmap;
+                Canvas.currentBitmap = new Bitmap(Canvas.tmpBitmap);
+                DrawFigure(Brush.x1, Brush.y1, e.X, e.Y, pictureBox);
+
                 pictureBox.Image = Canvas.currentBitmap;
+                //pictureBox.Image = Canvas.currentBitmap;
+                //if (Brush.drawStartFinishFlag == true)
+                //{
+                //    Canvas.currentBitmap = Canvas.tmpBitmap;
+                //    pictureBox.Image = Canvas.currentBitmap;
+                //}
             }
         }
 
-        public void DrawFigue(int x1, int y1, int x2, int y2, PictureBox pictureBox)
+        public void DrawFigure(int x1, int y1, int x2, int y2, PictureBox pictureBox)
         {
             Brush.DrawLine(x1, y1, x1, y2, pictureBox);
             Brush.DrawLine(x1, y1, x2, y1, pictureBox);
