@@ -42,7 +42,10 @@ namespace risovalka
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
-            Brush.DrawMouseLine(e, pictureBox1);
+            Brush q = new Brush();
+            q.drawSwitch.DrawDynamicFigure(e, pictureBox1);
+            //Brush.DrawMouseLine(e, pictureBox1);
+            //IPainter //painter.DrawDymanicFigure(e, picturebox1);
         }
 
         private void palette_Click(object sender, EventArgs e)

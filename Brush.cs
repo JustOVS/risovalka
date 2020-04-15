@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace risovalka
 {
-    public static class Brush
+    public class Brush
     {
         public static bool drawStartFinishFlag = false;
 
@@ -17,6 +17,8 @@ namespace risovalka
 
         
        private static int size = 1;         //размер кисти, используем через свойство Size
+        
+        public IPainter drawSwitch = new Squaire();
 
         public static int Size               //надо прикрутить к бегунку 4 положения для переключения размера
         {
