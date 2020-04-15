@@ -81,7 +81,7 @@ namespace risovalka
 
             }
         }
-        public static void Pen()                  
+        public static void Pen(int x1, int y1)                  
         {                                                           
             switch(Size)
             {
