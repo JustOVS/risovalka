@@ -15,6 +15,8 @@ namespace risovalka
         public Form1()
         {
             InitializeComponent();
+
+           
         }
 
         
@@ -43,6 +45,19 @@ namespace risovalka
             Brush.DrawMouseLine(e, pictureBox1);
         }
 
-        
+        private void palette_Click(object sender, EventArgs e)
+        {
+            ColorDialog MyDialog = new ColorDialog();
+
+            // расширенное окно для выбора цвета
+            MyDialog.FullOpen = true;
+            // установка начального цвета для colorDialog
+            MyDialog.Color = this.BackColor;
+
+            if (MyDialog.ShowDialog() == DialogResult.Cancel)
+                return;
+            // установка цвета формы
+            this.BackColor = MyDialog.Color;
+        }
     }
 }

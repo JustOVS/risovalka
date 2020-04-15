@@ -17,3 +17,4 @@ F:\ProjectsVS\risovalka\obj\Debug\risovalka.csproj.GenerateResource.cache
 F:\ProjectsVS\risovalka\obj\Debug\risovalka.csproj.CoreCompileInputs.cache
 F:\ProjectsVS\risovalka\obj\Debug\risovalka.exe
 F:\ProjectsVS\risovalka\obj\Debug\risovalka.pdb
+C:\Users\Татьяна\source\repos\risovalka\obj\Debug\risovalka.csprojAssemblyReference.cache
