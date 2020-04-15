@@ -1,7 +1,6 @@
 C:\Users\Татьяна\source\repos\risovalka\bin\Debug\risovalka.exe.config
 C:\Users\Татьяна\source\repos\risovalka\bin\Debug\risovalka.exe
 C:\Users\Татьяна\source\repos\risovalka\bin\Debug\risovalka.pdb
-C:\Users\Татьяна\source\repos\risovalka\obj\Debug\risovalka.csprojAssemblyReference.cache
 C:\Users\Татьяна\source\repos\risovalka\obj\Debug\risovalka.Form1.resources
 C:\Users\Татьяна\source\repos\risovalka\obj\Debug\risovalka.Properties.Resources.resources
 C:\Users\Татьяна\source\repos\risovalka\obj\Debug\risovalka.csproj.GenerateResource.cache

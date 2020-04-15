@@ -42,5 +42,7 @@ namespace risovalka
         {
             Brush.DrawMouseLine(e, pictureBox1);
         }
+
+        
     }
 }
