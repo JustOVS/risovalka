@@ -16,7 +16,7 @@ namespace risovalka
      
 
         
-        private static int size = 1;         //размер кисти, используем через свойство Size
+       private static int size = 1;         //размер кисти, используем через свойство Size
 
         public static int Size               //надо прикрутить к бегунку 4 положения для переключения размера
         {
@@ -26,14 +26,14 @@ namespace risovalka
             }
             set
             {
-                if (value >= 1 && value <= 4)
+                if (value >= 1 && value <= 10)
                 {
                     size = value;
                 }
             }
         }
 
-        public static Color currentColor = Color.Black;
+        public static Color currentColor= Color.Black;
         public static void DrawMouseLine(MouseEventArgs e, PictureBox pictureBox)
         {
             DrawLine(x1, y1, e.X, e.Y, pictureBox);
@@ -126,12 +126,14 @@ namespace risovalka
 
         public static void EraseLine(MouseEventArgs e, PictureBox pictureBox)   
         {
-            Color tmpColor = currentColor;
-            currentColor = pictureBox.BackColor;
-            DrawLine(x1, y1, e.X, e.Y, pictureBox);
-            x1 = e.X;
-            y1 = e.Y;
-            currentColor = tmpColor;
+           
+                Color tmpColor = currentColor;
+                currentColor = pictureBox.BackColor;
+                DrawLine(x1, y1, e.X, e.Y, pictureBox);
+                x1 = e.X;
+                y1 = e.Y;
+                currentColor = tmpColor;
+            
         }
     }
 }
