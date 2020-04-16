@@ -35,7 +35,7 @@ namespace risovalka
             AbstractPainter.y1 = e.Y;
             AbstractPainter.drawStartFinishFlag = true;
             Canvas.tmpBitmap = new Bitmap (Canvas.currentBitmap);
-            
+            Canvas.AddToTmp();
 
         }
 
@@ -87,8 +87,50 @@ namespace risovalka
             Brush.Size = 4;
         }
 
-       
+        private void buttonPencile_Click(object sender, EventArgs e)
+        {
+            AbstractPainter.drawSwitch = new Line ();
+        }
 
-       
+
+        private void buttonSquare_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonRectabgle_Click(object sender, EventArgs e)
+        {
+            AbstractPainter.drawSwitch = new Rectangle();
+        }
+
+        private void buttonTriangle_Click(object sender, EventArgs e)
+        {
+            AbstractPainter.drawSwitch = new IsoscelesTriangle ();
+        }
+
+        private void buttonRightTriangle_Click(object sender, EventArgs e)
+        {
+            AbstractPainter.drawSwitch = new RectangleTriangle ();
+        }
+
+        private void buttonEraser_Click(object sender, EventArgs e)
+        {
+            AbstractPainter.drawSwitch = new Eraser();
+        }
+
+        private void buttonBucket_Click(object sender, EventArgs e)
+        {
+            Canvas.Clear(pictureBox1 );
+        }
+
+        private void buttonUndo_Click(object sender, EventArgs e)
+        {
+            Canvas.Undo(pictureBox1);
+        }
+
+        private void buttonRedo_Click(object sender, EventArgs e)
+        {
+            Canvas.Redo(pictureBox1);
+        }
     }
 }
