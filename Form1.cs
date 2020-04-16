@@ -15,13 +15,80 @@ namespace risovalka
         public Form1()
         {
             InitializeComponent();
+
+           
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        
+
+        
+
+        private void Form1_Load(object sender, EventArgs e)
         {
-            //1
-            //22
-            //33
+            Canvas.currentBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+            Canvas.tmpBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
         }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            AbstractPainter.x1 = e.X;
+            AbstractPainter.y1 = e.Y;
+            AbstractPainter.drawStartFinishFlag = true;
+            Canvas.tmpBitmap = new Bitmap (Canvas.currentBitmap);
+            
+
+        }
+
+        private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
+        {
+            AbstractPainter.drawStartFinishFlag = false;
+        }
+
+        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+            AbstractPainter.drawSwitch.DrawDynamicFigure(e, pictureBox1);
+            //Brush.DrawMouseLine(e, pictureBox1);
+            //IPainter //painter.DrawDymanicFigure(e, picturebox1);
+        }
+
+       
+
+        private void buttonPalette_Click(object sender, EventArgs e)
+        {
+            ColorDialog MyDialog = new ColorDialog();
+
+            Brush.currentColor = Color.Black;
+            // расширенное окно для выбора цвета
+            MyDialog.FullOpen = true;
+            // установка начального цвета для colorDialog
+            MyDialog.Color = Brush.currentColor;
+
+            if (MyDialog.ShowDialog() == DialogResult.Cancel)
+                return;
+            // установка цвета формы
+            Brush.currentColor = MyDialog.Color;
+        }
+
+        private void buttonSize1_Click(object sender, EventArgs e)
+        {
+            Brush.Size = 1;
+        }
+        private void buttonSize2_Click(object sender, EventArgs e)
+        {
+            Brush.Size = 2;
+        }
+
+        private void buttonSize3_Click(object sender, EventArgs e)
+        {
+            Brush.Size = 3;
+        }
+        private void buttonSize4_Click(object sender, EventArgs e)
+        {
+            Brush.Size = 4;
+        }
+
+       
+
+       
     }
 }
