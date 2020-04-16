@@ -46,7 +46,6 @@ namespace risovalka
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
-           
             AbstractPainter.drawSwitch.DrawDynamicFigure(e, pictureBox1);
             //Brush.DrawMouseLine(e, pictureBox1);
             //IPainter //painter.DrawDymanicFigure(e, picturebox1);

@@ -18,3 +18,13 @@ F:\ProjectsVS\risovalka\obj\Debug\risovalka.csproj.CoreCompileInputs.cache
 F:\ProjectsVS\risovalka\obj\Debug\risovalka.exe
 F:\ProjectsVS\risovalka\obj\Debug\risovalka.pdb
 C:\Users\Татьяна\source\repos\risovalka\obj\Debug\risovalka.csprojAssemblyReference.cache
+D:\repos\risovalka\bin\Debug\risovalka.exe.config
+D:\repos\risovalka\bin\Debug\risovalka.exe
+D:\repos\risovalka\bin\Debug\risovalka.pdb
+D:\repos\risovalka\obj\Debug\risovalka.csprojAssemblyReference.cache
+D:\repos\risovalka\obj\Debug\risovalka.Form1.resources
+D:\repos\risovalka\obj\Debug\risovalka.Properties.Resources.resources
+D:\repos\risovalka\obj\Debug\risovalka.csproj.GenerateResource.cache
+D:\repos\risovalka\obj\Debug\risovalka.csproj.CoreCompileInputs.cache
+D:\repos\risovalka\obj\Debug\risovalka.exe
+D:\repos\risovalka\obj\Debug\risovalka.pdb
