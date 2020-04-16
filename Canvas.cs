@@ -27,27 +27,31 @@ namespace risovalka
                                                          // Если же Undo делалось, то  после того Bitmap, до которого дошли с помощью Undo будет добавлен новый Bitmap, а те, 
                                                          // которые ранее шли после текущего Bitmap удаляются из списка (с ними разрываются связи)
             {
-                tmpList.Add(currentBitmap);
+                tmpList.Add(new Bitmap(currentBitmap));
             }
             else
             {
-                tmpList.InsertAndCut(currentBitmap, undoCounter);
+                tmpList.InsertAndCut(new Bitmap(currentBitmap), undoCounter);
             }
             undoCounter++;
         }
 
         public static void Undo(PictureBox pictureBox) //метод отрисовывает предыдущий bitmap, надо передавать Bitmap с места вызова
         {
-            if (undoCounter == tmpList.Length)
+            if (undoCounter == 0 )
             {
-                tmpList.Add(currentBitmap);
+
+            }
+            else if (undoCounter == tmpList.Length)
+            {
+                tmpList.Add(new Bitmap (currentBitmap));
                 currentBitmap = tmpList[undoCounter - 1];
                 pictureBox.Image = currentBitmap;
             }
             else
             {
                 undoCounter--;
-                currentBitmap = tmpList[undoCounter - 1];
+                currentBitmap = new Bitmap(tmpList[undoCounter - 1]);
                 pictureBox.Image = currentBitmap;
             }
         }
@@ -61,7 +65,7 @@ namespace risovalka
             else
             {
                 undoCounter++;
-                currentBitmap = tmpList[undoCounter - 1];
+                currentBitmap = new Bitmap(tmpList[undoCounter - 1]);
                 pictureBox.Image = currentBitmap;
             }
         }

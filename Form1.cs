@@ -35,7 +35,7 @@ namespace risovalka
             AbstractPainter.y1 = e.Y;
             AbstractPainter.drawStartFinishFlag = true;
             Canvas.tmpBitmap = new Bitmap (Canvas.currentBitmap);
-            
+            Canvas.AddToTmp();
 
         }
 
@@ -126,6 +126,11 @@ namespace risovalka
         private void buttonUndo_Click(object sender, EventArgs e)
         {
             Canvas.Undo(pictureBox1);
+        }
+
+        private void buttonRedo_Click(object sender, EventArgs e)
+        {
+            Canvas.Redo(pictureBox1);
         }
     }
 }
