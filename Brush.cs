@@ -50,7 +50,7 @@ namespace risovalka
 
             currentColor = MyDialog.Color;
         }
-        public static void Pen(int x1, int y1)
+        public static void Pen(int x1, int y1, Color currentColor)
         {
             switch (Size)
             {

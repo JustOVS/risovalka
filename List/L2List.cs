@@ -45,7 +45,7 @@ namespace risovalka.List
                 }
                 else if (index < 0 || index > Length - 1)
                 {
-                    throw new IndexOutOfRangeException();
+                   // throw new IndexOutOfRangeException();
                 }
                 else if (index <= Length / 2)
                 {
