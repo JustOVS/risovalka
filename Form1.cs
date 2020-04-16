@@ -51,41 +51,44 @@ namespace risovalka
             //IPainter //painter.DrawDymanicFigure(e, picturebox1);
         }
 
-        private void palette_Click(object sender, EventArgs e)
+       
+
+        private void buttonPalette_Click(object sender, EventArgs e)
         {
-            // ColorDialog MyDialog = new ColorDialog();
+            ColorDialog MyDialog = new ColorDialog();
 
-            // Color currentColor = Color.Black;
-            // // расширенное окно для выбора цвета
-            // MyDialog.FullOpen = true;
-            // // установка начального цвета для colorDialog
-            // MyDialog.Color =currentColor;
+            Color currentColor = Color.Black;
+            // расширенное окно для выбора цвета
+            MyDialog.FullOpen = true;
+            // установка начального цвета для colorDialog
+            MyDialog.Color = currentColor;
 
-            // if (MyDialog.ShowDialog() == DialogResult.Cancel)
-            //     return;
-            // // установка цвета формы
-            ////currentColor = MyDialog.Color;
-            Brush.ChooseColor();
+            if (MyDialog.ShowDialog() == DialogResult.Cancel)
+                return;
+            // установка цвета формы
+            //currentColor = MyDialog.Color;
         }
 
-        private void size1_Click(object sender, EventArgs e)
+        private void buttonSize1_Click(object sender, EventArgs e)
         {
             Brush.Size = 1;
         }
-
-        private void size2_Click(object sender, EventArgs e)
+        private void buttonSize2_Click(object sender, EventArgs e)
         {
             Brush.Size = 2;
         }
 
-        private void size3_Click(object sender, EventArgs e)
+        private void buttonSize3_Click(object sender, EventArgs e)
         {
             Brush.Size = 3;
         }
-
-        private void size4_Click(object sender, EventArgs e)
+        private void buttonSize4_Click(object sender, EventArgs e)
         {
             Brush.Size = 4;
         }
+
+       
+
+       
     }
 }
