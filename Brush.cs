@@ -19,7 +19,7 @@ namespace risovalka
       
         
         
-        public static Color currentColor= Color.Black;
+        public static Color currentColor = Color.Black;
         private static int size = 1;         //размер кисти, используем через свойство Size
         public static int Size               //надо прикрутить к бегунку 4 положения для переключения размера
         {
@@ -29,7 +29,7 @@ namespace risovalka
             }
             set
             {
-                if (value >= 1 && value <= 10)
+                if (value >= 1 && value <= 4)
                 {
                     size = value;
                 }
