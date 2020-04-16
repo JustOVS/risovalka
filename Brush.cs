@@ -135,5 +135,21 @@ namespace risovalka
                 currentColor = tmpColor;
             
         }
+
+        public static void ChooseColor()
+        {
+            ColorDialog MyDialog = new ColorDialog();
+
+            
+            
+            MyDialog.FullOpen = true;
+            
+            MyDialog.Color =currentColor;
+
+            if (MyDialog.ShowDialog() == DialogResult.Cancel)
+                   return;
+           
+            currentColor = MyDialog.Color;
+        }
     }
 }
