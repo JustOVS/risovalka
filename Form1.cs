@@ -26,23 +26,30 @@ namespace risovalka
         private void Form1_Load(object sender, EventArgs e)
         {
             Canvas.currentBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+            Canvas.tmpBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
         }
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
-            Brush.x1 = e.X;
-            Brush.y1 = e.Y;
-            Brush.drawStartFinishFlag = true;
+            AbstractPainter.x1 = e.X;
+            AbstractPainter.y1 = e.Y;
+            AbstractPainter.drawStartFinishFlag = true;
+            Canvas.tmpBitmap = new Bitmap (Canvas.currentBitmap);
+            
+
         }
 
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
-            Brush.drawStartFinishFlag = false;
+            AbstractPainter.drawStartFinishFlag = false;
         }
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
-            Brush.DrawMouseLine(e, pictureBox1);
+           
+            AbstractPainter.drawSwitch.DrawDynamicFigure(e, pictureBox1);
+            //Brush.DrawMouseLine(e, pictureBox1);
+            //IPainter //painter.DrawDymanicFigure(e, picturebox1);
         }
 
         private void palette_Click(object sender, EventArgs e)
