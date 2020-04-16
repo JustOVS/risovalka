@@ -31,9 +31,9 @@ namespace risovalka
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
-            Brush.x1 = e.X;
-            Brush.y1 = e.Y;
-            Brush.drawStartFinishFlag = true;
+            AbstractPainter.x1 = e.X;
+            AbstractPainter.y1 = e.Y;
+            AbstractPainter.drawStartFinishFlag = true;
             Canvas.tmpBitmap = new Bitmap (Canvas.currentBitmap);
             
 
@@ -41,14 +41,13 @@ namespace risovalka
 
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
-            Brush.drawStartFinishFlag = false;
+            AbstractPainter.drawStartFinishFlag = false;
         }
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
            
-            Brush q = new Brush();
-            q.drawSwitch.DrawDynamicFigure(e, pictureBox1);
+            AbstractPainter.drawSwitch.DrawDynamicFigure(e, pictureBox1);
             //Brush.DrawMouseLine(e, pictureBox1);
             //IPainter //painter.DrawDymanicFigure(e, picturebox1);
         }

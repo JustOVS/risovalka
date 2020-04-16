@@ -8,15 +8,15 @@ using System.Drawing;
 
 namespace risovalka
 {
-    public class Squaire : IPainter
+    public class Squaire : AbstractPainter
     {
         
-        public void DrawDynamicFigure(MouseEventArgs e, PictureBox pictureBox)
+        public override void DrawDynamicFigure(MouseEventArgs e, PictureBox pictureBox)
         {
-            if (Brush.drawStartFinishFlag == true)
+            if (AbstractPainter.drawStartFinishFlag == true)
             {
                 Canvas.currentBitmap = new Bitmap(Canvas.tmpBitmap);
-                DrawFigure(Brush.x1, Brush.y1, e.X, e.Y, pictureBox);
+                DrawFigure(AbstractPainter.x1, AbstractPainter.y1, e.X, e.Y, pictureBox);
 
                 pictureBox.Image = Canvas.currentBitmap;
                 //pictureBox.Image = Canvas.currentBitmap;
@@ -30,10 +30,10 @@ namespace risovalka
 
         public void DrawFigure(int x1, int y1, int x2, int y2, PictureBox pictureBox)
         {
-            Brush.DrawLine(x1, y1, x1, y2, pictureBox);
-            Brush.DrawLine(x1, y1, x2, y1, pictureBox);
-            Brush.DrawLine(x1, y2, x2, y2, pictureBox);
-            Brush.DrawLine(x2, y1, x2, y2, pictureBox);
+            AbstractPainter.DrawLine(x1, y1, x1, y2, pictureBox);
+            AbstractPainter.DrawLine(x1, y1, x2, y1, pictureBox);
+            AbstractPainter.DrawLine(x1, y2, x2, y2, pictureBox);
+            AbstractPainter.DrawLine(x2, y1, x2, y2, pictureBox);
 
         }
 

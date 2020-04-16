@@ -54,7 +54,8 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="IPainter.cs" />
+    <Compile Include="AbstractPainter.cs" />
+    <Compile Include="Line.cs" />
     <Compile Include="List\L2List.cs" />
     <Compile Include="List\Node2d.cs" />
     <Compile Include="Program.cs" />
