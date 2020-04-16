@@ -13,7 +13,7 @@ namespace risovalka
     {
         public static int x1, y1;         //поля, которые присваиваются при mousedown и нужны для посмотрения фигур всех наследников.
 
-        public static AbstractPainter drawSwitch = new Squaire();  //поле для смены режима рисования (линия/фигуры), по умолчанию на старте стоит линия.
+        public static AbstractPainter drawSwitch = new Line();  //поле для смены режима рисования (линия/фигуры), по умолчанию на старте стоит линия.
 
         public static bool drawStartFinishFlag = false; // при mousedown = true, при mouseup = false, соответственно, методы наследников рисуют только при значении true.
 
@@ -21,7 +21,7 @@ namespace risovalka
         //void DrawFigure(int x1, int y1, int x2, int y2, PictureBox pictureBox);
         public abstract void DrawDynamicFigure(MouseEventArgs e, PictureBox pictureBox);
 
-        public static void DrawLine(int x1, int y1, int x2, int y2, PictureBox pictureBox)
+        public static void DrawLine(int x1, int y1, int x2, int y2, PictureBox pictureBox, Color currentColor)
         {
             if (drawStartFinishFlag == true)
             {
@@ -35,7 +35,7 @@ namespace risovalka
                 {
 
                     //Canvas.DrawPixel(x1, y1, Color.Red);
-                    Brush.Pen(x1, y1);
+                    Brush.Pen(x1, y1, currentColor);
                     pictureBox.Image = Canvas.currentBitmap;
                 }
 
@@ -51,7 +51,7 @@ namespace risovalka
                     while (length + 1 != 0)
                     {
                         //Canvas.DrawPixel((int)x, (int)y, Color.Red);
-                        Brush.Pen((int)x, (int)y);
+                        Brush.Pen((int)x, (int)y, currentColor);
                         pictureBox.Image = Canvas.currentBitmap;
 
                         x += dx;
