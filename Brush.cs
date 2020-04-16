@@ -33,7 +33,7 @@ namespace risovalka
             }
         }
 
-        public static Color currentColor= Color.Black;
+        public static Color currentColor = Color.Black;
         public static void DrawMouseLine(MouseEventArgs e, PictureBox pictureBox)
         {
             DrawLine(x1, y1, e.X, e.Y, pictureBox);

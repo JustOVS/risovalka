@@ -26,6 +26,8 @@ namespace risovalka
         private void Form1_Load(object sender, EventArgs e)
         {
             Canvas.currentBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+
+          
         }
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
@@ -45,7 +47,9 @@ namespace risovalka
             Brush.DrawMouseLine(e, pictureBox1);
         }
 
-        private void palette_Click(object sender, EventArgs e)
+       
+
+        private void buttonPalette_Click(object sender, EventArgs e)
         {
             ColorDialog MyDialog = new ColorDialog();
 
@@ -53,32 +57,34 @@ namespace risovalka
             // расширенное окно для выбора цвета
             MyDialog.FullOpen = true;
             // установка начального цвета для colorDialog
-            MyDialog.Color =currentColor;
+            MyDialog.Color = currentColor;
 
             if (MyDialog.ShowDialog() == DialogResult.Cancel)
                 return;
             // установка цвета формы
-           //currentColor = MyDialog.Color;
+            //currentColor = MyDialog.Color;
         }
 
-        private void size1_Click(object sender, EventArgs e)
+        private void buttonSize1_Click(object sender, EventArgs e)
         {
             Brush.Size = 1;
         }
-
-        private void size2_Click(object sender, EventArgs e)
+        private void buttonSize2_Click(object sender, EventArgs e)
         {
             Brush.Size = 2;
         }
 
-        private void size3_Click(object sender, EventArgs e)
+        private void buttonSize3_Click(object sender, EventArgs e)
         {
             Brush.Size = 3;
         }
-
-        private void size4_Click(object sender, EventArgs e)
+        private void buttonSize4_Click(object sender, EventArgs e)
         {
             Brush.Size = 4;
         }
+
+       
+
+       
     }
 }
