@@ -57,16 +57,16 @@ namespace risovalka
         {
             ColorDialog MyDialog = new ColorDialog();
 
-            Color currentColor = Color.Black;
+            Brush.currentColor = Color.Black;
             // расширенное окно для выбора цвета
             MyDialog.FullOpen = true;
             // установка начального цвета для colorDialog
-            MyDialog.Color = currentColor;
+            MyDialog.Color = Brush.currentColor;
 
             if (MyDialog.ShowDialog() == DialogResult.Cancel)
                 return;
             // установка цвета формы
-            //currentColor = MyDialog.Color;
+            Brush.currentColor = MyDialog.Color;
         }
 
         private void buttonSize1_Click(object sender, EventArgs e)
