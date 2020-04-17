@@ -15,16 +15,18 @@ namespace risovalka
         {
             if (AbstractPainter.drawStartFinishFlag == true)
             {
-                Canvas.currentBitmap = new Bitmap(Canvas.tmpBitmap);
-                DrawFigure(AbstractPainter.x1, AbstractPainter.y1, e.X, e.Y, pictureBox, Brush.currentColor);
+                if (AbstractPainter.shift == false)
+                {
+                    Canvas.currentBitmap = new Bitmap(Canvas.tmpBitmap);
+                    DrawFigure(AbstractPainter.x1, AbstractPainter.y1, e.X, e.Y, pictureBox, Brush.currentColor);
 
-                pictureBox.Image = Canvas.currentBitmap;
-                //pictureBox.Image = Canvas.currentBitmap;
-                //if (Brush.drawStartFinishFlag == true)
-                //{
-                //    Canvas.currentBitmap = Canvas.tmpBitmap;
-                //    pictureBox.Image = Canvas.currentBitmap;
-                //}
+                    pictureBox.Image = Canvas.currentBitmap;
+                }
+                else
+                {
+                    
+                     new Square().DrawDynamicFigure(e, pictureBox);
+                }
             }
         }
 
@@ -37,9 +39,6 @@ namespace risovalka
 
         }
 
-        public void CalculateTops(int x1, int y1, int x2, int y2)
-        {
-
-        }
+        
     }
 }
