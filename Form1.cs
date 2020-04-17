@@ -95,7 +95,7 @@ namespace risovalka
 
         private void buttonSquare_Click(object sender, EventArgs e)
         {
-
+            AbstractPainter.drawSwitch = new Square();
         }
 
         private void buttonRectabgle_Click(object sender, EventArgs e)
@@ -131,6 +131,37 @@ namespace risovalka
         private void buttonRedo_Click(object sender, EventArgs e)
         {
             Canvas.Redo(pictureBox1);
+        }
+
+        private void pictureBox1_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            if(Control.ModifierKeys == Keys.Shift
+)
+            {
+                AbstractPainter.shift = true;
+            }
+        }
+
+        private void pictureBox1_KeyUp(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            if (Control.ModifierKeys == Keys.Shift
+)
+            {
+                AbstractPainter.shift = false;
+            }
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (Control.ModifierKeys == Keys.Shift)
+            {
+                AbstractPainter.shift = true;
+            }
+        }
+
+        private void Form1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            
         }
     }
 }

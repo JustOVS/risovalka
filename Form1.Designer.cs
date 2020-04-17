@@ -110,7 +110,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox1.Location = new System.Drawing.Point(231, 105);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(836, 446);
             this.pictureBox1.TabIndex = 0;
@@ -148,7 +148,7 @@
             this.toolStripSeparator2,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "&File";
             // 
             // newToolStripMenuItem
@@ -234,7 +234,7 @@
             this.toolStripSeparator4,
             this.selectAllToolStripMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 26);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
             this.editToolStripMenuItem.Text = "&Edit";
             // 
             // UndoEdit
@@ -300,7 +300,7 @@
             this.pencilTools,
             this.brushTools});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(58, 26);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
             this.toolsToolStripMenuItem.Text = "&Tools";
             // 
             // pencilTools
@@ -324,7 +324,7 @@
             this.toolStripSeparator5,
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 26);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             this.helpToolStripMenuItem.Text = "&Help";
             // 
             // contentsToolStripMenuItem
@@ -362,10 +362,10 @@
             // toolStripContainer1.ContentPanel
             // 
             this.toolStripContainer1.ContentPanel.AccessibleRole = System.Windows.Forms.AccessibleRole.Outline;
-            this.toolStripContainer1.ContentPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(200, 184);
+            this.toolStripContainer1.ContentPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(200, 190);
             this.toolStripContainer1.Location = new System.Drawing.Point(569, 357);
-            this.toolStripContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.toolStripContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.toolStripContainer1.Name = "toolStripContainer1";
             this.toolStripContainer1.Size = new System.Drawing.Size(200, 215);
             this.toolStripContainer1.TabIndex = 0;
@@ -380,7 +380,7 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 30);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(231, 524);
             this.panel1.TabIndex = 3;
@@ -393,7 +393,7 @@
             this.panelSizesButton.Controls.Add(this.buttonSize4);
             this.panelSizesButton.Controls.Add(this.buttonSize3);
             this.panelSizesButton.Location = new System.Drawing.Point(0, 154);
-            this.panelSizesButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelSizesButton.Margin = new System.Windows.Forms.Padding(4);
             this.panelSizesButton.Name = "panelSizesButton";
             this.panelSizesButton.Size = new System.Drawing.Size(231, 58);
             this.panelSizesButton.TabIndex = 19;
@@ -403,7 +403,7 @@
             this.buttonSize1.BackColor = System.Drawing.Color.Yellow;
             this.buttonSize1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonSize1.Location = new System.Drawing.Point(47, 33);
-            this.buttonSize1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonSize1.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSize1.Name = "buttonSize1";
             this.buttonSize1.Size = new System.Drawing.Size(19, 17);
             this.buttonSize1.TabIndex = 10;
@@ -415,7 +415,7 @@
             this.buttonSize2.BackColor = System.Drawing.Color.Yellow;
             this.buttonSize2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonSize2.Location = new System.Drawing.Point(73, 26);
-            this.buttonSize2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonSize2.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSize2.Name = "buttonSize2";
             this.buttonSize2.Size = new System.Drawing.Size(27, 25);
             this.buttonSize2.TabIndex = 11;
@@ -427,7 +427,7 @@
             this.buttonSize4.BackColor = System.Drawing.Color.Yellow;
             this.buttonSize4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonSize4.Location = new System.Drawing.Point(151, 11);
-            this.buttonSize4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonSize4.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSize4.Name = "buttonSize4";
             this.buttonSize4.Size = new System.Drawing.Size(43, 39);
             this.buttonSize4.TabIndex = 13;
@@ -439,7 +439,7 @@
             this.buttonSize3.BackColor = System.Drawing.Color.Yellow;
             this.buttonSize3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonSize3.Location = new System.Drawing.Point(108, 18);
-            this.buttonSize3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonSize3.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSize3.Name = "buttonSize3";
             this.buttonSize3.Size = new System.Drawing.Size(35, 32);
             this.buttonSize3.TabIndex = 12;
@@ -451,7 +451,7 @@
             this.panelFigure.BackColor = System.Drawing.Color.Yellow;
             this.panelFigure.Controls.Add(this.label1);
             this.panelFigure.Location = new System.Drawing.Point(0, 212);
-            this.panelFigure.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelFigure.Margin = new System.Windows.Forms.Padding(4);
             this.panelFigure.Name = "panelFigure";
             this.panelFigure.Size = new System.Drawing.Size(231, 28);
             this.panelFigure.TabIndex = 17;
@@ -479,7 +479,7 @@
             this.panelFiguresButtoms.Controls.Add(this.buttonTriangle);
             this.panelFiguresButtoms.Controls.Add(this.buttonSquare);
             this.panelFiguresButtoms.Location = new System.Drawing.Point(0, 240);
-            this.panelFiguresButtoms.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelFiguresButtoms.Margin = new System.Windows.Forms.Padding(4);
             this.panelFiguresButtoms.Name = "panelFiguresButtoms";
             this.panelFiguresButtoms.Size = new System.Drawing.Size(231, 181);
             this.panelFiguresButtoms.TabIndex = 13;
@@ -493,7 +493,7 @@
             this.buttonPolygon2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonPolygon2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonPolygon2.Location = new System.Drawing.Point(84, 121);
-            this.buttonPolygon2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonPolygon2.Margin = new System.Windows.Forms.Padding(4);
             this.buttonPolygon2.Name = "buttonPolygon2";
             this.buttonPolygon2.Size = new System.Drawing.Size(53, 49);
             this.buttonPolygon2.TabIndex = 17;
@@ -508,7 +508,7 @@
             this.buttonOval.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonOval.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonOval.Location = new System.Drawing.Point(16, 121);
-            this.buttonOval.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonOval.Margin = new System.Windows.Forms.Padding(4);
             this.buttonOval.Name = "buttonOval";
             this.buttonOval.Size = new System.Drawing.Size(53, 49);
             this.buttonOval.TabIndex = 16;
@@ -523,7 +523,7 @@
             this.buttonRightTriangle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonRightTriangle.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonRightTriangle.Location = new System.Drawing.Point(84, 64);
-            this.buttonRightTriangle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonRightTriangle.Margin = new System.Windows.Forms.Padding(4);
             this.buttonRightTriangle.Name = "buttonRightTriangle";
             this.buttonRightTriangle.Size = new System.Drawing.Size(53, 49);
             this.buttonRightTriangle.TabIndex = 16;
@@ -539,7 +539,7 @@
             this.buttonRectabgle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonRectabgle.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonRectabgle.Location = new System.Drawing.Point(151, 64);
-            this.buttonRectabgle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonRectabgle.Margin = new System.Windows.Forms.Padding(4);
             this.buttonRectabgle.Name = "buttonRectabgle";
             this.buttonRectabgle.Size = new System.Drawing.Size(53, 49);
             this.buttonRectabgle.TabIndex = 16;
@@ -555,7 +555,7 @@
             this.buttonCircle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonCircle.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonCircle.Location = new System.Drawing.Point(16, 64);
-            this.buttonCircle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonCircle.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCircle.Name = "buttonCircle";
             this.buttonCircle.Size = new System.Drawing.Size(53, 49);
             this.buttonCircle.TabIndex = 16;
@@ -570,7 +570,7 @@
             this.buttonPolygon1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonPolygon1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonPolygon1.Location = new System.Drawing.Point(84, 7);
-            this.buttonPolygon1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonPolygon1.Margin = new System.Windows.Forms.Padding(4);
             this.buttonPolygon1.Name = "buttonPolygon1";
             this.buttonPolygon1.Size = new System.Drawing.Size(53, 49);
             this.buttonPolygon1.TabIndex = 16;
@@ -585,7 +585,7 @@
             this.buttonTriangle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonTriangle.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonTriangle.Location = new System.Drawing.Point(16, 7);
-            this.buttonTriangle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonTriangle.Margin = new System.Windows.Forms.Padding(4);
             this.buttonTriangle.Name = "buttonTriangle";
             this.buttonTriangle.Size = new System.Drawing.Size(53, 49);
             this.buttonTriangle.TabIndex = 10;
@@ -601,7 +601,7 @@
             this.buttonSquare.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonSquare.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSquare.Location = new System.Drawing.Point(151, 7);
-            this.buttonSquare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonSquare.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSquare.Name = "buttonSquare";
             this.buttonSquare.Size = new System.Drawing.Size(53, 49);
             this.buttonSquare.TabIndex = 13;
@@ -613,7 +613,7 @@
             this.panelSize.BackColor = System.Drawing.Color.Yellow;
             this.panelSize.Controls.Add(this.label2);
             this.panelSize.Location = new System.Drawing.Point(0, 127);
-            this.panelSize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelSize.Margin = new System.Windows.Forms.Padding(4);
             this.panelSize.Name = "panelSize";
             this.panelSize.Size = new System.Drawing.Size(231, 28);
             this.panelSize.TabIndex = 18;
@@ -636,7 +636,7 @@
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.pictureBoxWhale);
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(231, 107);
             this.panel3.TabIndex = 6;
@@ -646,7 +646,7 @@
             this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel4.Controls.Add(this.D);
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(253, 27);
             this.panel4.TabIndex = 7;
@@ -667,7 +667,7 @@
             // 
             this.pictureBoxWhale.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxWhale.Image")));
             this.pictureBoxWhale.Location = new System.Drawing.Point(0, 31);
-            this.pictureBoxWhale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBoxWhale.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBoxWhale.Name = "pictureBoxWhale";
             this.pictureBoxWhale.Size = new System.Drawing.Size(231, 76);
             this.pictureBoxWhale.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -679,7 +679,7 @@
             this.panel2.BackColor = System.Drawing.Color.Yellow;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(231, 30);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(836, 27);
             this.panel2.TabIndex = 4;
@@ -695,7 +695,7 @@
             this.panelTools.Controls.Add(this.buttonPencile);
             this.panelTools.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTools.Location = new System.Drawing.Point(231, 57);
-            this.panelTools.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelTools.Margin = new System.Windows.Forms.Padding(4);
             this.panelTools.Name = "panelTools";
             this.panelTools.Size = new System.Drawing.Size(836, 48);
             this.panelTools.TabIndex = 5;
@@ -707,7 +707,7 @@
             this.buttonBucket.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonBucket.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonBucket.Location = new System.Drawing.Point(196, 7);
-            this.buttonBucket.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonBucket.Margin = new System.Windows.Forms.Padding(4);
             this.buttonBucket.Name = "buttonBucket";
             this.buttonBucket.Size = new System.Drawing.Size(37, 33);
             this.buttonBucket.TabIndex = 8;
@@ -721,7 +721,7 @@
             this.buttonUndo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonUndo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonUndo.Location = new System.Drawing.Point(293, 7);
-            this.buttonUndo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonUndo.Margin = new System.Windows.Forms.Padding(4);
             this.buttonUndo.Name = "buttonUndo";
             this.buttonUndo.Size = new System.Drawing.Size(37, 33);
             this.buttonUndo.TabIndex = 16;
@@ -735,7 +735,7 @@
             this.buttonRedo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonRedo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonRedo.Location = new System.Drawing.Point(339, 7);
-            this.buttonRedo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonRedo.Margin = new System.Windows.Forms.Padding(4);
             this.buttonRedo.Name = "buttonRedo";
             this.buttonRedo.Size = new System.Drawing.Size(37, 33);
             this.buttonRedo.TabIndex = 16;
@@ -749,7 +749,7 @@
             this.buttonPalette.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonPalette.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonPalette.Location = new System.Drawing.Point(139, 7);
-            this.buttonPalette.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonPalette.Margin = new System.Windows.Forms.Padding(4);
             this.buttonPalette.Name = "buttonPalette";
             this.buttonPalette.Size = new System.Drawing.Size(37, 33);
             this.buttonPalette.TabIndex = 7;
@@ -763,7 +763,7 @@
             this.buttonEraser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonEraser.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonEraser.Location = new System.Drawing.Point(79, 7);
-            this.buttonEraser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonEraser.Margin = new System.Windows.Forms.Padding(4);
             this.buttonEraser.Name = "buttonEraser";
             this.buttonEraser.Size = new System.Drawing.Size(37, 33);
             this.buttonEraser.TabIndex = 8;
@@ -777,7 +777,7 @@
             this.buttonPencile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonPencile.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonPencile.Location = new System.Drawing.Point(20, 7);
-            this.buttonPencile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonPencile.Margin = new System.Windows.Forms.Padding(4);
             this.buttonPencile.Name = "buttonPencile";
             this.buttonPencile.Size = new System.Drawing.Size(37, 33);
             this.buttonPencile.TabIndex = 6;
@@ -795,10 +795,12 @@
             this.Controls.Add(this.toolStripContainer1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.Form1_PreviewKeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
