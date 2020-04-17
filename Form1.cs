@@ -113,6 +113,13 @@ namespace risovalka
             AbstractPainter.drawSwitch = new RectangleTriangle ();
         }
 
+        private void buttonPolygon1_Click(object sender, EventArgs e)
+        {
+            AbstractPainter.drawSwitch = new Polygon();
+        }
+
+
+
         private void buttonEraser_Click(object sender, EventArgs e)
         {
             AbstractPainter.drawSwitch = new Eraser();
@@ -163,5 +170,7 @@ namespace risovalka
         {
             
         }
+
+       
     }
 }
