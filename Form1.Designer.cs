@@ -60,7 +60,6 @@
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelSizesButton = new System.Windows.Forms.Panel();
             this.buttonSize1 = new System.Windows.Forms.Button();
@@ -94,7 +93,6 @@
             this.buttonPencile = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            this.toolStripContainer1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelSizesButton.SuspendLayout();
             this.panelFigure.SuspendLayout();
@@ -355,18 +353,6 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.aboutToolStripMenuItem.Text = "&About...";
             // 
-            // toolStripContainer1
-            // 
-            // 
-            // toolStripContainer1.ContentPanel
-            // 
-            this.toolStripContainer1.ContentPanel.AccessibleRole = System.Windows.Forms.AccessibleRole.Outline;
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(150, 150);
-            this.toolStripContainer1.Location = new System.Drawing.Point(427, 290);
-            this.toolStripContainer1.Name = "toolStripContainer1";
-            this.toolStripContainer1.Size = new System.Drawing.Size(150, 175);
-            this.toolStripContainer1.TabIndex = 0;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -478,7 +464,8 @@
             this.buttonPolygon2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonPolygon2.BackgroundImage")));
             this.buttonPolygon2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonPolygon2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonPolygon2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonPolygon2.FlatAppearance.BorderSize = 0;
+            this.buttonPolygon2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPolygon2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonPolygon2.Location = new System.Drawing.Point(63, 98);
             this.buttonPolygon2.Name = "buttonPolygon2";
@@ -492,7 +479,8 @@
             this.buttonOval.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonOval.BackgroundImage")));
             this.buttonOval.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonOval.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonOval.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonOval.FlatAppearance.BorderSize = 0;
+            this.buttonOval.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOval.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonOval.Location = new System.Drawing.Point(12, 98);
             this.buttonOval.Name = "buttonOval";
@@ -506,7 +494,8 @@
             this.buttonRightTriangle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonRightTriangle.BackgroundImage")));
             this.buttonRightTriangle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonRightTriangle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonRightTriangle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonRightTriangle.FlatAppearance.BorderSize = 0;
+            this.buttonRightTriangle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRightTriangle.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonRightTriangle.Location = new System.Drawing.Point(63, 52);
             this.buttonRightTriangle.Name = "buttonRightTriangle";
@@ -521,7 +510,8 @@
             this.buttonRectabgle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonRectabgle.BackgroundImage")));
             this.buttonRectabgle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonRectabgle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonRectabgle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonRectabgle.FlatAppearance.BorderSize = 0;
+            this.buttonRectabgle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRectabgle.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonRectabgle.Location = new System.Drawing.Point(63, 6);
             this.buttonRectabgle.Name = "buttonRectabgle";
@@ -536,7 +526,8 @@
             this.buttonCircle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonCircle.BackgroundImage")));
             this.buttonCircle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonCircle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCircle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonCircle.FlatAppearance.BorderSize = 0;
+            this.buttonCircle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCircle.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonCircle.Location = new System.Drawing.Point(12, 52);
             this.buttonCircle.Name = "buttonCircle";
@@ -550,7 +541,8 @@
             this.buttonPolygon1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonPolygon1.BackgroundImage")));
             this.buttonPolygon1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonPolygon1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonPolygon1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonPolygon1.FlatAppearance.BorderSize = 0;
+            this.buttonPolygon1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPolygon1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonPolygon1.Location = new System.Drawing.Point(113, 52);
             this.buttonPolygon1.Name = "buttonPolygon1";
@@ -565,7 +557,8 @@
             this.buttonTriangle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonTriangle.BackgroundImage")));
             this.buttonTriangle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonTriangle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonTriangle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonTriangle.FlatAppearance.BorderSize = 0;
+            this.buttonTriangle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTriangle.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonTriangle.Location = new System.Drawing.Point(12, 6);
             this.buttonTriangle.Name = "buttonTriangle";
@@ -580,7 +573,8 @@
             this.buttonSquare.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonSquare.BackgroundImage")));
             this.buttonSquare.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonSquare.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonSquare.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonSquare.FlatAppearance.BorderSize = 0;
+            this.buttonSquare.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSquare.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSquare.Location = new System.Drawing.Point(113, 6);
             this.buttonSquare.Name = "buttonSquare";
@@ -678,7 +672,8 @@
             this.buttonBucket.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonBucket.BackgroundImage")));
             this.buttonBucket.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonBucket.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonBucket.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonBucket.FlatAppearance.BorderSize = 0;
+            this.buttonBucket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBucket.Location = new System.Drawing.Point(147, 6);
             this.buttonBucket.Name = "buttonBucket";
             this.buttonBucket.Size = new System.Drawing.Size(28, 27);
@@ -691,7 +686,8 @@
             this.buttonUndo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonUndo.BackgroundImage")));
             this.buttonUndo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonUndo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonUndo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonUndo.FlatAppearance.BorderSize = 0;
+            this.buttonUndo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUndo.Location = new System.Drawing.Point(220, 6);
             this.buttonUndo.Name = "buttonUndo";
             this.buttonUndo.Size = new System.Drawing.Size(28, 27);
@@ -704,7 +700,8 @@
             this.buttonRedo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonRedo.BackgroundImage")));
             this.buttonRedo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonRedo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonRedo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonRedo.FlatAppearance.BorderSize = 0;
+            this.buttonRedo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRedo.Location = new System.Drawing.Point(254, 6);
             this.buttonRedo.Name = "buttonRedo";
             this.buttonRedo.Size = new System.Drawing.Size(28, 27);
@@ -717,7 +714,8 @@
             this.buttonPalette.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonPalette.BackgroundImage")));
             this.buttonPalette.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonPalette.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonPalette.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonPalette.FlatAppearance.BorderSize = 0;
+            this.buttonPalette.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPalette.Location = new System.Drawing.Point(104, 6);
             this.buttonPalette.Name = "buttonPalette";
             this.buttonPalette.Size = new System.Drawing.Size(28, 27);
@@ -730,7 +728,8 @@
             this.buttonEraser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonEraser.BackgroundImage")));
             this.buttonEraser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonEraser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonEraser.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonEraser.FlatAppearance.BorderSize = 0;
+            this.buttonEraser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEraser.Location = new System.Drawing.Point(59, 6);
             this.buttonEraser.Name = "buttonEraser";
             this.buttonEraser.Size = new System.Drawing.Size(28, 27);
@@ -743,7 +742,8 @@
             this.buttonPencile.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonPencile.BackgroundImage")));
             this.buttonPencile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonPencile.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonPencile.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonPencile.FlatAppearance.BorderSize = 0;
+            this.buttonPencile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPencile.Location = new System.Drawing.Point(15, 6);
             this.buttonPencile.Name = "buttonPencile";
             this.buttonPencile.Size = new System.Drawing.Size(28, 27);
@@ -759,7 +759,6 @@
             this.Controls.Add(this.panelTools);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.toolStripContainer1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Form1";
@@ -770,8 +769,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.toolStripContainer1.ResumeLayout(false);
-            this.toolStripContainer1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panelSizesButton.ResumeLayout(false);
             this.panelFigure.ResumeLayout(false);
@@ -822,7 +819,6 @@
         private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripContainer toolStripContainer1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label D;
