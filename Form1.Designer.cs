@@ -361,7 +361,7 @@
             // toolStripContainer1.ContentPanel
             // 
             this.toolStripContainer1.ContentPanel.AccessibleRole = System.Windows.Forms.AccessibleRole.Outline;
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(150, 155);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(150, 150);
             this.toolStripContainer1.Location = new System.Drawing.Point(427, 290);
             this.toolStripContainer1.Name = "toolStripContainer1";
             this.toolStripContainer1.Size = new System.Drawing.Size(150, 175);
@@ -523,7 +523,7 @@
             this.buttonRectabgle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonRectabgle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonRectabgle.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonRectabgle.Location = new System.Drawing.Point(113, 52);
+            this.buttonRectabgle.Location = new System.Drawing.Point(63, 6);
             this.buttonRectabgle.Name = "buttonRectabgle";
             this.buttonRectabgle.Size = new System.Drawing.Size(40, 40);
             this.buttonRectabgle.TabIndex = 16;
@@ -552,7 +552,7 @@
             this.buttonPolygon1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonPolygon1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonPolygon1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonPolygon1.Location = new System.Drawing.Point(63, 6);
+            this.buttonPolygon1.Location = new System.Drawing.Point(113, 52);
             this.buttonPolygon1.Name = "buttonPolygon1";
             this.buttonPolygon1.Size = new System.Drawing.Size(40, 40);
             this.buttonPolygon1.TabIndex = 16;

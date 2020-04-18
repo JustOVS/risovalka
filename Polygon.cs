@@ -10,7 +10,7 @@ namespace risovalka
 {
     public class Polygon : AbstractPainter
     {
-        public static  int nSides = 6;
+        public static  int nSides = 7;
         int[] points = new int[2* nSides];
         public override void DrawDynamicFigure(MouseEventArgs e, PictureBox pictureBox)
         {
@@ -28,27 +28,25 @@ namespace risovalka
 
         public void DrawFigure(int x1, int y1, int x2, int y2, PictureBox pictureBox, Color currentColor)
         {
-            double angle = 0; int i = 0;
-            int radius = Convert.ToInt32(Math.Sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1)));
-            //int j = 0;
-            while (i < nSides + 1)
+            double angle = 90; int i = 0;
+            int radius = (int)(Math.Round(Math.Sqrt(Math.Pow(((double)x2 - (double)AbstractPainter.x1), 2) + Math.Pow(((double)y2 - (double)AbstractPainter.y1), 2))));
+          
+            int j = 0;
+            while (i < nSides )
             {
-                //int radius = Convert.ToInt32(Math.Sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1)));
-                // int radius = (int)(Math.Round(Math.Sqrt(Math.Pow(((double)e.Y - (double)AbstractPainter.x1), 2) + Math.Pow(((double)e.X - (double)AbstractPainter.y1), 2))));
-                //int j = 0;
-                points[i] = AbstractPainter.x1 + (int)(Math.Round(Math.Cos(angle / 180 * Math.PI) * radius));
-                //j++;
-                points[i] = AbstractPainter.y1 - (int)(Math.Round(Math.Sin(angle / 180 * Math.PI) * radius));
-                //j++;
-                angle += 180 *(nSides -2)/ nSides;
+                points[j] = AbstractPainter.x1 + (int)(Math.Round(Math.Cos(angle / 180 * Math.PI) * radius));
+                j++;
+                points[j] = AbstractPainter.y1 - (int)(Math.Round(Math.Sin(angle / 180 * Math.PI) * radius));
+                j++;
+                angle += 360 / nSides;
                 i++;
             }
 
-            for (int k = 0; k < points.Length-1; k += 2)
+            for (int k = 0; k < points.Length-1; k +=2)
             {
                 if (k == points.Length - 2)
                 {
-                    AbstractPainter.DrawLine(points[k], points[k + 1], points[1], points[k+radius ], pictureBox, currentColor );
+                    AbstractPainter.DrawLine(points[k], points[k + 1], points[0], points[1], pictureBox, currentColor );
                 }
                 else
                 {
