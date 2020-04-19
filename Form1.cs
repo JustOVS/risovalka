@@ -142,8 +142,7 @@ namespace risovalka
 
         private void pictureBox1_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
         {
-            if(Control.ModifierKeys == Keys.Shift
-)
+            if(e.Shift)
             {
                 AbstractPainter.shift = true;
             }
@@ -151,8 +150,8 @@ namespace risovalka
 
         private void pictureBox1_KeyUp(object sender, System.Windows.Forms.KeyEventArgs e)
         {
-            if (Control.ModifierKeys == Keys.Shift
-)
+            if (Control.ModifierKeys == Keys.Shift)
+
             {
                 AbstractPainter.shift = false;
             }
@@ -160,7 +159,7 @@ namespace risovalka
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (Control.ModifierKeys == Keys.Shift)
+            if (e.Shift)
             {
                 AbstractPainter.shift = true;
             }
@@ -168,7 +167,20 @@ namespace risovalka
 
         private void Form1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
-            
+            if (e.Shift)
+            {
+                AbstractPainter.shift = true;
+            }
+        }
+
+        private void buttonCircle_Click(object sender, EventArgs e)
+        {
+            AbstractPainter.drawSwitch = new Circle();
+        }
+
+        private void buttonOval_Click(object sender, EventArgs e)
+        {
+            AbstractPainter.drawSwitch = new Ellipse();
         }
 
        

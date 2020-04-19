@@ -487,6 +487,7 @@
             this.buttonOval.Size = new System.Drawing.Size(40, 40);
             this.buttonOval.TabIndex = 16;
             this.buttonOval.UseVisualStyleBackColor = false;
+            this.buttonOval.Click += new System.EventHandler(this.buttonOval_Click);
             // 
             // buttonRightTriangle
             // 
@@ -534,6 +535,7 @@
             this.buttonCircle.Size = new System.Drawing.Size(40, 40);
             this.buttonCircle.TabIndex = 16;
             this.buttonCircle.UseVisualStyleBackColor = false;
+            this.buttonCircle.Click += new System.EventHandler(this.buttonCircle_Click);
             // 
             // buttonPolygon1
             // 
