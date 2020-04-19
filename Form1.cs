@@ -170,5 +170,10 @@ namespace risovalka
         {
             AbstractPainter.drawSwitch = new Circle();
         }
+
+        private void buttonOval_Click(object sender, EventArgs e)
+        {
+            AbstractPainter.drawSwitch = new Ellipse();
+        }
     }
 }

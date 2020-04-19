@@ -48,7 +48,10 @@
   <ItemGroup>
     <Compile Include="Canvas.cs" />
     <Compile Include="Brush.cs" />
-    <Compile Include="Circle.cs" />
+    <Compile Include="C:\Users\Олег\Desktop\Circle.cs">
+      <Link>Circle.cs</Link>
+    </Compile>
+    <Compile Include="Ellipse.cs" />
     <Compile Include="Eraser.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
