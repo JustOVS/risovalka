@@ -183,6 +183,9 @@ namespace risovalka
             AbstractPainter.drawSwitch = new Ellipse();
         }
 
-       
+        private void buttonPolygon2_Click(object sender, EventArgs e)
+        {
+            AbstractPainter.drawSwitch = new PointPolygon();
+        }
     }
 }
