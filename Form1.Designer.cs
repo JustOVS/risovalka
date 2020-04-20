@@ -91,6 +91,11 @@
             this.buttonPalette = new System.Windows.Forms.Button();
             this.buttonEraser = new System.Windows.Forms.Button();
             this.buttonPencile = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buttonOkPanelPolygonSides = new System.Windows.Forms.Button();
+            this.panelPolygonSides = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.labelNumberOfAngles = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -102,6 +107,8 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhale)).BeginInit();
             this.panelTools.SuspendLayout();
+            this.panelPolygonSides.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -787,6 +794,62 @@
             this.buttonPencile.UseVisualStyleBackColor = true;
             this.buttonPencile.Click += new System.EventHandler(this.buttonPencile_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(13, 41);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(85, 20);
+            this.textBox1.TabIndex = 6;
+            this.textBox1.VisibleChanged += new System.EventHandler(this.buttonPolygon1_Click);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
+            // buttonOkPanelPolygonSides
+            // 
+            this.buttonOkPanelPolygonSides.BackColor = System.Drawing.Color.Yellow;
+            this.buttonOkPanelPolygonSides.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonOkPanelPolygonSides.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.buttonOkPanelPolygonSides.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
+            this.buttonOkPanelPolygonSides.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOkPanelPolygonSides.Location = new System.Drawing.Point(126, 41);
+            this.buttonOkPanelPolygonSides.Name = "buttonOkPanelPolygonSides";
+            this.buttonOkPanelPolygonSides.Size = new System.Drawing.Size(50, 20);
+            this.buttonOkPanelPolygonSides.TabIndex = 7;
+            this.buttonOkPanelPolygonSides.Text = "ok";
+            this.buttonOkPanelPolygonSides.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonOkPanelPolygonSides.UseVisualStyleBackColor = false;
+            this.buttonOkPanelPolygonSides.Click += new System.EventHandler(this.buttonOkPanelPolygonSides_Click);
+            // 
+            // panelPolygonSides
+            // 
+            this.panelPolygonSides.BackColor = System.Drawing.Color.LightBlue;
+            this.panelPolygonSides.Controls.Add(this.buttonOkPanelPolygonSides);
+            this.panelPolygonSides.Controls.Add(this.textBox1);
+            this.panelPolygonSides.Controls.Add(this.panel5);
+            this.panelPolygonSides.Location = new System.Drawing.Point(393, 199);
+            this.panelPolygonSides.Name = "panelPolygonSides";
+            this.panelPolygonSides.Size = new System.Drawing.Size(186, 82);
+            this.panelPolygonSides.TabIndex = 8;
+            this.panelPolygonSides.Visible = false;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Yellow;
+            this.panel5.Controls.Add(this.labelNumberOfAngles);
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(186, 23);
+            this.panel5.TabIndex = 8;
+            // 
+            // labelNumberOfAngles
+            // 
+            this.labelNumberOfAngles.AutoSize = true;
+            this.labelNumberOfAngles.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelNumberOfAngles.Location = new System.Drawing.Point(10, 4);
+            this.labelNumberOfAngles.Name = "labelNumberOfAngles";
+            this.labelNumberOfAngles.Size = new System.Drawing.Size(166, 16);
+            this.labelNumberOfAngles.TabIndex = 0;
+            this.labelNumberOfAngles.Text = "Введите количество углов";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -818,6 +881,10 @@
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhale)).EndInit();
             this.panelTools.ResumeLayout(false);
+            this.panelPolygonSides.ResumeLayout(false);
+            this.panelPolygonSides.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -887,6 +954,11 @@
         private System.Windows.Forms.Panel panelSize;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panelSizesButton;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button buttonOkPanelPolygonSides;
+        private System.Windows.Forms.Panel panelPolygonSides;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label labelNumberOfAngles;
     }
 }
 
