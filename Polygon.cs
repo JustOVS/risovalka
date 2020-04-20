@@ -27,7 +27,12 @@ namespace risovalka
         }
 
         public void DrawFigure(int x1, int y1, int x2, int y2, PictureBox pictureBox, Color currentColor)
-        {
+        { 
+            if (nSides <3)
+            {
+                nSides = 3;
+            }
+
             double angle = 90; int i = 0;
             int radius = (int)(Math.Round(Math.Sqrt(Math.Pow(((double)x2 - (double)AbstractPainter.x1), 2) + Math.Pow(((double)y2 - (double)AbstractPainter.y1), 2))));
           

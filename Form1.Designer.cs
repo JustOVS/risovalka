@@ -94,9 +94,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.buttonOkPanelPolygonSides = new System.Windows.Forms.Button();
             this.panelPolygonSides = new System.Windows.Forms.Panel();
-            this.labelNumberOfAngles = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.labelNumberOfAngles = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -117,7 +116,7 @@
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox1.Location = new System.Drawing.Point(173, 85);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(627, 362);
+            this.pictureBox1.Size = new System.Drawing.Size(627, 365);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
@@ -475,7 +474,7 @@
             this.buttonPolygon2.FlatAppearance.BorderSize = 0;
             this.buttonPolygon2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPolygon2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonPolygon2.Location = new System.Drawing.Point(63, 98);
+            this.buttonPolygon2.Location = new System.Drawing.Point(113, 52);
             this.buttonPolygon2.Name = "buttonPolygon2";
             this.buttonPolygon2.Size = new System.Drawing.Size(40, 40);
             this.buttonPolygon2.TabIndex = 17;
@@ -552,7 +551,7 @@
             this.buttonPolygon1.FlatAppearance.BorderSize = 0;
             this.buttonPolygon1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPolygon1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonPolygon1.Location = new System.Drawing.Point(113, 52);
+            this.buttonPolygon1.Location = new System.Drawing.Point(63, 98);
             this.buttonPolygon1.Name = "buttonPolygon1";
             this.buttonPolygon1.Size = new System.Drawing.Size(40, 40);
             this.buttonPolygon1.TabIndex = 16;
@@ -724,7 +723,7 @@
             this.buttonPalette.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonPalette.FlatAppearance.BorderSize = 0;
             this.buttonPalette.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPalette.Location = new System.Drawing.Point(104, 6);
+            this.buttonPalette.Location = new System.Drawing.Point(334, 3);
             this.buttonPalette.Name = "buttonPalette";
             this.buttonPalette.Size = new System.Drawing.Size(28, 27);
             this.buttonPalette.TabIndex = 7;
@@ -796,16 +795,6 @@
             this.panelPolygonSides.TabIndex = 8;
             this.panelPolygonSides.Visible = false;
             // 
-            // labelNumberOfAngles
-            // 
-            this.labelNumberOfAngles.AutoSize = true;
-            this.labelNumberOfAngles.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelNumberOfAngles.Location = new System.Drawing.Point(10, 4);
-            this.labelNumberOfAngles.Name = "labelNumberOfAngles";
-            this.labelNumberOfAngles.Size = new System.Drawing.Size(166, 16);
-            this.labelNumberOfAngles.TabIndex = 0;
-            this.labelNumberOfAngles.Text = "Введите количество углов";
-            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Yellow;
@@ -815,9 +804,15 @@
             this.panel5.Size = new System.Drawing.Size(186, 23);
             this.panel5.TabIndex = 8;
             // 
-            // colorDialog1
+            // labelNumberOfAngles
             // 
-            this.colorDialog1.Color = System.Drawing.Color.Maroon;
+            this.labelNumberOfAngles.AutoSize = true;
+            this.labelNumberOfAngles.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelNumberOfAngles.Location = new System.Drawing.Point(10, 4);
+            this.labelNumberOfAngles.Name = "labelNumberOfAngles";
+            this.labelNumberOfAngles.Size = new System.Drawing.Size(166, 16);
+            this.labelNumberOfAngles.TabIndex = 0;
+            this.labelNumberOfAngles.Text = "Введите количество углов";
             // 
             // Form1
             // 
@@ -928,7 +923,6 @@
         private System.Windows.Forms.Panel panelPolygonSides;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label labelNumberOfAngles;
-        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }
 
