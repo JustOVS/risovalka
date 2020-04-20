@@ -36,11 +36,39 @@ namespace risovalka
             AbstractPainter.drawStartFinishFlag = true;
             Canvas.tmpBitmap = new Bitmap (Canvas.currentBitmap);
             Canvas.AddToTmp();
+            if (PointPolygon.first.X != -1 && PointPolygon.first.Y != -1) //&& e.Button == MouseButtons.Left && e.Clicks == 1
+            {
+                
+                AbstractPainter.DrawLine(PointPolygon.last.X, PointPolygon.last.Y, e.X, e.Y, pictureBox1, Brush.currentColor);
+                pictureBox1.Image = Canvas.currentBitmap;
+                
+            }
+            else if (AbstractPainter.drawSwitch.GetType() == typeof(PointPolygon))
+            {
+                PointPolygon.first.X = e.X;
+                PointPolygon.first.Y = e.Y;
+                PointPolygon.last.X = e.X;
+                PointPolygon.last.Y = e.Y;
+            }
 
         }
 
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
+            
+            
+             if (Math.Abs(e.X - PointPolygon.first.X) < 10 && Math.Abs(e.Y - PointPolygon.first.Y) < 10 && PointPolygon.first.X != -1)
+            {
+                Canvas.currentBitmap = new Bitmap(Canvas.tmpBitmap);
+                AbstractPainter.DrawLine(PointPolygon.last.X, PointPolygon.last.Y, PointPolygon.first.X, PointPolygon.first.Y, pictureBox1, Brush.currentColor);
+                PointPolygon.first.X = -1;
+                PointPolygon.first.Y = -1;
+            }
+            else if (PointPolygon.first.X != -1)
+            {
+                PointPolygon.last.X = e.X;
+                PointPolygon.last.Y = e.Y;
+            }
             AbstractPainter.drawStartFinishFlag = false;
         }
 
@@ -186,6 +214,16 @@ namespace risovalka
         private void buttonPolygon2_Click(object sender, EventArgs e)
         {
             AbstractPainter.drawSwitch = new PointPolygon();
+        }
+
+        private void pictureBox1_DoubleClick(object sender, EventArgs e)
+        {
+            if(PointPolygon.first.X != -1)
+            {
+                AbstractPainter.DrawLine(PointPolygon.last.X, PointPolygon.last.Y, PointPolygon.first.X, PointPolygon.first.Y, pictureBox1, Brush.currentColor);
+                PointPolygon.first.X = -1;
+                PointPolygon.first.Y = -1;
+            }
         }
     }
 }

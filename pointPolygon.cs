@@ -10,16 +10,20 @@ namespace risovalka
 {
     class PointPolygon : AbstractPainter
     {
+        public static Point first = new Point (-1, -1);
+        public static Point last;
         public override void DrawDynamicFigure(MouseEventArgs e, PictureBox pictureBox)
         {
+            
             if (AbstractPainter.drawStartFinishFlag == true)
             {
+                
+                    Canvas.currentBitmap = new Bitmap(Canvas.tmpBitmap);
+                    AbstractPainter.DrawLine(last.X, last.Y, e.X, e.Y, pictureBox, Brush.currentColor);
+                    pictureBox.Image = Canvas.currentBitmap;
+                    
 
-                Canvas.currentBitmap = new Bitmap(Canvas.tmpBitmap);
-                AbstractPainter.DrawLine(x1, y1, e.X, e.Y, pictureBox, Brush.currentColor);
-
-                pictureBox.Image = Canvas.currentBitmap;
-
+                
             }
         }
     }

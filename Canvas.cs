@@ -86,6 +86,8 @@ namespace risovalka
             AddToTmp();
             currentBitmap = new Bitmap(pictureBox.Width, pictureBox.Height);
             pictureBox.Image = currentBitmap;
+            PointPolygon.first.X = -1;
+            PointPolygon.first.Y = -1;
         }
     }
 }
