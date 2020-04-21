@@ -93,16 +93,16 @@
             this.pictureBoxWhale = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelTools = new System.Windows.Forms.Panel();
-            this.flowLayoutPanelTppls = new System.Windows.Forms.FlowLayoutPanel();
-            this.buttonPencile = new System.Windows.Forms.Button();
-            this.buttonEraser = new System.Windows.Forms.Button();
+            this.buttonPipetka = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.buttonEraser = new System.Windows.Forms.Button();
+            this.buttonPencile = new System.Windows.Forms.Button();
             this.flowLayoutPanelDelete = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonUndo = new System.Windows.Forms.Button();
             this.buttonRedo = new System.Windows.Forms.Button();
             this.buttonBucket = new System.Windows.Forms.Button();
             this.panelColors = new System.Windows.Forms.Panel();
-            this.buttonPalette = new System.Windows.Forms.Button();
+            this.pictureBoxCurrentColor = new System.Windows.Forms.PictureBox();
             this.buttonWhite = new System.Windows.Forms.Button();
             this.buttonBlack = new System.Windows.Forms.Button();
             this.buttonForestGreen = new System.Windows.Forms.Button();
@@ -118,11 +118,13 @@
             this.buttonBlueViolet = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.buttonRed = new System.Windows.Forms.Button();
+            this.buttonPalette = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.buttonOkPanelPolygonSides = new System.Windows.Forms.Button();
             this.panelPolygonSides = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.labelNumberOfAngles = new System.Windows.Forms.Label();
+            this.pictureBoxPrevColor = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -138,11 +140,12 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhale)).BeginInit();
             this.panelTools.SuspendLayout();
-            this.flowLayoutPanelTppls.SuspendLayout();
             this.flowLayoutPanelDelete.SuspendLayout();
             this.panelColors.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCurrentColor)).BeginInit();
             this.panelPolygonSides.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPrevColor)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -588,15 +591,15 @@
             this.panel7.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel7.Controls.Add(this.numericUpDownForPolygon);
             this.panel7.Controls.Add(this.buttonPolygon1);
-            this.panel7.Location = new System.Drawing.Point(63, 97);
+            this.panel7.Location = new System.Drawing.Point(63, 91);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(90, 40);
+            this.panel7.Size = new System.Drawing.Size(90, 46);
             this.panel7.TabIndex = 7;
             // 
             // numericUpDownForPolygon
             // 
             this.numericUpDownForPolygon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.numericUpDownForPolygon.Location = new System.Drawing.Point(46, 12);
+            this.numericUpDownForPolygon.Location = new System.Drawing.Point(50, 12);
             this.numericUpDownForPolygon.Maximum = new decimal(new int[] {
             30,
             0,
@@ -619,14 +622,14 @@
             // 
             // buttonPolygon1
             // 
-            this.buttonPolygon1.BackColor = System.Drawing.Color.LightBlue;
+            this.buttonPolygon1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.buttonPolygon1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonPolygon1.BackgroundImage")));
             this.buttonPolygon1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonPolygon1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonPolygon1.FlatAppearance.BorderSize = 0;
             this.buttonPolygon1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPolygon1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonPolygon1.Location = new System.Drawing.Point(0, 0);
+            this.buttonPolygon1.Location = new System.Drawing.Point(2, 3);
             this.buttonPolygon1.Name = "buttonPolygon1";
             this.buttonPolygon1.Size = new System.Drawing.Size(40, 40);
             this.buttonPolygon1.TabIndex = 16;
@@ -820,7 +823,12 @@
             this.panelTools.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTools.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelTools.Controls.Add(this.flowLayoutPanelTppls);
+            this.panelTools.Controls.Add(this.pictureBoxCurrentColor);
+            this.panelTools.Controls.Add(this.buttonPipetka);
+            this.panelTools.Controls.Add(this.pictureBoxPrevColor);
+            this.panelTools.Controls.Add(this.button1);
+            this.panelTools.Controls.Add(this.buttonEraser);
+            this.panelTools.Controls.Add(this.buttonPencile);
             this.panelTools.Controls.Add(this.flowLayoutPanelDelete);
             this.panelTools.Controls.Add(this.panelColors);
             this.panelTools.Location = new System.Drawing.Point(173, 46);
@@ -828,45 +836,19 @@
             this.panelTools.Size = new System.Drawing.Size(627, 39);
             this.panelTools.TabIndex = 5;
             // 
-            // flowLayoutPanelTppls
+            // buttonPipetka
             // 
-            this.flowLayoutPanelTppls.Controls.Add(this.buttonPencile);
-            this.flowLayoutPanelTppls.Controls.Add(this.buttonEraser);
-            this.flowLayoutPanelTppls.Controls.Add(this.button1);
-            this.flowLayoutPanelTppls.Location = new System.Drawing.Point(15, 2);
-            this.flowLayoutPanelTppls.Name = "flowLayoutPanelTppls";
-            this.flowLayoutPanelTppls.Size = new System.Drawing.Size(110, 34);
-            this.flowLayoutPanelTppls.TabIndex = 6;
-            // 
-            // buttonPencile
-            // 
-            this.buttonPencile.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonPencile.BackgroundImage")));
-            this.buttonPencile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonPencile.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonPencile.Dock = System.Windows.Forms.DockStyle.Left;
-            this.buttonPencile.FlatAppearance.BorderSize = 0;
-            this.buttonPencile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPencile.Location = new System.Drawing.Point(3, 3);
-            this.buttonPencile.Name = "buttonPencile";
-            this.buttonPencile.Size = new System.Drawing.Size(28, 27);
-            this.buttonPencile.TabIndex = 6;
-            this.buttonPencile.UseVisualStyleBackColor = true;
-            this.buttonPencile.Click += new System.EventHandler(this.buttonPencile_Click);
-            // 
-            // buttonEraser
-            // 
-            this.buttonEraser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonEraser.BackgroundImage")));
-            this.buttonEraser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonEraser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonEraser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonEraser.FlatAppearance.BorderSize = 0;
-            this.buttonEraser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEraser.Location = new System.Drawing.Point(37, 3);
-            this.buttonEraser.Name = "buttonEraser";
-            this.buttonEraser.Size = new System.Drawing.Size(28, 27);
-            this.buttonEraser.TabIndex = 8;
-            this.buttonEraser.UseVisualStyleBackColor = true;
-            this.buttonEraser.Click += new System.EventHandler(this.buttonEraser_Click);
+            this.buttonPipetka.AutoSize = true;
+            this.buttonPipetka.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonPipetka.BackgroundImage")));
+            this.buttonPipetka.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonPipetka.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPipetka.FlatAppearance.BorderSize = 0;
+            this.buttonPipetka.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPipetka.Location = new System.Drawing.Point(109, 6);
+            this.buttonPipetka.Name = "buttonPipetka";
+            this.buttonPipetka.Size = new System.Drawing.Size(28, 27);
+            this.buttonPipetka.TabIndex = 18;
+            this.buttonPipetka.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -874,14 +856,41 @@
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(71, 3);
+            this.button1.Location = new System.Drawing.Point(75, 6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(28, 27);
             this.button1.TabIndex = 17;
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // buttonEraser
+            // 
+            this.buttonEraser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonEraser.BackgroundImage")));
+            this.buttonEraser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonEraser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEraser.FlatAppearance.BorderSize = 0;
+            this.buttonEraser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEraser.Location = new System.Drawing.Point(41, 6);
+            this.buttonEraser.Name = "buttonEraser";
+            this.buttonEraser.Size = new System.Drawing.Size(28, 27);
+            this.buttonEraser.TabIndex = 8;
+            this.buttonEraser.UseVisualStyleBackColor = true;
+            this.buttonEraser.Click += new System.EventHandler(this.buttonEraser_Click);
+            // 
+            // buttonPencile
+            // 
+            this.buttonPencile.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonPencile.BackgroundImage")));
+            this.buttonPencile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonPencile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPencile.FlatAppearance.BorderSize = 0;
+            this.buttonPencile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPencile.Location = new System.Drawing.Point(6, 6);
+            this.buttonPencile.Name = "buttonPencile";
+            this.buttonPencile.Size = new System.Drawing.Size(28, 27);
+            this.buttonPencile.TabIndex = 6;
+            this.buttonPencile.UseVisualStyleBackColor = true;
+            this.buttonPencile.Click += new System.EventHandler(this.buttonPencile_Click);
             // 
             // flowLayoutPanelDelete
             // 
@@ -940,8 +949,8 @@
             // panelColors
             // 
             this.panelColors.BackColor = System.Drawing.Color.SkyBlue;
-            this.panelColors.Controls.Add(this.buttonPalette);
             this.panelColors.Controls.Add(this.buttonWhite);
+            this.panelColors.Controls.Add(this.buttonPalette);
             this.panelColors.Controls.Add(this.buttonBlack);
             this.panelColors.Controls.Add(this.buttonForestGreen);
             this.panelColors.Controls.Add(this.buttonLightSkyBlue);
@@ -961,20 +970,14 @@
             this.panelColors.Size = new System.Drawing.Size(181, 40);
             this.panelColors.TabIndex = 6;
             // 
-            // buttonPalette
+            // pictureBoxCurrentColor
             // 
-            this.buttonPalette.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.buttonPalette.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonPalette.BackgroundImage")));
-            this.buttonPalette.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonPalette.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonPalette.FlatAppearance.BorderSize = 0;
-            this.buttonPalette.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPalette.Location = new System.Drawing.Point(146, 6);
-            this.buttonPalette.Name = "buttonPalette";
-            this.buttonPalette.Size = new System.Drawing.Size(28, 27);
-            this.buttonPalette.TabIndex = 7;
-            this.buttonPalette.UseVisualStyleBackColor = true;
-            this.buttonPalette.Click += new System.EventHandler(this.buttonPalette_Click);
+            this.pictureBoxCurrentColor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxCurrentColor.Location = new System.Drawing.Point(353, 9);
+            this.pictureBoxCurrentColor.Name = "pictureBoxCurrentColor";
+            this.pictureBoxCurrentColor.Size = new System.Drawing.Size(27, 27);
+            this.pictureBoxCurrentColor.TabIndex = 7;
+            this.pictureBoxCurrentColor.TabStop = false;
             // 
             // buttonWhite
             // 
@@ -1177,6 +1180,21 @@
             this.buttonRed.UseVisualStyleBackColor = false;
             this.buttonRed.Click += new System.EventHandler(this.buttonRed_Click);
             // 
+            // buttonPalette
+            // 
+            this.buttonPalette.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.buttonPalette.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonPalette.BackgroundImage")));
+            this.buttonPalette.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonPalette.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPalette.FlatAppearance.BorderSize = 0;
+            this.buttonPalette.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPalette.Location = new System.Drawing.Point(145, 6);
+            this.buttonPalette.Name = "buttonPalette";
+            this.buttonPalette.Size = new System.Drawing.Size(28, 27);
+            this.buttonPalette.TabIndex = 7;
+            this.buttonPalette.UseVisualStyleBackColor = true;
+            this.buttonPalette.Click += new System.EventHandler(this.buttonPalette_Click);
+            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(13, 41);
@@ -1230,6 +1248,15 @@
             this.labelNumberOfAngles.TabIndex = 0;
             this.labelNumberOfAngles.Text = "Введите количество углов";
             // 
+            // pictureBoxPrevColor
+            // 
+            this.pictureBoxPrevColor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxPrevColor.Location = new System.Drawing.Point(340, 3);
+            this.pictureBoxPrevColor.Name = "pictureBoxPrevColor";
+            this.pictureBoxPrevColor.Size = new System.Drawing.Size(27, 27);
+            this.pictureBoxPrevColor.TabIndex = 6;
+            this.pictureBoxPrevColor.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1267,15 +1294,16 @@
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhale)).EndInit();
             this.panelTools.ResumeLayout(false);
-            this.flowLayoutPanelTppls.ResumeLayout(false);
-            this.flowLayoutPanelTppls.PerformLayout();
+            this.panelTools.PerformLayout();
             this.flowLayoutPanelDelete.ResumeLayout(false);
             this.flowLayoutPanelDelete.PerformLayout();
             this.panelColors.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCurrentColor)).EndInit();
             this.panelPolygonSides.ResumeLayout(false);
             this.panelPolygonSides.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPrevColor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1374,9 +1402,11 @@
         private System.Windows.Forms.Label labelFillBucket;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelDelete;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelTppls;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.NumericUpDown numericUpDownForPolygon;
+        private System.Windows.Forms.Button buttonPipetka;
+        private System.Windows.Forms.PictureBox pictureBoxCurrentColor;
+        private System.Windows.Forms.PictureBox pictureBoxPrevColor;
     }
 }
 

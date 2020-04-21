@@ -305,5 +305,7 @@ namespace risovalka
             //Canvas.currentBitmap = tmpBitmap;
           
         }
+
+       
     }
 }
