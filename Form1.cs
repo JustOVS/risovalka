@@ -70,6 +70,8 @@ namespace risovalka
                 PointPolygon.last.Y = e.Y;
             }
             AbstractPainter.drawStartFinishFlag = false;
+
+           
         }
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
@@ -84,16 +86,11 @@ namespace risovalka
         private void buttonPalette_Click(object sender, EventArgs e)
         {
             ColorDialog MyDialog = new ColorDialog();
-
-            Brush.currentColor = Color.Black;
-            // расширенное окно для выбора цвета
             MyDialog.FullOpen = true;
-            // установка начального цвета для colorDialog
-            MyDialog.Color = Brush.currentColor;
-
+            
             if (MyDialog.ShowDialog() == DialogResult.Cancel)
                 return;
-            // установка цвета формы
+          
             Brush.currentColor = MyDialog.Color;
         }
 
@@ -143,22 +140,14 @@ namespace risovalka
 
         private void buttonPolygon1_Click(object sender, EventArgs e)
         {
-            panelPolygonSides.Visible = true;
+           AbstractPainter.drawSwitch = new Polygon(Convert.ToInt32(numericUpDownForPolygon.Value));
         }
 
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        private void numericUpDownForPolygon_ValueChanged(object sender, EventArgs e)
         {
-            if ((e.KeyChar >= '0') && (e.KeyChar <= '9'))
-            {
+            //Polygon.nSides = Convert.ToInt32 ( numericUpDownForPolygon.Value);
+            AbstractPainter.drawSwitch = new Polygon( Convert.ToInt32(numericUpDownForPolygon.Value));
 
-            }
-        }
-
-        private void buttonOkPanelPolygonSides_Click(object sender, EventArgs e)
-        {
-            Polygon.nSides = Convert.ToInt32(textBox1.Text);
-            panelPolygonSides.Visible = false;
-            AbstractPainter.drawSwitch = new Polygon();
         }
 
         private void buttonEraser_Click(object sender, EventArgs e)
@@ -237,6 +226,84 @@ namespace risovalka
                 PointPolygon.first.X = -1;
                 PointPolygon.first.Y = -1;
             }
+        }
+
+        private void buttonRed_Click(object sender, EventArgs e)
+        {
+            Brush.currentColor = buttonRed.BackColor;
+        }
+
+        private void buttonMagente_Click(object sender, EventArgs e)
+        {
+            Brush.currentColor = buttonMagente.BackColor;
+        }
+
+        private void buttonBrown_Click(object sender, EventArgs e)
+        {
+            Brush.currentColor = buttonBrown.BackColor;
+        }
+
+        private void buttonYellow_Click(object sender, EventArgs e)
+        {
+            Brush.currentColor = buttonYellow.BackColor;
+        }
+
+        private void buttonOrange_Click(object sender, EventArgs e)
+        {
+            Brush.currentColor = buttonOrange.BackColor;
+        }
+
+        private void buttonLightCoral_Click(object sender, EventArgs e)
+        {
+            Brush.currentColor = buttonLightCoral.BackColor;
+        }
+
+        private void buttonAqua_Click(object sender, EventArgs e)
+        {
+            Brush.currentColor = buttonAqua.BackColor;
+        }
+
+        private void buttonLightSkyBlue_Click(object sender, EventArgs e)
+        {
+            Brush.currentColor = buttonLightSkyBlue.BackColor;
+        }
+
+        private void buttonGreen_Click(object sender, EventArgs e)
+        {
+            Brush.currentColor = buttonGreen.BackColor;
+        }
+
+        private void buttonBlueViolet_Click(object sender, EventArgs e)
+        {
+            Brush.currentColor = buttonBlueViolet.BackColor;
+        }
+
+        private void buttonBlue_Click(object sender, EventArgs e)
+        {
+            Brush.currentColor = buttonBlue.BackColor;
+        }
+
+        private void buttonForestGreen_Click(object sender, EventArgs e)
+        {
+            Brush.currentColor = buttonForestGreen.BackColor;
+        }
+
+        private void buttonWhite_Click(object sender, EventArgs e)
+        {
+            Brush.currentColor = buttonWhite.BackColor;
+        }
+
+        private void buttonBlack_Click(object sender, EventArgs e)
+        {
+            Brush.currentColor = buttonBlack.BackColor;
+        }
+
+        private void pictureBox1_Resize(object sender, EventArgs e)
+        {
+            //Bitmap tmpBitmap = Canvas.currentBitmap;
+            //Canvas.currentBitmap = new Bitmap (pictureBox1.Width, pictureBox1.Height);
+            //Canvas.currentBitmap = tmpBitmap;
+          
         }
     }
 }
