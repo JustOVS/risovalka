@@ -75,12 +75,14 @@
             this.panelFigure = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelFiguresButtoms = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.numericUpDownForPolygon = new System.Windows.Forms.NumericUpDown();
+            this.buttonPolygon1 = new System.Windows.Forms.Button();
             this.buttonPolygon2 = new System.Windows.Forms.Button();
             this.buttonOval = new System.Windows.Forms.Button();
             this.buttonRightTriangle = new System.Windows.Forms.Button();
             this.buttonRectabgle = new System.Windows.Forms.Button();
             this.buttonCircle = new System.Windows.Forms.Button();
-            this.buttonPolygon1 = new System.Windows.Forms.Button();
             this.buttonTriangle = new System.Windows.Forms.Button();
             this.buttonSquare = new System.Windows.Forms.Button();
             this.panelSize = new System.Windows.Forms.Panel();
@@ -100,29 +102,27 @@
             this.buttonRedo = new System.Windows.Forms.Button();
             this.buttonBucket = new System.Windows.Forms.Button();
             this.panelColors = new System.Windows.Forms.Panel();
-            this.buttonBlack = new System.Windows.Forms.Button();
-            this.buttonWhite = new System.Windows.Forms.Button();
-            this.buttonForestGreen = new System.Windows.Forms.Button();
             this.buttonPalette = new System.Windows.Forms.Button();
+            this.buttonWhite = new System.Windows.Forms.Button();
+            this.buttonBlack = new System.Windows.Forms.Button();
+            this.buttonForestGreen = new System.Windows.Forms.Button();
             this.buttonLightSkyBlue = new System.Windows.Forms.Button();
-            this.buttonBlue = new System.Windows.Forms.Button();
-            this.buttonGreen = new System.Windows.Forms.Button();
-            this.buttonBlueViolet = new System.Windows.Forms.Button();
-            this.buttonLightCoral = new System.Windows.Forms.Button();
             this.buttonAqua = new System.Windows.Forms.Button();
             this.buttonOrange = new System.Windows.Forms.Button();
-            this.buttonYellow = new System.Windows.Forms.Button();
             this.buttonBrown = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.buttonMagente = new System.Windows.Forms.Button();
+            this.buttonGreen = new System.Windows.Forms.Button();
+            this.buttonLightCoral = new System.Windows.Forms.Button();
+            this.buttonBlue = new System.Windows.Forms.Button();
+            this.buttonYellow = new System.Windows.Forms.Button();
+            this.buttonBlueViolet = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.buttonRed = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.buttonOkPanelPolygonSides = new System.Windows.Forms.Button();
             this.panelPolygonSides = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.labelNumberOfAngles = new System.Windows.Forms.Label();
-            this.numericUpDownForPolygon = new System.Windows.Forms.NumericUpDown();
-            this.panel7 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -131,6 +131,8 @@
             this.panelSizesButton.SuspendLayout();
             this.panelFigure.SuspendLayout();
             this.panelFiguresButtoms.SuspendLayout();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownForPolygon)).BeginInit();
             this.panelSize.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -141,8 +143,6 @@
             this.panelColors.SuspendLayout();
             this.panelPolygonSides.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownForPolygon)).BeginInit();
-            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -160,6 +160,7 @@
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
+            this.pictureBox1.Resize += new System.EventHandler(this.pictureBox1_Resize);
             // 
             // menuStrip1
             // 
@@ -582,6 +583,56 @@
             this.panelFiguresButtoms.Size = new System.Drawing.Size(173, 147);
             this.panelFiguresButtoms.TabIndex = 13;
             // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel7.Controls.Add(this.numericUpDownForPolygon);
+            this.panel7.Controls.Add(this.buttonPolygon1);
+            this.panel7.Location = new System.Drawing.Point(63, 97);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(90, 40);
+            this.panel7.TabIndex = 7;
+            // 
+            // numericUpDownForPolygon
+            // 
+            this.numericUpDownForPolygon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.numericUpDownForPolygon.Location = new System.Drawing.Point(46, 12);
+            this.numericUpDownForPolygon.Maximum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.numericUpDownForPolygon.Minimum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDownForPolygon.Name = "numericUpDownForPolygon";
+            this.numericUpDownForPolygon.Size = new System.Drawing.Size(40, 20);
+            this.numericUpDownForPolygon.TabIndex = 6;
+            this.numericUpDownForPolygon.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDownForPolygon.ValueChanged += new System.EventHandler(this.numericUpDownForPolygon_ValueChanged);
+            // 
+            // buttonPolygon1
+            // 
+            this.buttonPolygon1.BackColor = System.Drawing.Color.LightBlue;
+            this.buttonPolygon1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonPolygon1.BackgroundImage")));
+            this.buttonPolygon1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonPolygon1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPolygon1.FlatAppearance.BorderSize = 0;
+            this.buttonPolygon1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPolygon1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonPolygon1.Location = new System.Drawing.Point(0, 0);
+            this.buttonPolygon1.Name = "buttonPolygon1";
+            this.buttonPolygon1.Size = new System.Drawing.Size(40, 40);
+            this.buttonPolygon1.TabIndex = 16;
+            this.buttonPolygon1.UseVisualStyleBackColor = false;
+            this.buttonPolygon1.Click += new System.EventHandler(this.buttonPolygon1_Click);
+            // 
             // buttonPolygon2
             // 
             this.buttonPolygon2.BackColor = System.Drawing.Color.LightBlue;
@@ -661,22 +712,6 @@
             this.buttonCircle.TabIndex = 16;
             this.buttonCircle.UseVisualStyleBackColor = false;
             this.buttonCircle.Click += new System.EventHandler(this.buttonCircle_Click);
-            // 
-            // buttonPolygon1
-            // 
-            this.buttonPolygon1.BackColor = System.Drawing.Color.LightBlue;
-            this.buttonPolygon1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonPolygon1.BackgroundImage")));
-            this.buttonPolygon1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonPolygon1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonPolygon1.FlatAppearance.BorderSize = 0;
-            this.buttonPolygon1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPolygon1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonPolygon1.Location = new System.Drawing.Point(0, 0);
-            this.buttonPolygon1.Name = "buttonPolygon1";
-            this.buttonPolygon1.Size = new System.Drawing.Size(40, 40);
-            this.buttonPolygon1.TabIndex = 16;
-            this.buttonPolygon1.UseVisualStyleBackColor = false;
-            this.buttonPolygon1.Click += new System.EventHandler(this.buttonPolygon1_Click);
             // 
             // buttonTriangle
             // 
@@ -926,47 +961,6 @@
             this.panelColors.Size = new System.Drawing.Size(181, 40);
             this.panelColors.TabIndex = 6;
             // 
-            // buttonBlack
-            // 
-            this.buttonBlack.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonBlack.BackColor = System.Drawing.Color.Black;
-            this.buttonBlack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonBlack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBlack.Location = new System.Drawing.Point(120, 20);
-            this.buttonBlack.Name = "buttonBlack";
-            this.buttonBlack.Size = new System.Drawing.Size(20, 20);
-            this.buttonBlack.TabIndex = 11;
-            this.buttonBlack.UseVisualStyleBackColor = false;
-            this.buttonBlack.Click += new System.EventHandler(this.buttonBlack_Click);
-            // 
-            // buttonWhite
-            // 
-            this.buttonWhite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.buttonWhite.BackColor = System.Drawing.Color.White;
-            this.buttonWhite.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonWhite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonWhite.Location = new System.Drawing.Point(120, 0);
-            this.buttonWhite.Name = "buttonWhite";
-            this.buttonWhite.Size = new System.Drawing.Size(20, 20);
-            this.buttonWhite.TabIndex = 12;
-            this.buttonWhite.UseVisualStyleBackColor = false;
-            this.buttonWhite.Click += new System.EventHandler(this.buttonWhite_Click);
-            // 
-            // buttonForestGreen
-            // 
-            this.buttonForestGreen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonForestGreen.BackColor = System.Drawing.Color.ForestGreen;
-            this.buttonForestGreen.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonForestGreen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonForestGreen.Location = new System.Drawing.Point(100, 0);
-            this.buttonForestGreen.Name = "buttonForestGreen";
-            this.buttonForestGreen.Size = new System.Drawing.Size(20, 20);
-            this.buttonForestGreen.TabIndex = 13;
-            this.buttonForestGreen.UseVisualStyleBackColor = false;
-            this.buttonForestGreen.Click += new System.EventHandler(this.buttonForestGreen_Click);
-            // 
             // buttonPalette
             // 
             this.buttonPalette.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -982,6 +976,47 @@
             this.buttonPalette.UseVisualStyleBackColor = true;
             this.buttonPalette.Click += new System.EventHandler(this.buttonPalette_Click);
             // 
+            // buttonWhite
+            // 
+            this.buttonWhite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.buttonWhite.BackColor = System.Drawing.Color.White;
+            this.buttonWhite.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonWhite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonWhite.Location = new System.Drawing.Point(120, 0);
+            this.buttonWhite.Name = "buttonWhite";
+            this.buttonWhite.Size = new System.Drawing.Size(20, 20);
+            this.buttonWhite.TabIndex = 12;
+            this.buttonWhite.UseVisualStyleBackColor = false;
+            this.buttonWhite.Click += new System.EventHandler(this.buttonWhite_Click);
+            // 
+            // buttonBlack
+            // 
+            this.buttonBlack.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonBlack.BackColor = System.Drawing.Color.Black;
+            this.buttonBlack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBlack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBlack.Location = new System.Drawing.Point(120, 20);
+            this.buttonBlack.Name = "buttonBlack";
+            this.buttonBlack.Size = new System.Drawing.Size(20, 20);
+            this.buttonBlack.TabIndex = 11;
+            this.buttonBlack.UseVisualStyleBackColor = false;
+            this.buttonBlack.Click += new System.EventHandler(this.buttonBlack_Click);
+            // 
+            // buttonForestGreen
+            // 
+            this.buttonForestGreen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonForestGreen.BackColor = System.Drawing.Color.ForestGreen;
+            this.buttonForestGreen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonForestGreen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonForestGreen.Location = new System.Drawing.Point(100, 0);
+            this.buttonForestGreen.Name = "buttonForestGreen";
+            this.buttonForestGreen.Size = new System.Drawing.Size(20, 20);
+            this.buttonForestGreen.TabIndex = 13;
+            this.buttonForestGreen.UseVisualStyleBackColor = false;
+            this.buttonForestGreen.Click += new System.EventHandler(this.buttonForestGreen_Click);
+            // 
             // buttonLightSkyBlue
             // 
             this.buttonLightSkyBlue.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -995,62 +1030,6 @@
             this.buttonLightSkyBlue.TabIndex = 15;
             this.buttonLightSkyBlue.UseVisualStyleBackColor = false;
             this.buttonLightSkyBlue.Click += new System.EventHandler(this.buttonLightSkyBlue_Click);
-            // 
-            // buttonBlue
-            // 
-            this.buttonBlue.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonBlue.BackColor = System.Drawing.Color.Blue;
-            this.buttonBlue.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonBlue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBlue.Location = new System.Drawing.Point(60, 20);
-            this.buttonBlue.Name = "buttonBlue";
-            this.buttonBlue.Size = new System.Drawing.Size(20, 20);
-            this.buttonBlue.TabIndex = 11;
-            this.buttonBlue.UseVisualStyleBackColor = false;
-            this.buttonBlue.Click += new System.EventHandler(this.buttonBlue_Click);
-            // 
-            // buttonGreen
-            // 
-            this.buttonGreen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonGreen.BackColor = System.Drawing.Color.Lime;
-            this.buttonGreen.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonGreen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonGreen.Location = new System.Drawing.Point(80, 20);
-            this.buttonGreen.Name = "buttonGreen";
-            this.buttonGreen.Size = new System.Drawing.Size(20, 20);
-            this.buttonGreen.TabIndex = 9;
-            this.buttonGreen.UseVisualStyleBackColor = false;
-            this.buttonGreen.Click += new System.EventHandler(this.buttonGreen_Click);
-            // 
-            // buttonBlueViolet
-            // 
-            this.buttonBlueViolet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonBlueViolet.BackColor = System.Drawing.Color.BlueViolet;
-            this.buttonBlueViolet.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonBlueViolet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBlueViolet.Location = new System.Drawing.Point(60, 0);
-            this.buttonBlueViolet.Name = "buttonBlueViolet";
-            this.buttonBlueViolet.Size = new System.Drawing.Size(20, 20);
-            this.buttonBlueViolet.TabIndex = 10;
-            this.buttonBlueViolet.UseVisualStyleBackColor = false;
-            this.buttonBlueViolet.Click += new System.EventHandler(this.buttonBlueViolet_Click);
-            // 
-            // buttonLightCoral
-            // 
-            this.buttonLightCoral.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonLightCoral.BackColor = System.Drawing.Color.LightCoral;
-            this.buttonLightCoral.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonLightCoral.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLightCoral.Location = new System.Drawing.Point(0, 19);
-            this.buttonLightCoral.Name = "buttonLightCoral";
-            this.buttonLightCoral.Size = new System.Drawing.Size(20, 20);
-            this.buttonLightCoral.TabIndex = 14;
-            this.buttonLightCoral.UseVisualStyleBackColor = false;
-            this.buttonLightCoral.Click += new System.EventHandler(this.buttonLightCoral_Click);
             // 
             // buttonAqua
             // 
@@ -1080,20 +1059,6 @@
             this.buttonOrange.UseVisualStyleBackColor = false;
             this.buttonOrange.Click += new System.EventHandler(this.buttonOrange_Click);
             // 
-            // buttonYellow
-            // 
-            this.buttonYellow.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonYellow.BackColor = System.Drawing.Color.Yellow;
-            this.buttonYellow.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonYellow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonYellow.Location = new System.Drawing.Point(40, 0);
-            this.buttonYellow.Name = "buttonYellow";
-            this.buttonYellow.Size = new System.Drawing.Size(20, 20);
-            this.buttonYellow.TabIndex = 12;
-            this.buttonYellow.UseVisualStyleBackColor = false;
-            this.buttonYellow.Click += new System.EventHandler(this.buttonYellow_Click);
-            // 
             // buttonBrown
             // 
             this.buttonBrown.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -1106,15 +1071,6 @@
             this.buttonBrown.TabIndex = 13;
             this.buttonBrown.UseVisualStyleBackColor = false;
             this.buttonBrown.Click += new System.EventHandler(this.buttonBrown_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(0, 20);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(0, 0);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // buttonMagente
             // 
@@ -1129,6 +1085,85 @@
             this.buttonMagente.TabIndex = 12;
             this.buttonMagente.UseVisualStyleBackColor = false;
             this.buttonMagente.Click += new System.EventHandler(this.buttonMagente_Click);
+            // 
+            // buttonGreen
+            // 
+            this.buttonGreen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonGreen.BackColor = System.Drawing.Color.Lime;
+            this.buttonGreen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonGreen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonGreen.Location = new System.Drawing.Point(80, 20);
+            this.buttonGreen.Name = "buttonGreen";
+            this.buttonGreen.Size = new System.Drawing.Size(20, 20);
+            this.buttonGreen.TabIndex = 9;
+            this.buttonGreen.UseVisualStyleBackColor = false;
+            this.buttonGreen.Click += new System.EventHandler(this.buttonGreen_Click);
+            // 
+            // buttonLightCoral
+            // 
+            this.buttonLightCoral.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonLightCoral.BackColor = System.Drawing.Color.LightCoral;
+            this.buttonLightCoral.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonLightCoral.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLightCoral.Location = new System.Drawing.Point(0, 19);
+            this.buttonLightCoral.Name = "buttonLightCoral";
+            this.buttonLightCoral.Size = new System.Drawing.Size(20, 20);
+            this.buttonLightCoral.TabIndex = 14;
+            this.buttonLightCoral.UseVisualStyleBackColor = false;
+            this.buttonLightCoral.Click += new System.EventHandler(this.buttonLightCoral_Click);
+            // 
+            // buttonBlue
+            // 
+            this.buttonBlue.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonBlue.BackColor = System.Drawing.Color.Blue;
+            this.buttonBlue.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBlue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBlue.Location = new System.Drawing.Point(60, 20);
+            this.buttonBlue.Name = "buttonBlue";
+            this.buttonBlue.Size = new System.Drawing.Size(20, 20);
+            this.buttonBlue.TabIndex = 11;
+            this.buttonBlue.UseVisualStyleBackColor = false;
+            this.buttonBlue.Click += new System.EventHandler(this.buttonBlue_Click);
+            // 
+            // buttonYellow
+            // 
+            this.buttonYellow.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonYellow.BackColor = System.Drawing.Color.Yellow;
+            this.buttonYellow.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonYellow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonYellow.Location = new System.Drawing.Point(40, 0);
+            this.buttonYellow.Name = "buttonYellow";
+            this.buttonYellow.Size = new System.Drawing.Size(20, 20);
+            this.buttonYellow.TabIndex = 12;
+            this.buttonYellow.UseVisualStyleBackColor = false;
+            this.buttonYellow.Click += new System.EventHandler(this.buttonYellow_Click);
+            // 
+            // buttonBlueViolet
+            // 
+            this.buttonBlueViolet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonBlueViolet.BackColor = System.Drawing.Color.BlueViolet;
+            this.buttonBlueViolet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBlueViolet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBlueViolet.Location = new System.Drawing.Point(60, 0);
+            this.buttonBlueViolet.Name = "buttonBlueViolet";
+            this.buttonBlueViolet.Size = new System.Drawing.Size(20, 20);
+            this.buttonBlueViolet.TabIndex = 10;
+            this.buttonBlueViolet.UseVisualStyleBackColor = false;
+            this.buttonBlueViolet.Click += new System.EventHandler(this.buttonBlueViolet_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(0, 20);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(0, 0);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // buttonRed
             // 
@@ -1149,7 +1184,6 @@
             this.textBox1.Size = new System.Drawing.Size(85, 20);
             this.textBox1.TabIndex = 6;
             this.textBox1.VisibleChanged += new System.EventHandler(this.buttonPolygon1_Click);
-           
             // 
             // buttonOkPanelPolygonSides
             // 
@@ -1165,7 +1199,6 @@
             this.buttonOkPanelPolygonSides.Text = "ok";
             this.buttonOkPanelPolygonSides.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.buttonOkPanelPolygonSides.UseVisualStyleBackColor = false;
-           
             // 
             // panelPolygonSides
             // 
@@ -1197,40 +1230,6 @@
             this.labelNumberOfAngles.TabIndex = 0;
             this.labelNumberOfAngles.Text = "Введите количество углов";
             // 
-            // numericUpDownForPolygon
-            // 
-            this.numericUpDownForPolygon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.numericUpDownForPolygon.Location = new System.Drawing.Point(46, 12);
-            this.numericUpDownForPolygon.Maximum = new decimal(new int[] {
-            30,
-            0,
-            0,
-            0});
-            this.numericUpDownForPolygon.Minimum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.numericUpDownForPolygon.Name = "numericUpDownForPolygon";
-            this.numericUpDownForPolygon.Size = new System.Drawing.Size(40, 20);
-            this.numericUpDownForPolygon.TabIndex = 6;
-            this.numericUpDownForPolygon.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.numericUpDownForPolygon.ValueChanged += new System.EventHandler(this.numericUpDownForPolygon_ValueChanged);
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel7.Controls.Add(this.numericUpDownForPolygon);
-            this.panel7.Controls.Add(this.buttonPolygon1);
-            this.panel7.Location = new System.Drawing.Point(63, 97);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(90, 40);
-            this.panel7.TabIndex = 7;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1259,6 +1258,8 @@
             this.panelFigure.ResumeLayout(false);
             this.panelFigure.PerformLayout();
             this.panelFiguresButtoms.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownForPolygon)).EndInit();
             this.panelSize.ResumeLayout(false);
             this.panelSize.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -1275,8 +1276,6 @@
             this.panelPolygonSides.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownForPolygon)).EndInit();
-            this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -10,8 +10,21 @@ namespace risovalka
 {
     public class Polygon : AbstractPainter
     {
-        public static int nSides =7 ;
+        public static int nSides ;
         int[] points = new int[2* nSides];
+
+        //public Polygon ()
+        //{
+            
+        //}
+
+        public Polygon (int n)
+        {
+            nSides = n;
+            points = new int[2 * nSides];
+        }
+
+
         public override void DrawDynamicFigure(MouseEventArgs e, PictureBox pictureBox)
         {
             if (AbstractPainter.drawStartFinishFlag == true)

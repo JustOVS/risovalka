@@ -70,6 +70,8 @@ namespace risovalka
                 PointPolygon.last.Y = e.Y;
             }
             AbstractPainter.drawStartFinishFlag = false;
+
+           
         }
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
@@ -138,14 +140,14 @@ namespace risovalka
 
         private void buttonPolygon1_Click(object sender, EventArgs e)
         {
-            AbstractPainter.drawSwitch = new Polygon();
+           AbstractPainter.drawSwitch = new Polygon(Convert.ToInt32(numericUpDownForPolygon.Value));
         }
-
-        
 
         private void numericUpDownForPolygon_ValueChanged(object sender, EventArgs e)
         {
-           // Polygon.nSides = Convert.ToInt32 ( numericUpDownForPolygon.Value);
+            //Polygon.nSides = Convert.ToInt32 ( numericUpDownForPolygon.Value);
+            AbstractPainter.drawSwitch = new Polygon( Convert.ToInt32(numericUpDownForPolygon.Value));
+
         }
 
         private void buttonEraser_Click(object sender, EventArgs e)
@@ -296,6 +298,12 @@ namespace risovalka
             Brush.currentColor = buttonBlack.BackColor;
         }
 
-       
+        private void pictureBox1_Resize(object sender, EventArgs e)
+        {
+            //Bitmap tmpBitmap = Canvas.currentBitmap;
+            //Canvas.currentBitmap = new Bitmap (pictureBox1.Width, pictureBox1.Height);
+            //Canvas.currentBitmap = tmpBitmap;
+          
+        }
     }
 }
