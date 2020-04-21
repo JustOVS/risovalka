@@ -10,7 +10,7 @@ namespace risovalka
 {
     public class Polygon : AbstractPainter
     {
-        public static int nSides ;
+        public static int nSides =7 ;
         int[] points = new int[2* nSides];
         public override void DrawDynamicFigure(MouseEventArgs e, PictureBox pictureBox)
         {
@@ -28,16 +28,12 @@ namespace risovalka
 
         public void DrawFigure(int x1, int y1, int x2, int y2, PictureBox pictureBox, Color currentColor)
         { 
-            if (nSides <3)
-            {
-                nSides = 3;
-            }
 
             double angle = 90; int i = 0;
             int radius = (int)(Math.Round(Math.Sqrt(Math.Pow(((double)x2 - (double)AbstractPainter.x1), 2) + Math.Pow(((double)y2 - (double)AbstractPainter.y1), 2))));
           
             int j = 0;
-            while (i < nSides )
+            while (i < nSides)
             {
                 points[j] = AbstractPainter.x1 + (int)(Math.Round(Math.Cos(angle / 180 * Math.PI) * radius));
                 j++;

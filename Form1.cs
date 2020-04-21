@@ -138,22 +138,14 @@ namespace risovalka
 
         private void buttonPolygon1_Click(object sender, EventArgs e)
         {
-            panelPolygonSides.Visible = true;
-        }
-
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((e.KeyChar >= '0') && (e.KeyChar <= '9'))
-            {
-
-            }
-        }
-
-        private void buttonOkPanelPolygonSides_Click(object sender, EventArgs e)
-        {
-            Polygon.nSides = Convert.ToInt32(textBox1.Text);
-            panelPolygonSides.Visible = false;
             AbstractPainter.drawSwitch = new Polygon();
+        }
+
+        
+
+        private void numericUpDownForPolygon_ValueChanged(object sender, EventArgs e)
+        {
+           // Polygon.nSides = Convert.ToInt32 ( numericUpDownForPolygon.Value);
         }
 
         private void buttonEraser_Click(object sender, EventArgs e)

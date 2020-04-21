@@ -121,6 +121,8 @@
             this.panelPolygonSides = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.labelNumberOfAngles = new System.Windows.Forms.Label();
+            this.numericUpDownForPolygon = new System.Windows.Forms.NumericUpDown();
+            this.panel7 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -139,6 +141,8 @@
             this.panelColors.SuspendLayout();
             this.panelPolygonSides.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownForPolygon)).BeginInit();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -565,12 +569,12 @@
             // panelFiguresButtoms
             // 
             this.panelFiguresButtoms.BackColor = System.Drawing.Color.LightBlue;
+            this.panelFiguresButtoms.Controls.Add(this.panel7);
             this.panelFiguresButtoms.Controls.Add(this.buttonPolygon2);
             this.panelFiguresButtoms.Controls.Add(this.buttonOval);
             this.panelFiguresButtoms.Controls.Add(this.buttonRightTriangle);
             this.panelFiguresButtoms.Controls.Add(this.buttonRectabgle);
             this.panelFiguresButtoms.Controls.Add(this.buttonCircle);
-            this.panelFiguresButtoms.Controls.Add(this.buttonPolygon1);
             this.panelFiguresButtoms.Controls.Add(this.buttonTriangle);
             this.panelFiguresButtoms.Controls.Add(this.buttonSquare);
             this.panelFiguresButtoms.Location = new System.Drawing.Point(0, 195);
@@ -587,7 +591,7 @@
             this.buttonPolygon2.FlatAppearance.BorderSize = 0;
             this.buttonPolygon2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPolygon2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonPolygon2.Location = new System.Drawing.Point(63, 98);
+            this.buttonPolygon2.Location = new System.Drawing.Point(12, 97);
             this.buttonPolygon2.Name = "buttonPolygon2";
             this.buttonPolygon2.Size = new System.Drawing.Size(40, 40);
             this.buttonPolygon2.TabIndex = 17;
@@ -603,7 +607,7 @@
             this.buttonOval.FlatAppearance.BorderSize = 0;
             this.buttonOval.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOval.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonOval.Location = new System.Drawing.Point(12, 98);
+            this.buttonOval.Location = new System.Drawing.Point(63, 52);
             this.buttonOval.Name = "buttonOval";
             this.buttonOval.Size = new System.Drawing.Size(40, 40);
             this.buttonOval.TabIndex = 16;
@@ -619,7 +623,7 @@
             this.buttonRightTriangle.FlatAppearance.BorderSize = 0;
             this.buttonRightTriangle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRightTriangle.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonRightTriangle.Location = new System.Drawing.Point(63, 52);
+            this.buttonRightTriangle.Location = new System.Drawing.Point(63, 6);
             this.buttonRightTriangle.Name = "buttonRightTriangle";
             this.buttonRightTriangle.Size = new System.Drawing.Size(40, 40);
             this.buttonRightTriangle.TabIndex = 16;
@@ -635,7 +639,7 @@
             this.buttonRectabgle.FlatAppearance.BorderSize = 0;
             this.buttonRectabgle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRectabgle.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonRectabgle.Location = new System.Drawing.Point(63, 6);
+            this.buttonRectabgle.Location = new System.Drawing.Point(113, 52);
             this.buttonRectabgle.Name = "buttonRectabgle";
             this.buttonRectabgle.Size = new System.Drawing.Size(40, 40);
             this.buttonRectabgle.TabIndex = 16;
@@ -667,7 +671,7 @@
             this.buttonPolygon1.FlatAppearance.BorderSize = 0;
             this.buttonPolygon1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPolygon1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonPolygon1.Location = new System.Drawing.Point(113, 52);
+            this.buttonPolygon1.Location = new System.Drawing.Point(0, 0);
             this.buttonPolygon1.Name = "buttonPolygon1";
             this.buttonPolygon1.Size = new System.Drawing.Size(40, 40);
             this.buttonPolygon1.TabIndex = 16;
@@ -1145,7 +1149,7 @@
             this.textBox1.Size = new System.Drawing.Size(85, 20);
             this.textBox1.TabIndex = 6;
             this.textBox1.VisibleChanged += new System.EventHandler(this.buttonPolygon1_Click);
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+           
             // 
             // buttonOkPanelPolygonSides
             // 
@@ -1161,7 +1165,7 @@
             this.buttonOkPanelPolygonSides.Text = "ok";
             this.buttonOkPanelPolygonSides.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.buttonOkPanelPolygonSides.UseVisualStyleBackColor = false;
-            this.buttonOkPanelPolygonSides.Click += new System.EventHandler(this.buttonOkPanelPolygonSides_Click);
+           
             // 
             // panelPolygonSides
             // 
@@ -1169,11 +1173,10 @@
             this.panelPolygonSides.Controls.Add(this.buttonOkPanelPolygonSides);
             this.panelPolygonSides.Controls.Add(this.textBox1);
             this.panelPolygonSides.Controls.Add(this.panel5);
-            this.panelPolygonSides.Location = new System.Drawing.Point(393, 199);
+            this.panelPolygonSides.Location = new System.Drawing.Point(200, 199);
             this.panelPolygonSides.Name = "panelPolygonSides";
             this.panelPolygonSides.Size = new System.Drawing.Size(186, 82);
             this.panelPolygonSides.TabIndex = 8;
-            this.panelPolygonSides.Visible = false;
             // 
             // panel5
             // 
@@ -1193,6 +1196,40 @@
             this.labelNumberOfAngles.Size = new System.Drawing.Size(166, 16);
             this.labelNumberOfAngles.TabIndex = 0;
             this.labelNumberOfAngles.Text = "Введите количество углов";
+            // 
+            // numericUpDownForPolygon
+            // 
+            this.numericUpDownForPolygon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.numericUpDownForPolygon.Location = new System.Drawing.Point(46, 12);
+            this.numericUpDownForPolygon.Maximum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.numericUpDownForPolygon.Minimum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDownForPolygon.Name = "numericUpDownForPolygon";
+            this.numericUpDownForPolygon.Size = new System.Drawing.Size(40, 20);
+            this.numericUpDownForPolygon.TabIndex = 6;
+            this.numericUpDownForPolygon.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDownForPolygon.ValueChanged += new System.EventHandler(this.numericUpDownForPolygon_ValueChanged);
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel7.Controls.Add(this.numericUpDownForPolygon);
+            this.panel7.Controls.Add(this.buttonPolygon1);
+            this.panel7.Location = new System.Drawing.Point(63, 97);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(90, 40);
+            this.panel7.TabIndex = 7;
             // 
             // Form1
             // 
@@ -1238,6 +1275,8 @@
             this.panelPolygonSides.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownForPolygon)).EndInit();
+            this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1337,6 +1376,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelDelete;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelTppls;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.NumericUpDown numericUpDownForPolygon;
     }
 }
 
