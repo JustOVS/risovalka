@@ -84,16 +84,11 @@ namespace risovalka
         private void buttonPalette_Click(object sender, EventArgs e)
         {
             ColorDialog MyDialog = new ColorDialog();
-
-            Brush.currentColor = Color.Black;
-            // расширенное окно для выбора цвета
             MyDialog.FullOpen = true;
-            // установка начального цвета для colorDialog
-            MyDialog.Color = Brush.currentColor;
-
+            
             if (MyDialog.ShowDialog() == DialogResult.Cancel)
                 return;
-            // установка цвета формы
+          
             Brush.currentColor = MyDialog.Color;
         }
 
@@ -238,5 +233,77 @@ namespace risovalka
                 PointPolygon.first.Y = -1;
             }
         }
+
+        private void buttonRed_Click(object sender, EventArgs e)
+        {
+            Brush.currentColor = buttonRed.BackColor;
+        }
+
+        private void buttonMagente_Click(object sender, EventArgs e)
+        {
+            Brush.currentColor = buttonMagente.BackColor;
+        }
+
+        private void buttonBrown_Click(object sender, EventArgs e)
+        {
+            Brush.currentColor = buttonBrown.BackColor;
+        }
+
+        private void buttonYellow_Click(object sender, EventArgs e)
+        {
+            Brush.currentColor = buttonYellow.BackColor;
+        }
+
+        private void buttonOrange_Click(object sender, EventArgs e)
+        {
+            Brush.currentColor = buttonOrange.BackColor;
+        }
+
+        private void buttonLightCoral_Click(object sender, EventArgs e)
+        {
+            Brush.currentColor = buttonLightCoral.BackColor;
+        }
+
+        private void buttonAqua_Click(object sender, EventArgs e)
+        {
+            Brush.currentColor = buttonAqua.BackColor;
+        }
+
+        private void buttonLightSkyBlue_Click(object sender, EventArgs e)
+        {
+            Brush.currentColor = buttonLightSkyBlue.BackColor;
+        }
+
+        private void buttonGreen_Click(object sender, EventArgs e)
+        {
+            Brush.currentColor = buttonGreen.BackColor;
+        }
+
+        private void buttonBlueViolet_Click(object sender, EventArgs e)
+        {
+            Brush.currentColor = buttonBlueViolet.BackColor;
+        }
+
+        private void buttonBlue_Click(object sender, EventArgs e)
+        {
+            Brush.currentColor = buttonBlue.BackColor;
+        }
+
+        private void buttonForestGreen_Click(object sender, EventArgs e)
+        {
+            Brush.currentColor = buttonForestGreen.BackColor;
+        }
+
+        private void buttonWhite_Click(object sender, EventArgs e)
+        {
+            Brush.currentColor = buttonWhite.BackColor;
+        }
+
+        private void buttonBlack_Click(object sender, EventArgs e)
+        {
+            Brush.currentColor = buttonBlack.BackColor;
+        }
+
+       
     }
 }
