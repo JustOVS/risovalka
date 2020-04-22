@@ -12,6 +12,7 @@ namespace risovalka
 {
     public partial class Form1 : Form
     {
+        bool fullFillingFlag = false;
         public Form1()
         {
             InitializeComponent();
@@ -34,21 +35,29 @@ namespace risovalka
             AbstractPainter.x1 = e.X;
             AbstractPainter.y1 = e.Y;
             AbstractPainter.drawStartFinishFlag = true;
-            Canvas.tmpBitmap = new Bitmap (Canvas.currentBitmap);
+            Canvas.tmpBitmap = new Bitmap(Canvas.currentBitmap);
             Canvas.AddToTmp();
-            if (PointPolygon.first.X != -1 && PointPolygon.first.Y != -1) //&& e.Button == MouseButtons.Left && e.Clicks == 1
+            if (fullFillingFlag == true)
             {
-                
-                AbstractPainter.DrawLine(PointPolygon.last.X, PointPolygon.last.Y, e.X, e.Y, pictureBox1, Brush.currentColor);
-                pictureBox1.Image = Canvas.currentBitmap;
-                
+                new FullFilling().Filling(e.X, e.Y, pictureBox1);
             }
-            else if (AbstractPainter.drawSwitch.GetType() == typeof(PointPolygon))
+            else
             {
-                PointPolygon.first.X = e.X;
-                PointPolygon.first.Y = e.Y;
-                PointPolygon.last.X = e.X;
-                PointPolygon.last.Y = e.Y;
+                
+                if (PointPolygon.first.X != -1 && PointPolygon.first.Y != -1) //&& e.Button == MouseButtons.Left && e.Clicks == 1
+                {
+
+                    AbstractPainter.DrawLine(PointPolygon.last.X, PointPolygon.last.Y, e.X, e.Y, pictureBox1, Brush.currentColor);
+                    pictureBox1.Image = Canvas.currentBitmap;
+
+                }
+                else if (AbstractPainter.drawSwitch.GetType() == typeof(PointPolygon))
+                {
+                    PointPolygon.first.X = e.X;
+                    PointPolygon.first.Y = e.Y;
+                    PointPolygon.last.X = e.X;
+                    PointPolygon.last.Y = e.Y;
+                }
             }
 
         }
@@ -114,33 +123,39 @@ namespace risovalka
 
         private void buttonPencile_Click(object sender, EventArgs e)
         {
+            fullFillingFlag = false;
             AbstractPainter.drawSwitch = new Line ();
         }
 
 
         private void buttonSquare_Click(object sender, EventArgs e)
         {
+            fullFillingFlag = false;
             AbstractPainter.drawSwitch = new Square();
         }
 
         private void buttonRectabgle_Click(object sender, EventArgs e)
         {
+            fullFillingFlag = false;
             AbstractPainter.drawSwitch = new Rectangle();
         }
 
         private void buttonTriangle_Click(object sender, EventArgs e)
         {
+            fullFillingFlag = false;
             AbstractPainter.drawSwitch = new IsoscelesTriangle ();
         }
 
         private void buttonRightTriangle_Click(object sender, EventArgs e)
         {
+            fullFillingFlag = false;
             AbstractPainter.drawSwitch = new RectangleTriangle ();
         }
 
         private void buttonPolygon1_Click(object sender, EventArgs e)
         {
-           AbstractPainter.drawSwitch = new Polygon(Convert.ToInt32(numericUpDownForPolygon.Value));
+            fullFillingFlag = false;
+            AbstractPainter.drawSwitch = new Polygon(Convert.ToInt32(numericUpDownForPolygon.Value));
         }
 
         private void numericUpDownForPolygon_ValueChanged(object sender, EventArgs e)
@@ -152,6 +167,7 @@ namespace risovalka
 
         private void buttonEraser_Click(object sender, EventArgs e)
         {
+            fullFillingFlag = false;
             AbstractPainter.drawSwitch = new Eraser();
         }
 
@@ -205,16 +221,19 @@ namespace risovalka
 
         private void buttonCircle_Click(object sender, EventArgs e)
         {
+            fullFillingFlag = false;
             AbstractPainter.drawSwitch = new Circle();
         }
 
         private void buttonOval_Click(object sender, EventArgs e)
         {
+            fullFillingFlag = false;
             AbstractPainter.drawSwitch = new Ellipse();
         }
 
         private void buttonPolygon2_Click(object sender, EventArgs e)
         {
+            fullFillingFlag = false;
             AbstractPainter.drawSwitch = new PointPolygon();
         }
 
@@ -306,6 +325,9 @@ namespace risovalka
           
         }
 
-       
+        private void button1_Click(object sender, EventArgs e)
+        {
+            fullFillingFlag = true;
+        }
     }
 }
