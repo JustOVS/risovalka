@@ -79,7 +79,6 @@ namespace risovalka
             }
             AbstractPainter.drawStartFinishFlag = false;
             Brush.takePipette = false;
-
            
         }
 
@@ -327,14 +326,19 @@ namespace risovalka
             Brush.currentColor = buttonBlack.BackColor;
         }
 
-        private void pictureBox1_Resize(object sender, EventArgs e)
+       
+
+        private void Form1_ResizeEnd(object sender, EventArgs e)
         {
-            //Bitmap tmpBitmap = Canvas.currentBitmap;
-            //Canvas.currentBitmap = new Bitmap (pictureBox1.Width, pictureBox1.Height);
-            //Canvas.currentBitmap = tmpBitmap;
-          
+            Bitmap tmpBitmap = Canvas.currentBitmap;
+            Canvas.currentBitmap = new Bitmap (pictureBox1.Width, pictureBox1.Height);
+            Canvas.currentBitmap = tmpBitmap;
         }
 
-       
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            Bitmap tmpBitmap = Canvas.currentBitmap;
+            Canvas.currentBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+        }
     }
 }
