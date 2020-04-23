@@ -20,6 +20,7 @@ namespace risovalka
         public static bool shift = false;
         //void DrawFigure(int x1, int y1, int x2, int y2, PictureBox pictureBox);
         public abstract void DrawDynamicFigure(MouseEventArgs e, PictureBox pictureBox);
+        public static Canvas apCanvas = Canvas.GetCanvas;
 
         public static void DrawLine(int x1, int y1, int x2, int y2, PictureBox pictureBox, Color currentColor)
         {
@@ -36,7 +37,7 @@ namespace risovalka
 
                     //Canvas.DrawPixel(x1, y1, Color.Red);
                     Brush.Pen(x1, y1, currentColor);
-                    pictureBox.Image = Canvas.currentBitmap;
+                    pictureBox.Image = apCanvas.currentBitmap;
                 }
 
                 else
@@ -52,7 +53,7 @@ namespace risovalka
                     {
                         //Canvas.DrawPixel((int)x, (int)y, Color.Red);
                         Brush.Pen((int)x, (int)y, currentColor);
-                        pictureBox.Image = Canvas.currentBitmap;
+                        pictureBox.Image = apCanvas.currentBitmap;
 
                         x += dx;
                         y += dy;

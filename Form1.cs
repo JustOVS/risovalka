@@ -12,6 +12,7 @@ namespace risovalka
 {
     public partial class Form1 : Form
     {
+        public Canvas formCanvas = Canvas.GetCanvas;
         public Form1()
         {
             InitializeComponent();
@@ -25,8 +26,8 @@ namespace risovalka
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Canvas.currentBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
-            Canvas.tmpBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+            formCanvas.currentBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+            formCanvas.tmpBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
         }
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
@@ -34,13 +35,13 @@ namespace risovalka
             AbstractPainter.x1 = e.X;
             AbstractPainter.y1 = e.Y;
             AbstractPainter.drawStartFinishFlag = true;
-            Canvas.tmpBitmap = new Bitmap (Canvas.currentBitmap);
-            Canvas.AddToTmp();
+            formCanvas.tmpBitmap = new Bitmap (formCanvas.currentBitmap);
+            formCanvas.AddToTmp();
             if (PointPolygon.first.X != -1 && PointPolygon.first.Y != -1) //&& e.Button == MouseButtons.Left && e.Clicks == 1
             {
                 
                 AbstractPainter.DrawLine(PointPolygon.last.X, PointPolygon.last.Y, e.X, e.Y, pictureBox1, Brush.currentColor);
-                pictureBox1.Image = Canvas.currentBitmap;
+                pictureBox1.Image = formCanvas.currentBitmap;
                 
             }
             else if (AbstractPainter.drawSwitch.GetType() == typeof(PointPolygon))
@@ -59,7 +60,7 @@ namespace risovalka
             
              if (Math.Abs(e.X - PointPolygon.first.X) < 10 && Math.Abs(e.Y - PointPolygon.first.Y) < 10 && PointPolygon.first.X != -1)
             {
-                Canvas.currentBitmap = new Bitmap(Canvas.tmpBitmap);
+                formCanvas.currentBitmap = new Bitmap(formCanvas.tmpBitmap);
                 AbstractPainter.DrawLine(PointPolygon.last.X, PointPolygon.last.Y, PointPolygon.first.X, PointPolygon.first.Y, pictureBox1, Brush.currentColor);
                 PointPolygon.first.X = -1;
                 PointPolygon.first.Y = -1;
@@ -157,17 +158,17 @@ namespace risovalka
 
         private void buttonBucket_Click(object sender, EventArgs e)
         {
-            Canvas.Clear(pictureBox1 );
+            formCanvas.Clear(pictureBox1 );
         }
 
         private void buttonUndo_Click(object sender, EventArgs e)
         {
-            Canvas.Undo(pictureBox1);
+            formCanvas.Undo(pictureBox1);
         }
 
         private void buttonRedo_Click(object sender, EventArgs e)
         {
-            Canvas.Redo(pictureBox1);
+            formCanvas.Redo(pictureBox1);
         }
 
         private void pictureBox1_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)

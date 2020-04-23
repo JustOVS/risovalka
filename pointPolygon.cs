@@ -18,9 +18,9 @@ namespace risovalka
             if (AbstractPainter.drawStartFinishFlag == true)
             {
                 
-                    Canvas.currentBitmap = new Bitmap(Canvas.tmpBitmap);
+                    apCanvas.currentBitmap = new Bitmap(apCanvas.tmpBitmap);
                     AbstractPainter.DrawLine(last.X, last.Y, e.X, e.Y, pictureBox, Brush.currentColor);
-                    pictureBox.Image = Canvas.currentBitmap;
+                    pictureBox.Image = apCanvas.currentBitmap;
                     
 
                 

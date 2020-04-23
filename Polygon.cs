@@ -30,10 +30,10 @@ namespace risovalka
             if (AbstractPainter.drawStartFinishFlag == true)
             {
 
-                Canvas.currentBitmap = new Bitmap(Canvas.tmpBitmap);
+                apCanvas.currentBitmap = new Bitmap(apCanvas.tmpBitmap);
                 DrawFigure(AbstractPainter.x1, AbstractPainter.y1, e.X, e.Y, pictureBox, Brush.currentColor);
 
-                pictureBox.Image = Canvas.currentBitmap;
+                pictureBox.Image = apCanvas.currentBitmap;
 
             }
 
