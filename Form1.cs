@@ -27,6 +27,7 @@ namespace risovalka
         {
             Canvas.currentBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             Canvas.tmpBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+            pictureBoxCurrentColor.BackColor = Color.Black;
         }
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
@@ -50,6 +51,8 @@ namespace risovalka
                 PointPolygon.last.X = e.X;
                 PointPolygon.last.Y = e.Y;
             }
+
+            
 
         }
 
@@ -79,6 +82,9 @@ namespace risovalka
             AbstractPainter.drawSwitch.DrawDynamicFigure(e, pictureBox1);
             //Brush.DrawMouseLine(e, pictureBox1);
             //IPainter //painter.DrawDymanicFigure(e, picturebox1);
+
+            //pictureBoxPrevColor.BackColor = pictureBoxCurrentColor.BackColor;
+            pictureBoxCurrentColor.BackColor = Brush.currentColor;
         }
 
        
@@ -92,6 +98,16 @@ namespace risovalka
                 return;
           
             Brush.currentColor = MyDialog.Color;
+        }
+
+        private void pictureBoxCurrentColor_Click(object sender, EventArgs e)
+        {
+            Brush.currentColor = pictureBoxCurrentColor.BackColor;
+        }
+
+        private void pictureBoxPrevColor_Click(object sender, EventArgs e)
+        {
+            Brush.currentColor = pictureBoxPrevColor.BackColor;
         }
 
         private void buttonSize1_Click(object sender, EventArgs e)
@@ -306,6 +322,6 @@ namespace risovalka
           
         }
 
-       
+        
     }
 }
