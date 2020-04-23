@@ -164,7 +164,6 @@
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
-           
             // 
             // menuStrip1
             // 
@@ -207,7 +206,7 @@
             this.newToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
             this.newToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.newToolStripMenuItem.Text = "&New";
             // 
             // openToolStripMenuItem
@@ -216,13 +215,13 @@
             this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.openToolStripMenuItem.Text = "&Open";
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(181, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(143, 6);
             // 
             // saveToolStripMenuItem
             // 
@@ -230,19 +229,19 @@
             this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.saveToolStripMenuItem.Text = "&Save";
             // 
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.saveAsToolStripMenuItem.Text = "Save &As";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(181, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(143, 6);
             // 
             // printToolStripMenuItem
             // 
@@ -250,7 +249,7 @@
             this.printToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
             this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.printToolStripMenuItem.Text = "&Print";
             // 
             // printPreviewToolStripMenuItem
@@ -258,18 +257,18 @@
             this.printPreviewToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("printPreviewToolStripMenuItem.Image")));
             this.printPreviewToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.printPreviewToolStripMenuItem.Name = "printPreviewToolStripMenuItem";
-            this.printPreviewToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.printPreviewToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.printPreviewToolStripMenuItem.Text = "Print Pre&view";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(181, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(143, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             // 
             // editToolStripMenuItem
@@ -291,20 +290,20 @@
             // 
             this.UndoEdit.Name = "UndoEdit";
             this.UndoEdit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
-            this.UndoEdit.Size = new System.Drawing.Size(184, 26);
+            this.UndoEdit.Size = new System.Drawing.Size(144, 22);
             this.UndoEdit.Text = "&Undo";
             // 
             // ReduEdit
             // 
             this.ReduEdit.Name = "ReduEdit";
             this.ReduEdit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
-            this.ReduEdit.Size = new System.Drawing.Size(184, 26);
+            this.ReduEdit.Size = new System.Drawing.Size(144, 22);
             this.ReduEdit.Text = "&Redo";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(181, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(141, 6);
             // 
             // cutToolStripMenuItem
             // 
@@ -312,7 +311,7 @@
             this.cutToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
             this.cutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.cutToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.cutToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.cutToolStripMenuItem.Text = "Cu&t";
             // 
             // copyToolStripMenuItem
@@ -321,7 +320,7 @@
             this.copyToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
             this.copyToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.copyToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.copyToolStripMenuItem.Text = "&Copy";
             // 
             // pasteToolStripMenuItem
@@ -330,18 +329,18 @@
             this.pasteToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
             this.pasteToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.pasteToolStripMenuItem.Text = "&Paste";
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(181, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(141, 6);
             // 
             // selectAllToolStripMenuItem
             // 
             this.selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
-            this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.selectAllToolStripMenuItem.Text = "Select &All";
             // 
             // toolsToolStripMenuItem
@@ -356,13 +355,13 @@
             // pencilTools
             // 
             this.pencilTools.Name = "pencilTools";
-            this.pencilTools.Size = new System.Drawing.Size(180, 22);
+            this.pencilTools.Size = new System.Drawing.Size(106, 22);
             this.pencilTools.Text = "pencil";
             // 
             // brushTools
             // 
             this.brushTools.Name = "brushTools";
-            this.brushTools.Size = new System.Drawing.Size(180, 22);
+            this.brushTools.Size = new System.Drawing.Size(106, 22);
             this.brushTools.Text = "Brush";
             // 
             // helpToolStripMenuItem
@@ -380,30 +379,30 @@
             // contentsToolStripMenuItem
             // 
             this.contentsToolStripMenuItem.Name = "contentsToolStripMenuItem";
-            this.contentsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.contentsToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.contentsToolStripMenuItem.Text = "&Contents";
             // 
             // indexToolStripMenuItem
             // 
             this.indexToolStripMenuItem.Name = "indexToolStripMenuItem";
-            this.indexToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.indexToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.indexToolStripMenuItem.Text = "&Index";
             // 
             // searchToolStripMenuItem
             // 
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.searchToolStripMenuItem.Text = "&Search";
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(119, 6);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.aboutToolStripMenuItem.Text = "&About...";
             // 
             // panel1
@@ -828,14 +827,13 @@
             this.panelTools.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTools.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelTools.Controls.Add(this.pictureBoxCurrentColor);
+            this.panelTools.Controls.Add(this.panelColors);
             this.panelTools.Controls.Add(this.buttonPipetka);
-            this.panelTools.Controls.Add(this.pictureBoxPrevColor);
+            this.panelTools.Controls.Add(this.buttonPalette);
             this.panelTools.Controls.Add(this.button1);
             this.panelTools.Controls.Add(this.buttonEraser);
             this.panelTools.Controls.Add(this.buttonPencile);
             this.panelTools.Controls.Add(this.flowLayoutPanelDelete);
-            this.panelTools.Controls.Add(this.panelColors);
             this.panelTools.Location = new System.Drawing.Point(173, 22);
             this.panelTools.Name = "panelTools";
             this.panelTools.Size = new System.Drawing.Size(627, 39);
@@ -844,7 +842,7 @@
             // pictureBoxCurrentColor
             // 
             this.pictureBoxCurrentColor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxCurrentColor.Location = new System.Drawing.Point(353, 9);
+            this.pictureBoxCurrentColor.Location = new System.Drawing.Point(24, 8);
             this.pictureBoxCurrentColor.Name = "pictureBoxCurrentColor";
             this.pictureBoxCurrentColor.Size = new System.Drawing.Size(27, 27);
             this.pictureBoxCurrentColor.TabIndex = 7;
@@ -870,7 +868,7 @@
             // 
             this.pictureBoxPrevColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.pictureBoxPrevColor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxPrevColor.Location = new System.Drawing.Point(340, 3);
+            this.pictureBoxPrevColor.Location = new System.Drawing.Point(6, 4);
             this.pictureBoxPrevColor.Name = "pictureBoxPrevColor";
             this.pictureBoxPrevColor.Size = new System.Drawing.Size(27, 27);
             this.pictureBoxPrevColor.TabIndex = 6;
@@ -976,25 +974,26 @@
             // panelColors
             // 
             this.panelColors.BackColor = System.Drawing.Color.SkyBlue;
+            this.panelColors.Controls.Add(this.pictureBoxCurrentColor);
             this.panelColors.Controls.Add(this.buttonWhite);
-            this.panelColors.Controls.Add(this.buttonPalette);
             this.panelColors.Controls.Add(this.buttonBlack);
-            this.panelColors.Controls.Add(this.buttonForestGreen);
-            this.panelColors.Controls.Add(this.buttonLightSkyBlue);
-            this.panelColors.Controls.Add(this.buttonAqua);
-            this.panelColors.Controls.Add(this.buttonOrange);
-            this.panelColors.Controls.Add(this.buttonBrown);
-            this.panelColors.Controls.Add(this.buttonMagente);
-            this.panelColors.Controls.Add(this.buttonGreen);
-            this.panelColors.Controls.Add(this.buttonLightCoral);
-            this.panelColors.Controls.Add(this.buttonBlue);
-            this.panelColors.Controls.Add(this.buttonYellow);
-            this.panelColors.Controls.Add(this.buttonBlueViolet);
             this.panelColors.Controls.Add(this.button2);
+            this.panelColors.Controls.Add(this.pictureBoxPrevColor);
+            this.panelColors.Controls.Add(this.buttonForestGreen);
+            this.panelColors.Controls.Add(this.buttonOrange);
+            this.panelColors.Controls.Add(this.buttonLightCoral);
+            this.panelColors.Controls.Add(this.buttonBlueViolet);
             this.panelColors.Controls.Add(this.buttonRed);
-            this.panelColors.Location = new System.Drawing.Point(153, 0);
+            this.panelColors.Controls.Add(this.buttonLightSkyBlue);
+            this.panelColors.Controls.Add(this.buttonBlue);
+            this.panelColors.Controls.Add(this.buttonMagente);
+            this.panelColors.Controls.Add(this.buttonBrown);
+            this.panelColors.Controls.Add(this.buttonYellow);
+            this.panelColors.Controls.Add(this.buttonAqua);
+            this.panelColors.Controls.Add(this.buttonGreen);
+            this.panelColors.Location = new System.Drawing.Point(180, 0);
             this.panelColors.Name = "panelColors";
-            this.panelColors.Size = new System.Drawing.Size(181, 40);
+            this.panelColors.Size = new System.Drawing.Size(198, 40);
             this.panelColors.TabIndex = 6;
             // 
             // buttonWhite
@@ -1003,7 +1002,7 @@
             this.buttonWhite.BackColor = System.Drawing.Color.White;
             this.buttonWhite.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonWhite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonWhite.Location = new System.Drawing.Point(120, 0);
+            this.buttonWhite.Location = new System.Drawing.Point(178, 0);
             this.buttonWhite.Name = "buttonWhite";
             this.buttonWhite.Size = new System.Drawing.Size(20, 20);
             this.buttonWhite.TabIndex = 12;
@@ -1018,7 +1017,7 @@
             this.buttonPalette.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonPalette.FlatAppearance.BorderSize = 0;
             this.buttonPalette.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPalette.Location = new System.Drawing.Point(145, 6);
+            this.buttonPalette.Location = new System.Drawing.Point(143, 6);
             this.buttonPalette.Name = "buttonPalette";
             this.buttonPalette.Size = new System.Drawing.Size(28, 27);
             this.buttonPalette.TabIndex = 7;
@@ -1032,9 +1031,9 @@
             this.buttonBlack.BackColor = System.Drawing.Color.Black;
             this.buttonBlack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonBlack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBlack.Location = new System.Drawing.Point(120, 20);
+            this.buttonBlack.Location = new System.Drawing.Point(177, 20);
             this.buttonBlack.Name = "buttonBlack";
-            this.buttonBlack.Size = new System.Drawing.Size(20, 20);
+            this.buttonBlack.Size = new System.Drawing.Size(21, 20);
             this.buttonBlack.TabIndex = 11;
             this.buttonBlack.UseVisualStyleBackColor = false;
             this.buttonBlack.Click += new System.EventHandler(this.buttonBlack_Click);
@@ -1046,9 +1045,9 @@
             this.buttonForestGreen.BackColor = System.Drawing.Color.ForestGreen;
             this.buttonForestGreen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonForestGreen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonForestGreen.Location = new System.Drawing.Point(100, 0);
+            this.buttonForestGreen.Location = new System.Drawing.Point(157, 0);
             this.buttonForestGreen.Name = "buttonForestGreen";
-            this.buttonForestGreen.Size = new System.Drawing.Size(20, 20);
+            this.buttonForestGreen.Size = new System.Drawing.Size(21, 20);
             this.buttonForestGreen.TabIndex = 13;
             this.buttonForestGreen.UseVisualStyleBackColor = false;
             this.buttonForestGreen.Click += new System.EventHandler(this.buttonForestGreen_Click);
@@ -1060,9 +1059,9 @@
             this.buttonLightSkyBlue.BackColor = System.Drawing.Color.LightSkyBlue;
             this.buttonLightSkyBlue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonLightSkyBlue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLightSkyBlue.Location = new System.Drawing.Point(100, 20);
+            this.buttonLightSkyBlue.Location = new System.Drawing.Point(157, 20);
             this.buttonLightSkyBlue.Name = "buttonLightSkyBlue";
-            this.buttonLightSkyBlue.Size = new System.Drawing.Size(20, 20);
+            this.buttonLightSkyBlue.Size = new System.Drawing.Size(21, 20);
             this.buttonLightSkyBlue.TabIndex = 15;
             this.buttonLightSkyBlue.UseVisualStyleBackColor = false;
             this.buttonLightSkyBlue.Click += new System.EventHandler(this.buttonLightSkyBlue_Click);
@@ -1074,9 +1073,9 @@
             this.buttonAqua.BackColor = System.Drawing.Color.Aqua;
             this.buttonAqua.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAqua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAqua.Location = new System.Drawing.Point(80, 0);
+            this.buttonAqua.Location = new System.Drawing.Point(137, 0);
             this.buttonAqua.Name = "buttonAqua";
-            this.buttonAqua.Size = new System.Drawing.Size(20, 20);
+            this.buttonAqua.Size = new System.Drawing.Size(21, 20);
             this.buttonAqua.TabIndex = 10;
             this.buttonAqua.UseVisualStyleBackColor = false;
             this.buttonAqua.Click += new System.EventHandler(this.buttonAqua_Click);
@@ -1088,7 +1087,7 @@
             this.buttonOrange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.buttonOrange.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonOrange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonOrange.Location = new System.Drawing.Point(20, 0);
+            this.buttonOrange.Location = new System.Drawing.Point(77, 0);
             this.buttonOrange.Name = "buttonOrange";
             this.buttonOrange.Size = new System.Drawing.Size(20, 20);
             this.buttonOrange.TabIndex = 13;
@@ -1101,7 +1100,7 @@
             this.buttonBrown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.buttonBrown.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonBrown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBrown.Location = new System.Drawing.Point(20, 20);
+            this.buttonBrown.Location = new System.Drawing.Point(78, 20);
             this.buttonBrown.Name = "buttonBrown";
             this.buttonBrown.Size = new System.Drawing.Size(20, 20);
             this.buttonBrown.TabIndex = 13;
@@ -1115,9 +1114,9 @@
             this.buttonMagente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.buttonMagente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonMagente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMagente.Location = new System.Drawing.Point(38, 19);
+            this.buttonMagente.Location = new System.Drawing.Point(97, 20);
             this.buttonMagente.Name = "buttonMagente";
-            this.buttonMagente.Size = new System.Drawing.Size(22, 20);
+            this.buttonMagente.Size = new System.Drawing.Size(20, 20);
             this.buttonMagente.TabIndex = 12;
             this.buttonMagente.UseVisualStyleBackColor = false;
             this.buttonMagente.Click += new System.EventHandler(this.buttonMagente_Click);
@@ -1129,9 +1128,9 @@
             this.buttonGreen.BackColor = System.Drawing.Color.Lime;
             this.buttonGreen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonGreen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonGreen.Location = new System.Drawing.Point(80, 20);
+            this.buttonGreen.Location = new System.Drawing.Point(137, 20);
             this.buttonGreen.Name = "buttonGreen";
-            this.buttonGreen.Size = new System.Drawing.Size(20, 20);
+            this.buttonGreen.Size = new System.Drawing.Size(21, 20);
             this.buttonGreen.TabIndex = 9;
             this.buttonGreen.UseVisualStyleBackColor = false;
             this.buttonGreen.Click += new System.EventHandler(this.buttonGreen_Click);
@@ -1143,9 +1142,9 @@
             this.buttonLightCoral.BackColor = System.Drawing.Color.LightCoral;
             this.buttonLightCoral.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonLightCoral.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLightCoral.Location = new System.Drawing.Point(0, 19);
+            this.buttonLightCoral.Location = new System.Drawing.Point(57, 19);
             this.buttonLightCoral.Name = "buttonLightCoral";
-            this.buttonLightCoral.Size = new System.Drawing.Size(20, 20);
+            this.buttonLightCoral.Size = new System.Drawing.Size(21, 20);
             this.buttonLightCoral.TabIndex = 14;
             this.buttonLightCoral.UseVisualStyleBackColor = false;
             this.buttonLightCoral.Click += new System.EventHandler(this.buttonLightCoral_Click);
@@ -1157,9 +1156,9 @@
             this.buttonBlue.BackColor = System.Drawing.Color.Blue;
             this.buttonBlue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonBlue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBlue.Location = new System.Drawing.Point(60, 20);
+            this.buttonBlue.Location = new System.Drawing.Point(117, 20);
             this.buttonBlue.Name = "buttonBlue";
-            this.buttonBlue.Size = new System.Drawing.Size(20, 20);
+            this.buttonBlue.Size = new System.Drawing.Size(21, 20);
             this.buttonBlue.TabIndex = 11;
             this.buttonBlue.UseVisualStyleBackColor = false;
             this.buttonBlue.Click += new System.EventHandler(this.buttonBlue_Click);
@@ -1171,7 +1170,7 @@
             this.buttonYellow.BackColor = System.Drawing.Color.Yellow;
             this.buttonYellow.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonYellow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonYellow.Location = new System.Drawing.Point(40, 0);
+            this.buttonYellow.Location = new System.Drawing.Point(97, 0);
             this.buttonYellow.Name = "buttonYellow";
             this.buttonYellow.Size = new System.Drawing.Size(20, 20);
             this.buttonYellow.TabIndex = 12;
@@ -1185,9 +1184,9 @@
             this.buttonBlueViolet.BackColor = System.Drawing.Color.BlueViolet;
             this.buttonBlueViolet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonBlueViolet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBlueViolet.Location = new System.Drawing.Point(60, 0);
+            this.buttonBlueViolet.Location = new System.Drawing.Point(117, 0);
             this.buttonBlueViolet.Name = "buttonBlueViolet";
-            this.buttonBlueViolet.Size = new System.Drawing.Size(20, 20);
+            this.buttonBlueViolet.Size = new System.Drawing.Size(21, 20);
             this.buttonBlueViolet.TabIndex = 10;
             this.buttonBlueViolet.UseVisualStyleBackColor = false;
             this.buttonBlueViolet.Click += new System.EventHandler(this.buttonBlueViolet_Click);
@@ -1206,7 +1205,7 @@
             this.buttonRed.BackColor = System.Drawing.Color.Red;
             this.buttonRed.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonRed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRed.Location = new System.Drawing.Point(0, 0);
+            this.buttonRed.Location = new System.Drawing.Point(57, 0);
             this.buttonRed.Name = "buttonRed";
             this.buttonRed.Size = new System.Drawing.Size(20, 20);
             this.buttonRed.TabIndex = 7;

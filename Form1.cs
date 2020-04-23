@@ -18,11 +18,6 @@ namespace risovalka
 
            
         }
-
-        
-
-        
-
         private void Form1_Load(object sender, EventArgs e)
         {
             Canvas.currentBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
@@ -220,6 +215,18 @@ namespace risovalka
             if (e.Shift)
             {
                 AbstractPainter.shift = true;
+            }
+
+            if (e.Control ==true && e.KeyCode.ToString () == "Z")
+            {
+                //Canvas.Undo(pictureBox1);
+                MessageBox.Show("z");
+            }
+
+            if (e.Control == true && e.KeyCode == Keys.Y)
+            {
+                buttonUndo.PerformClick();
+
             }
         }
 

@@ -46,12 +46,13 @@ namespace risovalka
             MyDialog.FullOpen = true;
 
             MyDialog.Color = currentColor;
-           
+            PrevColor = currentColor;
+
 
             if (MyDialog.ShowDialog() == DialogResult.Cancel)
                 return;
 
-            PrevColor = currentColor;
+           // PrevColor = currentColor;
             currentColor = MyDialog.Color;
         }
         public static void Pen(int x1, int y1, Color currentColor)
