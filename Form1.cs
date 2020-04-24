@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using risovalka.FormFigure;
 using risovalka.AbstractPainterFactory;
 using risovalka.APainter;
+using risovalka.IFill;
 
 namespace risovalka
 {
@@ -22,6 +23,7 @@ namespace risovalka
         public APainterFactory currentFactory = new LinePainterFactory();
         public AbstractPainter currentPainter = null;
         public static bool drawStartFinishFlag = false;
+        public bool fillingFlag = false;
         public Form1()
         {
             InitializeComponent();
@@ -45,14 +47,19 @@ namespace risovalka
             drawStartFinishFlag = true;
             formCanvas.tmpBitmap = new Bitmap(formCanvas.currentBitmap);
             formCanvas.AddToTmp();
-            currentPainter = currentFactory.CreatePainter(currentForm, currentColor, size, new Point(e.X, e.Y));
-
-            if (PointPolygonPainter.first.X != -1) //&& e.Button == MouseButtons.Left && e.Clicks == 1
+            if (fillingFlag == true)
             {
+                new Filling().Fill(new Point(e.X, e.Y), pictureBox1, new Brush(currentColor, size));
+            }
+            else
+            {
+                currentPainter = currentFactory.CreatePainter(currentForm, currentColor, size, new Point(e.X, e.Y));
 
-                currentPainter.DrawDynamicFigure(new Point(e.X, e.Y), pictureBox1);
-                
+                if (PointPolygonPainter.first.X != -1) //&& e.Button == MouseButtons.Left && e.Clicks == 1
+                {
 
+                    currentPainter.DrawDynamicFigure(new Point(e.X, e.Y), pictureBox1);
+                }
             }
             //else if (AbstractPainter.drawSwitch.GetType() == typeof(PointPolygon))
             //{
@@ -128,6 +135,7 @@ namespace risovalka
         {
             currentFactory = new LinePainterFactory();
             currentForm = new LineForm();
+            fillingFlag = false;
         }
 
 
@@ -135,30 +143,35 @@ namespace risovalka
         {
             currentFactory = new FigurePainterFactory();
             currentForm = new SquareForm();
+            fillingFlag = false;
         }
 
         private void buttonRectabgle_Click(object sender, EventArgs e)
         {
             currentFactory = new FigurePainterFactory();
             currentForm = new RectangleForm();
+            fillingFlag = false;
         }
 
         private void buttonTriangle_Click(object sender, EventArgs e)
         {
             currentFactory = new FigurePainterFactory();
             currentForm = new IsoTriangleForm();
+            fillingFlag = false;
         }
 
         private void buttonRightTriangle_Click(object sender, EventArgs e)
         {
             currentFactory = new FigurePainterFactory();
             currentForm = new RecTriangleForm();
+            fillingFlag = false;
         }
 
         private void buttonPolygon1_Click(object sender, EventArgs e)
         {
             currentFactory = new FigurePainterFactory();
             currentForm = new PolygonForm(Convert.ToInt32(numericUpDownForPolygon.Value));
+            fillingFlag = false;
         }
 
         private void numericUpDownForPolygon_ValueChanged(object sender, EventArgs e)
@@ -172,6 +185,7 @@ namespace risovalka
         {
             currentFactory = new ErasePainterFactory();
             currentForm = new LineForm();
+            fillingFlag = false;
         }
 
         private void buttonBucket_Click(object sender, EventArgs e)
@@ -226,6 +240,7 @@ namespace risovalka
         {
             currentFactory = new FigurePainterFactory();
             currentForm = new CircleForm();
+            fillingFlag = false;
 
         }
 
@@ -233,12 +248,14 @@ namespace risovalka
         {
             currentFactory = new FigurePainterFactory();
             currentForm = new EllipseForm();
+            fillingFlag = false;
         }
 
         private void buttonPolygon2_Click(object sender, EventArgs e)
         {
             currentFactory = new PointPolygonPainterFactory();
             currentForm = new LineForm();
+            fillingFlag = false;
         }
 
         private void pictureBox1_DoubleClick(object sender, EventArgs e)
@@ -342,6 +359,11 @@ namespace risovalka
             currentColor = MyDialog.Color;
 
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            fillingFlag = true;
         }
     }
 }

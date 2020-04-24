@@ -76,6 +76,7 @@
     <Compile Include="FormFigure\RectangleForm.cs" />
     <Compile Include="FormFigure\RecTriangleForm.cs" />
     <Compile Include="FormFigure\SquareForm.cs" />
+    <Compile Include="IFill\Filling.cs" />
     <Compile Include="IsoscelesTriangle.cs" />
     <Compile Include="Line.cs" />
     <Compile Include="List\L2List.cs" />
