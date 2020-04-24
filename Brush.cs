@@ -12,14 +12,16 @@ namespace risovalka
     {
         //public static bool drawStartFinishFlag = false;
 
-       // public static int x1, y1;                             // Стартовые координаты при рисовании мышкой, первоначально значения присваивается из mousedown;
-     
+        // public static int x1, y1;                             // Стартовые координаты при рисовании мышкой, первоначально значения присваивается из mousedown;
+
 
         //public IPainter drawSwitch = new Squaire();
-      
-        
-        
+
+
+        public static bool takePipette = false;
         public static Color currentColor = Color.Black;
+        public static Color PrevColor = Color.Blue;
+
         private static int size = 1;         //размер кисти, используем через свойство Size
         public static int Size               //надо прикрутить к бегунку 4 положения для переключения размера
         {
@@ -44,10 +46,13 @@ namespace risovalka
             MyDialog.FullOpen = true;
 
             MyDialog.Color = currentColor;
+            PrevColor = currentColor;
+
 
             if (MyDialog.ShowDialog() == DialogResult.Cancel)
                 return;
 
+           // PrevColor = currentColor;
             currentColor = MyDialog.Color;
         }
         public static void Pen(int x1, int y1, Color currentColor)

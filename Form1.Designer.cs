@@ -93,7 +93,9 @@
             this.pictureBoxWhale = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelTools = new System.Windows.Forms.Panel();
+            this.pictureBoxCurrentColor = new System.Windows.Forms.PictureBox();
             this.buttonPipetka = new System.Windows.Forms.Button();
+            this.pictureBoxPrevColor = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonEraser = new System.Windows.Forms.Button();
             this.buttonPencile = new System.Windows.Forms.Button();
@@ -102,8 +104,8 @@
             this.buttonRedo = new System.Windows.Forms.Button();
             this.buttonBucket = new System.Windows.Forms.Button();
             this.panelColors = new System.Windows.Forms.Panel();
-            this.pictureBoxCurrentColor = new System.Windows.Forms.PictureBox();
             this.buttonWhite = new System.Windows.Forms.Button();
+            this.buttonPalette = new System.Windows.Forms.Button();
             this.buttonBlack = new System.Windows.Forms.Button();
             this.buttonForestGreen = new System.Windows.Forms.Button();
             this.buttonLightSkyBlue = new System.Windows.Forms.Button();
@@ -118,13 +120,11 @@
             this.buttonBlueViolet = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.buttonRed = new System.Windows.Forms.Button();
-            this.buttonPalette = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.buttonOkPanelPolygonSides = new System.Windows.Forms.Button();
             this.panelPolygonSides = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.labelNumberOfAngles = new System.Windows.Forms.Label();
-            this.pictureBoxPrevColor = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -139,13 +139,14 @@
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhale)).BeginInit();
+            this.panel2.SuspendLayout();
             this.panelTools.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCurrentColor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPrevColor)).BeginInit();
             this.flowLayoutPanelDelete.SuspendLayout();
             this.panelColors.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCurrentColor)).BeginInit();
             this.panelPolygonSides.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPrevColor)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -154,29 +155,31 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pictureBox1.Location = new System.Drawing.Point(173, 85);
+            this.pictureBox1.Location = new System.Drawing.Point(173, 61);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(627, 362);
+            this.pictureBox1.Size = new System.Drawing.Size(627, 386);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.DoubleClick += new System.EventHandler(this.pictureBox1_DoubleClick);
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
-            this.pictureBox1.Resize += new System.EventHandler(this.pictureBox1_Resize);
             // 
             // menuStrip1
             // 
+            this.menuStrip1.AutoSize = false;
+            this.menuStrip1.BackColor = System.Drawing.Color.Yellow;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.editToolStripMenuItem,
             this.toolsToolStripMenuItem,
             this.helpToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 1);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(329, 21);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -194,7 +197,7 @@
             this.toolStripSeparator2,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 17);
             this.fileToolStripMenuItem.Text = "&File";
             // 
             // newToolStripMenuItem
@@ -280,7 +283,7 @@
             this.toolStripSeparator4,
             this.selectAllToolStripMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 17);
             this.editToolStripMenuItem.Text = "&Edit";
             // 
             // UndoEdit
@@ -346,7 +349,7 @@
             this.pencilTools,
             this.brushTools});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(47, 17);
             this.toolsToolStripMenuItem.Text = "&Tools";
             // 
             // pencilTools
@@ -370,7 +373,7 @@
             this.toolStripSeparator5,
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 17);
             this.helpToolStripMenuItem.Text = "&Help";
             // 
             // contentsToolStripMenuItem
@@ -414,7 +417,7 @@
             this.panel1.Controls.Add(this.panelFiguresButtoms);
             this.panel1.Controls.Add(this.panelSize);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Location = new System.Drawing.Point(0, 24);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(173, 426);
             this.panel1.TabIndex = 3;
@@ -813,7 +816,8 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.Yellow;
-            this.panel2.Location = new System.Drawing.Point(173, 24);
+            this.panel2.Controls.Add(this.menuStrip1);
+            this.panel2.Location = new System.Drawing.Point(173, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(627, 22);
             this.panel2.TabIndex = 4;
@@ -823,18 +827,27 @@
             this.panelTools.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTools.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelTools.Controls.Add(this.pictureBoxCurrentColor);
+            this.panelTools.Controls.Add(this.panelColors);
             this.panelTools.Controls.Add(this.buttonPipetka);
-            this.panelTools.Controls.Add(this.pictureBoxPrevColor);
+            this.panelTools.Controls.Add(this.buttonPalette);
             this.panelTools.Controls.Add(this.button1);
             this.panelTools.Controls.Add(this.buttonEraser);
             this.panelTools.Controls.Add(this.buttonPencile);
             this.panelTools.Controls.Add(this.flowLayoutPanelDelete);
-            this.panelTools.Controls.Add(this.panelColors);
-            this.panelTools.Location = new System.Drawing.Point(173, 46);
+            this.panelTools.Location = new System.Drawing.Point(173, 22);
             this.panelTools.Name = "panelTools";
             this.panelTools.Size = new System.Drawing.Size(627, 39);
             this.panelTools.TabIndex = 5;
+            // 
+            // pictureBoxCurrentColor
+            // 
+            this.pictureBoxCurrentColor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxCurrentColor.Location = new System.Drawing.Point(24, 8);
+            this.pictureBoxCurrentColor.Name = "pictureBoxCurrentColor";
+            this.pictureBoxCurrentColor.Size = new System.Drawing.Size(27, 27);
+            this.pictureBoxCurrentColor.TabIndex = 7;
+            this.pictureBoxCurrentColor.TabStop = false;
+            this.pictureBoxCurrentColor.Click += new System.EventHandler(this.pictureBoxCurrentColor_Click);
             // 
             // buttonPipetka
             // 
@@ -849,6 +862,18 @@
             this.buttonPipetka.Size = new System.Drawing.Size(28, 27);
             this.buttonPipetka.TabIndex = 18;
             this.buttonPipetka.UseVisualStyleBackColor = true;
+            this.buttonPipetka.Click += new System.EventHandler(this.buttonPipetka_Click);
+            // 
+            // pictureBoxPrevColor
+            // 
+            this.pictureBoxPrevColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.pictureBoxPrevColor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxPrevColor.Location = new System.Drawing.Point(6, 4);
+            this.pictureBoxPrevColor.Name = "pictureBoxPrevColor";
+            this.pictureBoxPrevColor.Size = new System.Drawing.Size(27, 27);
+            this.pictureBoxPrevColor.TabIndex = 6;
+            this.pictureBoxPrevColor.TabStop = false;
+            this.pictureBoxPrevColor.Click += new System.EventHandler(this.pictureBoxPrevColor_Click);
             // 
             // button1
             // 
@@ -949,35 +974,27 @@
             // panelColors
             // 
             this.panelColors.BackColor = System.Drawing.Color.SkyBlue;
+            this.panelColors.Controls.Add(this.pictureBoxCurrentColor);
             this.panelColors.Controls.Add(this.buttonWhite);
-            this.panelColors.Controls.Add(this.buttonPalette);
             this.panelColors.Controls.Add(this.buttonBlack);
-            this.panelColors.Controls.Add(this.buttonForestGreen);
-            this.panelColors.Controls.Add(this.buttonLightSkyBlue);
-            this.panelColors.Controls.Add(this.buttonAqua);
-            this.panelColors.Controls.Add(this.buttonOrange);
-            this.panelColors.Controls.Add(this.buttonBrown);
-            this.panelColors.Controls.Add(this.buttonMagente);
-            this.panelColors.Controls.Add(this.buttonGreen);
-            this.panelColors.Controls.Add(this.buttonLightCoral);
-            this.panelColors.Controls.Add(this.buttonBlue);
-            this.panelColors.Controls.Add(this.buttonYellow);
-            this.panelColors.Controls.Add(this.buttonBlueViolet);
             this.panelColors.Controls.Add(this.button2);
+            this.panelColors.Controls.Add(this.pictureBoxPrevColor);
+            this.panelColors.Controls.Add(this.buttonForestGreen);
+            this.panelColors.Controls.Add(this.buttonOrange);
+            this.panelColors.Controls.Add(this.buttonLightCoral);
+            this.panelColors.Controls.Add(this.buttonBlueViolet);
             this.panelColors.Controls.Add(this.buttonRed);
-            this.panelColors.Location = new System.Drawing.Point(153, 0);
+            this.panelColors.Controls.Add(this.buttonLightSkyBlue);
+            this.panelColors.Controls.Add(this.buttonBlue);
+            this.panelColors.Controls.Add(this.buttonMagente);
+            this.panelColors.Controls.Add(this.buttonBrown);
+            this.panelColors.Controls.Add(this.buttonYellow);
+            this.panelColors.Controls.Add(this.buttonAqua);
+            this.panelColors.Controls.Add(this.buttonGreen);
+            this.panelColors.Location = new System.Drawing.Point(180, 0);
             this.panelColors.Name = "panelColors";
-            this.panelColors.Size = new System.Drawing.Size(181, 40);
+            this.panelColors.Size = new System.Drawing.Size(198, 40);
             this.panelColors.TabIndex = 6;
-            // 
-            // pictureBoxCurrentColor
-            // 
-            this.pictureBoxCurrentColor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxCurrentColor.Location = new System.Drawing.Point(353, 9);
-            this.pictureBoxCurrentColor.Name = "pictureBoxCurrentColor";
-            this.pictureBoxCurrentColor.Size = new System.Drawing.Size(27, 27);
-            this.pictureBoxCurrentColor.TabIndex = 7;
-            this.pictureBoxCurrentColor.TabStop = false;
             // 
             // buttonWhite
             // 
@@ -985,12 +1002,27 @@
             this.buttonWhite.BackColor = System.Drawing.Color.White;
             this.buttonWhite.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonWhite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonWhite.Location = new System.Drawing.Point(120, 0);
+            this.buttonWhite.Location = new System.Drawing.Point(178, 0);
             this.buttonWhite.Name = "buttonWhite";
             this.buttonWhite.Size = new System.Drawing.Size(20, 20);
             this.buttonWhite.TabIndex = 12;
             this.buttonWhite.UseVisualStyleBackColor = false;
             this.buttonWhite.Click += new System.EventHandler(this.buttonWhite_Click);
+            // 
+            // buttonPalette
+            // 
+            this.buttonPalette.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.buttonPalette.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonPalette.BackgroundImage")));
+            this.buttonPalette.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonPalette.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPalette.FlatAppearance.BorderSize = 0;
+            this.buttonPalette.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPalette.Location = new System.Drawing.Point(143, 6);
+            this.buttonPalette.Name = "buttonPalette";
+            this.buttonPalette.Size = new System.Drawing.Size(28, 27);
+            this.buttonPalette.TabIndex = 7;
+            this.buttonPalette.UseVisualStyleBackColor = true;
+            this.buttonPalette.Click += new System.EventHandler(this.buttonPalette_Click);
             // 
             // buttonBlack
             // 
@@ -999,9 +1031,9 @@
             this.buttonBlack.BackColor = System.Drawing.Color.Black;
             this.buttonBlack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonBlack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBlack.Location = new System.Drawing.Point(120, 20);
+            this.buttonBlack.Location = new System.Drawing.Point(177, 20);
             this.buttonBlack.Name = "buttonBlack";
-            this.buttonBlack.Size = new System.Drawing.Size(20, 20);
+            this.buttonBlack.Size = new System.Drawing.Size(21, 20);
             this.buttonBlack.TabIndex = 11;
             this.buttonBlack.UseVisualStyleBackColor = false;
             this.buttonBlack.Click += new System.EventHandler(this.buttonBlack_Click);
@@ -1013,9 +1045,9 @@
             this.buttonForestGreen.BackColor = System.Drawing.Color.ForestGreen;
             this.buttonForestGreen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonForestGreen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonForestGreen.Location = new System.Drawing.Point(100, 0);
+            this.buttonForestGreen.Location = new System.Drawing.Point(157, 0);
             this.buttonForestGreen.Name = "buttonForestGreen";
-            this.buttonForestGreen.Size = new System.Drawing.Size(20, 20);
+            this.buttonForestGreen.Size = new System.Drawing.Size(21, 20);
             this.buttonForestGreen.TabIndex = 13;
             this.buttonForestGreen.UseVisualStyleBackColor = false;
             this.buttonForestGreen.Click += new System.EventHandler(this.buttonForestGreen_Click);
@@ -1027,9 +1059,9 @@
             this.buttonLightSkyBlue.BackColor = System.Drawing.Color.LightSkyBlue;
             this.buttonLightSkyBlue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonLightSkyBlue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLightSkyBlue.Location = new System.Drawing.Point(100, 20);
+            this.buttonLightSkyBlue.Location = new System.Drawing.Point(157, 20);
             this.buttonLightSkyBlue.Name = "buttonLightSkyBlue";
-            this.buttonLightSkyBlue.Size = new System.Drawing.Size(20, 20);
+            this.buttonLightSkyBlue.Size = new System.Drawing.Size(21, 20);
             this.buttonLightSkyBlue.TabIndex = 15;
             this.buttonLightSkyBlue.UseVisualStyleBackColor = false;
             this.buttonLightSkyBlue.Click += new System.EventHandler(this.buttonLightSkyBlue_Click);
@@ -1041,9 +1073,9 @@
             this.buttonAqua.BackColor = System.Drawing.Color.Aqua;
             this.buttonAqua.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAqua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAqua.Location = new System.Drawing.Point(80, 0);
+            this.buttonAqua.Location = new System.Drawing.Point(137, 0);
             this.buttonAqua.Name = "buttonAqua";
-            this.buttonAqua.Size = new System.Drawing.Size(20, 20);
+            this.buttonAqua.Size = new System.Drawing.Size(21, 20);
             this.buttonAqua.TabIndex = 10;
             this.buttonAqua.UseVisualStyleBackColor = false;
             this.buttonAqua.Click += new System.EventHandler(this.buttonAqua_Click);
@@ -1055,7 +1087,7 @@
             this.buttonOrange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.buttonOrange.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonOrange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonOrange.Location = new System.Drawing.Point(20, 0);
+            this.buttonOrange.Location = new System.Drawing.Point(77, 0);
             this.buttonOrange.Name = "buttonOrange";
             this.buttonOrange.Size = new System.Drawing.Size(20, 20);
             this.buttonOrange.TabIndex = 13;
@@ -1068,7 +1100,7 @@
             this.buttonBrown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.buttonBrown.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonBrown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBrown.Location = new System.Drawing.Point(20, 20);
+            this.buttonBrown.Location = new System.Drawing.Point(78, 20);
             this.buttonBrown.Name = "buttonBrown";
             this.buttonBrown.Size = new System.Drawing.Size(20, 20);
             this.buttonBrown.TabIndex = 13;
@@ -1082,9 +1114,9 @@
             this.buttonMagente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.buttonMagente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonMagente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMagente.Location = new System.Drawing.Point(38, 19);
+            this.buttonMagente.Location = new System.Drawing.Point(97, 20);
             this.buttonMagente.Name = "buttonMagente";
-            this.buttonMagente.Size = new System.Drawing.Size(22, 20);
+            this.buttonMagente.Size = new System.Drawing.Size(20, 20);
             this.buttonMagente.TabIndex = 12;
             this.buttonMagente.UseVisualStyleBackColor = false;
             this.buttonMagente.Click += new System.EventHandler(this.buttonMagente_Click);
@@ -1096,9 +1128,9 @@
             this.buttonGreen.BackColor = System.Drawing.Color.Lime;
             this.buttonGreen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonGreen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonGreen.Location = new System.Drawing.Point(80, 20);
+            this.buttonGreen.Location = new System.Drawing.Point(137, 20);
             this.buttonGreen.Name = "buttonGreen";
-            this.buttonGreen.Size = new System.Drawing.Size(20, 20);
+            this.buttonGreen.Size = new System.Drawing.Size(21, 20);
             this.buttonGreen.TabIndex = 9;
             this.buttonGreen.UseVisualStyleBackColor = false;
             this.buttonGreen.Click += new System.EventHandler(this.buttonGreen_Click);
@@ -1110,9 +1142,9 @@
             this.buttonLightCoral.BackColor = System.Drawing.Color.LightCoral;
             this.buttonLightCoral.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonLightCoral.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLightCoral.Location = new System.Drawing.Point(0, 19);
+            this.buttonLightCoral.Location = new System.Drawing.Point(57, 19);
             this.buttonLightCoral.Name = "buttonLightCoral";
-            this.buttonLightCoral.Size = new System.Drawing.Size(20, 20);
+            this.buttonLightCoral.Size = new System.Drawing.Size(21, 20);
             this.buttonLightCoral.TabIndex = 14;
             this.buttonLightCoral.UseVisualStyleBackColor = false;
             this.buttonLightCoral.Click += new System.EventHandler(this.buttonLightCoral_Click);
@@ -1124,9 +1156,9 @@
             this.buttonBlue.BackColor = System.Drawing.Color.Blue;
             this.buttonBlue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonBlue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBlue.Location = new System.Drawing.Point(60, 20);
+            this.buttonBlue.Location = new System.Drawing.Point(117, 20);
             this.buttonBlue.Name = "buttonBlue";
-            this.buttonBlue.Size = new System.Drawing.Size(20, 20);
+            this.buttonBlue.Size = new System.Drawing.Size(21, 20);
             this.buttonBlue.TabIndex = 11;
             this.buttonBlue.UseVisualStyleBackColor = false;
             this.buttonBlue.Click += new System.EventHandler(this.buttonBlue_Click);
@@ -1138,7 +1170,7 @@
             this.buttonYellow.BackColor = System.Drawing.Color.Yellow;
             this.buttonYellow.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonYellow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonYellow.Location = new System.Drawing.Point(40, 0);
+            this.buttonYellow.Location = new System.Drawing.Point(97, 0);
             this.buttonYellow.Name = "buttonYellow";
             this.buttonYellow.Size = new System.Drawing.Size(20, 20);
             this.buttonYellow.TabIndex = 12;
@@ -1152,9 +1184,9 @@
             this.buttonBlueViolet.BackColor = System.Drawing.Color.BlueViolet;
             this.buttonBlueViolet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonBlueViolet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBlueViolet.Location = new System.Drawing.Point(60, 0);
+            this.buttonBlueViolet.Location = new System.Drawing.Point(117, 0);
             this.buttonBlueViolet.Name = "buttonBlueViolet";
-            this.buttonBlueViolet.Size = new System.Drawing.Size(20, 20);
+            this.buttonBlueViolet.Size = new System.Drawing.Size(21, 20);
             this.buttonBlueViolet.TabIndex = 10;
             this.buttonBlueViolet.UseVisualStyleBackColor = false;
             this.buttonBlueViolet.Click += new System.EventHandler(this.buttonBlueViolet_Click);
@@ -1173,27 +1205,12 @@
             this.buttonRed.BackColor = System.Drawing.Color.Red;
             this.buttonRed.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonRed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRed.Location = new System.Drawing.Point(0, 0);
+            this.buttonRed.Location = new System.Drawing.Point(57, 0);
             this.buttonRed.Name = "buttonRed";
             this.buttonRed.Size = new System.Drawing.Size(20, 20);
             this.buttonRed.TabIndex = 7;
             this.buttonRed.UseVisualStyleBackColor = false;
             this.buttonRed.Click += new System.EventHandler(this.buttonRed_Click);
-            // 
-            // buttonPalette
-            // 
-            this.buttonPalette.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.buttonPalette.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonPalette.BackgroundImage")));
-            this.buttonPalette.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonPalette.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonPalette.FlatAppearance.BorderSize = 0;
-            this.buttonPalette.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPalette.Location = new System.Drawing.Point(145, 6);
-            this.buttonPalette.Name = "buttonPalette";
-            this.buttonPalette.Size = new System.Drawing.Size(28, 27);
-            this.buttonPalette.TabIndex = 7;
-            this.buttonPalette.UseVisualStyleBackColor = true;
-            this.buttonPalette.Click += new System.EventHandler(this.buttonPalette_Click);
             // 
             // textBox1
             // 
@@ -1248,15 +1265,6 @@
             this.labelNumberOfAngles.TabIndex = 0;
             this.labelNumberOfAngles.Text = "Введите количество углов";
             // 
-            // pictureBoxPrevColor
-            // 
-            this.pictureBoxPrevColor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxPrevColor.Location = new System.Drawing.Point(340, 3);
-            this.pictureBoxPrevColor.Name = "pictureBoxPrevColor";
-            this.pictureBoxPrevColor.Size = new System.Drawing.Size(27, 27);
-            this.pictureBoxPrevColor.TabIndex = 6;
-            this.pictureBoxPrevColor.TabStop = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1266,14 +1274,15 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(700, 470);
             this.Name = "Form1";
             this.Text = "Whale Draw";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResizeEnd += new System.EventHandler(this.Form1_ResizeEnd);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.Form1_PreviewKeyDown);
+            this.Resize += new System.EventHandler(this.Form1_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -1293,19 +1302,19 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWhale)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.panelTools.ResumeLayout(false);
             this.panelTools.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCurrentColor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPrevColor)).EndInit();
             this.flowLayoutPanelDelete.ResumeLayout(false);
             this.flowLayoutPanelDelete.PerformLayout();
             this.panelColors.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCurrentColor)).EndInit();
             this.panelPolygonSides.ResumeLayout(false);
             this.panelPolygonSides.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPrevColor)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
