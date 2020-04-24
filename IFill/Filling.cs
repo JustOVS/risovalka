@@ -12,15 +12,17 @@ namespace risovalka.IFill
 {
     public class Filling
     {
-        
-        public void Fill(Point p1, PictureBox pictureBox, Brush brush)
+        Canvas fillCanvas = Canvas.GetCanvas;
+        public void Fill(Point p1, PictureBox pictureBox, Color currentColor, int currentSize)
+
         {
+            Brush brush = new Brush(currentColor, currentSize);
             int x = p1.X;
             int y = p1.Y;
             int leftChecking = x;
             int rightChecking = x;
 
-            Canvas fillCanvas = Canvas.GetCanvas;
+            
             Color localColor = fillCanvas.currentBitmap.GetPixel(x, y);
 
             while (fillCanvas.currentBitmap.GetPixel(leftChecking - 1, y) == localColor && leftChecking - 1 > 0)
@@ -39,12 +41,12 @@ namespace risovalka.IFill
             {
                 if (fillCanvas.currentBitmap.GetPixel(i, y - 1) == localColor && y - 1 > 0)
                 {
-                    Fill(new Point(i, y - 1), pictureBox, brush);
+                    Fill(new Point(i, y - 1), pictureBox, currentColor, currentSize);
                 }
 
                 if (fillCanvas.currentBitmap.GetPixel(i, y + 1) == localColor && y + 1 < fillCanvas.currentBitmap.Height - 1)
                 {
-                    Fill(new Point(i, y + 1), pictureBox, brush);
+                    Fill(new Point(i, y + 1), pictureBox, currentColor, currentSize);
                 }
             }
         }
