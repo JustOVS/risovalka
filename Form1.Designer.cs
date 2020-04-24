@@ -206,7 +206,7 @@
             this.newToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
             this.newToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.newToolStripMenuItem.Text = "&New";
             // 
             // openToolStripMenuItem
@@ -215,13 +215,13 @@
             this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.openToolStripMenuItem.Text = "&Open";
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(143, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(178, 6);
             // 
             // saveToolStripMenuItem
             // 
@@ -229,19 +229,19 @@
             this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.saveToolStripMenuItem.Text = "&Save";
             // 
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.saveAsToolStripMenuItem.Text = "Save &As";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(143, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(178, 6);
             // 
             // printToolStripMenuItem
             // 
@@ -249,7 +249,7 @@
             this.printToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
             this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.printToolStripMenuItem.Text = "&Print";
             // 
             // printPreviewToolStripMenuItem
@@ -257,18 +257,18 @@
             this.printPreviewToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("printPreviewToolStripMenuItem.Image")));
             this.printPreviewToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.printPreviewToolStripMenuItem.Name = "printPreviewToolStripMenuItem";
-            this.printPreviewToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.printPreviewToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.printPreviewToolStripMenuItem.Text = "Print Pre&view";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(143, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(178, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.exitToolStripMenuItem.Text = "E&xit";
             // 
             // editToolStripMenuItem
@@ -290,20 +290,20 @@
             // 
             this.UndoEdit.Name = "UndoEdit";
             this.UndoEdit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
-            this.UndoEdit.Size = new System.Drawing.Size(144, 22);
+            this.UndoEdit.Size = new System.Drawing.Size(179, 26);
             this.UndoEdit.Text = "&Undo";
             // 
             // ReduEdit
             // 
             this.ReduEdit.Name = "ReduEdit";
             this.ReduEdit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
-            this.ReduEdit.Size = new System.Drawing.Size(144, 22);
+            this.ReduEdit.Size = new System.Drawing.Size(179, 26);
             this.ReduEdit.Text = "&Redo";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(141, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(176, 6);
             // 
             // cutToolStripMenuItem
             // 
@@ -311,7 +311,7 @@
             this.cutToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
             this.cutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.cutToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.cutToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
             this.cutToolStripMenuItem.Text = "Cu&t";
             // 
             // copyToolStripMenuItem
@@ -320,7 +320,7 @@
             this.copyToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
             this.copyToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.copyToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
             this.copyToolStripMenuItem.Text = "&Copy";
             // 
             // pasteToolStripMenuItem
@@ -329,18 +329,18 @@
             this.pasteToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
             this.pasteToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
             this.pasteToolStripMenuItem.Text = "&Paste";
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(141, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(176, 6);
             // 
             // selectAllToolStripMenuItem
             // 
             this.selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
-            this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
             this.selectAllToolStripMenuItem.Text = "Select &All";
             // 
             // toolsToolStripMenuItem
@@ -355,13 +355,13 @@
             // pencilTools
             // 
             this.pencilTools.Name = "pencilTools";
-            this.pencilTools.Size = new System.Drawing.Size(106, 22);
+            this.pencilTools.Size = new System.Drawing.Size(132, 26);
             this.pencilTools.Text = "pencil";
             // 
             // brushTools
             // 
             this.brushTools.Name = "brushTools";
-            this.brushTools.Size = new System.Drawing.Size(106, 22);
+            this.brushTools.Size = new System.Drawing.Size(132, 26);
             this.brushTools.Text = "Brush";
             // 
             // helpToolStripMenuItem
@@ -379,30 +379,30 @@
             // contentsToolStripMenuItem
             // 
             this.contentsToolStripMenuItem.Name = "contentsToolStripMenuItem";
-            this.contentsToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.contentsToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
             this.contentsToolStripMenuItem.Text = "&Contents";
             // 
             // indexToolStripMenuItem
             // 
             this.indexToolStripMenuItem.Name = "indexToolStripMenuItem";
-            this.indexToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.indexToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
             this.indexToolStripMenuItem.Text = "&Index";
             // 
             // searchToolStripMenuItem
             // 
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
             this.searchToolStripMenuItem.Text = "&Search";
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(119, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(147, 6);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
             this.aboutToolStripMenuItem.Text = "&About...";
             // 
             // panel1
@@ -419,7 +419,7 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(173, 426);
+            this.panel1.Size = new System.Drawing.Size(231, 524);
             this.panel1.TabIndex = 3;
             // 
             // panelFillBucket
@@ -428,9 +428,10 @@
             this.panelFillBucket.Controls.Add(this.buttonOnlyBorders);
             this.panelFillBucket.Controls.Add(this.buttonOnlyFigure);
             this.panelFillBucket.Controls.Add(this.buttonFigureWithBorders);
-            this.panelFillBucket.Location = new System.Drawing.Point(0, 363);
+            this.panelFillBucket.Location = new System.Drawing.Point(0, 447);
+            this.panelFillBucket.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelFillBucket.Name = "panelFillBucket";
-            this.panelFillBucket.Size = new System.Drawing.Size(173, 47);
+            this.panelFillBucket.Size = new System.Drawing.Size(231, 58);
             this.panelFillBucket.TabIndex = 20;
             // 
             // buttonOnlyBorders
@@ -442,9 +443,10 @@
             this.buttonOnlyBorders.FlatAppearance.BorderSize = 0;
             this.buttonOnlyBorders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOnlyBorders.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonOnlyBorders.Location = new System.Drawing.Point(63, 3);
+            this.buttonOnlyBorders.Location = new System.Drawing.Point(84, 4);
+            this.buttonOnlyBorders.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonOnlyBorders.Name = "buttonOnlyBorders";
-            this.buttonOnlyBorders.Size = new System.Drawing.Size(40, 40);
+            this.buttonOnlyBorders.Size = new System.Drawing.Size(53, 49);
             this.buttonOnlyBorders.TabIndex = 19;
             this.buttonOnlyBorders.UseVisualStyleBackColor = false;
             // 
@@ -457,9 +459,10 @@
             this.buttonOnlyFigure.FlatAppearance.BorderSize = 0;
             this.buttonOnlyFigure.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOnlyFigure.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonOnlyFigure.Location = new System.Drawing.Point(12, 6);
+            this.buttonOnlyFigure.Location = new System.Drawing.Point(16, 7);
+            this.buttonOnlyFigure.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonOnlyFigure.Name = "buttonOnlyFigure";
-            this.buttonOnlyFigure.Size = new System.Drawing.Size(37, 35);
+            this.buttonOnlyFigure.Size = new System.Drawing.Size(49, 43);
             this.buttonOnlyFigure.TabIndex = 18;
             this.buttonOnlyFigure.UseVisualStyleBackColor = false;
             // 
@@ -472,9 +475,10 @@
             this.buttonFigureWithBorders.FlatAppearance.BorderSize = 0;
             this.buttonFigureWithBorders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonFigureWithBorders.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonFigureWithBorders.Location = new System.Drawing.Point(113, 4);
+            this.buttonFigureWithBorders.Location = new System.Drawing.Point(151, 5);
+            this.buttonFigureWithBorders.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonFigureWithBorders.Name = "buttonFigureWithBorders";
-            this.buttonFigureWithBorders.Size = new System.Drawing.Size(40, 40);
+            this.buttonFigureWithBorders.Size = new System.Drawing.Size(53, 49);
             this.buttonFigureWithBorders.TabIndex = 18;
             this.buttonFigureWithBorders.UseVisualStyleBackColor = false;
             // 
@@ -482,9 +486,10 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.Yellow;
             this.panel6.Controls.Add(this.labelFillBucket);
-            this.panel6.Location = new System.Drawing.Point(0, 340);
+            this.panel6.Location = new System.Drawing.Point(0, 418);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(173, 23);
+            this.panel6.Size = new System.Drawing.Size(231, 28);
             this.panel6.TabIndex = 19;
             // 
             // labelFillBucket
@@ -492,9 +497,10 @@
             this.labelFillBucket.AutoSize = true;
             this.labelFillBucket.BackColor = System.Drawing.Color.Yellow;
             this.labelFillBucket.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelFillBucket.Location = new System.Drawing.Point(54, 4);
+            this.labelFillBucket.Location = new System.Drawing.Point(72, 5);
+            this.labelFillBucket.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelFillBucket.Name = "labelFillBucket";
-            this.labelFillBucket.Size = new System.Drawing.Size(64, 17);
+            this.labelFillBucket.Size = new System.Drawing.Size(79, 22);
             this.labelFillBucket.TabIndex = 0;
             this.labelFillBucket.Text = "Заливка";
             // 
@@ -505,18 +511,20 @@
             this.panelSizesButton.Controls.Add(this.buttonSize2);
             this.panelSizesButton.Controls.Add(this.buttonSize4);
             this.panelSizesButton.Controls.Add(this.buttonSize3);
-            this.panelSizesButton.Location = new System.Drawing.Point(0, 125);
+            this.panelSizesButton.Location = new System.Drawing.Point(0, 154);
+            this.panelSizesButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelSizesButton.Name = "panelSizesButton";
-            this.panelSizesButton.Size = new System.Drawing.Size(173, 47);
+            this.panelSizesButton.Size = new System.Drawing.Size(231, 58);
             this.panelSizesButton.TabIndex = 19;
             // 
             // buttonSize1
             // 
             this.buttonSize1.BackColor = System.Drawing.Color.Yellow;
             this.buttonSize1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonSize1.Location = new System.Drawing.Point(35, 27);
+            this.buttonSize1.Location = new System.Drawing.Point(47, 33);
+            this.buttonSize1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonSize1.Name = "buttonSize1";
-            this.buttonSize1.Size = new System.Drawing.Size(14, 14);
+            this.buttonSize1.Size = new System.Drawing.Size(19, 17);
             this.buttonSize1.TabIndex = 10;
             this.buttonSize1.UseVisualStyleBackColor = false;
             this.buttonSize1.Click += new System.EventHandler(this.buttonSize1_Click);
@@ -525,9 +533,10 @@
             // 
             this.buttonSize2.BackColor = System.Drawing.Color.Yellow;
             this.buttonSize2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonSize2.Location = new System.Drawing.Point(55, 21);
+            this.buttonSize2.Location = new System.Drawing.Point(73, 26);
+            this.buttonSize2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonSize2.Name = "buttonSize2";
-            this.buttonSize2.Size = new System.Drawing.Size(20, 20);
+            this.buttonSize2.Size = new System.Drawing.Size(27, 25);
             this.buttonSize2.TabIndex = 11;
             this.buttonSize2.UseVisualStyleBackColor = false;
             this.buttonSize2.Click += new System.EventHandler(this.buttonSize2_Click);
@@ -536,9 +545,10 @@
             // 
             this.buttonSize4.BackColor = System.Drawing.Color.Yellow;
             this.buttonSize4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonSize4.Location = new System.Drawing.Point(113, 9);
+            this.buttonSize4.Location = new System.Drawing.Point(151, 11);
+            this.buttonSize4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonSize4.Name = "buttonSize4";
-            this.buttonSize4.Size = new System.Drawing.Size(32, 32);
+            this.buttonSize4.Size = new System.Drawing.Size(43, 39);
             this.buttonSize4.TabIndex = 13;
             this.buttonSize4.UseVisualStyleBackColor = false;
             this.buttonSize4.Click += new System.EventHandler(this.buttonSize4_Click);
@@ -547,9 +557,10 @@
             // 
             this.buttonSize3.BackColor = System.Drawing.Color.Yellow;
             this.buttonSize3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonSize3.Location = new System.Drawing.Point(81, 15);
+            this.buttonSize3.Location = new System.Drawing.Point(108, 18);
+            this.buttonSize3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonSize3.Name = "buttonSize3";
-            this.buttonSize3.Size = new System.Drawing.Size(26, 26);
+            this.buttonSize3.Size = new System.Drawing.Size(35, 32);
             this.buttonSize3.TabIndex = 12;
             this.buttonSize3.UseVisualStyleBackColor = false;
             this.buttonSize3.Click += new System.EventHandler(this.buttonSize3_Click);
@@ -558,18 +569,20 @@
             // 
             this.panelFigure.BackColor = System.Drawing.Color.Yellow;
             this.panelFigure.Controls.Add(this.label1);
-            this.panelFigure.Location = new System.Drawing.Point(0, 172);
+            this.panelFigure.Location = new System.Drawing.Point(0, 212);
+            this.panelFigure.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelFigure.Name = "panelFigure";
-            this.panelFigure.Size = new System.Drawing.Size(173, 23);
+            this.panelFigure.Size = new System.Drawing.Size(231, 28);
             this.panelFigure.TabIndex = 17;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(57, 3);
+            this.label1.Location = new System.Drawing.Point(76, 4);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 17);
+            this.label1.Size = new System.Drawing.Size(75, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Фигуры";
             // 
@@ -584,9 +597,10 @@
             this.panelFiguresButtoms.Controls.Add(this.buttonCircle);
             this.panelFiguresButtoms.Controls.Add(this.buttonTriangle);
             this.panelFiguresButtoms.Controls.Add(this.buttonSquare);
-            this.panelFiguresButtoms.Location = new System.Drawing.Point(0, 195);
+            this.panelFiguresButtoms.Location = new System.Drawing.Point(0, 240);
+            this.panelFiguresButtoms.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelFiguresButtoms.Name = "panelFiguresButtoms";
-            this.panelFiguresButtoms.Size = new System.Drawing.Size(173, 147);
+            this.panelFiguresButtoms.Size = new System.Drawing.Size(231, 181);
             this.panelFiguresButtoms.TabIndex = 13;
             // 
             // panel7
@@ -594,15 +608,17 @@
             this.panel7.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel7.Controls.Add(this.numericUpDownForPolygon);
             this.panel7.Controls.Add(this.buttonPolygon1);
-            this.panel7.Location = new System.Drawing.Point(63, 91);
+            this.panel7.Location = new System.Drawing.Point(84, 112);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(90, 46);
+            this.panel7.Size = new System.Drawing.Size(120, 57);
             this.panel7.TabIndex = 7;
             // 
             // numericUpDownForPolygon
             // 
             this.numericUpDownForPolygon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.numericUpDownForPolygon.Location = new System.Drawing.Point(50, 12);
+            this.numericUpDownForPolygon.Location = new System.Drawing.Point(67, 15);
+            this.numericUpDownForPolygon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numericUpDownForPolygon.Maximum = new decimal(new int[] {
             30,
             0,
@@ -614,7 +630,7 @@
             0,
             0});
             this.numericUpDownForPolygon.Name = "numericUpDownForPolygon";
-            this.numericUpDownForPolygon.Size = new System.Drawing.Size(40, 20);
+            this.numericUpDownForPolygon.Size = new System.Drawing.Size(53, 22);
             this.numericUpDownForPolygon.TabIndex = 6;
             this.numericUpDownForPolygon.Value = new decimal(new int[] {
             5,
@@ -632,9 +648,10 @@
             this.buttonPolygon1.FlatAppearance.BorderSize = 0;
             this.buttonPolygon1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPolygon1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonPolygon1.Location = new System.Drawing.Point(2, 3);
+            this.buttonPolygon1.Location = new System.Drawing.Point(3, 4);
+            this.buttonPolygon1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonPolygon1.Name = "buttonPolygon1";
-            this.buttonPolygon1.Size = new System.Drawing.Size(40, 40);
+            this.buttonPolygon1.Size = new System.Drawing.Size(53, 49);
             this.buttonPolygon1.TabIndex = 16;
             this.buttonPolygon1.UseVisualStyleBackColor = false;
             this.buttonPolygon1.Click += new System.EventHandler(this.buttonPolygon1_Click);
@@ -648,9 +665,10 @@
             this.buttonPolygon2.FlatAppearance.BorderSize = 0;
             this.buttonPolygon2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPolygon2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonPolygon2.Location = new System.Drawing.Point(12, 97);
+            this.buttonPolygon2.Location = new System.Drawing.Point(16, 119);
+            this.buttonPolygon2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonPolygon2.Name = "buttonPolygon2";
-            this.buttonPolygon2.Size = new System.Drawing.Size(40, 40);
+            this.buttonPolygon2.Size = new System.Drawing.Size(53, 49);
             this.buttonPolygon2.TabIndex = 17;
             this.buttonPolygon2.UseVisualStyleBackColor = false;
             this.buttonPolygon2.Click += new System.EventHandler(this.buttonPolygon2_Click);
@@ -664,9 +682,10 @@
             this.buttonOval.FlatAppearance.BorderSize = 0;
             this.buttonOval.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOval.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonOval.Location = new System.Drawing.Point(63, 52);
+            this.buttonOval.Location = new System.Drawing.Point(84, 64);
+            this.buttonOval.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonOval.Name = "buttonOval";
-            this.buttonOval.Size = new System.Drawing.Size(40, 40);
+            this.buttonOval.Size = new System.Drawing.Size(53, 49);
             this.buttonOval.TabIndex = 16;
             this.buttonOval.UseVisualStyleBackColor = false;
             this.buttonOval.Click += new System.EventHandler(this.buttonOval_Click);
@@ -680,9 +699,10 @@
             this.buttonRightTriangle.FlatAppearance.BorderSize = 0;
             this.buttonRightTriangle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRightTriangle.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonRightTriangle.Location = new System.Drawing.Point(63, 6);
+            this.buttonRightTriangle.Location = new System.Drawing.Point(84, 7);
+            this.buttonRightTriangle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonRightTriangle.Name = "buttonRightTriangle";
-            this.buttonRightTriangle.Size = new System.Drawing.Size(40, 40);
+            this.buttonRightTriangle.Size = new System.Drawing.Size(53, 49);
             this.buttonRightTriangle.TabIndex = 16;
             this.buttonRightTriangle.UseVisualStyleBackColor = false;
             this.buttonRightTriangle.Click += new System.EventHandler(this.buttonRightTriangle_Click);
@@ -696,9 +716,10 @@
             this.buttonRectabgle.FlatAppearance.BorderSize = 0;
             this.buttonRectabgle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRectabgle.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonRectabgle.Location = new System.Drawing.Point(113, 52);
+            this.buttonRectabgle.Location = new System.Drawing.Point(151, 64);
+            this.buttonRectabgle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonRectabgle.Name = "buttonRectabgle";
-            this.buttonRectabgle.Size = new System.Drawing.Size(40, 40);
+            this.buttonRectabgle.Size = new System.Drawing.Size(53, 49);
             this.buttonRectabgle.TabIndex = 16;
             this.buttonRectabgle.UseVisualStyleBackColor = false;
             this.buttonRectabgle.Click += new System.EventHandler(this.buttonRectabgle_Click);
@@ -712,9 +733,10 @@
             this.buttonCircle.FlatAppearance.BorderSize = 0;
             this.buttonCircle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCircle.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonCircle.Location = new System.Drawing.Point(12, 52);
+            this.buttonCircle.Location = new System.Drawing.Point(16, 64);
+            this.buttonCircle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonCircle.Name = "buttonCircle";
-            this.buttonCircle.Size = new System.Drawing.Size(40, 40);
+            this.buttonCircle.Size = new System.Drawing.Size(53, 49);
             this.buttonCircle.TabIndex = 16;
             this.buttonCircle.UseVisualStyleBackColor = false;
             this.buttonCircle.Click += new System.EventHandler(this.buttonCircle_Click);
@@ -728,9 +750,10 @@
             this.buttonTriangle.FlatAppearance.BorderSize = 0;
             this.buttonTriangle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTriangle.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonTriangle.Location = new System.Drawing.Point(12, 6);
+            this.buttonTriangle.Location = new System.Drawing.Point(16, 7);
+            this.buttonTriangle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonTriangle.Name = "buttonTriangle";
-            this.buttonTriangle.Size = new System.Drawing.Size(40, 40);
+            this.buttonTriangle.Size = new System.Drawing.Size(53, 49);
             this.buttonTriangle.TabIndex = 10;
             this.buttonTriangle.UseVisualStyleBackColor = false;
             this.buttonTriangle.Click += new System.EventHandler(this.buttonTriangle_Click);
@@ -744,9 +767,10 @@
             this.buttonSquare.FlatAppearance.BorderSize = 0;
             this.buttonSquare.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSquare.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSquare.Location = new System.Drawing.Point(113, 6);
+            this.buttonSquare.Location = new System.Drawing.Point(151, 7);
+            this.buttonSquare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonSquare.Name = "buttonSquare";
-            this.buttonSquare.Size = new System.Drawing.Size(40, 40);
+            this.buttonSquare.Size = new System.Drawing.Size(53, 49);
             this.buttonSquare.TabIndex = 13;
             this.buttonSquare.UseVisualStyleBackColor = false;
             this.buttonSquare.Click += new System.EventHandler(this.buttonSquare_Click);
@@ -755,9 +779,10 @@
             // 
             this.panelSize.BackColor = System.Drawing.Color.Yellow;
             this.panelSize.Controls.Add(this.label2);
-            this.panelSize.Location = new System.Drawing.Point(0, 103);
+            this.panelSize.Location = new System.Drawing.Point(0, 127);
+            this.panelSize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelSize.Name = "panelSize";
-            this.panelSize.Size = new System.Drawing.Size(173, 23);
+            this.panelSize.Size = new System.Drawing.Size(231, 28);
             this.panelSize.TabIndex = 18;
             // 
             // label2
@@ -765,9 +790,10 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Yellow;
             this.label2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(54, 4);
+            this.label2.Location = new System.Drawing.Point(72, 5);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 17);
+            this.label2.Size = new System.Drawing.Size(76, 22);
             this.label2.TabIndex = 0;
             this.label2.Text = "Размер";
             // 
@@ -777,8 +803,9 @@
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.pictureBoxWhale);
             this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(173, 87);
+            this.panel3.Size = new System.Drawing.Size(231, 107);
             this.panel3.TabIndex = 6;
             // 
             // panel4
@@ -786,8 +813,9 @@
             this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel4.Controls.Add(this.D);
             this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(190, 22);
+            this.panel4.Size = new System.Drawing.Size(253, 27);
             this.panel4.TabIndex = 7;
             // 
             // D
@@ -795,18 +823,20 @@
             this.D.AutoSize = true;
             this.D.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.D.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.D.Location = new System.Drawing.Point(36, 4);
+            this.D.Location = new System.Drawing.Point(48, 5);
+            this.D.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.D.Name = "D";
-            this.D.Size = new System.Drawing.Size(93, 18);
+            this.D.Size = new System.Drawing.Size(118, 23);
             this.D.TabIndex = 6;
             this.D.Text = "Whale Draw";
             // 
             // pictureBoxWhale
             // 
             this.pictureBoxWhale.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxWhale.Image")));
-            this.pictureBoxWhale.Location = new System.Drawing.Point(0, 25);
+            this.pictureBoxWhale.Location = new System.Drawing.Point(0, 31);
+            this.pictureBoxWhale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBoxWhale.Name = "pictureBoxWhale";
-            this.pictureBoxWhale.Size = new System.Drawing.Size(173, 62);
+            this.pictureBoxWhale.Size = new System.Drawing.Size(231, 76);
             this.pictureBoxWhale.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxWhale.TabIndex = 6;
             this.pictureBoxWhale.TabStop = false;
@@ -819,7 +849,7 @@
             this.panel2.Controls.Add(this.menuStrip1);
             this.panel2.Location = new System.Drawing.Point(173, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(627, 22);
+            this.panel2.Size = new System.Drawing.Size(836, 27);
             this.panel2.TabIndex = 4;
             // 
             // panelTools
@@ -836,7 +866,7 @@
             this.panelTools.Controls.Add(this.flowLayoutPanelDelete);
             this.panelTools.Location = new System.Drawing.Point(173, 22);
             this.panelTools.Name = "panelTools";
-            this.panelTools.Size = new System.Drawing.Size(627, 39);
+            this.panelTools.Size = new System.Drawing.Size(836, 48);
             this.panelTools.TabIndex = 5;
             // 
             // pictureBoxCurrentColor
@@ -857,9 +887,10 @@
             this.buttonPipetka.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonPipetka.FlatAppearance.BorderSize = 0;
             this.buttonPipetka.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPipetka.Location = new System.Drawing.Point(109, 6);
+            this.buttonPipetka.Location = new System.Drawing.Point(145, 7);
+            this.buttonPipetka.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonPipetka.Name = "buttonPipetka";
-            this.buttonPipetka.Size = new System.Drawing.Size(28, 27);
+            this.buttonPipetka.Size = new System.Drawing.Size(37, 33);
             this.buttonPipetka.TabIndex = 18;
             this.buttonPipetka.UseVisualStyleBackColor = true;
             this.buttonPipetka.Click += new System.EventHandler(this.buttonPipetka_Click);
@@ -883,11 +914,13 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(75, 6);
+            this.button1.Location = new System.Drawing.Point(100, 7);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(28, 27);
+            this.button1.Size = new System.Drawing.Size(37, 33);
             this.button1.TabIndex = 17;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonEraser
             // 
@@ -896,9 +929,10 @@
             this.buttonEraser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonEraser.FlatAppearance.BorderSize = 0;
             this.buttonEraser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEraser.Location = new System.Drawing.Point(41, 6);
+            this.buttonEraser.Location = new System.Drawing.Point(55, 7);
+            this.buttonEraser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonEraser.Name = "buttonEraser";
-            this.buttonEraser.Size = new System.Drawing.Size(28, 27);
+            this.buttonEraser.Size = new System.Drawing.Size(37, 33);
             this.buttonEraser.TabIndex = 8;
             this.buttonEraser.UseVisualStyleBackColor = true;
             this.buttonEraser.Click += new System.EventHandler(this.buttonEraser_Click);
@@ -910,9 +944,10 @@
             this.buttonPencile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonPencile.FlatAppearance.BorderSize = 0;
             this.buttonPencile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPencile.Location = new System.Drawing.Point(6, 6);
+            this.buttonPencile.Location = new System.Drawing.Point(8, 7);
+            this.buttonPencile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonPencile.Name = "buttonPencile";
-            this.buttonPencile.Size = new System.Drawing.Size(28, 27);
+            this.buttonPencile.Size = new System.Drawing.Size(37, 33);
             this.buttonPencile.TabIndex = 6;
             this.buttonPencile.UseVisualStyleBackColor = true;
             this.buttonPencile.Click += new System.EventHandler(this.buttonPencile_Click);
@@ -923,9 +958,10 @@
             this.flowLayoutPanelDelete.Controls.Add(this.buttonUndo);
             this.flowLayoutPanelDelete.Controls.Add(this.buttonRedo);
             this.flowLayoutPanelDelete.Controls.Add(this.buttonBucket);
-            this.flowLayoutPanelDelete.Location = new System.Drawing.Point(519, 3);
+            this.flowLayoutPanelDelete.Location = new System.Drawing.Point(692, 4);
+            this.flowLayoutPanelDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanelDelete.Name = "flowLayoutPanelDelete";
-            this.flowLayoutPanelDelete.Size = new System.Drawing.Size(108, 34);
+            this.flowLayoutPanelDelete.Size = new System.Drawing.Size(144, 42);
             this.flowLayoutPanelDelete.TabIndex = 6;
             // 
             // buttonUndo
@@ -935,9 +971,10 @@
             this.buttonUndo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonUndo.FlatAppearance.BorderSize = 0;
             this.buttonUndo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonUndo.Location = new System.Drawing.Point(3, 3);
+            this.buttonUndo.Location = new System.Drawing.Point(4, 4);
+            this.buttonUndo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonUndo.Name = "buttonUndo";
-            this.buttonUndo.Size = new System.Drawing.Size(28, 27);
+            this.buttonUndo.Size = new System.Drawing.Size(37, 33);
             this.buttonUndo.TabIndex = 16;
             this.buttonUndo.UseVisualStyleBackColor = true;
             this.buttonUndo.Click += new System.EventHandler(this.buttonUndo_Click);
@@ -949,9 +986,10 @@
             this.buttonRedo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonRedo.FlatAppearance.BorderSize = 0;
             this.buttonRedo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRedo.Location = new System.Drawing.Point(37, 3);
+            this.buttonRedo.Location = new System.Drawing.Point(49, 4);
+            this.buttonRedo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonRedo.Name = "buttonRedo";
-            this.buttonRedo.Size = new System.Drawing.Size(28, 27);
+            this.buttonRedo.Size = new System.Drawing.Size(37, 33);
             this.buttonRedo.TabIndex = 16;
             this.buttonRedo.UseVisualStyleBackColor = true;
             this.buttonRedo.Click += new System.EventHandler(this.buttonRedo_Click);
@@ -964,9 +1002,10 @@
             this.buttonBucket.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonBucket.FlatAppearance.BorderSize = 0;
             this.buttonBucket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBucket.Location = new System.Drawing.Point(71, 3);
+            this.buttonBucket.Location = new System.Drawing.Point(94, 4);
+            this.buttonBucket.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonBucket.Name = "buttonBucket";
-            this.buttonBucket.Size = new System.Drawing.Size(24, 27);
+            this.buttonBucket.Size = new System.Drawing.Size(32, 33);
             this.buttonBucket.TabIndex = 8;
             this.buttonBucket.UseVisualStyleBackColor = true;
             this.buttonBucket.Click += new System.EventHandler(this.buttonBucket_Click);
@@ -1004,7 +1043,7 @@
             this.buttonWhite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonWhite.Location = new System.Drawing.Point(178, 0);
             this.buttonWhite.Name = "buttonWhite";
-            this.buttonWhite.Size = new System.Drawing.Size(20, 20);
+            this.buttonWhite.Size = new System.Drawing.Size(27, 25);
             this.buttonWhite.TabIndex = 12;
             this.buttonWhite.UseVisualStyleBackColor = false;
             this.buttonWhite.Click += new System.EventHandler(this.buttonWhite_Click);
@@ -1089,7 +1128,7 @@
             this.buttonOrange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOrange.Location = new System.Drawing.Point(77, 0);
             this.buttonOrange.Name = "buttonOrange";
-            this.buttonOrange.Size = new System.Drawing.Size(20, 20);
+            this.buttonOrange.Size = new System.Drawing.Size(27, 25);
             this.buttonOrange.TabIndex = 13;
             this.buttonOrange.UseVisualStyleBackColor = false;
             this.buttonOrange.Click += new System.EventHandler(this.buttonOrange_Click);
@@ -1102,7 +1141,7 @@
             this.buttonBrown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBrown.Location = new System.Drawing.Point(78, 20);
             this.buttonBrown.Name = "buttonBrown";
-            this.buttonBrown.Size = new System.Drawing.Size(20, 20);
+            this.buttonBrown.Size = new System.Drawing.Size(27, 25);
             this.buttonBrown.TabIndex = 13;
             this.buttonBrown.UseVisualStyleBackColor = false;
             this.buttonBrown.Click += new System.EventHandler(this.buttonBrown_Click);
@@ -1172,7 +1211,7 @@
             this.buttonYellow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonYellow.Location = new System.Drawing.Point(97, 0);
             this.buttonYellow.Name = "buttonYellow";
-            this.buttonYellow.Size = new System.Drawing.Size(20, 20);
+            this.buttonYellow.Size = new System.Drawing.Size(27, 25);
             this.buttonYellow.TabIndex = 12;
             this.buttonYellow.UseVisualStyleBackColor = false;
             this.buttonYellow.Click += new System.EventHandler(this.buttonYellow_Click);
@@ -1193,7 +1232,8 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(0, 20);
+            this.button2.Location = new System.Drawing.Point(0, 25);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(0, 0);
             this.button2.TabIndex = 8;
@@ -1207,7 +1247,7 @@
             this.buttonRed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRed.Location = new System.Drawing.Point(57, 0);
             this.buttonRed.Name = "buttonRed";
-            this.buttonRed.Size = new System.Drawing.Size(20, 20);
+            this.buttonRed.Size = new System.Drawing.Size(27, 25);
             this.buttonRed.TabIndex = 7;
             this.buttonRed.UseVisualStyleBackColor = false;
             this.buttonRed.Click += new System.EventHandler(this.buttonRed_Click);
@@ -1216,7 +1256,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(13, 41);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(85, 20);
+            this.textBox1.Size = new System.Drawing.Size(85, 22);
             this.textBox1.TabIndex = 6;
             this.textBox1.VisibleChanged += new System.EventHandler(this.buttonPolygon1_Click);
             // 
@@ -1261,21 +1301,22 @@
             this.labelNumberOfAngles.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelNumberOfAngles.Location = new System.Drawing.Point(10, 4);
             this.labelNumberOfAngles.Name = "labelNumberOfAngles";
-            this.labelNumberOfAngles.Size = new System.Drawing.Size(166, 16);
+            this.labelNumberOfAngles.Size = new System.Drawing.Size(215, 19);
             this.labelNumberOfAngles.TabIndex = 0;
             this.labelNumberOfAngles.Text = "Введите количество углов";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.panelTools);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.MainMenuStrip = this.menuStrip1;
-            this.MinimumSize = new System.Drawing.Size(700, 470);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(927, 568);
             this.Name = "Form1";
             this.Text = "Whale Draw";
             this.Load += new System.EventHandler(this.Form1_Load);

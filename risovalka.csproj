@@ -46,6 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractPainterFactory\APainterFactory.cs" />
+    <Compile Include="AbstractPainterFactory\ErasePainterFactory.cs" />
+    <Compile Include="AbstractPainterFactory\FigurePainterFactory.cs" />
+    <Compile Include="AbstractPainterFactory\LinePainterFactory.cs" />
+    <Compile Include="AbstractPainterFactory\PointPolygonPainterFactory.cs" />
+    <Compile Include="APainter\ErasePainter.cs" />
+    <Compile Include="APainter\FigurePainter.cs" />
+    <Compile Include="APainter\LinePainter.cs" />
+    <Compile Include="APainter\PointPolygonPainter.cs" />
     <Compile Include="Canvas.cs" />
     <Compile Include="Brush.cs" />
     <Compile Include="Circle1.cs" />
@@ -57,7 +66,17 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="AbstractPainter.cs" />
+    <Compile Include="APainter\AbstractPainter.cs" />
+    <Compile Include="FormFigure\CircleForm.cs" />
+    <Compile Include="FormFigure\EllipseForm.cs" />
+    <Compile Include="FormFigure\IFormFigure.cs" />
+    <Compile Include="FormFigure\IsoTriangleForm.cs" />
+    <Compile Include="FormFigure\LineForm.cs" />
+    <Compile Include="FormFigure\PolygonForm.cs" />
+    <Compile Include="FormFigure\RectangleForm.cs" />
+    <Compile Include="FormFigure\RecTriangleForm.cs" />
+    <Compile Include="FormFigure\SquareForm.cs" />
+    <Compile Include="IFill\Filling.cs" />
     <Compile Include="IsoscelesTriangle.cs" />
     <Compile Include="Line.cs" />
     <Compile Include="List\L2List.cs" />

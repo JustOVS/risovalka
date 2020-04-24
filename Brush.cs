@@ -10,92 +10,140 @@ namespace risovalka
 {
     public class Brush
     {
-        //public static bool drawStartFinishFlag = false;
+        public Color currentColor = Form1.currentColor;
+        public static Canvas brushCanvas = Canvas.GetCanvas;
+        public int size = Form1.size;         //размер кисти, используем через свойство Size
+        //public int Size               
+        //{
+        //    get
+        //    {
+        //        return size;
+        //    }
+        //    set
+        //    {
+        //        if (value >= 1 && value <= 4)
+        //        {
+        //            size = value;
+        //        }
+        //    }
+        //}
 
-        // public static int x1, y1;                             // Стартовые координаты при рисовании мышкой, первоначально значения присваивается из mousedown;
-
-
-        //public IPainter drawSwitch = new Squaire();
-
-
+        public Brush()
         public static bool takePipette = false;
-        public static Color currentColor = Color.Black;
-        public static Color PrevColor = Color.Blue;
-
-        private static int size = 1;         //размер кисти, используем через свойство Size
-        public static int Size               //надо прикрутить к бегунку 4 положения для переключения размера
         {
-            get
-            {
-                return size;
-            }
-            set
-            {
-                if (value >= 1 && value <= 4)
-                {
-                    size = value;
-                }
-            }
+            currentColor = Form1.currentColor;
+            size = Form1.size;
         }
-        public static void ChooseColor()
+        public Brush(Color currentColor, int size)
         {
-            ColorDialog MyDialog = new ColorDialog();
-
-
-
-            MyDialog.FullOpen = true;
-
-            MyDialog.Color = currentColor;
-            PrevColor = currentColor;
-
-
-            if (MyDialog.ShowDialog() == DialogResult.Cancel)
-                return;
-
-           // PrevColor = currentColor;
-            currentColor = MyDialog.Color;
+            this.currentColor = currentColor;
+            this.size = size;
         }
-        public static void Pen(int x1, int y1, Color currentColor)
+        public void Pen(int x1, int y1, Color currentColor)
         {
-            switch (Size)
+            switch (size)
             {
                 case 1:
-                    Canvas.DrawPixel(x1, y1, currentColor);
+                    brushCanvas.DrawPixel(x1, y1, currentColor);
                     break;
 
                 case 2:
-                    Canvas.DrawPixel(x1 - 1, y1 - 1, currentColor);
-                    Canvas.DrawPixel(x1, y1 - 1, currentColor);
-                    Canvas.DrawPixel(x1 - 1, y1, currentColor);
-                    Canvas.DrawPixel(x1, y1, currentColor);
+                    brushCanvas.DrawPixel(x1 - 1, y1 - 1, currentColor);
+                    brushCanvas.DrawPixel(x1, y1 - 1, currentColor);
+                    brushCanvas.DrawPixel(x1 - 1, y1, currentColor);
+                    brushCanvas.DrawPixel(x1, y1, currentColor);
                     break;
                 case 3:
-                    Canvas.DrawPixel(x1, y1, currentColor);
-                    Canvas.DrawPixel(x1 - 1, y1, currentColor);
-                    Canvas.DrawPixel(x1 + 1, y1, currentColor);
-                    Canvas.DrawPixel(x1, y1 - 1, currentColor);
-                    Canvas.DrawPixel(x1, y1 + 1, currentColor);
+                    brushCanvas.DrawPixel(x1, y1, currentColor);
+                    brushCanvas.DrawPixel(x1 - 1, y1, currentColor);
+                    brushCanvas.DrawPixel(x1 + 1, y1, currentColor);
+                    brushCanvas.DrawPixel(x1, y1 - 1, currentColor);
+                    brushCanvas.DrawPixel(x1, y1 + 1, currentColor);
                     break;
                 case 4:
-                    Canvas.DrawPixel(x1 - 1, y1 - 1, currentColor);
-                    Canvas.DrawPixel(x1, y1 - 1, currentColor);
-                    Canvas.DrawPixel(x1 - 1, y1, currentColor);
-                    Canvas.DrawPixel(x1, y1, currentColor);
+                    brushCanvas.DrawPixel(x1 - 1, y1 - 1, currentColor);
+                    brushCanvas.DrawPixel(x1, y1 - 1, currentColor);
+                    brushCanvas.DrawPixel(x1 - 1, y1, currentColor);
+                    brushCanvas.DrawPixel(x1, y1, currentColor);
 
-                    Canvas.DrawPixel(x1 - 2, y1, currentColor);
-                    Canvas.DrawPixel(x1 - 2, y1 - 1, currentColor);
+                    brushCanvas.DrawPixel(x1 - 2, y1, currentColor);
+                    brushCanvas.DrawPixel(x1 - 2, y1 - 1, currentColor);
 
-                    Canvas.DrawPixel(x1 - 1, y1 - 2, currentColor);
+                    brushCanvas.DrawPixel(x1 - 1, y1 - 2, currentColor);
 
-                    Canvas.DrawPixel(x1 + 1, y1 - 1, currentColor);
-                    Canvas.DrawPixel(x1 + 1, y1, currentColor);
+                    brushCanvas.DrawPixel(x1 + 1, y1 - 1, currentColor);
+                    brushCanvas.DrawPixel(x1 + 1, y1, currentColor);
 
-                    Canvas.DrawPixel(x1 - 1, y1 + 1, currentColor);
-                    Canvas.DrawPixel(x1, y1 + 1, currentColor);
+                    brushCanvas.DrawPixel(x1 - 1, y1 + 1, currentColor);
+                    brushCanvas.DrawPixel(x1, y1 + 1, currentColor);
                     break;
 
             }
+        }
+        public void DrawLine(Point p1, Point p2, PictureBox pictureBox, Color currentColor)
+        {
+                int x1 = p1.X;
+                int y1 = p1.Y;
+                int x2 = p2.X;
+                int y2 = p2.Y;
+                if (Form1.drawStartFinishFlag == true)
+                {
+                    int lengthX = Math.Abs(x2 - x1);
+                    int lengthY = Math.Abs(y2 - y1);
 
+                    int length = Math.Max(lengthX, lengthY);
+
+
+                    if (length == 0)
+                    {
+
+                        //Canvas.DrawPixel(x1, y1, Color.Red);
+                        Pen(x1, y1, currentColor);
+                        pictureBox.Image = brushCanvas.currentBitmap;
+                    }
+
+                    else
+                    {
+                        double dx = (double)(x2 - x1) / (double)length;
+                        double dy = (double)(y2 - y1) / (double)length;
+                        double x = x1;
+                        double y = y1;
+
+
+
+                        while (length + 1 != 0)
+                        {
+                            //Canvas.DrawPixel((int)x, (int)y, Color.Red);
+                            Pen((int)x, (int)y, currentColor);
+                            pictureBox.Image = brushCanvas.currentBitmap;
+
+                            x += dx;
+                            y += dy;
+                            length--;
+                        }
+                    }
+
+                }
+        }
+
+
+
+
+            //public static void ChooseColor()
+            //{
+            //    ColorDialog MyDialog = new ColorDialog();
+
+
+
+            //    MyDialog.FullOpen = true;
+
+            //    MyDialog.Color = currentColor;
+
+            //    if (MyDialog.ShowDialog() == DialogResult.Cancel)
+            //        return;
+
+            //    currentColor = MyDialog.Color;
+            //}
             //public static void DrawMouseLine(MouseEventArgs e, PictureBox pictureBox)
             //{
             //    DrawLine(x1, y1, e.X, e.Y, pictureBox);
@@ -149,16 +197,15 @@ namespace risovalka
 
         //public static void EraseLine(MouseEventArgs e, PictureBox pictureBox)   
         //{
-           
+
         //        Color tmpColor = currentColor;
         //        currentColor = pictureBox.BackColor;
         //        DrawLine(x1, y1, e.X, e.Y, pictureBox);
         //        x1 = e.X;
         //        y1 = e.Y;
         //        currentColor = tmpColor;
-            
+
         //}
 
-        
+
     }
-}
