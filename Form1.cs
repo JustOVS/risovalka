@@ -68,7 +68,7 @@ namespace risovalka
 
             if (Brush.takePipette == true)
             {
-                Brush.currentColor = Canvas.currentBitmap.GetPixel(e.X, e.Y);
+               currentColor = formCanvas.currentBitmap.GetPixel(e.X, e.Y);
 
             }
 
@@ -118,7 +118,7 @@ namespace risovalka
                 //}
 
             }
-            pictureBoxCurrentColor.BackColor = Brush.currentColor;
+            pictureBoxCurrentColor.BackColor = currentColor;
         }
 
 
@@ -141,12 +141,12 @@ namespace risovalka
 
         private void pictureBoxCurrentColor_Click(object sender, EventArgs e)
         {
-            Brush.currentColor = pictureBoxCurrentColor.BackColor;
+            currentColor = pictureBoxCurrentColor.BackColor;
         }
 
         private void pictureBoxPrevColor_Click(object sender, EventArgs e)
         {
-            Brush.currentColor = pictureBoxPrevColor.BackColor;
+            currentColor = pictureBoxPrevColor.BackColor;
         }
 
         private void buttonSize1_Click(object sender, EventArgs e)
@@ -376,9 +376,9 @@ namespace risovalka
 
         private void Form1_ResizeEnd(object sender, EventArgs e)
         {
-            Bitmap tmpBitmap = Canvas.currentBitmap;
-            Canvas.currentBitmap = new Bitmap (pictureBox1.Width, pictureBox1.Height);
-            Canvas.currentBitmap = tmpBitmap;
+            Bitmap tmpBitmap = formCanvas.currentBitmap;
+            formCanvas.currentBitmap = new Bitmap (pictureBox1.Width, pictureBox1.Height);
+            formCanvas.currentBitmap = tmpBitmap;
         }
         public void ChooseColor()
         {
@@ -404,8 +404,8 @@ namespace risovalka
         }
         private void Form1_Resize(object sender, EventArgs e)
         {
-            Bitmap tmpBitmap = Canvas.currentBitmap;
-            Canvas.currentBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+            Bitmap tmpBitmap = formCanvas.currentBitmap;
+            formCanvas.currentBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
         }
     }
 }

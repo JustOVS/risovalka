@@ -13,27 +13,15 @@ namespace risovalka
         public Color currentColor = Form1.currentColor;
         public static Canvas brushCanvas = Canvas.GetCanvas;
         public int size = Form1.size;         //размер кисти, используем через свойство Size
-        //public int Size               
-        //{
-        //    get
-        //    {
-        //        return size;
-        //    }
-        //    set
-        //    {
-        //        if (value >= 1 && value <= 4)
-        //        {
-        //            size = value;
-        //        }
-        //    }
-        //}
-
+   
+public static bool takePipette = false;
         public Brush()
-        public static bool takePipette = false;
         {
             currentColor = Form1.currentColor;
             size = Form1.size;
         }
+        
+       
         public Brush(Color currentColor, int size)
         {
             this.currentColor = currentColor;
