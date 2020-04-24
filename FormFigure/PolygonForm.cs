@@ -11,7 +11,7 @@ namespace risovalka.FormFigure
     public class PolygonForm : IFormFigure
     {
         public static int nSides;
-        List<Point> list1 = new List<Point>();
+        
        
         // int[] points = new int[2 * nSides];
 
@@ -27,6 +27,7 @@ namespace risovalka.FormFigure
         }
         public List<Point> CalculateFigure(Point p1, Point p2)
         {
+            List<Point> list1 = new List<Point>();
             int x1 = p1.X;
             int y1 = p1.Y;
             int x2 = p2.X;

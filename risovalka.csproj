@@ -47,9 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractPainterFactory\APainterFactory.cs" />
+    <Compile Include="AbstractPainterFactory\ErasePainterFactory.cs" />
     <Compile Include="AbstractPainterFactory\FigurePainterFactory.cs" />
     <Compile Include="AbstractPainterFactory\LinePainterFactory.cs" />
     <Compile Include="AbstractPainterFactory\PointPolygonPainterFactory.cs" />
+    <Compile Include="APainter\ErasePainter.cs" />
     <Compile Include="APainter\FigurePainter.cs" />
     <Compile Include="APainter\LinePainter.cs" />
     <Compile Include="APainter\PointPolygonPainter.cs" />

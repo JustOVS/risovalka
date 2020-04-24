@@ -41,20 +41,19 @@ namespace risovalka
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
-            //AbstractPainter.x1 = e.X;
-            //AbstractPainter.y1 = e.Y;
+            
             drawStartFinishFlag = true;
             formCanvas.tmpBitmap = new Bitmap(formCanvas.currentBitmap);
             formCanvas.AddToTmp();
             currentPainter = currentFactory.CreatePainter(currentForm, currentColor, size, new Point(e.X, e.Y));
 
-            //if (PointPolygon.first.X != -1 && PointPolygon.first.Y != -1) //&& e.Button == MouseButtons.Left && e.Clicks == 1
-            //{
+            if (PointPolygonPainter.first.X != -1) //&& e.Button == MouseButtons.Left && e.Clicks == 1
+            {
 
-            //    AbstractPainter.DrawLine(PointPolygon.last.X, PointPolygon.last.Y, e.X, e.Y, pictureBox1, Brush.currentColor);
-            //    pictureBox1.Image = formCanvas.currentBitmap;
+                currentPainter.DrawDynamicFigure(new Point(e.X, e.Y), pictureBox1);
+                
 
-            //}
+            }
             //else if (AbstractPainter.drawSwitch.GetType() == typeof(PointPolygon))
             //{
             //    PointPolygon.first.X = e.X;
@@ -69,18 +68,15 @@ namespace risovalka
         {
 
 
-            // if (Math.Abs(e.X - PointPolygon.first.X) < 10 && Math.Abs(e.Y - PointPolygon.first.Y) < 10 && PointPolygon.first.X != -1)
-            //{
-            //    formCanvas.currentBitmap = new Bitmap(formCanvas.tmpBitmap);
-            //    AbstractPainter.DrawLine(PointPolygon.last.X, PointPolygon.last.Y, PointPolygon.first.X, PointPolygon.first.Y, pictureBox1, Brush.currentColor);
-            //    PointPolygon.first.X = -1;
-            //    PointPolygon.first.Y = -1;
-            //}
-            //else if (PointPolygon.first.X != -1)
-            //{
-            //    PointPolygon.last.X = e.X;
-            //    PointPolygon.last.Y = e.Y;
-            //}
+            if (Math.Abs(e.X - PointPolygonPainter.first.X) < 10 && Math.Abs(e.Y - PointPolygonPainter.first.Y) < 10 && PointPolygonPainter.first.X != -1)
+            {
+                new PointPolygonPainter(currentColor, size).ConnectLastAndFirst(pictureBox1);
+            }
+            else if (PointPolygonPainter.first.X != -1)
+            {
+                PointPolygonPainter.last.X = e.X;
+                PointPolygonPainter.last.Y = e.Y;
+            }
             drawStartFinishFlag = false;
 
 
@@ -174,7 +170,8 @@ namespace risovalka
 
         private void buttonEraser_Click(object sender, EventArgs e)
         {
-            //AbstractPainter.drawSwitch = new Eraser();
+            currentFactory = new ErasePainterFactory();
+            currentForm = new LineForm();
         }
 
         private void buttonBucket_Click(object sender, EventArgs e)
@@ -240,17 +237,16 @@ namespace risovalka
 
         private void buttonPolygon2_Click(object sender, EventArgs e)
         {
-            //AbstractPainter.drawSwitch = new PointPolygon();
+            currentFactory = new PointPolygonPainterFactory();
+            currentForm = new LineForm();
         }
 
         private void pictureBox1_DoubleClick(object sender, EventArgs e)
         {
-            //if(PointPolygon.first.X != -1)
-            //{
-            //    AbstractPainter.DrawLine(PointPolygon.last.X, PointPolygon.last.Y, PointPolygon.first.X, PointPolygon.first.Y, pictureBox1, Brush.currentColor);
-            //    PointPolygon.first.X = -1;
-            //    PointPolygon.first.Y = -1;
-            //}
+            if (PointPolygonPainter.first.X != -1)
+            {
+                new PointPolygonPainter(currentColor, size).ConnectLastAndFirst(pictureBox1);
+            }
         }
 
         private void buttonRed_Click(object sender, EventArgs e)
