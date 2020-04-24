@@ -93,11 +93,27 @@ namespace risovalka
         {
             if (drawStartFinishFlag == true)
             {
-                currentPainter.DrawDynamicFigure(new Point(e.X, e.Y), pictureBox1);
-            }
-            //Brush.DrawMouseLine(e, pictureBox1);
-            //IPainter //painter.DrawDymanicFigure(e, picturebox1);
+                //if (Control.ModifierKeys == Keys.Shift && (currentForm is RectangleForm))
+                //{
+                //    AbstractPainter tmpPainter = currentFactory.CreatePainter(new SquareForm(), currentColor, size, new Point(e.X, e.Y));
+                //    tmpPainter.DrawDynamicFigure(new Point(e.X, e.Y), pictureBox1);
+                //}
+                ////else if (Control.ModifierKeys != Keys.Shift && (AbstractPainter.drawSwitch.GetType() == typeof(Rectangle)))
+                ////{
 
+                ////    new Rectangle().DrawDynamicFigure(e, pictureBox1);
+                ////}
+                ////else
+                ////{
+                ////    AbstractPainter.drawSwitch.DrawDynamicFigure(e, pictureBox1);
+                ////}
+
+                //else
+                //{
+                    currentPainter.DrawDynamicFigure(new Point(e.X, e.Y), pictureBox1);
+                //}
+
+            }
         }
 
 
