@@ -11,6 +11,6 @@ namespace risovalka.IButtonswitch
 {
     public interface IButton
     {
-        bool ButtonSwitch(Point p1, PictureBox pictureBox, ref Color currentColor, int currentSize);
+        bool ButtonSwitch(Point p1, PictureBox pictureBox, ref Color currentColor);
     }
 }

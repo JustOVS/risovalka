@@ -5,15 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using risovalka.IFill;
+using risovalka.AFill;
 
 namespace risovalka.IButtonswitch
 {
     public class FillButton : IButton
     {
-        public bool ButtonSwitch(Point p1, PictureBox pictureBox, ref Color currentColor, int currentSize)
+        public bool ButtonSwitch(Point p1, PictureBox pictureBox, ref Color currentColor)
         {
-            new Filling().Fill(p1, pictureBox, currentColor, currentSize);
+            new TotalFilling().Fill(p1, pictureBox, currentColor);
             return false;
         }
     }

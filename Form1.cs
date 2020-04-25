@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using risovalka.FormFigure;
 using risovalka.AbstractPainterFactory;
 using risovalka.APainter;
-using risovalka.IFill;
+using risovalka.AFill;
 using risovalka.IButtonswitch;
 namespace risovalka
 {
@@ -44,7 +44,7 @@ namespace risovalka
             
             formCanvas.tmpBitmap = new Bitmap(formCanvas.currentBitmap);
             formCanvas.AddToTmp();
-            drawStartFinishFlag = buttonSwitch.ButtonSwitch(new Point(e.X, e.Y), pictureBox1, ref currentColor, size); 
+            drawStartFinishFlag = buttonSwitch.ButtonSwitch(new Point(e.X, e.Y), pictureBox1, ref currentColor); 
             if (drawStartFinishFlag)
             {
                 currentPainter = currentFactory.CreatePainter(currentForm, currentColor, size, new Point(e.X, e.Y));
@@ -59,7 +59,10 @@ namespace risovalka
 
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
-
+            if(buttonSwitch is PipetteButton)
+            {
+                buttonSwitch = new NoneButton();
+            }
 
             if (Math.Abs(e.X - PointPolygonPainter.first.X) < 10 && Math.Abs(e.Y - PointPolygonPainter.first.Y) < 10 && PointPolygonPainter.first.X != -1)
             {
@@ -72,6 +75,7 @@ namespace risovalka
             }
             drawStartFinishFlag = false;
         }
+        
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {

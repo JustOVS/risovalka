@@ -8,15 +8,15 @@ using System.Windows.Forms;
 using risovalka;
 
 
-namespace risovalka.IFill
+namespace risovalka.AFill
 {
-    public class Filling
+    public class TotalFilling : AbstractFilling
     {
-        Canvas fillCanvas = Canvas.GetCanvas;
-        public void Fill(Point p1, PictureBox pictureBox, Color currentColor, int currentSize)
+        
+        public override void Fill(Point p1, PictureBox pictureBox, Color currentColor)
 
         {
-            Brush brush = new Brush(currentColor, currentSize);
+            Brush brush = new Brush(currentColor, 1);
             int x = p1.X;
             int y = p1.Y;
             int leftChecking = x;
@@ -41,12 +41,12 @@ namespace risovalka.IFill
             {
                 if (fillCanvas.currentBitmap.GetPixel(i, y - 1) == localColor && y - 1 > 0)
                 {
-                    Fill(new Point(i, y - 1), pictureBox, currentColor, currentSize);
+                    Fill(new Point(i, y - 1), pictureBox, currentColor);
                 }
 
                 if (fillCanvas.currentBitmap.GetPixel(i, y + 1) == localColor && y + 1 < fillCanvas.currentBitmap.Height - 1)
                 {
-                    Fill(new Point(i, y + 1), pictureBox, currentColor, currentSize);
+                    Fill(new Point(i, y + 1), pictureBox, currentColor);
                 }
             }
         }
