@@ -28,3 +28,9 @@ D:\repos\risovalka\obj\Debug\risovalka.csproj.GenerateResource.cache
 D:\repos\risovalka\obj\Debug\risovalka.csproj.CoreCompileInputs.cache
 D:\repos\risovalka\obj\Debug\risovalka.exe
 D:\repos\risovalka\obj\Debug\risovalka.pdb
+E:\VisualProject\risovalka\obj\Debug\risovalka.csprojAssemblyReference.cache
+E:\VisualProject\risovalka\obj\Debug\risovalka.Form1.resources
+E:\VisualProject\risovalka\obj\Debug\risovalka.Properties.Resources.resources
+E:\VisualProject\risovalka\obj\Debug\risovalka.csproj.GenerateResource.cache
+E:\VisualProject\risovalka\obj\Debug\risovalka.csproj.CoreCompileInputs.cache
+E:\VisualProject\risovalka\obj\Debug\risovalka.exe

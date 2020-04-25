@@ -10,7 +10,7 @@ namespace risovalka.List
     public class L2List
     {
 
-
+       
         private L2Node first;
         private L2Node last;
         public int Length { get; private set; }
@@ -45,7 +45,7 @@ namespace risovalka.List
                 }
                 else if (index < 0 || index > Length - 1)
                 {
-                    throw new IndexOutOfRangeException();
+                   return Canvas.GetCanvas.currentBitmap;
                 }
                 else if (index <= Length / 2)
                 {
