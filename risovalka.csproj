@@ -76,7 +76,12 @@
     <Compile Include="FormFigure\RectangleForm.cs" />
     <Compile Include="FormFigure\RecTriangleForm.cs" />
     <Compile Include="FormFigure\SquareForm.cs" />
-    <Compile Include="IFill\Filling.cs" />
+    <Compile Include="IButtonswitch\FillButton.cs" />
+    <Compile Include="IButtonswitch\IButton.cs" />
+    <Compile Include="IButtonswitch\NoneButton.cs" />
+    <Compile Include="IButtonswitch\PipetteButton.cs" />
+    <Compile Include="AFill\TotalFilling.cs" />
+    <Compile Include="AFill\AbstractFilling.cs" />
     <Compile Include="IsoscelesTriangle.cs" />
     <Compile Include="Line.cs" />
     <Compile Include="List\L2List.cs" />

@@ -74,8 +74,8 @@ public static bool takePipette = false;
                 int y1 = p1.Y;
                 int x2 = p2.X;
                 int y2 = p2.Y;
-                if (Form1.drawStartFinishFlag == true)
-                {
+                //if (Form1.drawStartFinishFlag == true)
+                //{
                     int lengthX = Math.Abs(x2 - x1);
                     int lengthY = Math.Abs(y2 - y1);
 
@@ -111,7 +111,7 @@ public static bool takePipette = false;
                         }
                     }
 
-                }
+                //}
         }
 
 
