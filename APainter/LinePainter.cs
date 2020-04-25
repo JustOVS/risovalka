@@ -17,7 +17,7 @@ namespace risovalka.APainter
             this.formFigure = formFigure;
             this.startPoint = startPoint;
         }
-        public override void DrawDynamicFigure(Point p1, PictureBox pictureBox)
+        public override void DrawDynamicFigure(Point p1, PictureBox pictureBox, bool shift)
         {
             brush.DrawLine(startPoint, p1, pictureBox, brush.currentColor);
             startPoint = p1;

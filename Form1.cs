@@ -24,6 +24,7 @@ namespace risovalka
         public AbstractPainter currentPainter = null;
         public static bool drawStartFinishFlag = false;
         IButton buttonSwitch = new NoneButton();
+        public bool shift = false;
         public Form1()
         {
             InitializeComponent();
@@ -52,7 +53,7 @@ namespace risovalka
                 if (PointPolygonPainter.first.X != -1) 
                 {
 
-                    currentPainter.DrawDynamicFigure(new Point(e.X, e.Y), pictureBox1);
+                    currentPainter.DrawDynamicFigure(new Point(e.X, e.Y), pictureBox1, shift);
                 }
             }
         }
@@ -81,27 +82,38 @@ namespace risovalka
         {
             if (drawStartFinishFlag == true)
             {
-                //if (Control.ModifierKeys == Keys.Shift && (currentForm is RectangleForm))
-                //{
-                //    AbstractPainter tmpPainter = currentFactory.CreatePainter(new SquareForm(), currentColor, size, new Point(e.X, e.Y));
-                //    tmpPainter.DrawDynamicFigure(new Point(e.X, e.Y), pictureBox1);
-                //}
-                ////else if (Control.ModifierKeys != Keys.Shift && (AbstractPainter.drawSwitch.GetType() == typeof(Rectangle)))
-                ////{
-
-                ////    new Rectangle().DrawDynamicFigure(e, pictureBox1);
-                ////}
-                ////else
-                ////{
-                ////    AbstractPainter.drawSwitch.DrawDynamicFigure(e, pictureBox1);
-                ////}
-
-                //else
-                //{
-                    currentPainter.DrawDynamicFigure(new Point(e.X, e.Y), pictureBox1);
-                //}
-
+                if (Control.ModifierKeys == Keys.Shift)
+                {
+                    shift = true;
+                }
+                else
+                {
+                    shift = false;
+                }
+                currentPainter.DrawDynamicFigure(new Point(e.X, e.Y), pictureBox1, shift);
             }
+
+            //if (Control.ModifierKeys == Keys.Shift && (currentForm is RectangleForm))
+            //{
+            //    AbstractPainter tmpPainter = currentFactory.CreatePainter(new SquareForm(), currentColor, size, new Point(e.X, e.Y));
+            //    tmpPainter.DrawDynamicFigure(new Point(e.X, e.Y), pictureBox1);
+            //}
+            ////else if (Control.ModifierKeys != Keys.Shift && (AbstractPainter.drawSwitch.GetType() == typeof(Rectangle)))
+            ////{
+
+            ////    new Rectangle().DrawDynamicFigure(e, pictureBox1);
+            ////}
+            ////else
+            ////{
+            ////    AbstractPainter.drawSwitch.DrawDynamicFigure(e, pictureBox1);
+            ////}
+
+            //else
+            //{
+
+            //}
+
+
             pictureBoxCurrentColor.BackColor = currentColor;
         }
 

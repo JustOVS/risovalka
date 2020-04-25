@@ -18,7 +18,7 @@ namespace risovalka.APainter
         public Point startPoint;
       
 
-        public abstract void DrawDynamicFigure(Point p1, PictureBox pictureBox);
+        public abstract void DrawDynamicFigure(Point p1, PictureBox pictureBox, bool shift);
 
         //public static int x1, y1;         //поля, которые присваиваются при mousedown и нужны для посмотрения фигур всех наследников.
 
