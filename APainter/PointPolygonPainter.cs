@@ -34,7 +34,7 @@ namespace risovalka.APainter
 
         }
 
-        public override void DrawDynamicFigure(Point p1, PictureBox pictureBox)
+        public override void DrawDynamicFigure(Point p1, PictureBox pictureBox, bool shift)
         {
             if (Form1.drawStartFinishFlag == true)
             {
