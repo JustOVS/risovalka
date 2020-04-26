@@ -8,7 +8,7 @@ using System.Linq;
 
 namespace FigureFormTests
 {
-    public class Tests
+    public class RectangleTests
     {
         IFormFigure figure = new RectangleForm();
      
