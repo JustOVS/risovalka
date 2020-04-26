@@ -8,7 +8,7 @@ using risovalka;
 
 namespace risovalka.FormFigure
 {
-    class EllipseForm : IFormFigure
+    public class EllipseForm : IFormFigure
     {
         public List<Point> CalculateFigure(Point p1, Point p2)
         {
