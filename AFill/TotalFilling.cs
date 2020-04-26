@@ -50,5 +50,42 @@ namespace risovalka.AFill
                 }
             }
         }
+        public override void Fill(Point p1, PictureBox pictureBox, Color currentColor, ref Bitmap newBitmap)
+
+        {
+            Brush brush = new Brush(currentColor, 1);
+            int x = p1.X;
+            int y = p1.Y;
+            int leftChecking = x;
+            int rightChecking = x;
+
+
+            Color localColor = newBitmap.GetPixel(x, y);
+
+            while (newBitmap.GetPixel(leftChecking - 1, y) == localColor && leftChecking - 1 > 0)
+            {
+                leftChecking--;
+            }
+
+            while (newBitmap.GetPixel(rightChecking + 1, y) == localColor && rightChecking + 1 < newBitmap.Width - 1)
+            {
+                rightChecking++;
+            }
+
+            brush.DrawLine(new Point(leftChecking, y), new Point(rightChecking, y), pictureBox, brush.currentColor, ref newBitmap);
+
+            for (int i = leftChecking; i <= rightChecking; i++)
+            {
+                if (newBitmap.GetPixel(i, y - 1) == localColor && y - 1 > 0)
+                {
+                    Fill(new Point(i, y - 1), pictureBox, currentColor, ref newBitmap);
+                }
+
+                if (newBitmap.GetPixel(i, y + 1) == localColor && y + 1 < newBitmap.Height - 1)
+                {
+                    Fill(new Point(i, y + 1), pictureBox, currentColor, ref newBitmap);
+                }
+            }
+        }
     }
 }

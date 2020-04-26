@@ -48,7 +48,7 @@ namespace risovalka
             drawStartFinishFlag = buttonSwitch.ButtonSwitch(new Point(e.X, e.Y), pictureBox1, ref currentColor); 
             if (drawStartFinishFlag)
             {
-                currentPainter = currentFactory.CreatePainter(currentForm, currentColor, size, new Point(e.X, e.Y));
+                currentPainter = currentFactory.CreatePainter(currentForm, currentColor, size, new Point(e.X, e.Y), new TotalFilling());
 
                 if (PointPolygonPainter.first.X != -1) 
                 {
@@ -252,7 +252,7 @@ namespace risovalka
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            //if (e.Shift)
+            //if (e.Shift) 
             //{
             //    AbstractPainter.shift = true;
             //}
@@ -358,6 +358,7 @@ namespace risovalka
 
         private void buttonWhite_Click(object sender, EventArgs e)
         {
+            
             currentColor = buttonWhite.BackColor;
         }
 

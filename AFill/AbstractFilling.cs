@@ -11,5 +11,7 @@ namespace risovalka.AFill
     {
         public Canvas fillCanvas = Canvas.GetCanvas;
         public abstract void Fill(Point p1, PictureBox pictureBox, Color currentColor);
+
+        public abstract void Fill(Point p1, PictureBox pictureBox, Color currentColor, ref Bitmap newBitmap);
     }
 }
