@@ -28,3 +28,13 @@ bin/Debug/risovalka.exe
 bin/Debug/
 
 risovalka.csproj
+
+.vs/risovalka/v16/TestStore/0/000.testlog
+
+FigureFormTests/bin/Debug/netcoreapp3.1/FigureFormTests.dll
+
+FigureFormTests/bin/Debug/netcoreapp3.1/FigureFormTests.pdb
+
+FigureFormTests/obj/Debug/netcoreapp3.1/FigureFormTests.dll
+
+FigureFormTests/obj/Debug/netcoreapp3.1/FigureFormTests.pdb
