@@ -68,12 +68,12 @@ public static bool takePipette = false;
 
             }
         }
-        public void Pen(int x1, int y1, Color currentColor, ref Bitmap newBitmap)
+        public void Pen(int x1, int y1, Color currentColor, Bitmap newBitmap)
         {
             switch (size)
             {
                 case 1:
-                    brushCanvas.DrawPixel(x1, y1, currentColor, ref newBitmap);
+                    brushCanvas.DrawPixel(x1, y1, currentColor, newBitmap);
                     break;
 
                 case 2:
@@ -154,7 +154,7 @@ public static bool takePipette = false;
 
                 //}
         }
-        public void DrawLine(Point p1, Point p2, PictureBox pictureBox, Color currentColor, ref Bitmap newBitmap)
+        public void DrawLine(Point p1, Point p2, PictureBox pictureBox, Color currentColor, Bitmap newBitmap)
         {
             
             int x1 = p1.X;
@@ -173,7 +173,7 @@ public static bool takePipette = false;
             {
 
                 //Canvas.DrawPixel(x1, y1, Color.Red);
-                Pen(x1, y1, currentColor, ref newBitmap);
+                Pen(x1, y1, currentColor, newBitmap);
                 pictureBox.Image = newBitmap;
             }
 
@@ -189,7 +189,7 @@ public static bool takePipette = false;
                 while (length + 1 != 0)
                 {
                     //Canvas.DrawPixel((int)x, (int)y, Color.Red);
-                    Pen((int)x, (int)y, currentColor, ref newBitmap);
+                    Pen((int)x, (int)y, currentColor, newBitmap);
                     pictureBox.Image = newBitmap;
 
                     x += dx;

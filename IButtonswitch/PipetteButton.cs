@@ -11,7 +11,7 @@ namespace risovalka.IButtonswitch
 {
     public class PipetteButton : IButton
     {
-        public bool ButtonSwitch(Point p1, PictureBox pictureBox, ref Color currentColor)
+        public bool ButtonSwitch(Point p1, PictureBox pictureBox, Color currentColor)
         {
             currentColor = Canvas.GetCanvas.currentBitmap.GetPixel(p1.X, p1.Y);
             return false;

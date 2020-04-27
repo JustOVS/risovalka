@@ -24,6 +24,8 @@ namespace risovalka
         public AbstractPainter currentPainter = null;
         public static bool drawStartFinishFlag = false;
         IButton buttonSwitch = new NoneButton();
+        public AbstractFilling currentFilling; 
+        public Color fillingColor = Color.Blue; //костыль
         public bool shift = false;
         public Form1()
         {
@@ -37,6 +39,7 @@ namespace risovalka
             formCanvas.currentBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             formCanvas.tmpBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             pictureBoxCurrentColor.BackColor = Color.Black;
+            currentFilling = new NoneFilling(currentColor, formCanvas.currentBitmap);
         }
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
@@ -45,10 +48,10 @@ namespace risovalka
             
             formCanvas.tmpBitmap = new Bitmap(formCanvas.currentBitmap);
             formCanvas.AddToTmp();
-            drawStartFinishFlag = buttonSwitch.ButtonSwitch(new Point(e.X, e.Y), pictureBox1, ref currentColor); 
+            drawStartFinishFlag = buttonSwitch.ButtonSwitch(new Point(e.X, e.Y), pictureBox1, currentColor); 
             if (drawStartFinishFlag)
             {
-                currentPainter = currentFactory.CreatePainter(currentForm, currentColor, size, new Point(e.X, e.Y), new TotalFilling());
+                currentPainter = currentFactory.CreatePainter(currentForm, currentColor, size, new Point(e.X, e.Y), currentFilling);
 
                 if (PointPolygonPainter.first.X != -1) 
                 {
@@ -90,6 +93,7 @@ namespace risovalka
                 {
                     shift = false;
                 }
+                
                 currentPainter.DrawDynamicFigure(new Point(e.X, e.Y), pictureBox1, shift);
             }
 
@@ -401,6 +405,21 @@ namespace risovalka
         {
             formCanvas.tmpBitmap = formCanvas.currentBitmap;
             formCanvas.currentBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+        }
+
+        private void buttonOnlyFigure_Click(object sender, EventArgs e)
+        {
+            currentFilling = new TotalFilling(currentColor, new Bitmap(pictureBox1.Width, pictureBox1.Height));
+        }
+
+        private void buttonFigureWithBorders_Click(object sender, EventArgs e)
+        {
+            currentFilling = new InsideFilling(fillingColor, new Bitmap(pictureBox1.Width, pictureBox1.Height));
+        }
+
+        private void buttonOnlyBorders_Click(object sender, EventArgs e)
+        {
+            currentFilling = new TotalFilling(currentColor, new Bitmap(pictureBox1.Width, pictureBox1.Height));
         }
     }
 }
