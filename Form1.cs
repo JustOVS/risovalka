@@ -10,8 +10,8 @@ using System.Windows.Forms;
 using risovalka.FormFigure;
 using risovalka.AbstractPainterFactory;
 using risovalka.APainter;
-using risovalka.IFill;
-
+using risovalka.AFill;
+using risovalka.IButtonswitch;
 namespace risovalka
 {
     public partial class Form1 : Form
@@ -23,7 +23,8 @@ namespace risovalka
         public APainterFactory currentFactory = new LinePainterFactory();
         public AbstractPainter currentPainter = null;
         public static bool drawStartFinishFlag = false;
-        public bool fillingFlag = false;
+        IButton buttonSwitch = new NoneButton();
+        public bool shift = false;
         public Form1()
         {
             InitializeComponent();
@@ -41,42 +42,28 @@ namespace risovalka
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
             
-            drawStartFinishFlag = true;
+            
             formCanvas.tmpBitmap = new Bitmap(formCanvas.currentBitmap);
             formCanvas.AddToTmp();
-            if (fillingFlag == true)
-            {
-                new Filling().Fill(new Point(e.X, e.Y), pictureBox1, new Brush(currentColor, size));
-            }
-            else
+            drawStartFinishFlag = buttonSwitch.ButtonSwitch(new Point(e.X, e.Y), pictureBox1, ref currentColor); 
+            if (drawStartFinishFlag)
             {
                 currentPainter = currentFactory.CreatePainter(currentForm, currentColor, size, new Point(e.X, e.Y));
 
-                if (PointPolygonPainter.first.X != -1) //&& e.Button == MouseButtons.Left && e.Clicks == 1
+                if (PointPolygonPainter.first.X != -1) 
                 {
 
-                    currentPainter.DrawDynamicFigure(new Point(e.X, e.Y), pictureBox1);
+                    currentPainter.DrawDynamicFigure(new Point(e.X, e.Y), pictureBox1, shift);
                 }
             }
-            //else if (AbstractPainter.drawSwitch.GetType() == typeof(PointPolygon))
-            //{
-            //    PointPolygon.first.X = e.X;
-            //    PointPolygon.first.Y = e.Y;
-            //    PointPolygon.last.X = e.X;
-            //    PointPolygon.last.Y = e.Y;
-            //}
-
-            if (Brush.takePipette == true)
-            {
-               currentColor = formCanvas.currentBitmap.GetPixel(e.X, e.Y);
-
-            }
-
         }
 
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
-
+            if(buttonSwitch is PipetteButton)
+            {
+                buttonSwitch = new NoneButton();
+            }
 
             if (Math.Abs(e.X - PointPolygonPainter.first.X) < 10 && Math.Abs(e.Y - PointPolygonPainter.first.Y) < 10 && PointPolygonPainter.first.X != -1)
             {
@@ -88,36 +75,45 @@ namespace risovalka
                 PointPolygonPainter.last.Y = e.Y;
             }
             drawStartFinishFlag = false;
-
-
-            Brush.takePipette = false;
         }
+        
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
             if (drawStartFinishFlag == true)
             {
-                //if (Control.ModifierKeys == Keys.Shift && (currentForm is RectangleForm))
-                //{
-                //    AbstractPainter tmpPainter = currentFactory.CreatePainter(new SquareForm(), currentColor, size, new Point(e.X, e.Y));
-                //    tmpPainter.DrawDynamicFigure(new Point(e.X, e.Y), pictureBox1);
-                //}
-                ////else if (Control.ModifierKeys != Keys.Shift && (AbstractPainter.drawSwitch.GetType() == typeof(Rectangle)))
-                ////{
-
-                ////    new Rectangle().DrawDynamicFigure(e, pictureBox1);
-                ////}
-                ////else
-                ////{
-                ////    AbstractPainter.drawSwitch.DrawDynamicFigure(e, pictureBox1);
-                ////}
-
-                //else
-                //{
-                    currentPainter.DrawDynamicFigure(new Point(e.X, e.Y), pictureBox1);
-                //}
-
+                if (Control.ModifierKeys == Keys.Shift)
+                {
+                    shift = true;
+                }
+                else
+                {
+                    shift = false;
+                }
+                currentPainter.DrawDynamicFigure(new Point(e.X, e.Y), pictureBox1, shift);
             }
+
+            //if (Control.ModifierKeys == Keys.Shift && (currentForm is RectangleForm))
+            //{
+            //    AbstractPainter tmpPainter = currentFactory.CreatePainter(new SquareForm(), currentColor, size, new Point(e.X, e.Y));
+            //    tmpPainter.DrawDynamicFigure(new Point(e.X, e.Y), pictureBox1);
+            //}
+            ////else if (Control.ModifierKeys != Keys.Shift && (AbstractPainter.drawSwitch.GetType() == typeof(Rectangle)))
+            ////{
+
+            ////    new Rectangle().DrawDynamicFigure(e, pictureBox1);
+            ////}
+            ////else
+            ////{
+            ////    AbstractPainter.drawSwitch.DrawDynamicFigure(e, pictureBox1);
+            ////}
+
+            //else
+            //{
+
+            //}
+
+
             pictureBoxCurrentColor.BackColor = currentColor;
         }
 
@@ -136,7 +132,7 @@ namespace risovalka
 
         private void buttonPipetka_Click(object sender, EventArgs e)
         {
-           Brush.takePipette = true; 
+            buttonSwitch = new PipetteButton();
         }
 
         private void pictureBoxCurrentColor_Click(object sender, EventArgs e)
@@ -171,7 +167,7 @@ namespace risovalka
         {
             currentFactory = new LinePainterFactory();
             currentForm = new LineForm();
-            fillingFlag = false;
+            buttonSwitch = new NoneButton();
         }
 
 
@@ -179,49 +175,47 @@ namespace risovalka
         {
             currentFactory = new FigurePainterFactory();
             currentForm = new SquareForm();
-            fillingFlag = false;
+            buttonSwitch = new NoneButton();
         }
 
         private void buttonRectabgle_Click(object sender, EventArgs e)
         {
             currentFactory = new FigurePainterFactory();
             currentForm = new RectangleForm();
-            fillingFlag = false;
+            buttonSwitch = new NoneButton();
         }
 
         private void buttonTriangle_Click(object sender, EventArgs e)
         {
             currentFactory = new FigurePainterFactory();
             currentForm = new IsoTriangleForm();
-            fillingFlag = false;
+            buttonSwitch = new NoneButton();
         }
 
         private void buttonRightTriangle_Click(object sender, EventArgs e)
         {
             currentFactory = new FigurePainterFactory();
             currentForm = new RecTriangleForm();
-            fillingFlag = false;
+            buttonSwitch = new NoneButton();
         }
 
         private void buttonPolygon1_Click(object sender, EventArgs e)
         {
             currentFactory = new FigurePainterFactory();
             currentForm = new PolygonForm(Convert.ToInt32(numericUpDownForPolygon.Value));
-            fillingFlag = false;
+            buttonSwitch = new NoneButton();
         }
 
         private void numericUpDownForPolygon_ValueChanged(object sender, EventArgs e)
         {
-            //Polygon.nSides = Convert.ToInt32 ( numericUpDownForPolygon.Value);
             currentForm = new PolygonForm(Convert.ToInt32(numericUpDownForPolygon.Value));
-
         }
 
         private void buttonEraser_Click(object sender, EventArgs e)
         {
             currentFactory = new ErasePainterFactory();
             currentForm = new LineForm();
-            fillingFlag = false;
+            buttonSwitch = new NoneButton();
         }
 
         private void buttonBucket_Click(object sender, EventArgs e)
@@ -276,7 +270,7 @@ namespace risovalka
         {
             currentFactory = new FigurePainterFactory();
             currentForm = new CircleForm();
-            fillingFlag = false;
+            buttonSwitch = new NoneButton();
 
         }
 
@@ -284,14 +278,14 @@ namespace risovalka
         {
             currentFactory = new FigurePainterFactory();
             currentForm = new EllipseForm();
-            fillingFlag = false;
+            buttonSwitch = new NoneButton();
         }
 
         private void buttonPolygon2_Click(object sender, EventArgs e)
         {
             currentFactory = new PointPolygonPainterFactory();
             currentForm = new LineForm();
-            fillingFlag = false;
+            buttonSwitch = new NoneButton();
         }
 
         private void pictureBox1_DoubleClick(object sender, EventArgs e)
@@ -400,11 +394,11 @@ namespace risovalka
 
         private void button1_Click(object sender, EventArgs e)
         {
-            fillingFlag = true;
+            buttonSwitch = new FillButton();
         }
         private void Form1_Resize(object sender, EventArgs e)
         {
-            Bitmap tmpBitmap = formCanvas.currentBitmap;
+            formCanvas.tmpBitmap = formCanvas.currentBitmap;
             formCanvas.currentBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
         }
     }
