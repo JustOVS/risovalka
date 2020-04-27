@@ -38,3 +38,7 @@ D:\repos\risovalka\bin\Debug\nunit.framework.dll
 D:\repos\risovalka\bin\Debug\nunit.framework.pdb
 D:\repos\risovalka\bin\Debug\nunit.framework.xml
 D:\repos\risovalka\obj\Debug\risovalka.csproj.CopyComplete
+C:\Users\Татьяна\source\repos\risovalka\bin\Debug\nunit.framework.dll
+C:\Users\Татьяна\source\repos\risovalka\bin\Debug\nunit.framework.pdb
+C:\Users\Татьяна\source\repos\risovalka\bin\Debug\nunit.framework.xml
+C:\Users\Татьяна\source\repos\risovalka\obj\Debug\risovalka.csproj.CopyComplete

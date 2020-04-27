@@ -41,8 +41,12 @@ namespace risovalka
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
-            
-            
+            if (e.Button == MouseButtons.Right)
+            {
+                currentColor = pictureBoxPrevColor.BackColor;
+            }
+
+
             formCanvas.tmpBitmap = new Bitmap(formCanvas.currentBitmap);
             formCanvas.AddToTmp();
             drawStartFinishFlag = buttonSwitch.ButtonSwitch(new Point(e.X, e.Y), pictureBox1, ref currentColor); 
@@ -75,6 +79,7 @@ namespace risovalka
                 PointPolygonPainter.last.Y = e.Y;
             }
             drawStartFinishFlag = false;
+            currentColor = pictureBoxCurrentColor.BackColor;
         }
         
 
@@ -113,21 +118,41 @@ namespace risovalka
 
             //}
 
-
-            pictureBoxCurrentColor.BackColor = currentColor;
+            if (e.Button == MouseButtons.Left)
+            {
+                pictureBoxCurrentColor.BackColor = currentColor;
+            }
+            // pictureBoxPrevColor.BackColor = currentColor;
         }
 
 
 
-        private void buttonPalette_Click(object sender, EventArgs e)
+        private void buttonPalette_MouseDown(object sender, MouseEventArgs e)
         {
-            ColorDialog MyDialog = new ColorDialog();
-            MyDialog.FullOpen = true;
 
-            if (MyDialog.ShowDialog() == DialogResult.Cancel)
-                return;
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                ColorDialog MyDialog = new ColorDialog();
+                MyDialog.FullOpen = true;
 
-            currentColor = MyDialog.Color;
+                if (MyDialog.ShowDialog() == DialogResult.Cancel)
+                    return;
+
+                currentColor = MyDialog.Color;
+                pictureBoxCurrentColor.BackColor = currentColor;
+            }
+
+            else if (e.Button == MouseButtons.Right)
+            {
+                ColorDialog MyDialog = new ColorDialog();
+                MyDialog.FullOpen = true;
+
+                if (MyDialog.ShowDialog() == DialogResult.Cancel)
+                    return;
+
+                currentColor = MyDialog.Color;
+                pictureBoxPrevColor.BackColor = currentColor;
+            }
         }
 
         private void buttonPipetka_Click(object sender, EventArgs e)
@@ -296,77 +321,217 @@ namespace risovalka
             }
         }
 
-        private void buttonRed_Click(object sender, EventArgs e)
+        private void buttonRed_MouseDown(object sender, MouseEventArgs e)
         {
-            currentColor = buttonRed.BackColor;
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                pictureBoxCurrentColor.BackColor = buttonRed.BackColor;
+                currentColor = buttonRed.BackColor;
+            }
+
+            else if (e.Button == MouseButtons.Right)
+            {
+                pictureBoxPrevColor.BackColor = buttonRed.BackColor;
+
+            }
         }
 
-        private void buttonMagente_Click(object sender, EventArgs e)
+        private void buttonMagente_MouseDown(object sender, MouseEventArgs e)
         {
-            currentColor = buttonMagente.BackColor;
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                pictureBoxCurrentColor.BackColor = buttonMagente.BackColor;
+                currentColor = buttonMagente.BackColor;
+            }
+
+            else if (e.Button == MouseButtons.Right)
+            {
+                pictureBoxPrevColor.BackColor = buttonMagente.BackColor;
+
+            }
         }
 
-        private void buttonBrown_Click(object sender, EventArgs e)
+        private void buttonBrown_MouseDown(object sender, MouseEventArgs e)
         {
-            currentColor = buttonBrown.BackColor;
+
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                pictureBoxCurrentColor.BackColor = buttonBrown.BackColor;
+                currentColor = buttonBrown.BackColor;
+            }
+
+            else if (e.Button == MouseButtons.Right)
+            {
+                pictureBoxPrevColor.BackColor = buttonBrown.BackColor;
+
+            }
         }
 
-        private void buttonYellow_Click(object sender, EventArgs e)
+        private void buttonYellow_MouseDown(object sender, MouseEventArgs e)
         {
-            currentColor = buttonYellow.BackColor;
+            if(e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                pictureBoxCurrentColor.BackColor = buttonYellow.BackColor;
+                currentColor = buttonYellow.BackColor;
+            }
+
+            else if (e.Button == MouseButtons.Right)
+            {
+                pictureBoxPrevColor.BackColor = buttonYellow.BackColor;
+
+            }
         }
 
-        private void buttonOrange_Click(object sender, EventArgs e)
+        private void buttonOrange_MouseDown(object sender, MouseEventArgs e)
         {
-            currentColor = buttonOrange.BackColor;
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                pictureBoxCurrentColor.BackColor = buttonOrange.BackColor;
+                currentColor = buttonOrange.BackColor;
+            }
+
+            else if (e.Button == MouseButtons.Right)
+            {
+                pictureBoxPrevColor.BackColor = buttonOrange.BackColor;
+
+            }
         }
 
-        private void buttonLightCoral_Click(object sender, EventArgs e)
+        private void buttonLightCoral_MouseDown(object sender, MouseEventArgs e)
         {
-            currentColor = buttonLightCoral.BackColor;
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                pictureBoxCurrentColor.BackColor = buttonLightCoral.BackColor;
+                currentColor = buttonLightCoral.BackColor;
+            }
+
+            else if (e.Button == MouseButtons.Right)
+            {
+                pictureBoxPrevColor.BackColor = buttonLightCoral.BackColor;
+
+            }
         }
 
-        private void buttonAqua_Click(object sender, EventArgs e)
+        private void buttonAqua_MouseDown(object sender, MouseEventArgs e)
         {
-            currentColor = buttonAqua.BackColor;
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                pictureBoxCurrentColor.BackColor = buttonAqua.BackColor;
+                currentColor = buttonAqua.BackColor;
+            }
+
+            else if (e.Button == MouseButtons.Right)
+            {
+                pictureBoxPrevColor.BackColor = buttonAqua.BackColor;
+
+            }
         }
 
-        private void buttonLightSkyBlue_Click(object sender, EventArgs e)
+        private void buttonLightSkyBlue_MouseDown(object sender, MouseEventArgs e)
         {
-            currentColor = buttonLightSkyBlue.BackColor;
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                pictureBoxCurrentColor.BackColor = buttonLightSkyBlue.BackColor;
+                currentColor = buttonLightSkyBlue.BackColor;
+            }
+
+            else if (e.Button == MouseButtons.Right)
+            {
+                pictureBoxPrevColor.BackColor = buttonLightSkyBlue.BackColor;
+
+            }
         }
 
-        private void buttonGreen_Click(object sender, EventArgs e)
+        private void buttonGreen_MouseDown(object sender, MouseEventArgs e)
         {
-            currentColor = buttonGreen.BackColor;
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                pictureBoxCurrentColor.BackColor = buttonGreen.BackColor;
+                currentColor = buttonGreen.BackColor;
+            }
+
+            else if (e.Button == MouseButtons.Right)
+            {
+                pictureBoxPrevColor.BackColor = buttonGreen.BackColor;
+
+            }
         }
 
-        private void buttonBlueViolet_Click(object sender, EventArgs e)
+        private void buttonBlueViolet_MouseDown(object sender, MouseEventArgs e)
         {
-            currentColor = buttonBlueViolet.BackColor;
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                pictureBoxCurrentColor.BackColor = buttonBlueViolet.BackColor;
+                currentColor = buttonBlueViolet.BackColor;
+            }
+
+            else if (e.Button == MouseButtons.Right)
+            {
+                pictureBoxPrevColor.BackColor = buttonBlueViolet.BackColor;
+
+            }
         }
 
-        private void buttonBlue_Click(object sender, EventArgs e)
+        private void buttonBlue_MouseDown(object sender, MouseEventArgs e)
         {
-            currentColor = buttonBlue.BackColor;
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                pictureBoxCurrentColor.BackColor = buttonBlue.BackColor;
+                currentColor = buttonBlue.BackColor;
+            }
+
+            else if (e.Button == MouseButtons.Right)
+            {
+                pictureBoxPrevColor.BackColor = buttonBlue.BackColor;
+
+            }
         }
 
-        private void buttonForestGreen_Click(object sender, EventArgs e)
+        private void buttonForestGreen_MouseDown(object sender, MouseEventArgs e)
         {
-            currentColor = buttonForestGreen.BackColor;
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                pictureBoxCurrentColor.BackColor = buttonForestGreen.BackColor;
+                currentColor = buttonForestGreen.BackColor;
+            }
+
+            else if (e.Button == MouseButtons.Right)
+            {
+                pictureBoxPrevColor.BackColor = buttonForestGreen.BackColor;
+
+            }
         }
 
-        private void buttonWhite_Click(object sender, EventArgs e)
+        private void buttonWhite_MouseDown(object sender, MouseEventArgs e)
         {
-            currentColor = buttonWhite.BackColor;
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                pictureBoxCurrentColor.BackColor = buttonWhite.BackColor;
+                currentColor = buttonWhite.BackColor;
+            }
+
+            else if (e.Button == MouseButtons.Right)
+            {
+                pictureBoxPrevColor.BackColor = buttonWhite.BackColor;
+
+            }
         }
 
-        private void buttonBlack_Click(object sender, EventArgs e)
+        private void buttonBlack_MouseDown(object sender, MouseEventArgs e)
         {
-            currentColor = buttonBlack.BackColor;
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                pictureBoxCurrentColor.BackColor = buttonBlack.BackColor;
+                currentColor = buttonBlack.BackColor;
+            }
+
+            else if (e.Button == MouseButtons.Right)
+            {
+                pictureBoxPrevColor.BackColor = buttonBlack.BackColor;
+
+            }
         }
 
-       
 
         private void Form1_ResizeEnd(object sender, EventArgs e)
         {
@@ -376,18 +541,18 @@ namespace risovalka
         }
         public void ChooseColor()
         {
-            ColorDialog MyDialog = new ColorDialog();
+        //    ColorDialog MyDialog = new ColorDialog();
 
 
 
-            MyDialog.FullOpen = true;
+        //    MyDialog.FullOpen = true;
 
-            MyDialog.Color = currentColor;
+        //    MyDialog.Color = currentColor;
 
-            if (MyDialog.ShowDialog() == DialogResult.Cancel)
-                return;
+        //    if (MyDialog.ShowDialog() == DialogResult.Cancel)
+        //        return;
 
-            currentColor = MyDialog.Color;
+        //    currentColor = MyDialog.Color;
 
 
         }
@@ -401,5 +566,21 @@ namespace risovalka
             formCanvas.tmpBitmap = formCanvas.currentBitmap;
             formCanvas.currentBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
         }
+
+        private void buttonRed_MouseClick(object sender, MouseEventArgs e)
+        {
+            //if (e.Button == MouseButtons.Left)
+            //{
+            //    currentColor = buttonRed.BackColor;
+            //}
+
+            //else if (e.Button == MouseButtons.Right)
+            //{
+            //    pictureBoxPrevColor.BackColor = buttonRed.BackColor;
+
+            //}
+        }
+
+      
     }
 }

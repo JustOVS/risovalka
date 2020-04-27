@@ -117,6 +117,7 @@
             this.buttonPipetka = new System.Windows.Forms.Button();
             this.buttonPencile = new System.Windows.Forms.Button();
             this.flowLayoutPanelDelete = new System.Windows.Forms.FlowLayoutPanel();
+            this.buttonHand = new System.Windows.Forms.Button();
             this.buttonUndo = new System.Windows.Forms.Button();
             this.buttonRedo = new System.Windows.Forms.Button();
             this.buttonBucket = new System.Windows.Forms.Button();
@@ -125,7 +126,6 @@
             this.panelPolygonSides = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.labelNumberOfAngles = new System.Windows.Forms.Label();
-            this.buttonHand = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -854,7 +854,7 @@
             this.buttonPalette.Size = new System.Drawing.Size(28, 27);
             this.buttonPalette.TabIndex = 7;
             this.buttonPalette.UseVisualStyleBackColor = true;
-            this.buttonPalette.Click += new System.EventHandler(this.buttonPalette_Click);
+            this.buttonPalette.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonPalette_MouseDown);
             // 
             // button1
             // 
@@ -910,12 +910,12 @@
             this.buttonBlack.Size = new System.Drawing.Size(20, 20);
             this.buttonBlack.TabIndex = 11;
             this.buttonBlack.UseVisualStyleBackColor = false;
-            this.buttonBlack.Click += new System.EventHandler(this.buttonBlack_Click);
+            this.buttonBlack.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonBlack_MouseDown);
             // 
             // pictureBoxCurrentColor
             // 
             this.pictureBoxCurrentColor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxCurrentColor.Location = new System.Drawing.Point(23, 12);
+            this.pictureBoxCurrentColor.Location = new System.Drawing.Point(10, 12);
             this.pictureBoxCurrentColor.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxCurrentColor.Name = "pictureBoxCurrentColor";
             this.pictureBoxCurrentColor.Size = new System.Drawing.Size(25, 25);
@@ -935,7 +935,7 @@
             this.buttonWhite.Size = new System.Drawing.Size(20, 20);
             this.buttonWhite.TabIndex = 12;
             this.buttonWhite.UseVisualStyleBackColor = false;
-            this.buttonWhite.Click += new System.EventHandler(this.buttonWhite_Click);
+            this.buttonWhite.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonWhite_MouseDown);
             // 
             // button2
             // 
@@ -959,13 +959,13 @@
             this.buttonForestGreen.Size = new System.Drawing.Size(20, 20);
             this.buttonForestGreen.TabIndex = 13;
             this.buttonForestGreen.UseVisualStyleBackColor = false;
-            this.buttonForestGreen.Click += new System.EventHandler(this.buttonForestGreen_Click);
+            this.buttonForestGreen.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonForestGreen_MouseDown);
             // 
             // pictureBoxPrevColor
             // 
             this.pictureBoxPrevColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.pictureBoxPrevColor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxPrevColor.Location = new System.Drawing.Point(7, 5);
+            this.pictureBoxPrevColor.Location = new System.Drawing.Point(22, 4);
             this.pictureBoxPrevColor.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxPrevColor.Name = "pictureBoxPrevColor";
             this.pictureBoxPrevColor.Size = new System.Drawing.Size(25, 25);
@@ -986,7 +986,7 @@
             this.buttonYellow.Size = new System.Drawing.Size(20, 20);
             this.buttonYellow.TabIndex = 12;
             this.buttonYellow.UseVisualStyleBackColor = false;
-            this.buttonYellow.Click += new System.EventHandler(this.buttonYellow_Click);
+            this.buttonYellow.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonYellow_MouseDown);
             // 
             // buttonAqua
             // 
@@ -1001,7 +1001,7 @@
             this.buttonAqua.Size = new System.Drawing.Size(20, 20);
             this.buttonAqua.TabIndex = 10;
             this.buttonAqua.UseVisualStyleBackColor = false;
-            this.buttonAqua.Click += new System.EventHandler(this.buttonAqua_Click);
+            this.buttonAqua.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonAqua_MouseDown);
             // 
             // buttonBlueViolet
             // 
@@ -1016,7 +1016,7 @@
             this.buttonBlueViolet.Size = new System.Drawing.Size(20, 20);
             this.buttonBlueViolet.TabIndex = 10;
             this.buttonBlueViolet.UseVisualStyleBackColor = false;
-            this.buttonBlueViolet.Click += new System.EventHandler(this.buttonBlueViolet_Click);
+            this.buttonBlueViolet.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonBlueViolet_MouseDown);
             // 
             // buttonRed
             // 
@@ -1029,7 +1029,8 @@
             this.buttonRed.Size = new System.Drawing.Size(20, 20);
             this.buttonRed.TabIndex = 7;
             this.buttonRed.UseVisualStyleBackColor = false;
-            this.buttonRed.Click += new System.EventHandler(this.buttonRed_Click);
+            this.buttonRed.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buttonRed_MouseClick);
+            this.buttonRed.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonRed_MouseDown);
             // 
             // buttonGreen
             // 
@@ -1044,7 +1045,7 @@
             this.buttonGreen.Size = new System.Drawing.Size(20, 20);
             this.buttonGreen.TabIndex = 9;
             this.buttonGreen.UseVisualStyleBackColor = false;
-            this.buttonGreen.Click += new System.EventHandler(this.buttonGreen_Click);
+            this.buttonGreen.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonGreen_MouseDown);
             // 
             // buttonMagente
             // 
@@ -1059,7 +1060,7 @@
             this.buttonMagente.Size = new System.Drawing.Size(20, 20);
             this.buttonMagente.TabIndex = 12;
             this.buttonMagente.UseVisualStyleBackColor = false;
-            this.buttonMagente.Click += new System.EventHandler(this.buttonMagente_Click);
+            this.buttonMagente.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonMagente_MouseDown);
             // 
             // buttonBrown
             // 
@@ -1073,7 +1074,7 @@
             this.buttonBrown.Size = new System.Drawing.Size(20, 20);
             this.buttonBrown.TabIndex = 13;
             this.buttonBrown.UseVisualStyleBackColor = false;
-            this.buttonBrown.Click += new System.EventHandler(this.buttonBrown_Click);
+            this.buttonBrown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonBrown_MouseDown);
             // 
             // buttonBlue
             // 
@@ -1088,7 +1089,7 @@
             this.buttonBlue.Size = new System.Drawing.Size(20, 20);
             this.buttonBlue.TabIndex = 11;
             this.buttonBlue.UseVisualStyleBackColor = false;
-            this.buttonBlue.Click += new System.EventHandler(this.buttonBlue_Click);
+            this.buttonBlue.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonBlue_MouseDown);
             // 
             // buttonLightCoral
             // 
@@ -1103,7 +1104,7 @@
             this.buttonLightCoral.Size = new System.Drawing.Size(20, 20);
             this.buttonLightCoral.TabIndex = 14;
             this.buttonLightCoral.UseVisualStyleBackColor = false;
-            this.buttonLightCoral.Click += new System.EventHandler(this.buttonLightCoral_Click);
+            this.buttonLightCoral.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonLightCoral_MouseDown);
             // 
             // buttonOrange
             // 
@@ -1118,7 +1119,7 @@
             this.buttonOrange.Size = new System.Drawing.Size(20, 20);
             this.buttonOrange.TabIndex = 13;
             this.buttonOrange.UseVisualStyleBackColor = false;
-            this.buttonOrange.Click += new System.EventHandler(this.buttonOrange_Click);
+            this.buttonOrange.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonOrange_MouseDown);
             // 
             // buttonLightSkyBlue
             // 
@@ -1133,7 +1134,7 @@
             this.buttonLightSkyBlue.Size = new System.Drawing.Size(20, 20);
             this.buttonLightSkyBlue.TabIndex = 15;
             this.buttonLightSkyBlue.UseVisualStyleBackColor = false;
-            this.buttonLightSkyBlue.Click += new System.EventHandler(this.buttonLightSkyBlue_Click);
+            this.buttonLightSkyBlue.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonLightSkyBlue_MouseDown);
             // 
             // buttonEraser
             // 
@@ -1189,6 +1190,20 @@
             this.flowLayoutPanelDelete.Name = "flowLayoutPanelDelete";
             this.flowLayoutPanelDelete.Size = new System.Drawing.Size(139, 34);
             this.flowLayoutPanelDelete.TabIndex = 6;
+            // 
+            // buttonHand
+            // 
+            this.buttonHand.AutoSize = true;
+            this.buttonHand.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonHand.BackgroundImage")));
+            this.buttonHand.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonHand.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonHand.FlatAppearance.BorderSize = 0;
+            this.buttonHand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHand.Location = new System.Drawing.Point(3, 3);
+            this.buttonHand.Name = "buttonHand";
+            this.buttonHand.Size = new System.Drawing.Size(28, 27);
+            this.buttonHand.TabIndex = 19;
+            this.buttonHand.UseVisualStyleBackColor = true;
             // 
             // buttonUndo
             // 
@@ -1285,20 +1300,6 @@
             this.labelNumberOfAngles.Size = new System.Drawing.Size(166, 16);
             this.labelNumberOfAngles.TabIndex = 0;
             this.labelNumberOfAngles.Text = "Введите количество углов";
-            // 
-            // buttonHand
-            // 
-            this.buttonHand.AutoSize = true;
-            this.buttonHand.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonHand.BackgroundImage")));
-            this.buttonHand.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonHand.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonHand.FlatAppearance.BorderSize = 0;
-            this.buttonHand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonHand.Location = new System.Drawing.Point(3, 3);
-            this.buttonHand.Name = "buttonHand";
-            this.buttonHand.Size = new System.Drawing.Size(28, 27);
-            this.buttonHand.TabIndex = 19;
-            this.buttonHand.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
