@@ -36,7 +36,7 @@ namespace risovalka
         {
             formCanvas.currentBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             formCanvas.tmpBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
-            pictureBoxCurrentColor.BackColor = Color.Black;
+           
         }
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
@@ -581,6 +581,47 @@ namespace risovalka
             //}
         }
 
-      
+        private void UndoEdit_Click(object sender, EventArgs e)
+        {
+            formCanvas.Undo(pictureBox1);
+        }
+
+        private void ReduEdit_Click(object sender, EventArgs e)
+        {
+            formCanvas.Redo(pictureBox1);
+        }
+
+        private void cutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formCanvas.Clear(pictureBox1);
+        }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result =MessageBox.Show(
+        "Сохранить документ?",
+        "Сообщение",
+        MessageBoxButtons.YesNoCancel,
+        MessageBoxIcon.Error,
+        MessageBoxDefaultButton.Button1,
+        MessageBoxOptions.DefaultDesktopOnly);
+
+            if (result == DialogResult.Yes)
+            {
+
+            }
+
+            else if (result == DialogResult.No)
+            {
+                formCanvas.Clear(pictureBox1);
+                formCanvas.currentBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+                formCanvas.tmpBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+            }
+
+            else if (result == DialogResult.Cancel)
+            { 
+                
+            }
+        }
     }
 }
