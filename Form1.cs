@@ -623,5 +623,63 @@ namespace risovalka
                 
             }
         }
+
+        private void buttonHand_Click(object sender, EventArgs e)
+        {
+            panelForVectors.Visible = true;
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //if (pictureBox1.Image !=null)
+            //{
+            //    SaveFileDialog savePicture = new SaveFileDialog ();
+            //    savePicture.Title = "Сохранить картинку как";
+            //    savePicture.OverwritePrompt = true; //если сохраняется файл с таким же названием
+            //    savePicture.CheckFileExists = true; //если пути такого не существует
+            //    savePicture.Filter = "Image files (*.JPG)|*.JPG| Image files (*.PNG)|*.PNG";
+
+            //    if (savePicture.ShowDialog() == DialogResult.OK )
+            //    {
+            //        try
+            //        {
+            //            pictureBox1.Image.Save(savePicture.FileName);
+            //        }
+
+            //        catch
+            //        {
+            //            MessageBox.Show("Невозможно сохранить изображение", "Oшибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //        }
+            //    }
+
+            //}
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (pictureBox1.Image != null)
+            {
+                SaveFileDialog savePicture = new SaveFileDialog();
+                savePicture.Title = "Сохранить картинку как";
+                savePicture.OverwritePrompt = true; //если сохраняется файл с таким же названием
+                savePicture.CheckFileExists = true; //если пути такого не существует
+                savePicture.Filter = "Image files (*.JPG)|*.JPG| Image files (*.PNG)|*.PNG";
+                savePicture.ShowHelp = true;
+
+                if (savePicture.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        pictureBox1.Image.Save(savePicture.FileName);
+                    }
+
+                    catch
+                    {
+                        MessageBox.Show("Невозможно сохранить изображение", "Oшибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+
+            }
+        }
     }
 }
