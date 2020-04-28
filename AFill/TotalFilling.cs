@@ -13,14 +13,15 @@ namespace risovalka.AFill
     public class TotalFilling : AbstractFilling
 
     {
-        public TotalFilling(Color fillingColor, Bitmap newBitmap) : base(fillingColor, newBitmap)
+        public TotalFilling(Color fillingColor) : base(fillingColor)
         {
 
         }
         public override void Fill(Point p1, PictureBox pictureBox, Bitmap newBitmap)
 
         {
-            counter++;
+            
+            
             Brush brush = new Brush(fillingColor, 1);
             int x = p1.X;
             int y = p1.Y;
@@ -29,29 +30,32 @@ namespace risovalka.AFill
 
             
             Color localColor = newBitmap.GetPixel(x, y);
-
-            while (newBitmap.GetPixel(leftChecking - 1, y) == localColor && leftChecking - 1 > 0)
+            if (localColor.ToArgb() != fillingColor.ToArgb()) //|| localColor.R != fillingColor.R || localColor.G != fillingColor.G || localColor.B != fillingColor.B)
             {
-                leftChecking--;
-            }
 
-            while (newBitmap.GetPixel(rightChecking + 1, y) == localColor && rightChecking + 1 < newBitmap.Width - 1)
-            {
-                rightChecking++;
-            }
-
-            brush.DrawLine(new Point(leftChecking, y), new Point(rightChecking, y), pictureBox, brush.currentColor, newBitmap);
-
-            for (int i = leftChecking; i <= rightChecking; i++)
-            {
-                if (newBitmap.GetPixel(i, y - 1) == localColor && y - 1 > 0)
+                while (newBitmap.GetPixel(leftChecking - 1, y) == localColor && leftChecking - 1 > 0)
                 {
-                    Fill(new Point(i, y - 1), pictureBox, newBitmap);
+                    leftChecking--;
                 }
 
-                if (newBitmap.GetPixel(i, y + 1) == localColor && y + 1 < newBitmap.Height - 1)
+                while (newBitmap.GetPixel(rightChecking + 1, y) == localColor && rightChecking + 1 < newBitmap.Width - 1)
                 {
-                    Fill(new Point(i, y + 1), pictureBox, newBitmap);
+                    rightChecking++;
+                }
+
+                brush.DrawLine(new Point(leftChecking, y), new Point(rightChecking, y), pictureBox, brush.currentColor, newBitmap);
+
+                for (int i = leftChecking; i <= rightChecking; i++)
+                {
+                    if (newBitmap.GetPixel(i, y - 1) == localColor && y - 1 > 0)
+                    {
+                        Fill(new Point(i, y - 1), pictureBox, newBitmap);
+                    }
+
+                    if (newBitmap.GetPixel(i, y + 1) == localColor && y + 1 < newBitmap.Height - 1)
+                    {
+                        Fill(new Point(i, y + 1), pictureBox, newBitmap);
+                    }
                 }
             }
         }

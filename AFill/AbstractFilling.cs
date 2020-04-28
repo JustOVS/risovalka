@@ -13,10 +13,10 @@ namespace risovalka.AFill
         public Color fillingColor;
         public Bitmap newBitmap;
         public int counter = 0;
-        public AbstractFilling(Color fillingColor, Bitmap newBitmap)
+        public AbstractFilling(Color fillingColor)
         {
             this.fillingColor = fillingColor;
-            this.newBitmap = newBitmap;
+            
         }
         public abstract void Fill(Point p1, PictureBox pictureBox, Bitmap newBitmap);
 

@@ -10,16 +10,16 @@ namespace risovalka
 {
     public class Brush
     {
-        public Color currentColor = Form1.currentColor;
+        public Color currentColor = Color.Black;
         public static Canvas brushCanvas = Canvas.GetCanvas;
         public int size = Form1.size;         //размер кисти, используем через свойство Size
    
 public static bool takePipette = false;
-        public Brush()
-        {
-            currentColor = Form1.currentColor;
-            size = Form1.size;
-        }
+        //public Brush()
+        //{
+        //    currentColor = Color.Black;
+        //    size = Form1.size;
+        //}
         
        
         public Brush(Color currentColor, int size)
@@ -77,34 +77,34 @@ public static bool takePipette = false;
                     break;
 
                 case 2:
-                    brushCanvas.DrawPixel(x1 - 1, y1 - 1, currentColor);
-                    brushCanvas.DrawPixel(x1, y1 - 1, currentColor);
-                    brushCanvas.DrawPixel(x1 - 1, y1, currentColor);
-                    brushCanvas.DrawPixel(x1, y1, currentColor);
+                    brushCanvas.DrawPixel(x1 - 1, y1 - 1, currentColor, newBitmap);
+                    brushCanvas.DrawPixel(x1, y1 - 1, currentColor, newBitmap);
+                    brushCanvas.DrawPixel(x1 - 1, y1, currentColor, newBitmap);
+                    brushCanvas.DrawPixel(x1, y1, currentColor, newBitmap);
                     break;
                 case 3:
-                    brushCanvas.DrawPixel(x1, y1, currentColor);
-                    brushCanvas.DrawPixel(x1 - 1, y1, currentColor);
-                    brushCanvas.DrawPixel(x1 + 1, y1, currentColor);
-                    brushCanvas.DrawPixel(x1, y1 - 1, currentColor);
-                    brushCanvas.DrawPixel(x1, y1 + 1, currentColor);
+                    brushCanvas.DrawPixel(x1, y1, currentColor, newBitmap);
+                    brushCanvas.DrawPixel(x1 - 1, y1, currentColor, newBitmap);
+                    brushCanvas.DrawPixel(x1 + 1, y1, currentColor, newBitmap);
+                    brushCanvas.DrawPixel(x1, y1 - 1, currentColor, newBitmap);
+                    brushCanvas.DrawPixel(x1, y1 + 1, currentColor, newBitmap);
                     break;
                 case 4:
-                    brushCanvas.DrawPixel(x1 - 1, y1 - 1, currentColor);
-                    brushCanvas.DrawPixel(x1, y1 - 1, currentColor);
-                    brushCanvas.DrawPixel(x1 - 1, y1, currentColor);
-                    brushCanvas.DrawPixel(x1, y1, currentColor);
+                    brushCanvas.DrawPixel(x1 - 1, y1 - 1, currentColor, newBitmap);
+                    brushCanvas.DrawPixel(x1, y1 - 1, currentColor, newBitmap);
+                    brushCanvas.DrawPixel(x1 - 1, y1, currentColor, newBitmap);
+                    brushCanvas.DrawPixel(x1, y1, currentColor, newBitmap);
 
-                    brushCanvas.DrawPixel(x1 - 2, y1, currentColor);
-                    brushCanvas.DrawPixel(x1 - 2, y1 - 1, currentColor);
+                    brushCanvas.DrawPixel(x1 - 2, y1, currentColor, newBitmap);
+                    brushCanvas.DrawPixel(x1 - 2, y1 - 1, currentColor, newBitmap);
 
-                    brushCanvas.DrawPixel(x1 - 1, y1 - 2, currentColor);
+                    brushCanvas.DrawPixel(x1 - 1, y1 - 2, currentColor, newBitmap);
 
-                    brushCanvas.DrawPixel(x1 + 1, y1 - 1, currentColor);
-                    brushCanvas.DrawPixel(x1 + 1, y1, currentColor);
+                    brushCanvas.DrawPixel(x1 + 1, y1 - 1, currentColor, newBitmap);
+                    brushCanvas.DrawPixel(x1 + 1, y1, currentColor, newBitmap);
 
-                    brushCanvas.DrawPixel(x1 - 1, y1 + 1, currentColor);
-                    brushCanvas.DrawPixel(x1, y1 + 1, currentColor);
+                    brushCanvas.DrawPixel(x1 - 1, y1 + 1, currentColor, newBitmap);
+                    brushCanvas.DrawPixel(x1, y1 + 1, currentColor, newBitmap);
                     break;
 
             }

@@ -9,7 +9,7 @@ namespace risovalka.AFill
 {
     public class NoneFilling : AbstractFilling
     {
-        public NoneFilling(Color fillingColor, Bitmap newBitmap) : base(fillingColor, newBitmap)
+        public NoneFilling(Color fillingColor) : base(fillingColor)
         {
 
         }

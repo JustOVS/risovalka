@@ -9,7 +9,7 @@ namespace risovalka.AFill
 {
     public class InsideFilling : AbstractFilling
     {
-        public InsideFilling(Color fillingColor, Bitmap newBitmap) : base(fillingColor, newBitmap)
+        public InsideFilling(Color fillingColor) : base(fillingColor)
         {
 
         }
@@ -54,7 +54,7 @@ namespace risovalka.AFill
         public override void Fill(Point p1, PictureBox pictureBox, Bitmap newBitmap)
 
         {
-            counter++;
+            
             Brush brush = new Brush(fillingColor, 1);
             int x = p1.X;
             int y = p1.Y;

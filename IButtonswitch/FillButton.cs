@@ -13,9 +13,10 @@ namespace risovalka.IButtonswitch
     {
         public bool ButtonSwitch(Point p1, PictureBox pictureBox, ref Color currentColor)
         {
-            AbstractFilling filler = new TotalFilling(currentColor, Canvas.GetCanvas.currentBitmap);
+            AbstractFilling filler = new TotalFilling(currentColor);
                 
-            filler.Fill(p1, pictureBox, filler.newBitmap);
+            filler.Fill(p1, pictureBox, Canvas.GetCanvas.currentBitmap);
+            
             return false;
         }
     }

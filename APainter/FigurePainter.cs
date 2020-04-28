@@ -50,8 +50,9 @@ namespace risovalka.APainter
                 {
                     brush.DrawLine(figurePoints[i], figurePoints[i + 1], pictureBox, brush.currentColor, newBitmap);
                 }
-
+                
                 typeOfFilling.Fill(formFigure.GetCenter(startPoint, p1), pictureBox, newBitmap);
+                
                 g.DrawImage(newBitmap, 0, 0, pictureBox.Width - 1, pictureBox.Height - 1);
                 pictureBox.Image = apCanvas.currentBitmap;
 
