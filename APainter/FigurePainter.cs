@@ -23,74 +23,85 @@ namespace risovalka.APainter
         
         public override void DrawDynamicFigure(Point p1, PictureBox pictureBox, bool shift)
         {
-            
+            //List<Point> figurePoints = formFigure.CalculateFigure(startPoint, p1);
+            //apCanvas.currentBitmap = new Bitmap(apCanvas.tmpBitmap);
+            //Bitmap newBitmap = new Bitmap(pictureBox.Width, pictureBox.Height);
+            //Graphics g = Graphics.FromImage(apCanvas.currentBitmap);
+
+            //for (int i = 0; i < figurePoints.Count - 1; i++)
+            //{
+            //    brush.DrawLine(figurePoints[i], figurePoints[i + 1], pictureBox, brush.currentColor, newBitmap);
+            //}
+
+            //typeOfFilling.Fill(formFigure.GetCenter(startPoint, p1), pictureBox, newBitmap);
+
+            //g.DrawImage(newBitmap, 0, 0, pictureBox.Width - 1, pictureBox.Height - 1);
+
+            //pictureBox.Image = apCanvas.currentBitmap;
+
             if (shift == false || formFigure is CircleForm || formFigure is SquareForm || formFigure is RecTriangleForm || formFigure is PolygonForm)
             {
                 List<Point> figurePoints = formFigure.CalculateFigure(startPoint, p1);
-                apCanvas.tmpBitmap = new Bitmap(apCanvas.currentBitmap);
+                apCanvas.currentBitmap = new Bitmap(apCanvas.tmpBitmap);
+                Bitmap newBitmap = new Bitmap(pictureBox.Width, pictureBox.Height);
                 Graphics g = Graphics.FromImage(apCanvas.currentBitmap);
+
                 for (int i = 0; i < figurePoints.Count - 1; i++)
                 {
-                    brush.DrawLine(figurePoints[i], figurePoints[i+1], pictureBox, brush.currentColor, typeOfFilling.newBitmap);
+                    brush.DrawLine(figurePoints[i], figurePoints[i + 1], pictureBox, brush.currentColor, newBitmap);
                 }
-               
-                //g.Clear(System.Drawing.Color.White);
-                
-                typeOfFilling.Fill(formFigure.GetCenter(startPoint, p1), pictureBox);
-               
-                g.DrawImage(typeOfFilling.newBitmap, 0, 0, pictureBox.Width-1, pictureBox.Height-1);//
-                
-                
-                //this.pictureBox.Size = ap.Size;
-                //this.pictureBox.Image = bm;
-                //this.pictureBox.Invalidate();
-                //g.Dispose();
 
+                typeOfFilling.Fill(formFigure.GetCenter(startPoint, p1), pictureBox, newBitmap);
+                g.DrawImage(newBitmap, 0, 0, pictureBox.Width - 1, pictureBox.Height - 1);
                 pictureBox.Image = apCanvas.currentBitmap;
-                
+
             }
             else if (formFigure is EllipseForm)
             {
                 List<Point> figurePoints = new CircleForm().CalculateFigure(startPoint, p1);
                 apCanvas.currentBitmap = new Bitmap(apCanvas.tmpBitmap);
+                Bitmap newBitmap = new Bitmap(pictureBox.Width, pictureBox.Height);
                 Graphics g = Graphics.FromImage(apCanvas.currentBitmap);
                 for (int i = 0; i < figurePoints.Count - 1; i++)
                 {
-                    brush.DrawLine(figurePoints[i], figurePoints[i + 1], pictureBox, brush.currentColor);
+                    brush.DrawLine(figurePoints[i], figurePoints[i + 1], pictureBox, brush.currentColor, newBitmap);
                 }
-                typeOfFilling.Fill(new CircleForm().GetCenter(startPoint, p1), pictureBox);
+                typeOfFilling.Fill(new CircleForm().GetCenter(startPoint, p1), pictureBox, newBitmap);
 
-                g.DrawImage(typeOfFilling.newBitmap, 0, 0, pictureBox.Width - 1, pictureBox.Height - 1);
+                g.DrawImage(newBitmap, 0, 0, pictureBox.Width, pictureBox.Height);
                 pictureBox.Image = apCanvas.currentBitmap;
             }
             else if (formFigure is IsoTriangleForm)
             {
                 List<Point> figurePoints = new RecTriangleForm().CalculateFigure(startPoint, p1);
                 apCanvas.currentBitmap = new Bitmap(apCanvas.tmpBitmap);
+                Bitmap newBitmap = new Bitmap(pictureBox.Width, pictureBox.Height);
                 Graphics g = Graphics.FromImage(apCanvas.currentBitmap);
                 for (int i = 0; i < figurePoints.Count - 1; i++)
                 {
-                    brush.DrawLine(figurePoints[i], figurePoints[i + 1], pictureBox, brush.currentColor);
+                    brush.DrawLine(figurePoints[i], figurePoints[i + 1], pictureBox, brush.currentColor, newBitmap);
                 }
-                typeOfFilling.Fill(new RecTriangleForm().GetCenter(startPoint, p1), pictureBox);
+                typeOfFilling.Fill(new RecTriangleForm().GetCenter(startPoint, p1), pictureBox, newBitmap);
 
-                g.DrawImage(typeOfFilling.newBitmap, 0, 0, pictureBox.Width - 1, pictureBox.Height - 1);
+                g.DrawImage(newBitmap, 0, 0, pictureBox.Width - 1, pictureBox.Height - 1);
                 pictureBox.Image = apCanvas.currentBitmap;
             }
-            else 
+            else
             {
                 List<Point> figurePoints = new SquareForm().CalculateFigure(startPoint, p1);
                 apCanvas.currentBitmap = new Bitmap(apCanvas.tmpBitmap);
+                Bitmap newBitmap = new Bitmap(pictureBox.Width, pictureBox.Height);
                 Graphics g = Graphics.FromImage(apCanvas.currentBitmap);
                 for (int i = 0; i < figurePoints.Count - 1; i++)
                 {
-                    brush.DrawLine(figurePoints[i], figurePoints[i + 1], pictureBox, brush.currentColor);
+                    brush.DrawLine(figurePoints[i], figurePoints[i + 1], pictureBox, brush.currentColor, newBitmap);
                 }
-                typeOfFilling.Fill(new RecTriangleForm().GetCenter(startPoint, p1), pictureBox);
+                typeOfFilling.Fill(new RecTriangleForm().GetCenter(startPoint, p1), pictureBox, newBitmap);
 
-                g.DrawImage(typeOfFilling.newBitmap, 0, 0, pictureBox.Width - 1, pictureBox.Height - 1);
+                g.DrawImage(newBitmap, 0, 0, pictureBox.Width - 1, pictureBox.Height - 1);
                 pictureBox.Image = apCanvas.currentBitmap;
-            }
+            
+            }  
         }
     }
 }

@@ -11,7 +11,7 @@ namespace risovalka.IButtonswitch
 {
     public class NoneButton : IButton
     {
-        public bool ButtonSwitch(Point p1, PictureBox pictureBox, Color currentColor)
+        public bool ButtonSwitch(Point p1, PictureBox pictureBox, ref Color currentColor)
         {
             return true;
         }

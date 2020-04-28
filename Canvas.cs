@@ -39,7 +39,7 @@ namespace risovalka
         }
         public void DrawPixel(int x, int y, Color color) // обертка для Bitmap.SetPixel, используем вместо этого Canvas.DrawPixel.
         {
-            if (x < currentBitmap.Width && x > 0 && y < currentBitmap.Height && y > 0)
+            if (x < currentBitmap.Width - 1 && x > 0 && y < currentBitmap.Height - 1 && y > 0)
             {
                  currentBitmap.SetPixel(x, y, color);
             }
@@ -52,7 +52,7 @@ namespace risovalka
 
         public void DrawPixel(int x, int y, Color color, Bitmap newBitmap) // обертка для Bitmap.SetPixel, используем вместо этого Canvas.DrawPixel.
         {
-            if (x < newBitmap.Width && x > 0 && y < newBitmap.Height && y > 0)
+            if (x < newBitmap.Width -1 && x > 0 && y < newBitmap.Height -1 && y > 0)
             {
                 newBitmap.SetPixel(x, y, color);
             }

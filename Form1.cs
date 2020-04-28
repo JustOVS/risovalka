@@ -48,7 +48,7 @@ namespace risovalka
             
             formCanvas.tmpBitmap = new Bitmap(formCanvas.currentBitmap);
             formCanvas.AddToTmp();
-            drawStartFinishFlag = buttonSwitch.ButtonSwitch(new Point(e.X, e.Y), pictureBox1, currentColor); 
+            drawStartFinishFlag = buttonSwitch.ButtonSwitch(new Point(e.X, e.Y), pictureBox1, ref currentColor); 
             if (drawStartFinishFlag)
             {
                 currentPainter = currentFactory.CreatePainter(currentForm, currentColor, size, new Point(e.X, e.Y), currentFilling);
@@ -83,7 +83,7 @@ namespace risovalka
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
-            if (drawStartFinishFlag == true)
+            if (drawStartFinishFlag)
             {
                 if (Control.ModifierKeys == Keys.Shift)
                 {
@@ -419,7 +419,7 @@ namespace risovalka
 
         private void buttonOnlyBorders_Click(object sender, EventArgs e)
         {
-            currentFilling = new TotalFilling(currentColor, new Bitmap(pictureBox1.Width, pictureBox1.Height));
+            currentFilling = new NoneFilling(currentColor, new Bitmap(pictureBox1.Width, pictureBox1.Height));
         }
     }
 }

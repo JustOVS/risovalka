@@ -14,7 +14,7 @@ namespace risovalka.AFill
 
         }
 
-        public override void Fill(Point p1, PictureBox pictureBox)
+        public override void Fill(Point p1, PictureBox pictureBox, Bitmap newBitmap)
         {
 
         }

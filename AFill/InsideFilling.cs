@@ -51,9 +51,10 @@ namespace risovalka.AFill
         //        }
         //    }
         //}
-        public override void Fill(Point p1, PictureBox pictureBox)
+        public override void Fill(Point p1, PictureBox pictureBox, Bitmap newBitmap)
 
         {
+            counter++;
             Brush brush = new Brush(fillingColor, 1);
             int x = p1.X;
             int y = p1.Y;
@@ -79,12 +80,12 @@ namespace risovalka.AFill
             {
                 if (newBitmap.GetPixel(i, y - 1) == localColor && y - 1 > 0)
                 {
-                    Fill(new Point(i, y - 1), pictureBox);
+                    Fill(new Point(i, y - 1), pictureBox, newBitmap);
                 }
 
                 if (newBitmap.GetPixel(i, y + 1) == localColor && y + 1 < newBitmap.Height - 1)
                 {
-                    Fill(new Point(i, y + 1), pictureBox);
+                    Fill(new Point(i, y + 1), pictureBox, newBitmap);
                 }
             }
         }
