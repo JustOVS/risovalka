@@ -567,19 +567,7 @@ namespace risovalka
             formCanvas.currentBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
         }
 
-        private void buttonRed_MouseClick(object sender, MouseEventArgs e)
-        {
-            //if (e.Button == MouseButtons.Left)
-            //{
-            //    currentColor = buttonRed.BackColor;
-            //}
-
-            //else if (e.Button == MouseButtons.Right)
-            //{
-            //    pictureBoxPrevColor.BackColor = buttonRed.BackColor;
-
-            //}
-        }
+      
 
         private void UndoEdit_Click(object sender, EventArgs e)
         {
@@ -608,7 +596,7 @@ namespace risovalka
 
             if (result == DialogResult.Yes)
             {
-
+                
             }
 
             else if (result == DialogResult.No)
@@ -631,39 +619,13 @@ namespace risovalka
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //if (pictureBox1.Image !=null)
-            //{
-            //    SaveFileDialog savePicture = new SaveFileDialog ();
-            //    savePicture.Title = "Сохранить картинку как";
-            //    savePicture.OverwritePrompt = true; //если сохраняется файл с таким же названием
-            //    savePicture.CheckFileExists = true; //если пути такого не существует
-            //    savePicture.Filter = "Image files (*.JPG)|*.JPG| Image files (*.PNG)|*.PNG";
-
-            //    if (savePicture.ShowDialog() == DialogResult.OK )
-            //    {
-            //        try
-            //        {
-            //            pictureBox1.Image.Save(savePicture.FileName);
-            //        }
-
-            //        catch
-            //        {
-            //            MessageBox.Show("Невозможно сохранить изображение", "Oшибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //        }
-            //    }
-
-            //}
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
             if (pictureBox1.Image != null)
             {
                 SaveFileDialog savePicture = new SaveFileDialog();
                 savePicture.Title = "Сохранить картинку как";
                 savePicture.OverwritePrompt = true; //если сохраняется файл с таким же названием
                 savePicture.CheckFileExists = true; //если пути такого не существует
-                savePicture.Filter = "Image files (*.JPG)|*.JPG| Image files (*.PNG)|*.PNG";
+                savePicture.Filter = "Image Files (*.JPG)|*.JPG| Image Files (*.PNG)|*.PNG| Image Files (*.BMP)|*.BMP";
                 savePicture.ShowHelp = true;
 
                 if (savePicture.ShowDialog() == DialogResult.OK)
@@ -679,6 +641,28 @@ namespace risovalka
                     }
                 }
 
+            }
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openPicture = new OpenFileDialog();
+            openPicture.Filter = "Image Files (*.BMP; *.JPG; *.PNG)|*.BMP; *.JPG; *.PNG";
+
+            if (openPicture.ShowDialog() == DialogResult.OK )
+            {
+                try 
+                {
+                   // pictureBox1.Image = new Bitmap (openPicture.FileName );
+                    //formCanvas.currentBitmap = pictureBox1;
+                    formCanvas.currentBitmap = new Bitmap(openPicture.FileName);
+                    pictureBox1.Image = formCanvas.currentBitmap;
+                }
+
+                catch
+                {
+                    MessageBox.Show("Невозможно открыть выбранный файл ", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

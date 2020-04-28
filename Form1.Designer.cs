@@ -120,7 +120,6 @@
             this.buttonChangeEdge = new System.Windows.Forms.Button();
             this.buttonChangeTops = new System.Windows.Forms.Button();
             this.buttonChangeFigure = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -211,13 +210,14 @@
             this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.openToolStripMenuItem.Text = "&Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(143, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(181, 6);
             // 
             // saveToolStripMenuItem
             // 
@@ -232,17 +232,17 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(143, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(181, 6);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(143, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(181, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.exitToolStripMenuItem.Text = "E&xit";
             // 
             // editToolStripMenuItem
@@ -962,7 +962,6 @@
             this.buttonRed.Size = new System.Drawing.Size(20, 20);
             this.buttonRed.TabIndex = 7;
             this.buttonRed.UseVisualStyleBackColor = false;
-            this.buttonRed.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buttonRed_MouseClick);
             this.buttonRed.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonRed_MouseDown);
             // 
             // buttonGreen
@@ -1288,22 +1287,11 @@
             this.buttonChangeFigure.TabIndex = 19;
             this.buttonChangeFigure.UseVisualStyleBackColor = true;
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(363, 232);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(57, 61);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.panelForVectors);
             this.Controls.Add(this.panelTools);
             this.Controls.Add(this.panel2);
@@ -1447,7 +1435,6 @@
         private System.Windows.Forms.Button buttonChangeEdge;
         private System.Windows.Forms.Button buttonChangeTops;
         private System.Windows.Forms.Button buttonChangeFigure;
-        private System.Windows.Forms.Button button3;
     }
 }
 
