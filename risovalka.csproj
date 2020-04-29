@@ -63,7 +63,7 @@
     <Compile Include="APainter\FigurePainter.cs" />
     <Compile Include="APainter\LinePainter.cs" />
     <Compile Include="APainter\PointPolygonPainter.cs" />
-    <Compile Include="Canvas.cs" />
+    <Compile Include="ICan\Canvas.cs" />
     <Compile Include="Brush.cs" />
     <Compile Include="Circle1.cs" />
     <Compile Include="Ellipse.cs" />
@@ -90,6 +90,8 @@
     <Compile Include="IButtonswitch\PipetteButton.cs" />
     <Compile Include="AFill\TotalFilling.cs" />
     <Compile Include="AFill\AbstractFilling.cs" />
+    <Compile Include="ICan\ICanvas.cs" />
+    <Compile Include="ICan\VectorCanvas.cs" />
     <Compile Include="IsoscelesTriangle.cs" />
     <Compile Include="Line.cs" />
     <Compile Include="List\L2List.cs" />

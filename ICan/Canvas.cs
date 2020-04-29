@@ -7,9 +7,9 @@ using System.Windows.Forms;
 using System.Drawing;
 using risovalka.List;
 
-namespace risovalka
+namespace risovalka.ICan
 {
-    public class Canvas
+    public class Canvas : ICanvas
     {
         private static Canvas obj;
         public List<Bitmap> archive;

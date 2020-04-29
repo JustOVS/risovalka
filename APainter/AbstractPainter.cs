@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using risovalka.FormFigure;
 using risovalka.AFill;
+using risovalka.ICan;
 
 namespace risovalka.APainter
 {

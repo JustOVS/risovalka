@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Drawing;
 using System.Windows.Forms;
 using risovalka;
+using risovalka.ICan;
 
 namespace risovalka.IButtonswitch
 {

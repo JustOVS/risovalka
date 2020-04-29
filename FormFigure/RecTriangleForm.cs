@@ -17,7 +17,7 @@ namespace risovalka.FormFigure
             int x2 = p2.X; // 4
             int y2 = p2.Y; // 4  // 1. 0, 0; 2. 4, 4; 3. 0, 4; 4. 0, 0 
 
-            return new List<Point> { new Point(x1, y1), new Point(x2, y2), new Point(x1, y2), new Point(x1, y1) };
+            return new List<Point> { new Point(x1, y1), new Point(x2, y2), new Point(x1, y2)};
         }
         public Point GetCenter(Point p1, Point p2)
         {

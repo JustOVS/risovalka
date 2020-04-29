@@ -12,6 +12,8 @@ using risovalka.AbstractPainterFactory;
 using risovalka.APainter;
 using risovalka.AFill;
 using risovalka.IButtonswitch;
+using risovalka.ICan;
+
 namespace risovalka
 {
     public partial class Form1 : Form
