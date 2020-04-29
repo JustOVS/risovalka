@@ -64,6 +64,9 @@ namespace risovalka
                     currentPainter.DrawDynamicFigure(new Point(e.X, e.Y), pictureBox1, shift);
                 }
             }
+
+
+            fillingColor = pictureBoxPrevColor.BackColor;
         }
 
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
@@ -557,7 +560,8 @@ namespace risovalka
 
         private void buttonFigureWithBorders_Click(object sender, EventArgs e)
         {
-            currentFilling = new InsideFilling(fillingColor);
+          //  fillingColor = pictureBoxPrevColor.BackColor;
+            currentFilling = new InsideFilling(fillingColor );
         }
 
         private void buttonOnlyBorders_Click(object sender, EventArgs e)
