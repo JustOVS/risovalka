@@ -68,9 +68,15 @@ namespace risovalka
 
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
+            
             if(buttonSwitch is PipetteButton)
             {
+                pictureBoxCurrentColor.BackColor = currentColor;
                 buttonSwitch = new NoneButton();
+            }
+            else
+            {
+                currentColor = pictureBoxCurrentColor.BackColor;
             }
 
             if (Math.Abs(e.X - PointPolygonPainter.first.X) < 10 && Math.Abs(e.Y - PointPolygonPainter.first.Y) < 10 && PointPolygonPainter.first.X != -1)
@@ -83,7 +89,7 @@ namespace risovalka
                 PointPolygonPainter.last.Y = e.Y;
             }
             drawStartFinishFlag = false;
-            currentColor = pictureBoxCurrentColor.BackColor;
+            
         }
         
 
