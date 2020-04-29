@@ -57,6 +57,8 @@
     <Compile Include="AbstractPainterFactory\FigurePainterFactory.cs" />
     <Compile Include="AbstractPainterFactory\LinePainterFactory.cs" />
     <Compile Include="AbstractPainterFactory\PointPolygonPainterFactory.cs" />
+    <Compile Include="AFill\InsideFilling.cs" />
+    <Compile Include="AFill\NoneFilling.cs" />
     <Compile Include="APainter\ErasePainter.cs" />
     <Compile Include="APainter\FigurePainter.cs" />
     <Compile Include="APainter\LinePainter.cs" />

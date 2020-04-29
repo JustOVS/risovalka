@@ -10,6 +10,16 @@ namespace risovalka.AFill
     public abstract class AbstractFilling
     {
         public Canvas fillCanvas = Canvas.GetCanvas;
-        public abstract void Fill(Point p1, PictureBox pictureBox, Color currentColor);
+        public Color fillingColor;
+        public Bitmap newBitmap;
+        public int counter = 0;
+        public AbstractFilling(Color fillingColor)
+        {
+            this.fillingColor = fillingColor;
+            
+        }
+        public abstract void Fill(Point p1, PictureBox pictureBox, Bitmap newBitmap);
+
+        
     }
 }

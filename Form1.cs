@@ -17,13 +17,15 @@ namespace risovalka
     public partial class Form1 : Form
     {
         public Canvas formCanvas = Canvas.GetCanvas;
-        public static Color currentColor = Color.Black;
+        public Color currentColor = Color.Black;
         public static int size = 1;
         public IFormFigure currentForm = new LineForm();
         public APainterFactory currentFactory = new LinePainterFactory();
         public AbstractPainter currentPainter = null;
         public static bool drawStartFinishFlag = false;
         IButton buttonSwitch = new NoneButton();
+        public AbstractFilling currentFilling; 
+        public Color fillingColor = Color.Blue; //костыль
         public bool shift = false;
         public Form1()
         {
@@ -36,7 +38,8 @@ namespace risovalka
         {
             formCanvas.currentBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             formCanvas.tmpBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
-           
+            pictureBoxCurrentColor.BackColor = Color.Black;
+            currentFilling = new NoneFilling(currentColor);
         }
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
@@ -52,7 +55,8 @@ namespace risovalka
             drawStartFinishFlag = buttonSwitch.ButtonSwitch(new Point(e.X, e.Y), pictureBox1, ref currentColor); 
             if (drawStartFinishFlag)
             {
-                currentPainter = currentFactory.CreatePainter(currentForm, currentColor, size, new Point(e.X, e.Y));
+                
+                currentPainter = currentFactory.CreatePainter(currentForm, currentColor, size, new Point(e.X, e.Y), currentFilling);
 
                 if (PointPolygonPainter.first.X != -1) 
                 {
@@ -85,7 +89,7 @@ namespace risovalka
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
-            if (drawStartFinishFlag == true)
+            if (drawStartFinishFlag)
             {
                 if (Control.ModifierKeys == Keys.Shift)
                 {
@@ -95,26 +99,12 @@ namespace risovalka
                 {
                     shift = false;
                 }
+                
                 currentPainter.DrawDynamicFigure(new Point(e.X, e.Y), pictureBox1, shift);
             }
 
-            //if (Control.ModifierKeys == Keys.Shift && (currentForm is RectangleForm))
-            //{
-            //    AbstractPainter tmpPainter = currentFactory.CreatePainter(new SquareForm(), currentColor, size, new Point(e.X, e.Y));
-            //    tmpPainter.DrawDynamicFigure(new Point(e.X, e.Y), pictureBox1);
-            //}
-            ////else if (Control.ModifierKeys != Keys.Shift && (AbstractPainter.drawSwitch.GetType() == typeof(Rectangle)))
-            ////{
 
-            ////    new Rectangle().DrawDynamicFigure(e, pictureBox1);
-            ////}
-            ////else
-            ////{
-            ////    AbstractPainter.drawSwitch.DrawDynamicFigure(e, pictureBox1);
-            ////}
 
-            //else
-            //{
 
             //}
 
@@ -260,35 +250,22 @@ namespace risovalka
 
         private void pictureBox1_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
         {
-            //if(e.Shift)
-            //{
-            //    AbstractPainter.shift = true;
-            //}
+       
         }
 
         private void pictureBox1_KeyUp(object sender, System.Windows.Forms.KeyEventArgs e)
         {
-            //if (Control.ModifierKeys == Keys.Shift)
-
-            //{
-            //    AbstractPainter.shift = false;
-            //}
+     
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            //if (e.Shift)
-            //{
-            //    AbstractPainter.shift = true;
-            //}
+      
         }
 
         private void Form1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
-            //if (e.Shift)
-            //{
-            //    AbstractPainter.shift = true;
-            //}
+         
         }
 
         private void buttonCircle_Click(object sender, EventArgs e)
@@ -565,6 +542,21 @@ namespace risovalka
         {
             formCanvas.tmpBitmap = formCanvas.currentBitmap;
             formCanvas.currentBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+        }
+
+        private void buttonOnlyFigure_Click(object sender, EventArgs e)
+        {
+            currentFilling = new TotalFilling(currentColor);
+        }
+
+        private void buttonFigureWithBorders_Click(object sender, EventArgs e)
+        {
+            currentFilling = new InsideFilling(fillingColor);
+        }
+
+        private void buttonOnlyBorders_Click(object sender, EventArgs e)
+        {
+            currentFilling = new NoneFilling(currentColor);
         }
 
       

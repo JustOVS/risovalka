@@ -7,12 +7,13 @@ using System.Drawing;
 using risovalka;
 using risovalka.APainter;
 using risovalka.FormFigure;
+using risovalka.AFill;
 
 namespace risovalka.AbstractPainterFactory
 {
     public abstract class APainterFactory
     {
         public AbstractPainter abstractPainter;
-        abstract public AbstractPainter CreatePainter(IFormFigure currentFigure, Color currentColor, int currentSize, Point startPoint);
+        abstract public AbstractPainter CreatePainter(IFormFigure currentFigure, Color currentColor, int currentSize, Point startPoint, AbstractFilling typeOfFilling);
     }
 }

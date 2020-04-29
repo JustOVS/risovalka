@@ -13,5 +13,9 @@ namespace risovalka.FormFigure
         {
             return new List<Point> { p1, p2 };
         }
+        public Point GetCenter(Point p1, Point p2)
+        {
+            return p1;
+        }
     }
 }
