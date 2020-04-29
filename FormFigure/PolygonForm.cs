@@ -51,6 +51,8 @@ namespace risovalka.FormFigure
             }
             list1.Add(lastPoint);
             return list1;
+
+            
             //for (int k = 0; k < points.Length - 1; k += 2)
             //{
             //    if (k == points.Length - 2)
@@ -62,6 +64,10 @@ namespace risovalka.FormFigure
             //        AbstractPainter.DrawLine(points[k], points[k + 1], points[k + 2], points[k + 3], pictureBox, currentColor);
             //    }
             //}
+        }
+        public Point GetCenter(Point p1, Point p2)
+        {
+            return p1;
         }
     }
 }

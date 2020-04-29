@@ -34,3 +34,15 @@ E:\VisualProject\risovalka\obj\Debug\risovalka.Properties.Resources.resources
 E:\VisualProject\risovalka\obj\Debug\risovalka.csproj.GenerateResource.cache
 E:\VisualProject\risovalka\obj\Debug\risovalka.csproj.CoreCompileInputs.cache
 E:\VisualProject\risovalka\obj\Debug\risovalka.exe
+D:\repos\risovalka\bin\Debug\nunit.framework.dll
+D:\repos\risovalka\bin\Debug\nunit.framework.pdb
+D:\repos\risovalka\bin\Debug\nunit.framework.xml
+D:\repos\risovalka\obj\Debug\risovalka.csproj.CopyComplete
+C:\Users\Татьяна\source\repos\risovalka\bin\Debug\nunit.framework.dll
+C:\Users\Татьяна\source\repos\risovalka\bin\Debug\nunit.framework.pdb
+C:\Users\Татьяна\source\repos\risovalka\bin\Debug\nunit.framework.xml
+C:\Users\Татьяна\source\repos\risovalka\obj\Debug\risovalka.csproj.CopyComplete
+F:\ProjectsVS\risovalka\bin\Debug\nunit.framework.dll
+F:\ProjectsVS\risovalka\bin\Debug\nunit.framework.pdb
+F:\ProjectsVS\risovalka\bin\Debug\nunit.framework.xml
+F:\ProjectsVS\risovalka\obj\Debug\risovalka.csproj.CopyComplete

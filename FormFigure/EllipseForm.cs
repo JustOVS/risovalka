@@ -8,7 +8,7 @@ using risovalka;
 
 namespace risovalka.FormFigure
 {
-    class EllipseForm : IFormFigure
+    public class EllipseForm : IFormFigure
     {
         public List<Point> CalculateFigure(Point p1, Point p2)
         {
@@ -90,6 +90,10 @@ namespace risovalka.FormFigure
             
             
             return list1;
+        }
+        public Point GetCenter(Point p1, Point p2)
+        {
+            return new Point(((p1.X + p2.X) / 2), ((p1.Y + p2.Y) / 2));
         }
     }
 }
