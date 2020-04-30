@@ -204,9 +204,9 @@ public static bool takePipette = false;
 
             //}
         }
-        public void DrawFigure(IFormFigure formFigure, Bitmap newBitmap, Point startPoint, Point p1, PictureBox pictureBox)
+        public void DrawFigure(IFormFigure formFigure, Bitmap newBitmap, PictureBox pictureBox, List<Point> figurePoints)
         {
-            List<Point> figurePoints = formFigure.CalculateFigure(startPoint, p1);
+            
             if (formFigure is CircleForm || formFigure is EllipseForm)
                 for (int i = 0; i < figurePoints.Count - 1; i++)
                 {

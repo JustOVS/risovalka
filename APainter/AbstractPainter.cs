@@ -12,13 +12,14 @@ using risovalka.ICan;
 namespace risovalka.APainter
 {
     
-    public abstract class AbstractPainter
+    public abstract class AbstractPainter 
     {
         public Brush brush;
         public IFormFigure formFigure;
         public Canvas apCanvas = Canvas.GetCanvas;
         public Point startPoint;
         public AbstractFilling typeOfFilling;
+        public List<Point> points;
       
 
         public abstract void DrawDynamicFigure(Point p1, PictureBox pictureBox, bool shift);

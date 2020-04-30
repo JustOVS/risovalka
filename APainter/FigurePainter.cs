@@ -28,19 +28,23 @@ namespace risovalka.APainter
                 Graphics g = Graphics.FromImage(apCanvas.currentBitmap);
             if (shift == false || formFigure is CircleForm || formFigure is SquareForm || formFigure is RecTriangleForm || formFigure is PolygonForm)
             {
-                brush.DrawFigure(formFigure, newBitmap, startPoint, p1, pictureBox);
+                List<Point> figurePoints = formFigure.CalculateFigure(startPoint, p1);
+                brush.DrawFigure(formFigure, newBitmap, pictureBox, figurePoints);
             }
             else if (formFigure is EllipseForm)
             {
-                brush.DrawFigure(new CircleForm(), newBitmap, startPoint, p1, pictureBox);
+                List<Point> figurePoints = new CircleForm().CalculateFigure(startPoint, p1);
+                brush.DrawFigure(new CircleForm(), newBitmap, pictureBox, figurePoints);
             }
             else if (formFigure is IsoTriangleForm)
             {
-                brush.DrawFigure(new RecTriangleForm(), newBitmap, startPoint, p1, pictureBox);
+                List<Point> figurePoints = new RecTriangleForm().CalculateFigure(startPoint, p1);
+                brush.DrawFigure(new RecTriangleForm(), newBitmap, pictureBox, figurePoints);
             }
             else
             {
-                brush.DrawFigure(new SquareForm(), newBitmap, startPoint, p1, pictureBox);
+                List<Point> figurePoints = new SquareForm().CalculateFigure(startPoint, p1);
+                brush.DrawFigure(new SquareForm(), newBitmap, pictureBox, figurePoints);
             }
             typeOfFilling.Fill(formFigure.GetCenter(startPoint, p1), pictureBox, newBitmap);
 

@@ -57,12 +57,14 @@
     <Compile Include="AbstractPainterFactory\FigurePainterFactory.cs" />
     <Compile Include="AbstractPainterFactory\LinePainterFactory.cs" />
     <Compile Include="AbstractPainterFactory\PointPolygonPainterFactory.cs" />
+    <Compile Include="AbstractPainterFactory\VectorFigurePainterFactory.cs" />
     <Compile Include="AFill\InsideFilling.cs" />
     <Compile Include="AFill\NoneFilling.cs" />
     <Compile Include="APainter\ErasePainter.cs" />
     <Compile Include="APainter\FigurePainter.cs" />
     <Compile Include="APainter\LinePainter.cs" />
     <Compile Include="APainter\PointPolygonPainter.cs" />
+    <Compile Include="APainter\VectorFigurePainter.cs" />
     <Compile Include="ICan\Canvas.cs" />
     <Compile Include="Brush.cs" />
     <Compile Include="Circle1.cs" />
@@ -90,7 +92,6 @@
     <Compile Include="IButtonswitch\PipetteButton.cs" />
     <Compile Include="AFill\TotalFilling.cs" />
     <Compile Include="AFill\AbstractFilling.cs" />
-    <Compile Include="ICan\ICanvas.cs" />
     <Compile Include="ICan\VectorCanvas.cs" />
     <Compile Include="IsoscelesTriangle.cs" />
     <Compile Include="Line.cs" />

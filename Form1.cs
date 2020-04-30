@@ -29,6 +29,7 @@ namespace risovalka
         public AbstractFilling currentFilling; 
         public Color fillingColor = Color.Blue; //костыль
         public bool shift = false;
+        public bool vectorMode = false;
         public Form1()
         {
             InitializeComponent();
@@ -59,7 +60,7 @@ namespace risovalka
             {
                 
                 currentPainter = currentFactory.CreatePainter(currentForm, currentColor, size, new Point(e.X, e.Y), currentFilling);
-
+                
                 if (PointPolygonPainter.first.X != -1) 
                 {
 
@@ -191,7 +192,14 @@ namespace risovalka
 
         private void buttonPencile_Click(object sender, EventArgs e)
         {
-            currentFactory = new LinePainterFactory();
+            if (vectorMode)
+            {
+                currentFactory = new VectorFigurePainterFactory();
+            }
+            else
+            {
+                currentFactory = new LinePainterFactory();
+            }
             currentForm = new LineForm();
             buttonSwitch = new NoneButton();
         }
@@ -199,35 +207,70 @@ namespace risovalka
 
         private void buttonSquare_Click(object sender, EventArgs e)
         {
-            currentFactory = new FigurePainterFactory();
+            if (vectorMode)
+            {
+                currentFactory = new VectorFigurePainterFactory();
+            }
+            else
+            {
+                currentFactory = new FigurePainterFactory();
+            }
             currentForm = new SquareForm();
             buttonSwitch = new NoneButton();
         }
 
         private void buttonRectabgle_Click(object sender, EventArgs e)
         {
-            currentFactory = new FigurePainterFactory();
+            if (vectorMode)
+            {
+                currentFactory = new VectorFigurePainterFactory();
+            }
+            else
+            {
+                currentFactory = new FigurePainterFactory();
+            }
             currentForm = new RectangleForm();
             buttonSwitch = new NoneButton();
         }
 
         private void buttonTriangle_Click(object sender, EventArgs e)
         {
-            currentFactory = new FigurePainterFactory();
+            if (vectorMode)
+            {
+                currentFactory = new VectorFigurePainterFactory();
+            }
+            else
+            {
+                currentFactory = new FigurePainterFactory();
+            }
             currentForm = new IsoTriangleForm();
             buttonSwitch = new NoneButton();
         }
 
         private void buttonRightTriangle_Click(object sender, EventArgs e)
         {
-            currentFactory = new FigurePainterFactory();
+            if (vectorMode)
+            {
+                currentFactory = new VectorFigurePainterFactory();
+            }
+            else
+            {
+                currentFactory = new FigurePainterFactory();
+            }
             currentForm = new RecTriangleForm();
             buttonSwitch = new NoneButton();
         }
 
         private void buttonPolygon1_Click(object sender, EventArgs e)
         {
-            currentFactory = new FigurePainterFactory();
+            if (vectorMode)
+            {
+                currentFactory = new VectorFigurePainterFactory();
+            }
+            else
+            {
+                currentFactory = new FigurePainterFactory();
+            }
             currentForm = new PolygonForm(Convert.ToInt32(numericUpDownForPolygon.Value));
             buttonSwitch = new NoneButton();
         }
@@ -281,7 +324,14 @@ namespace risovalka
 
         private void buttonCircle_Click(object sender, EventArgs e)
         {
-            currentFactory = new FigurePainterFactory();
+            if (vectorMode)
+            {
+                currentFactory = new VectorFigurePainterFactory();
+            }
+            else
+            {
+                currentFactory = new FigurePainterFactory();
+            }
             currentForm = new CircleForm();
             buttonSwitch = new NoneButton();
 
@@ -289,7 +339,14 @@ namespace risovalka
 
         private void buttonOval_Click(object sender, EventArgs e)
         {
-            currentFactory = new FigurePainterFactory();
+            if (vectorMode)
+            {
+                currentFactory = new VectorFigurePainterFactory(); 
+            }
+            else
+            {
+                currentFactory = new FigurePainterFactory();
+            }
             currentForm = new EllipseForm();
             buttonSwitch = new NoneButton();
         }
@@ -618,7 +675,18 @@ namespace risovalka
 
         private void buttonHand_Click(object sender, EventArgs e)
         {
-            panelForVectors.Visible = true;
+            if (vectorMode)
+            {
+                panelForVectors.Visible = false;
+                vectorMode = false;
+                formCanvas.Clear(pictureBox1);
+            }
+            else
+            {
+                panelForVectors.Visible = true;
+                vectorMode = true;
+                formCanvas.Clear(pictureBox1);
+            }
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)

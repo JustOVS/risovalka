@@ -5,16 +5,17 @@
 //using System.Threading.Tasks;
 //using System.Windows.Forms;
 //using System.Drawing;
+//using risovalka.APainter;
 
 //namespace risovalka.ICan
 //{
-//    public class VectorCanvas
+//    public class VectorCanvas : Canvas
 //    {
 //        private static VectorCanvas obj;
-  
+
 //        public Bitmap currentBitmap;
 //        public Bitmap tmpBitmap;
-        
+
 
 //        private VectorCanvas()
 //        {
@@ -56,22 +57,16 @@
 //            }
 
 //        }
-//        public List<Figure> figures;
+//        public List<AbstractPainter> figures;
 
 //        public void DrawAllFigures(PictureBox pictureBox)
 //        {
 //            currentBitmap = new Bitmap(pictureBox.Width, pictureBox.Height);
 
-//            Brush brush = new Brush();
-//            foreach (Figure f in figures)
+            
+//            foreach (AbstractPainter f in figures)
 //            {
-//                Point tmp = f.points[0];
-//                foreach (Point p in f.points)
-//                {
-//                    brush.DrawLine(tmp, p, pictureBox, Color.Black);
-//                    tmp = p;
-//                }
-//                brush.DrawLine(tmp, f.points[0], pictureBox, Color.Black);
+//                f.brush.DrawFigure(f.formFigure, currentBitmap, pictureBox, f.points);
 //            }
 //        }
 
