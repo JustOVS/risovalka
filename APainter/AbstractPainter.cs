@@ -24,6 +24,6 @@ namespace risovalka.APainter
 
         public abstract void DrawDynamicFigure(Point p1, PictureBox pictureBox, bool shift);
 
-        
+        public abstract void MoveFigure(int dX, int dY);
     }
 }

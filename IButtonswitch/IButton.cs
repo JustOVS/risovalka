@@ -7,11 +7,15 @@ using System.Drawing;
 using System.Windows.Forms;
 using risovalka;
 using risovalka.ICan;
+using risovalka.APainter;
 
 namespace risovalka.IButtonswitch
 {
-    public interface IButton
+    public abstract class IButton
     {
-        bool ButtonSwitch(Point p1, PictureBox pictureBox, ref Color currentColor);
+        bool ChangingFlag;
+        public abstract bool ActivateButton(Point p1, PictureBox pictureBox, ref Color currentColor, ref AbstractPainter abstractPainter);
+        public abstract void Move(Point p1, PictureBox pictureBox, AbstractPainter currentPainter);
+        public abstract void DeactivateButton();
     }
 }

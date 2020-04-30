@@ -55,7 +55,7 @@ namespace risovalka
 
             formCanvas.tmpBitmap = new Bitmap(formCanvas.currentBitmap);
             formCanvas.AddToTmp();
-            drawStartFinishFlag = buttonSwitch.ButtonSwitch(new Point(e.X, e.Y), pictureBox1, ref currentColor); 
+            drawStartFinishFlag = buttonSwitch.ActivateButton(new Point(e.X, e.Y), pictureBox1, ref currentColor, ref currentPainter); 
             if (drawStartFinishFlag)
             {
                 
@@ -74,7 +74,8 @@ namespace risovalka
 
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
-            
+
+            buttonSwitch.DeactivateButton();
             if(buttonSwitch is PipetteButton)
             {
                 pictureBoxCurrentColor.BackColor = currentColor;
@@ -101,6 +102,7 @@ namespace risovalka
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
+            buttonSwitch.Move(e.Location, pictureBox1, currentPainter);
             if (drawStartFinishFlag)
             {
                 if (Control.ModifierKeys == Keys.Shift)
@@ -736,6 +738,11 @@ namespace risovalka
                     MessageBox.Show("Невозможно открыть выбранный файл ", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void buttonChangeFigure_Click(object sender, EventArgs e)
+        {
+            buttonSwitch = new FigureChangingButton();
         }
     }
 }

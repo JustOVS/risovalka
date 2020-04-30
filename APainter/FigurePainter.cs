@@ -77,5 +77,10 @@ namespace risovalka.APainter
                     }
             }
         }
+
+        public override void MoveFigure(int dX, int dY)
+        {
+            
+        }
     }
 }

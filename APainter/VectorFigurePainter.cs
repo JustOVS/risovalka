@@ -25,5 +25,14 @@ namespace risovalka.APainter
             this.points = formFigure.CalculateFigure(startPoint, p1);
             apCanvas.DrawAllFigures(pictureBox);
         }
+        public override void MoveFigure(int dX, int dY)
+        {
+            
+                for (int i = 0; i < points.Count; i++)
+                {
+                    points[i] = new Point(points[i].X + dX, points[i].Y + dY);
+                }
+            
+        }
     }
 }
