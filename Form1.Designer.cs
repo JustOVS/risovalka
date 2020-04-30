@@ -120,6 +120,7 @@
             this.buttonChangeEdge = new System.Windows.Forms.Button();
             this.buttonChangeTops = new System.Windows.Forms.Button();
             this.buttonChangeFigure = new System.Windows.Forms.Button();
+            this.toolStripMenuItemSaveAs = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -187,6 +188,7 @@
             this.openToolStripMenuItem,
             this.toolStripSeparator,
             this.saveToolStripMenuItem,
+            this.toolStripMenuItemSaveAs,
             this.toolStripSeparator1,
             this.toolStripSeparator2,
             this.exitToolStripMenuItem});
@@ -1334,6 +1336,13 @@
             this.buttonChangeFigure.UseVisualStyleBackColor = true;
             this.buttonChangeFigure.Click += new System.EventHandler(this.buttonChangeFigure_Click);
             // 
+            // toolStripMenuItemSaveAs
+            // 
+            this.toolStripMenuItemSaveAs.Name = "toolStripMenuItemSaveAs";
+            this.toolStripMenuItemSaveAs.Size = new System.Drawing.Size(184, 26);
+            this.toolStripMenuItemSaveAs.Text = "Save as ..";
+            this.toolStripMenuItemSaveAs.Click += new System.EventHandler(this.toolStripMenuItemSaveAs_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1483,6 +1492,7 @@
         private System.Windows.Forms.Button buttonChangeEdge;
         private System.Windows.Forms.Button buttonChangeTops;
         private System.Windows.Forms.Button buttonChangeFigure;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSaveAs;
     }
 }
 

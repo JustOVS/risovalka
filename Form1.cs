@@ -659,7 +659,32 @@ namespace risovalka
 
             if (result == DialogResult.Yes)
             {
-                
+                if (pictureBox1.Image != null)
+                {
+                    SaveFileDialog savePicture = new SaveFileDialog();
+                    savePicture.Title = "Сохранить картинку как";
+                    savePicture.OverwritePrompt = true; //если сохраняется файл с таким же названием
+                    savePicture.CheckFileExists = false; //если пути такого не существует
+                    savePicture.Filter = "Image Files (*.JPG)|*.JPG| Image Files (*.PNG)|*.PNG| Image Files (*.BMP)|*.BMP";
+                    savePicture.ShowHelp = true;
+
+                    if (savePicture.ShowDialog() == DialogResult.OK)
+                    {
+                        try
+                        {
+                            pictureBox1.Image.Save(savePicture.FileName);
+                        }
+
+                        catch
+                        {
+                            MessageBox.Show("Невозможно сохранить изображение", "Oшибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+
+                    formCanvas.Clear(pictureBox1);
+                    formCanvas.currentBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+                    formCanvas.tmpBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+                }
             }
 
             else if (result == DialogResult.No)
@@ -727,9 +752,9 @@ namespace risovalka
             {
                 try 
                 {
-                   // pictureBox1.Image = new Bitmap (openPicture.FileName );
+                    // pictureBox1.Image = new Bitmap (openPicture.FileName );
                     //formCanvas.currentBitmap = pictureBox1;
-                    formCanvas.currentBitmap = new Bitmap(openPicture.FileName);
+                    formCanvas.currentBitmap = new Bitmap (openPicture.FileName);   
                     pictureBox1.Image = formCanvas.currentBitmap;
                 }
 
@@ -737,6 +762,33 @@ namespace risovalka
                 {
                     MessageBox.Show("Невозможно открыть выбранный файл ", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+
+        private void toolStripMenuItemSaveAs_Click(object sender, EventArgs e)
+        {
+            if (pictureBox1.Image != null)
+            {
+                SaveFileDialog savePicture = new SaveFileDialog();
+                savePicture.Title = "Сохранить картинку как";
+                savePicture.OverwritePrompt = true; //если сохраняется файл с таким же названием
+                savePicture.CheckFileExists = false ; //если пути такого не существует
+                savePicture.Filter = "Image Files (*.JPG)|*.JPG| Image Files (*.PNG)|*.PNG| Image Files (*.BMP)|*.BMP";
+                savePicture.ShowHelp = true;
+
+                if (savePicture.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        pictureBox1.Image.Save(savePicture.FileName);
+                    }
+
+                    catch
+                    {
+                        MessageBox.Show("Невозможно сохранить изображение", "Oшибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+
             }
         }
 
