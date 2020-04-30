@@ -12,6 +12,8 @@ using risovalka.AbstractPainterFactory;
 using risovalka.APainter;
 using risovalka.AFill;
 using risovalka.IButtonswitch;
+using risovalka.ICan;
+
 namespace risovalka
 {
     public partial class Form1 : Form
@@ -27,6 +29,7 @@ namespace risovalka
         public AbstractFilling currentFilling; 
         public Color fillingColor = Color.Blue; //костыль
         public bool shift = false;
+        public bool vectorMode = false;
         public Form1()
         {
             InitializeComponent();
@@ -52,12 +55,12 @@ namespace risovalka
 
             formCanvas.tmpBitmap = new Bitmap(formCanvas.currentBitmap);
             formCanvas.AddToTmp();
-            drawStartFinishFlag = buttonSwitch.ButtonSwitch(new Point(e.X, e.Y), pictureBox1, ref currentColor); 
+            drawStartFinishFlag = buttonSwitch.ActivateButton(new Point(e.X, e.Y), pictureBox1, ref currentColor, ref currentPainter); 
             if (drawStartFinishFlag)
             {
                 
                 currentPainter = currentFactory.CreatePainter(currentForm, currentColor, size, new Point(e.X, e.Y), currentFilling);
-
+                
                 if (PointPolygonPainter.first.X != -1) 
                 {
 
@@ -71,7 +74,8 @@ namespace risovalka
 
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
-            
+
+            buttonSwitch.DeactivateButton();
             if(buttonSwitch is PipetteButton)
             {
                 pictureBoxCurrentColor.BackColor = currentColor;
@@ -98,6 +102,7 @@ namespace risovalka
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
+            buttonSwitch.Move(e.Location, pictureBox1, currentPainter);
             if (drawStartFinishFlag)
             {
                 if (Control.ModifierKeys == Keys.Shift)
@@ -189,7 +194,14 @@ namespace risovalka
 
         private void buttonPencile_Click(object sender, EventArgs e)
         {
-            currentFactory = new LinePainterFactory();
+            if (vectorMode)
+            {
+                currentFactory = new VectorFigurePainterFactory();
+            }
+            else
+            {
+                currentFactory = new LinePainterFactory();
+            }
             currentForm = new LineForm();
             buttonSwitch = new NoneButton();
         }
@@ -197,35 +209,70 @@ namespace risovalka
 
         private void buttonSquare_Click(object sender, EventArgs e)
         {
-            currentFactory = new FigurePainterFactory();
+            if (vectorMode)
+            {
+                currentFactory = new VectorFigurePainterFactory();
+            }
+            else
+            {
+                currentFactory = new FigurePainterFactory();
+            }
             currentForm = new SquareForm();
             buttonSwitch = new NoneButton();
         }
 
         private void buttonRectabgle_Click(object sender, EventArgs e)
         {
-            currentFactory = new FigurePainterFactory();
+            if (vectorMode)
+            {
+                currentFactory = new VectorFigurePainterFactory();
+            }
+            else
+            {
+                currentFactory = new FigurePainterFactory();
+            }
             currentForm = new RectangleForm();
             buttonSwitch = new NoneButton();
         }
 
         private void buttonTriangle_Click(object sender, EventArgs e)
         {
-            currentFactory = new FigurePainterFactory();
+            if (vectorMode)
+            {
+                currentFactory = new VectorFigurePainterFactory();
+            }
+            else
+            {
+                currentFactory = new FigurePainterFactory();
+            }
             currentForm = new IsoTriangleForm();
             buttonSwitch = new NoneButton();
         }
 
         private void buttonRightTriangle_Click(object sender, EventArgs e)
         {
-            currentFactory = new FigurePainterFactory();
+            if (vectorMode)
+            {
+                currentFactory = new VectorFigurePainterFactory();
+            }
+            else
+            {
+                currentFactory = new FigurePainterFactory();
+            }
             currentForm = new RecTriangleForm();
             buttonSwitch = new NoneButton();
         }
 
         private void buttonPolygon1_Click(object sender, EventArgs e)
         {
-            currentFactory = new FigurePainterFactory();
+            if (vectorMode)
+            {
+                currentFactory = new VectorFigurePainterFactory();
+            }
+            else
+            {
+                currentFactory = new FigurePainterFactory();
+            }
             currentForm = new PolygonForm(Convert.ToInt32(numericUpDownForPolygon.Value));
             buttonSwitch = new NoneButton();
         }
@@ -279,7 +326,14 @@ namespace risovalka
 
         private void buttonCircle_Click(object sender, EventArgs e)
         {
-            currentFactory = new FigurePainterFactory();
+            if (vectorMode)
+            {
+                currentFactory = new VectorFigurePainterFactory();
+            }
+            else
+            {
+                currentFactory = new FigurePainterFactory();
+            }
             currentForm = new CircleForm();
             buttonSwitch = new NoneButton();
 
@@ -287,7 +341,14 @@ namespace risovalka
 
         private void buttonOval_Click(object sender, EventArgs e)
         {
-            currentFactory = new FigurePainterFactory();
+            if (vectorMode)
+            {
+                currentFactory = new VectorFigurePainterFactory(); 
+            }
+            else
+            {
+                currentFactory = new FigurePainterFactory();
+            }
             currentForm = new EllipseForm();
             buttonSwitch = new NoneButton();
         }
@@ -598,7 +659,32 @@ namespace risovalka
 
             if (result == DialogResult.Yes)
             {
-                
+                if (pictureBox1.Image != null)
+                {
+                    SaveFileDialog savePicture = new SaveFileDialog();
+                    savePicture.Title = "Сохранить картинку как";
+                    savePicture.OverwritePrompt = true; //если сохраняется файл с таким же названием
+                    savePicture.CheckFileExists = false; //если пути такого не существует
+                    savePicture.Filter = "Image Files (*.JPG)|*.JPG| Image Files (*.PNG)|*.PNG| Image Files (*.BMP)|*.BMP";
+                    savePicture.ShowHelp = true;
+
+                    if (savePicture.ShowDialog() == DialogResult.OK)
+                    {
+                        try
+                        {
+                            pictureBox1.Image.Save(savePicture.FileName);
+                        }
+
+                        catch
+                        {
+                            MessageBox.Show("Невозможно сохранить изображение", "Oшибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+
+                    formCanvas.Clear(pictureBox1);
+                    formCanvas.currentBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+                    formCanvas.tmpBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+                }
             }
 
             else if (result == DialogResult.No)
@@ -616,7 +702,18 @@ namespace risovalka
 
         private void buttonHand_Click(object sender, EventArgs e)
         {
-            panelForVectors.Visible = true;
+            if (vectorMode)
+            {
+                panelForVectors.Visible = false;
+                vectorMode = false;
+                formCanvas.Clear(pictureBox1);
+            }
+            else
+            {
+                panelForVectors.Visible = true;
+                vectorMode = true;
+                formCanvas.Clear(pictureBox1);
+            }
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -655,9 +752,9 @@ namespace risovalka
             {
                 try 
                 {
-                   // pictureBox1.Image = new Bitmap (openPicture.FileName );
+                    // pictureBox1.Image = new Bitmap (openPicture.FileName );
                     //formCanvas.currentBitmap = pictureBox1;
-                    formCanvas.currentBitmap = new Bitmap(openPicture.FileName);
+                    formCanvas.currentBitmap = new Bitmap (openPicture.FileName);   
                     pictureBox1.Image = formCanvas.currentBitmap;
                 }
 
@@ -666,6 +763,38 @@ namespace risovalka
                     MessageBox.Show("Невозможно открыть выбранный файл ", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void toolStripMenuItemSaveAs_Click(object sender, EventArgs e)
+        {
+            if (pictureBox1.Image != null)
+            {
+                SaveFileDialog savePicture = new SaveFileDialog();
+                savePicture.Title = "Сохранить картинку как";
+                savePicture.OverwritePrompt = true; //если сохраняется файл с таким же названием
+                savePicture.CheckFileExists = false ; //если пути такого не существует
+                savePicture.Filter = "Image Files (*.JPG)|*.JPG| Image Files (*.PNG)|*.PNG| Image Files (*.BMP)|*.BMP";
+                savePicture.ShowHelp = true;
+
+                if (savePicture.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        pictureBox1.Image.Save(savePicture.FileName);
+                    }
+
+                    catch
+                    {
+                        MessageBox.Show("Невозможно сохранить изображение", "Oшибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+
+            }
+        }
+
+        private void buttonChangeFigure_Click(object sender, EventArgs e)
+        {
+            buttonSwitch = new FigureChangingButton();
         }
     }
 }

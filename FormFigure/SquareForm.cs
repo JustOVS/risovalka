@@ -26,7 +26,7 @@ namespace risovalka.FormFigure
             }
             int dx = x2 - x1 > 0 ? delta : -delta;
             int dy = y2 - y1 > 0 ? delta : -delta;
-            return new List<Point> { new Point(x1, y1), new Point(x1 + dx, y1), new Point(x1 + dx, y1 + dy), new Point(x1, y1 + dy), new Point(x1, y1) };
+            return new List<Point> { new Point(x1, y1), new Point(x1 + dx, y1), new Point(x1 + dx, y1 + dy), new Point(x1, y1 + dy)};
         }
         public Point GetCenter(Point p1, Point p2)
         {

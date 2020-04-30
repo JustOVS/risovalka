@@ -54,5 +54,10 @@ namespace risovalka.APainter
             first.X = -1;
             first.Y = -1;
         }
+
+        public override void MoveFigure(int dX, int dY)
+        {
+            
+        }
     }
 }

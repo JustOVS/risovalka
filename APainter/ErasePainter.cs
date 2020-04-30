@@ -22,5 +22,10 @@ namespace risovalka.APainter
             brush.DrawLine(startPoint, p1, pictureBox, pictureBox.BackColor);
             startPoint = p1;
         }
+
+        public override void MoveFigure(int dX, int dY)
+        {
+            
+        }
     }
 }
