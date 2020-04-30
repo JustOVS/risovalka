@@ -18,6 +18,10 @@ namespace risovalka.IButtonswitch
         public override bool ActivateButton(Point p1, PictureBox pictureBox, ref Color currentColor, ref AbstractPainter currentPainter)
         {
             currentPainter = Canvas.GetCanvas.FindFigureByPoint1(p1);
+            if (currentPainter != null)
+            {
+                currentPainter.brush.currentColor = currentColor;
+            }
             tmpPoint = p1;
             ChangingFlag = true;
             return false;
