@@ -32,7 +32,7 @@ namespace risovalka.APainter
                 {
                     points[i] = new Point(points[i].X + dX, points[i].Y + dY);
                 }
-            
+            startPoint = new Point(startPoint.X + dX, startPoint.Y + dY);
         }
     }
 }

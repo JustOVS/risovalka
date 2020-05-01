@@ -796,5 +796,10 @@ namespace risovalka
         {
             buttonSwitch = new FigureChangingButton();
         }
+
+        private void buttonChangeTops_Click(object sender, EventArgs e)
+        {
+            buttonSwitch = new VertexButton();
+        }
     }
 }

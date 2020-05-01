@@ -161,19 +161,36 @@ namespace risovalka.ICan
             return null;
         }
 
-        //public int FindPointByPoint(Point p)
-        //{
+        public AbstractPainter FindFigureByPoint1(Point p, ref Point tmpPoint)
+        {
+            foreach (AbstractPainter f in figures)
+            {
+                foreach (Point t in f.points)
+                {
+                    if (Math.Abs(t.X - p.X) <= 10 && Math.Abs(t.Y - p.Y) <= 10)
+                    {
+                        tmpPoint = t;
+                        return f;
+                    }
+                }
+            }
+            
+            return null;
+        }
 
-        //    foreach (Figure f in figures)
-        //    {
-        //        if (f.points.Contains(p))
-        //        {
-        //            return f.points.IndexOf(p);
-        //        }
+        public int FindPointByPoint(Point p)
+        {
 
-        //    }
-        //    return -1;
-        //}
+            foreach (AbstractPainter f in figures)
+            {
+                if (f.points.Contains(p))
+                {
+                    return f.points.IndexOf(p);
+                }
+
+            }
+            return -1;
+        }
 
 
         //public void PointChangeMode(PictureBox pictureBox)
