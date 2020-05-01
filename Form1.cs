@@ -801,5 +801,10 @@ namespace risovalka
         {
             buttonSwitch = new VertexButton();
         }
+
+        private void buttonChangeEdge_Click(object sender, EventArgs e)
+        {
+            buttonSwitch = new MotionOfFacesButton ();
+        }
     }
 }
