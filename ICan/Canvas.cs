@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using risovalka.List;
 using risovalka.APainter;
+using risovalka.FormFigure;
 
 namespace risovalka.ICan
 {
@@ -169,8 +170,17 @@ namespace risovalka.ICan
                 {
                     if (Math.Abs(t.X - p.X) <= 10 && Math.Abs(t.Y - p.Y) <= 10)
                     {
-                        tmpPoint = t;
-                        return f;
+                        if ((f.formFigure is EllipseForm) && (t.X == f.startPoint.X || t.Y == f.startPoint.Y))
+                        {
+                            tmpPoint = t;
+                            return f;
+                        }
+                        else if (!(f.formFigure is EllipseForm))
+                        {
+                            tmpPoint = t;
+                            return f;
+                        }
+                        
                     }
                 }
             }

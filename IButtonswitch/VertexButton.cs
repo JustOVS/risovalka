@@ -32,24 +32,55 @@ namespace risovalka.IButtonswitch
             {
                 int x=0;
                 int y=0;
-                foreach(Point f in currentPainter.points)
+                
+                if (tmpPoint.Y == currentPainter.startPoint.Y)
                 {
-                    if (f.X == currentPainter.startPoint.X)
+                    foreach (Point f in currentPainter.points)
                     {
-                        if (((currentPainter.startPoint.Y < f.Y) && (currentPainter.startPoint.Y < tmpPoint.Y)) || ((currentPainter.startPoint.Y > f.Y) && (currentPainter.startPoint.Y > tmpPoint.Y)))
+                        if (f.X == currentPainter.startPoint.X)
                         {
                             y = f.Y;
+                            x = p1.X;
+                            break;
                         }
                     }
-                    else if((f.Y == currentPainter.startPoint.Y))    
-                    if (((currentPainter.startPoint.X < f.X) && (currentPainter.startPoint.X < tmpPoint.X)) || ((currentPainter.startPoint.X > f.X) && (currentPainter.startPoint.X > tmpPoint.X)))
+                }
+
+                else if (tmpPoint.X == currentPainter.startPoint.X)
+                {
+                    foreach (Point f in currentPainter.points)
+                    {
+                        if(f.Y == currentPainter.startPoint.Y)
                         {
                             x = f.X;
+                            y = p1.Y;
+                            break;
                         }
-                    
+                    }
                 }
-                x += p1.X - tmpPoint.X;
-                y += p1.Y - tmpPoint.Y;
+                
+                
+
+                //foreach(Point f in currentPainter.points)
+                //{
+                //    if (f.X == currentPainter.startPoint.X)
+                //    {
+                //        if (((currentPainter.startPoint.Y < f.Y) && (currentPainter.startPoint.Y < tmpPoint.Y)) || ((currentPainter.startPoint.Y > f.Y) && (currentPainter.startPoint.Y > tmpPoint.Y)))
+                //        {
+                //            y = f.Y;
+                //        }
+                //    }
+                //    else if((f.Y == currentPainter.startPoint.Y))    
+                //    if (((currentPainter.startPoint.X < f.X) && (currentPainter.startPoint.X < tmpPoint.X)) || ((currentPainter.startPoint.X > f.X) && (currentPainter.startPoint.X > tmpPoint.X)))
+                //        {
+                //            x = f.X;
+                //        }
+
+                //}
+                //int dX = (int)(x / tmpPoint.X);
+                //int dY = (int)(y / tmpPoint.Y);
+                //x += (p1.X - tmpPoint.X) * dX;
+                //y += p1.Y - tmpPoint.Y * dY;
                 pointForResize = new Point(x, y);
                 currentPainter.points = currentPainter.formFigure.CalculateFigure(currentPainter.startPoint, pointForResize);
                 Canvas.GetCanvas.DrawAllFigures(pictureBox);
