@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Татьяна\\source\\repos\\risovalka\\FigureFormTests\\FigureFormTests.csproj": {}
+    "D:\\repos\\risovalka\\FigureFormTests\\FigureFormTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Татьяна\\source\\repos\\risovalka\\FigureFormTests\\FigureFormTests.csproj": {
+    "D:\\repos\\risovalka\\FigureFormTests\\FigureFormTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Татьяна\\source\\repos\\risovalka\\FigureFormTests\\FigureFormTests.csproj",
+        "projectUniqueName": "D:\\repos\\risovalka\\FigureFormTests\\FigureFormTests.csproj",
         "projectName": "FigureFormTests",
-        "projectPath": "C:\\Users\\Татьяна\\source\\repos\\risovalka\\FigureFormTests\\FigureFormTests.csproj",
-        "packagesPath": "C:\\Users\\Татьяна\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Татьяна\\source\\repos\\risovalka\\FigureFormTests\\obj\\",
+        "projectPath": "D:\\repos\\risovalka\\FigureFormTests\\FigureFormTests.csproj",
+        "packagesPath": "C:\\Users\\raign\\.nuget\\packages\\",
+        "outputPath": "D:\\repos\\risovalka\\FigureFormTests\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Татьяна\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\raign\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -27,8 +31,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Татьяна\\source\\repos\\risovalka\\risovalka.csproj": {
-                "projectPath": "C:\\Users\\Татьяна\\source\\repos\\risovalka\\risovalka.csproj"
+              "D:\\repos\\risovalka\\risovalka.csproj": {
+                "projectPath": "D:\\repos\\risovalka\\risovalka.csproj"
               }
             }
           }
@@ -42,13 +46,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "Microsoft.NET.Test.Sdk": {
-              "target": "Package",
-              "version": "[16.4.0, )"
-            },
             "NUnit3TestAdapter": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[3.15.1, )"
+              "version": "[3.16.1, )"
             },
             "nunit": {
               "target": "Package",
@@ -74,12 +76,12 @@
         }
       }
     },
-    "C:\\Users\\Татьяна\\source\\repos\\risovalka\\risovalka.csproj": {
+    "D:\\repos\\risovalka\\risovalka.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Татьяна\\source\\repos\\risovalka\\risovalka.csproj",
+        "projectUniqueName": "D:\\repos\\risovalka\\risovalka.csproj",
         "projectName": "risovalka",
-        "projectPath": "C:\\Users\\Татьяна\\source\\repos\\risovalka\\risovalka.csproj"
+        "projectPath": "D:\\repos\\risovalka\\risovalka.csproj"
       },
       "frameworks": {
         "net472": {}
