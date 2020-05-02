@@ -18,6 +18,8 @@ namespace risovalka.IButtonswitch
         //Point tmpY;
         bool ChangingFlag = false;
         int tmpIndex;
+        
+       
 
         public override bool ActivateButton(Point p1, PictureBox pictureBox, ref Color currentColor, ref AbstractPainter currentPainter)
         {
@@ -26,17 +28,21 @@ namespace risovalka.IButtonswitch
             tmpIndex = Canvas.GetCanvas.FindPointByPoint(tmpPoint);
             ChangingFlag = true;
             return false;
+
+            
         }
 
 
         public override void Move(Point p1, PictureBox pictureBox, AbstractPainter currentPainter)
         {
+            
+
             if (ChangingFlag && currentPainter != null)
             {
 
                 Point p2; // = tmpIndex+1 != currentPainter.points.Count? currentPainter.points[tmpIndex + 1] : currentPainter.points[0];
                 int p2Index;
-                if(tmpIndex + 1 < currentPainter.points.Count)
+                if (tmpIndex + 1 < currentPainter.points.Count)
                 {
                     p2 = currentPainter.points[tmpIndex + 1];
                     p2Index = tmpIndex + 1;
@@ -53,17 +59,38 @@ namespace risovalka.IButtonswitch
                 //p2.X = tmpPoint.X + p2.X;
                 //p2.Y  = tmpPoint.Y  + p2.Y ;
 
-                if( tmpPoint.X == p2.X)
+                
+                
+                //if (k>0)
+                //{
+                //    int d= Math.Abs(b-)
+                //}
+
+                if ( tmpPoint.X == p2.X)
                 {
-                    int dx = p1.X - tmpPoint.X;
-                    currentPainter.points[tmpIndex] = new Point(tmpPoint.X+ dx, tmpPoint.Y);
+                    int dx =  tmpPoint.X-p1.X;
+                    currentPainter.points[tmpIndex] = new Point(p1.X+ dx, p1.Y);
                     currentPainter.points[p2Index] = new Point(p2.X + dx, p2.Y);
                 }
                 else if (tmpPoint.Y == p2.Y)
                 {
-                    int dy = p1.Y = tmpPoint.Y;
-                    currentPainter.points[tmpIndex] = new Point(tmpPoint.X, tmpPoint.Y+dy);
+                    int dy = tmpPoint.Y-p1.Y ;
+                    currentPainter.points[tmpIndex] = new Point(p1.X, p1.Y+dy);
                     currentPainter.points[p2Index] = new Point(p2.X, p2.Y+dy);
+                }
+
+                else if ((tmpPoint.Y != p2.Y) && (tmpPoint.X != p2.X))
+                {
+                    //double k = (p2.Y - tmpPoint.Y) / (tmpPoint.X - p2.X);
+                   // double b = -(p2.X * tmpPoint.Y - tmpPoint.X * p2.Y) / (tmpPoint.X - p2.X);
+
+                    // int d = Convert.ToInt32(b-(-((p2.X * p1.Y - p1.X * p2.Y) / (p1.X - p2.X))) );
+
+                   // int d = Convert.ToInt32( b - p1.X);
+                    currentPainter.points[tmpIndex] = new Point(tmpPoint.X, p1.Y);
+                    currentPainter.points[p2Index] = new Point(tmpPoint.X, p2.Y);
+
+
                 }
 
 
