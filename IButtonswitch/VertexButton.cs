@@ -18,6 +18,9 @@ namespace risovalka.IButtonswitch
         int tmpIndex;
         bool ChangingFlag = false;
         Point pointForResize;
+        bool ellipseFlag = true;
+        int x=0;
+        int y=0;
         public override bool ActivateButton(Point p1, PictureBox pictureBox, ref Color currentColor, ref AbstractPainter currentPainter)
         {
             currentPainter = Canvas.GetCanvas.FindFigureByPoint1(p1, ref tmpPoint);
@@ -30,8 +33,7 @@ namespace risovalka.IButtonswitch
         {
             if (ChangingFlag && currentPainter != null && currentPainter.formFigure is EllipseForm)
             {
-                int x=0;
-                int y=0;
+                
                 
                
 
@@ -41,7 +43,11 @@ namespace risovalka.IButtonswitch
                     {
                         if(f.Y == currentPainter.startPoint.Y && f.X != currentPainter.startPoint.X)
                         {
-                            x = f.X;
+                            if (ellipseFlag)
+                            {
+                                x = f.X;
+                                ellipseFlag = false;
+                            }
                             y = p1.Y;
                             
                             break;
@@ -55,7 +61,11 @@ namespace risovalka.IButtonswitch
                     {
                         if (f.X == currentPainter.startPoint.X)
                         {
-                            y = f.Y;
+                            if (ellipseFlag)
+                            {
+                                y = f.Y;
+                                ellipseFlag = false;
+                            }
                             x = p1.X;
 
                             break;
@@ -94,6 +104,11 @@ namespace risovalka.IButtonswitch
                 
 
             }
+            else if(ChangingFlag && currentPainter != null && currentPainter.formFigure is CircleForm)
+            {
+                currentPainter.points = currentPainter.formFigure.CalculateFigure(currentPainter.startPoint, p1);
+                Canvas.GetCanvas.DrawAllFigures(pictureBox);
+            }
             else if (ChangingFlag && currentPainter != null)
             {
                 currentPainter.points[tmpIndex] = p1;
@@ -103,6 +118,7 @@ namespace risovalka.IButtonswitch
         public override void DeactivateButton()
         {
             ChangingFlag = false;
+            ellipseFlag = true;
         }
     }
 }
