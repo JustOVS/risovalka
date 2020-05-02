@@ -10,7 +10,7 @@ namespace FigureFormTests
 {
     public class SquareTests
     {
-        IFormFigure figure = new SquareForm();
+        readonly IFormFigure figure = new SquareForm();
 
         [TestCase(new int[] { 0, 0, 4, 4 }, ExpectedResult = new int[] { 0, 0, 4, 0, 4, 4, 0, 4, 0, 0 })]
         [TestCase(new int[] { 0, 0, -5, -5 }, ExpectedResult = new int[] { 0, 0, -5, 0, -5, -5, 0, -5, 0, 0 })]

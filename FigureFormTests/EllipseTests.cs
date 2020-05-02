@@ -11,7 +11,7 @@ namespace FigureFormTests
 {
     public class EllipseTests
     {
-        IFormFigure figure = new EllipseForm();
+        readonly IFormFigure figure = new EllipseForm();
 
         [TestCase(new int[] { 0, 0, 4, 4 }, ExpectedResult = new int[] { 0, 4, 3, 3,
         3, 2, 4, 1, 4, 0, 4, 0, 4, -1, 3, -2, 3, -3, 0, -4, 0, -4, -3, -3, -3,

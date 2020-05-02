@@ -10,7 +10,7 @@ namespace FigureFormTests
 {
     public class RectangleTests
     {
-        IFormFigure figure = new RectangleForm();
+        readonly IFormFigure figure = new RectangleForm();
      
         [TestCase (new int[] { 0, 0, 4, 4 }, ExpectedResult = new int[] { 0, 0, 4, 0, 4, 4, 0, 4, 0, 0 })]
         public int[] CalculateFigureTest(int[] points)
