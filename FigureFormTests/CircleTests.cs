@@ -10,7 +10,7 @@ namespace FigureFormTests
 {
     public class CircleTests
     {
-        IFormFigure figure = new CircleForm();
+        readonly IFormFigure figure = new CircleForm();
 
         [TestCase(new int[] { 0, 0, 4, 4 }, ExpectedResult = new int[] { 0, 6, 0, 6, 1, 
             6, 2, 6, 3, 5, 4, 4, 

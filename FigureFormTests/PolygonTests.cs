@@ -15,7 +15,7 @@ namespace FigureFormTests
     public class PolygonTests
     {
         IFormFigure figure;
-        int sides;
+        readonly int sides;
         int[] expectedResult;
         int expectedResultCounter = 1;
         
