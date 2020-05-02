@@ -44,7 +44,7 @@ namespace risovalka.FormFigure
 
         public Point GetCenter(Point p1, Point p2)
         {
-            return new Point(((p1.X + p2.X) / 2), ((p1.Y + p2.Y) / 2));
+            return p1; // (((p1.X + p2.X) / 2), ((p1.Y + p2.Y) / 2));
         }
     }
 }

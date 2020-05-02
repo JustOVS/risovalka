@@ -69,6 +69,7 @@ namespace risovalka.ICan
             AddToTmp();
             currentBitmap = new Bitmap(pictureBox.Width, pictureBox.Height);
             pictureBox.Image = currentBitmap;
+            //figures = null;
             //PointPolygon.first.X = -1;
             //PointPolygon.first.Y = -1;
         }
@@ -91,7 +92,7 @@ namespace risovalka.ICan
 
         public void Undo(PictureBox pictureBox) //метод отрисовывает предыдущий bitmap, надо передавать Bitmap с места вызова
         {
-            if (undoCounter == 0)
+            if (undoCounter == 1)
             {
 
             }
@@ -129,9 +130,16 @@ namespace risovalka.ICan
             currentBitmap = new Bitmap(pictureBox.Width, pictureBox.Height);
 
 
-            foreach (AbstractPainter f in figures)
+            //foreach (AbstractPainter f in figures)
+            for (int i = figures.Count-1; i >= 0; i--)
             {
-                f.brush.DrawFigure(f.formFigure, currentBitmap, pictureBox, f.points);
+                AbstractPainter f = figures[i];
+                Bitmap newBitmap = new Bitmap(pictureBox.Width, pictureBox.Height);
+                Graphics g = Graphics.FromImage(currentBitmap);
+                f.brush.DrawFigure(f.formFigure, newBitmap, pictureBox, f.points);
+                f.typeOfFilling.Fill(f.formFigure.GetCenter(f.startPoint, f.endPoint), pictureBox, newBitmap);
+                g.DrawImage(newBitmap, 0, 0, pictureBox.Width - 1, pictureBox.Height - 1);
+                pictureBox.Image = currentBitmap;
             }
         }
 

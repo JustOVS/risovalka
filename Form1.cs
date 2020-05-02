@@ -75,6 +75,7 @@ namespace risovalka
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
 
+            
             buttonSwitch.DeactivateButton();
             if(buttonSwitch is PipetteButton)
             {
@@ -113,7 +114,13 @@ namespace risovalka
                 {
                     shift = false;
                 }
-                
+                //if (drawStartFinishFlag)
+                //{
+                //    if (currentPainter != null)
+                //    {
+                currentPainter.endPoint = e.Location;
+                //    }
+                //}
                 currentPainter.DrawDynamicFigure(new Point(e.X, e.Y), pictureBox1, shift);
             }
 

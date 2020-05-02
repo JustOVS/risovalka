@@ -21,7 +21,16 @@ namespace risovalka.FormFigure
         }
         public Point GetCenter(Point p1, Point p2)
         {
-            return new Point((p1.X ), ((p1.Y + 2 *p2.Y) / 3));
+            int x = 0;
+            int y = 0;
+            List<Point> tmpList = CalculateFigure(p1, p2);
+            foreach (Point p in tmpList)
+            {
+                x += p.X;
+                y += p.Y;
+            }
+            Point center = new Point(x / tmpList.Count, y / tmpList.Count);
+            return center; //new Point((p1.X ), ((p1.Y + 2 *p2.Y) / 3));
         }
     }
 }
