@@ -60,11 +60,11 @@ namespace risovalka.FormFigure
                     y = i;
                     x = Math.Sqrt((Math.Pow(smallAxis, 2) / Math.Pow(majorAxis, 2)) * (Math.Pow(majorAxis, 2) - Math.Pow(y, 2)));
                 }
-             
-                    list1.Add(new Point(Convert.ToInt32(x1 + x), Convert.ToInt32(y1 + y)));
-                    list2.Add(new Point(Convert.ToInt32(x1 + x), Convert.ToInt32(y1 - y)));
-                    list3.Add(new Point(Convert.ToInt32(x1 - x), Convert.ToInt32(y1 - y)));
-                    list4.Add(new Point(Convert.ToInt32(x1 - x), Convert.ToInt32(y1 + y)));
+
+                list1.Add(new Point(Convert.ToInt32(x1 + x), Convert.ToInt32(y1 + y)));
+                list2.Add(new Point(Convert.ToInt32(x1 + x), Convert.ToInt32(y1 - y)));
+                list3.Add(new Point(Convert.ToInt32(x1 - x), Convert.ToInt32(y1 - y)));
+                list4.Add(new Point(Convert.ToInt32(x1 - x), Convert.ToInt32(y1 + y)));
 
 
 
@@ -85,15 +85,28 @@ namespace risovalka.FormFigure
                 list1.AddRange(list3);
                 list1.AddRange(list4);
             }
-            
-            
-            
-            
+
+
+
+
             return list1;
         }
         public Point GetCenter(Point p1, Point p2)
         {
-            return new Point(((p1.X + p2.X) / 2), ((p1.Y + p2.Y) / 2));
+            return p1; //new Point(((p1.X + p2.X) / 2), ((p1.Y + p2.Y) / 2));
+        }
+
+        public Point GetCenter(List<Point> points)
+        {
+            int x = 0;
+            int y = 0;
+
+            foreach (Point p in points)
+            {
+                x += p.X;
+                y += p.Y;
+            }
+            return new Point(x / points.Count, y / points.Count);
         }
     }
 }

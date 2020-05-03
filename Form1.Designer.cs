@@ -36,6 +36,7 @@
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemSaveAs = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -120,7 +121,6 @@
             this.buttonChangeEdge = new System.Windows.Forms.Button();
             this.buttonChangeTops = new System.Windows.Forms.Button();
             this.buttonChangeFigure = new System.Windows.Forms.Button();
-            this.toolStripMenuItemSaveAs = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -230,6 +230,13 @@
             this.saveToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.saveToolStripMenuItem.Text = "&Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItemSaveAs
+            // 
+            this.toolStripMenuItemSaveAs.Name = "toolStripMenuItemSaveAs";
+            this.toolStripMenuItemSaveAs.Size = new System.Drawing.Size(181, 26);
+            this.toolStripMenuItemSaveAs.Text = "Save as ..";
+            this.toolStripMenuItemSaveAs.Click += new System.EventHandler(this.toolStripMenuItemSaveAs_Click);
             // 
             // toolStripSeparator1
             // 
@@ -887,7 +894,7 @@
             // 
             // pictureBoxPrevColor
             // 
-            this.pictureBoxPrevColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.pictureBoxPrevColor.BackColor = System.Drawing.Color.Pink;
             this.pictureBoxPrevColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxPrevColor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxPrevColor.Location = new System.Drawing.Point(21, 4);
@@ -1306,6 +1313,7 @@
             this.buttonChangeEdge.Size = new System.Drawing.Size(37, 33);
             this.buttonChangeEdge.TabIndex = 17;
             this.buttonChangeEdge.UseVisualStyleBackColor = true;
+            this.buttonChangeEdge.Click += new System.EventHandler(this.buttonChangeEdge_Click);
             // 
             // buttonChangeTops
             // 
@@ -1320,6 +1328,7 @@
             this.buttonChangeTops.Size = new System.Drawing.Size(37, 33);
             this.buttonChangeTops.TabIndex = 18;
             this.buttonChangeTops.UseVisualStyleBackColor = true;
+            this.buttonChangeTops.Click += new System.EventHandler(this.buttonChangeTops_Click);
             // 
             // buttonChangeFigure
             // 
@@ -1336,13 +1345,6 @@
             this.buttonChangeFigure.UseVisualStyleBackColor = true;
             this.buttonChangeFigure.Click += new System.EventHandler(this.buttonChangeFigure_Click);
             // 
-            // toolStripMenuItemSaveAs
-            // 
-            this.toolStripMenuItemSaveAs.Name = "toolStripMenuItemSaveAs";
-            this.toolStripMenuItemSaveAs.Size = new System.Drawing.Size(184, 26);
-            this.toolStripMenuItemSaveAs.Text = "Save as ..";
-            this.toolStripMenuItemSaveAs.Click += new System.EventHandler(this.toolStripMenuItemSaveAs_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1355,7 +1357,7 @@
             this.Controls.Add(this.pictureBox1);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MinimumSize = new System.Drawing.Size(925, 564);
+            this.MinimumSize = new System.Drawing.Size(925, 563);
             this.Name = "Form1";
             this.Text = "Whale Draw";
             this.Load += new System.EventHandler(this.Form1_Load);

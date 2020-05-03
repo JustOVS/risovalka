@@ -18,6 +18,7 @@ namespace risovalka.APainter
         public IFormFigure formFigure;
         public Canvas apCanvas = Canvas.GetCanvas;
         public Point startPoint;
+        public Point endPoint;
         public AbstractFilling typeOfFilling;
         public List<Point> points;
       

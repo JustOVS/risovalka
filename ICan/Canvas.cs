@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using risovalka.List;
 using risovalka.APainter;
+using risovalka.FormFigure;
 
 namespace risovalka.ICan
 {
@@ -68,6 +69,7 @@ namespace risovalka.ICan
             AddToTmp();
             currentBitmap = new Bitmap(pictureBox.Width, pictureBox.Height);
             pictureBox.Image = currentBitmap;
+            //figures = null;
             //PointPolygon.first.X = -1;
             //PointPolygon.first.Y = -1;
         }
@@ -90,7 +92,7 @@ namespace risovalka.ICan
 
         public void Undo(PictureBox pictureBox) //метод отрисовывает предыдущий bitmap, надо передавать Bitmap с места вызова
         {
-            if (undoCounter == 0)
+            if (undoCounter == 1)
             {
 
             }
@@ -128,9 +130,16 @@ namespace risovalka.ICan
             currentBitmap = new Bitmap(pictureBox.Width, pictureBox.Height);
 
 
-            foreach (AbstractPainter f in figures)
+            //foreach (AbstractPainter f in figures)
+            for (int i = figures.Count-1; i >= 0; i--)
             {
-                f.brush.DrawFigure(f.formFigure, currentBitmap, pictureBox, f.points);
+                AbstractPainter f = figures[i];
+                Bitmap newBitmap = new Bitmap(pictureBox.Width, pictureBox.Height);
+                Graphics g = Graphics.FromImage(currentBitmap);
+                f.brush.DrawFigure(f.formFigure, newBitmap, pictureBox, f.points);
+                f.typeOfFilling.Fill(f.formFigure.GetCenter(f.points), pictureBox, newBitmap);
+                g.DrawImage(newBitmap, 0, 0, pictureBox.Width - 1, pictureBox.Height - 1);
+                pictureBox.Image = currentBitmap;
             }
         }
 
@@ -161,19 +170,45 @@ namespace risovalka.ICan
             return null;
         }
 
-        //public int FindPointByPoint(Point p)
-        //{
+        public AbstractPainter FindFigureByPoint1(Point p, ref Point tmpPoint)
+        {
+            foreach (AbstractPainter f in figures)
+            {
+                foreach (Point t in f.points)
+                {
+                    if (Math.Abs(t.X - p.X) <= 10 && Math.Abs(t.Y - p.Y) <= 10)
+                    {
+                        if ((f.formFigure is EllipseForm) && (t.X == f.startPoint.X || t.Y == f.startPoint.Y))
+                        {
+                            tmpPoint = t;
+                            return f;
+                        }
+                        else if (!(f.formFigure is EllipseForm))
+                        {
+                            tmpPoint = t;
+                            return f;
+                        }
+                        
+                    }
+                }
+            }
+            
+            return null;
+        }
 
-        //    foreach (Figure f in figures)
-        //    {
-        //        if (f.points.Contains(p))
-        //        {
-        //            return f.points.IndexOf(p);
-        //        }
+        public int FindPointByPoint(Point p)
+        {
 
-        //    }
-        //    return -1;
-        //}
+            foreach (AbstractPainter f in figures)
+            {
+                if (f.points.Contains(p))
+                {
+                    return f.points.IndexOf(p);
+                }
+
+            }
+            return -1;
+        }
 
 
         //public void PointChangeMode(PictureBox pictureBox)

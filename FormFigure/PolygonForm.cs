@@ -11,8 +11,8 @@ namespace risovalka.FormFigure
     public class PolygonForm : IFormFigure
     {
         public static int nSides;
-        
-       
+
+
         // int[] points = new int[2 * nSides];
 
         //public Polygon()
@@ -32,11 +32,11 @@ namespace risovalka.FormFigure
             int y1 = p1.Y;
             int x2 = p2.X;
             int y2 = p2.Y;
-            double angle = 90; 
+            double angle = 90;
             int i = 0;
-            
+
             int radius = (int)(Math.Round(Math.Sqrt(Math.Pow(((double)x2 - (double)x1), 2) + Math.Pow(((double)y2 - (double)y1), 2))));
-            
+
 
             while (i < nSides)
             {
@@ -50,6 +50,19 @@ namespace risovalka.FormFigure
         public Point GetCenter(Point p1, Point p2)
         {
             return p1;
+        }
+
+        public Point GetCenter(List<Point> points)
+        {
+            int x = 0;
+            int y = 0;
+
+            foreach (Point p in points)
+            {
+                x += p.X;
+                y += p.Y;
+            }
+            return new Point(x / points.Count, y / points.Count);
         }
     }
 }

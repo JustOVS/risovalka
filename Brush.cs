@@ -15,10 +15,10 @@ namespace risovalka
     public class Brush
     {
         public Color currentColor = Color.Black;
-        public static Canvas brushCanvas = Canvas.GetCanvas;
+        public Canvas brushCanvas = Canvas.GetCanvas;
         public int size = Form1.size;         //размер кисти, используем через свойство Size
    
-public static bool takePipette = false;
+//public static bool takePipette = false;
         //public Brush()
         //{
         //    currentColor = Color.Black;

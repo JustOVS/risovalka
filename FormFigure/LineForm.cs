@@ -17,5 +17,17 @@ namespace risovalka.FormFigure
         {
             return p1;
         }
+        public Point GetCenter(List<Point> points)
+        {
+            int x = 0;
+            int y = 0;
+
+            foreach (Point p in points)
+            {
+                x += p.X;
+                y += p.Y;
+            }
+            return new Point(x / points.Count, y / points.Count);
+        }
     }
 }
