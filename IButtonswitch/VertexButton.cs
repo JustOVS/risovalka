@@ -114,6 +114,7 @@ namespace risovalka.IButtonswitch
                 currentPainter.points[tmpIndex] = p1;
                 Canvas.GetCanvas.DrawAllFigures(pictureBox);
             }
+            Canvas.GetCanvas.PointChangeMode(pictureBox);
         }
         public override void DeactivateButton()
         {

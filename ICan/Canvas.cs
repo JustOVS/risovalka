@@ -211,25 +211,45 @@ namespace risovalka.ICan
         }
 
 
-        //public void PointChangeMode(PictureBox pictureBox)
-        //{
-        //    DrawAllFigures(pictureBox);
-        //    Brush brush = new Brush();
+        public void PointChangeMode(PictureBox pictureBox)
+        {
+            //DrawAllFigures(pictureBox);
+            Brush brush = new Brush(Color.Red, 1);
 
-        //    foreach (Figure f in figures)
-        //    {
-        //        foreach (Point t in f.points)
-        //        {
-        //            for (int i = -3; i <= 3; i++)
-        //            {
-        //                Point p1 = new Point(t.X - 3, t.Y + i);
-        //                Point p2 = new Point(t.X + 3, t.Y + i);
-        //                brush.DrawLine(p1, p2, pictureBox, Color.Red);
+            foreach (AbstractPainter f in figures)
+            {
+                if (f.formFigure is EllipseForm || f.formFigure is CircleForm)
+                {
+                    foreach (Point t in f.points)
+                    {
+                        if (t.X == f.startPoint.X || t.Y == f.startPoint.Y)
+                        {
+                            for (int i = -3; i <= 3; i++)
+                            {
+                                Point p1 = new Point(t.X - 3, t.Y + i);
+                                Point p2 = new Point(t.X + 3, t.Y + i);
+                                brush.DrawLine(p1, p2, pictureBox, Color.Red);
 
-        //            }
-        //        }
-        //    }
-        //}
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    foreach (Point t in f.points)
+                    {
+
+                        for (int i = -3; i <= 3; i++)
+                        {
+                            Point p1 = new Point(t.X - 3, t.Y + i);
+                            Point p2 = new Point(t.X + 3, t.Y + i);
+                            brush.DrawLine(p1, p2, pictureBox, Color.Red);
+
+                        }
+                    }
+                }
+            }
+        }
 
 
     }

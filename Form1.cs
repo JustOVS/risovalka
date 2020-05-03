@@ -817,6 +817,7 @@ namespace risovalka
         private void buttonChangeTops_Click(object sender, EventArgs e)
         {
             buttonSwitch = new VertexButton();
+            formCanvas.PointChangeMode(pictureBox1);
         }
 
         private void buttonChangeEdge_Click(object sender, EventArgs e)
