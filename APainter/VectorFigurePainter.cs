@@ -23,6 +23,7 @@ namespace risovalka.APainter
         public override void DrawDynamicFigure(Point p1, PictureBox pictureBox, bool shift)
         {
             this.points = formFigure.CalculateFigure(startPoint, p1);
+            endPoint = p1;
             apCanvas.DrawAllFigures(pictureBox);
         }
         public override void MoveFigure(int dX, int dY)

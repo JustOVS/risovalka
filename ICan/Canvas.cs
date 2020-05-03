@@ -137,7 +137,7 @@ namespace risovalka.ICan
                 Bitmap newBitmap = new Bitmap(pictureBox.Width, pictureBox.Height);
                 Graphics g = Graphics.FromImage(currentBitmap);
                 f.brush.DrawFigure(f.formFigure, newBitmap, pictureBox, f.points);
-                f.typeOfFilling.Fill(f.formFigure.GetCenter(f.startPoint, f.endPoint), pictureBox, newBitmap);
+                f.typeOfFilling.Fill(f.formFigure.GetCenter(f.points), pictureBox, newBitmap);
                 g.DrawImage(newBitmap, 0, 0, pictureBox.Width - 1, pictureBox.Height - 1);
                 pictureBox.Image = currentBitmap;
             }

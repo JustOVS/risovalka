@@ -26,8 +26,8 @@ namespace risovalka
         public AbstractPainter currentPainter = null;
         public static bool drawStartFinishFlag = false;
         IButton buttonSwitch = new NoneButton();
-        public AbstractFilling currentFilling; 
-        public Color fillingColor = Color.Blue; //костыль
+        public AbstractFilling currentFilling;
+        public Color fillingColor = Color.Pink; //костыль
         public bool shift = false;
         public bool vectorMode = false;
         public Form1()
@@ -60,6 +60,15 @@ namespace risovalka
             {
                 
                 currentPainter = currentFactory.CreatePainter(currentForm, currentColor, size, new Point(e.X, e.Y), currentFilling);
+
+                //if (currentPainter.typeOfFilling is TotalFilling)
+                //{
+                //    currentPainter.typeOfFilling.fillingColor = currentColor;
+                //}
+                //else if (currentPainter.typeOfFilling is InsideFilling)
+                //{
+                //    currentPainter.typeOfFilling.fillingColor = pictureBoxPrevColor.BackColor;
+                //}
                 
                 if (PointPolygonPainter.first.X != -1) 
                 {
@@ -69,7 +78,7 @@ namespace risovalka
             }
 
 
-            fillingColor = pictureBoxPrevColor.BackColor;
+            //fillingColor = pictureBoxPrevColor.BackColor;
         }
 
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
@@ -299,6 +308,7 @@ namespace risovalka
         private void buttonBucket_Click(object sender, EventArgs e)
         {
             formCanvas.Clear(pictureBox1);
+            formCanvas.figures.Clear();
         }
 
         private void buttonUndo_Click(object sender, EventArgs e)
@@ -628,8 +638,8 @@ namespace risovalka
 
         private void buttonFigureWithBorders_Click(object sender, EventArgs e)
         {
-          //  fillingColor = pictureBoxPrevColor.BackColor;
-            currentFilling = new InsideFilling(fillingColor );
+            fillingColor = pictureBoxPrevColor.BackColor;
+            currentFilling = new InsideFilling(fillingColor);
         }
 
         private void buttonOnlyBorders_Click(object sender, EventArgs e)

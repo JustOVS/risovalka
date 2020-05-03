@@ -20,8 +20,8 @@ namespace risovalka.AFill
         public override void Fill(Point p1, PictureBox pictureBox, Bitmap newBitmap)
 
         {
-            
-            
+
+
             Brush brush = new Brush(fillingColor, 1);
             int x = p1.X;
             int y = p1.Y;
