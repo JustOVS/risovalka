@@ -11,8 +11,8 @@ namespace risovalka.FormFigure
 {
     public interface IFormFigure
     {
-        List <Point> CalculateFigure(Point p1, Point p2);
+        List<Point> CalculateFigure(Point p1, Point p2);
         Point GetCenter(Point p1, Point p2);
+        Point GetCenter(List<Point> points);
     }
-
 }

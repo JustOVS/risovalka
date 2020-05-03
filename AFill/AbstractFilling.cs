@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using System.Windows.Forms;
+using risovalka.ICan;
+
 namespace risovalka.AFill
 {
     public abstract class AbstractFilling

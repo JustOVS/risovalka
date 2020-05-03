@@ -46,3 +46,7 @@ F:\ProjectsVS\risovalka\bin\Debug\nunit.framework.dll
 F:\ProjectsVS\risovalka\bin\Debug\nunit.framework.pdb
 F:\ProjectsVS\risovalka\bin\Debug\nunit.framework.xml
 F:\ProjectsVS\risovalka\obj\Debug\risovalka.csproj.CopyComplete
+D:\repos\risovalka\bin\Debug\NUnit3.TestAdapter.dll
+D:\repos\risovalka\bin\Debug\NUnit3.TestAdapter.pdb
+D:\repos\risovalka\bin\Debug\nunit.engine.dll
+D:\repos\risovalka\bin\Debug\nunit.engine.api.dll

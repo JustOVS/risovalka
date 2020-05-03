@@ -5,16 +5,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using System.Windows.Forms;
+using risovalka.ICan;
+using risovalka.FormFigure;
+using risovalka.APainter;
+
 
 namespace risovalka
 {
     public class Brush
     {
         public Color currentColor = Color.Black;
-        public static Canvas brushCanvas = Canvas.GetCanvas;
+        public Canvas brushCanvas = Canvas.GetCanvas;
         public int size = Form1.size;         //размер кисти, используем через свойство Size
    
-public static bool takePipette = false;
+//public static bool takePipette = false;
         //public Brush()
         //{
         //    currentColor = Color.Black;
@@ -199,6 +203,31 @@ public static bool takePipette = false;
             }
 
             //}
+        }
+        public void DrawFigure(IFormFigure formFigure, Bitmap newBitmap, PictureBox pictureBox, List<Point> figurePoints)
+        {
+            
+            if (formFigure is CircleForm || formFigure is EllipseForm)
+                for (int i = 0; i < figurePoints.Count - 1; i++)
+                {
+                    this.DrawLine(figurePoints[i], figurePoints[i + 1], pictureBox, this.currentColor, newBitmap);
+                }
+            else
+            {
+               
+                 for (int i = 0; i < figurePoints.Count; i++)
+                 {
+                    if (i != figurePoints.Count - 1)
+                    {
+                        this.DrawLine(figurePoints[i], figurePoints[i + 1], pictureBox, this.currentColor, newBitmap);
+                    }
+                    else
+                    {
+                        this.DrawLine(figurePoints[i], figurePoints[0], pictureBox, this.currentColor, newBitmap);
+                    }
+                 }   
+              
+            }
         }
 
 
