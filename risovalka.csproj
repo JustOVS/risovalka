@@ -66,6 +66,7 @@
     <Compile Include="APainter\LinePainter.cs" />
     <Compile Include="APainter\PointPolygonPainter.cs" />
     <Compile Include="APainter\VectorFigurePainter.cs" />
+    <Compile Include="IButtonswitch\FacesButton.cs" />
     <Compile Include="IButtonswitch\FigureChangingButton.cs" />
     <Compile Include="IButtonswitch\MotionOfFacesButton.cs" />
     <Compile Include="IButtonswitch\VertexButton.cs" />

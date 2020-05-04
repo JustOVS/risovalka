@@ -15,7 +15,7 @@ namespace risovalka.IButtonswitch
     {
         Point tmpPoint;
         bool ChangingFlag = false;
-        List<double> tmpPointList = new List<double>(); 
+        List<double> tmpPointList = new List<double>();
 
         public override bool ActivateButton(Point p1, PictureBox pictureBox, ref Color currentColor, ref AbstractPainter currentPainter)
         {
@@ -33,13 +33,20 @@ namespace risovalka.IButtonswitch
         {
             if (ChangingFlag && currentPainter != null)
             {
-                if (Control.ModifierKeys != Keys.Shift)
+                if (Control.ModifierKeys != Keys.Shift && Control.MouseButtons == MouseButtons.Left)
                 {
                     currentPainter.MoveFigure(p1.X - tmpPoint.X, p1.Y - tmpPoint.Y);
-                } else if (Control.ModifierKeys == Keys.Shift)
+                }
+                else if (Control.ModifierKeys == Keys.Shift)
                 {
-                    int dY = (int) ((p1.Y - tmpPoint.Y) * 1.5);
+                    int dY = (int)((p1.Y - tmpPoint.Y) * 1.5);
                     RotateFigure(dY, currentPainter);
+                }
+                else if (Control.MouseButtons == MouseButtons.Right)
+                {
+                    int dX = p1.X - tmpPoint.X;
+                    int dY = p1.Y - tmpPoint.Y;
+                    ScaleFigure(dX, dY, currentPainter);
                 }
 
                 tmpPoint = p1;
@@ -51,8 +58,7 @@ namespace risovalka.IButtonswitch
         {
             Point center = currentPainter.formFigure.GetCenter(currentPainter.points);
             double angleRad = angle * Math.PI / 180;
-            List<Point> points = new List<Point>();
-
+            
             if (tmpPointList.Count == 0)
             {
                 for (int i = 0; i < currentPainter.points.Count; i++)
@@ -66,23 +72,46 @@ namespace risovalka.IButtonswitch
             }
             else
             {
-                for(int i = 0; i < tmpPointList.Count - 1; i += 2)
+                for (int i = 0; i < tmpPointList.Count - 1; i += 2)
                 {
                     double tmpX = tmpPointList[i];
 
                     tmpPointList[i] = ((tmpPointList[i] - center.X) * Math.Cos(angleRad) -
-                        (tmpPointList[i+1] - center.Y) * Math.Sin(angleRad) + center.X);
+                        (tmpPointList[i + 1] - center.Y) * Math.Sin(angleRad) + center.X);
 
                     tmpPointList[i + 1] = ((tmpX - center.X) * Math.Sin(angleRad) +
-                        (tmpPointList[i+1] - center.Y) * Math.Cos(angleRad) + center.Y);
+                        (tmpPointList[i + 1] - center.Y) * Math.Cos(angleRad) + center.Y);
                 }
             }
 
             currentPainter.points.Clear();
 
-            for(int i = 0; i < tmpPointList.Count - 1; i += 2)
+            for (int i = 0; i < tmpPointList.Count - 1; i += 2)
             {
-                currentPainter.points.Add(new Point((int)(tmpPointList[i]), (int)(tmpPointList[i+1])));
+                currentPainter.points.Add(new Point((int)(tmpPointList[i]), (int)(tmpPointList[i + 1])));
+            }
+        }
+
+        private void ScaleFigure(int dX, int dY, AbstractPainter currentPainter)
+        {
+            for (int i = 0; i < currentPainter.points.Count; i++)
+            {
+                if(Math.Abs(tmpPoint.X - currentPainter.points[i].X) <= 10)
+                {
+                    currentPainter.points[i] = new Point(currentPainter.points[i].X 
+                        + dX, currentPainter.points[i].Y);
+                    if(currentPainter.formFigure is FormFigure.IsoTriangleForm)
+                    {
+                        currentPainter.points[0] = new Point((currentPainter.points[1].X
+                        + currentPainter.points[2].X) / 2, currentPainter.points[0].Y);
+                    }
+                }
+
+                if(Math.Abs(tmpPoint.Y - currentPainter.points[i].Y) <= 10)
+                {
+                    currentPainter.points[i] = new Point(currentPainter.points[i].X, 
+                        currentPainter.points[i].Y + dY);
+                }
             }
         }
 

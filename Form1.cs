@@ -47,7 +47,7 @@ namespace risovalka
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Right)
+            if (e.Button == MouseButtons.Right && buttonSwitch is FigureChangingButton == false)
             {
                 currentColor = pictureBoxPrevColor.BackColor;
             }
@@ -817,11 +817,12 @@ namespace risovalka
         private void buttonChangeTops_Click(object sender, EventArgs e)
         {
             buttonSwitch = new VertexButton();
+            formCanvas.PointChangeMode(pictureBox1);
         }
 
         private void buttonChangeEdge_Click(object sender, EventArgs e)
         {
-            buttonSwitch = new MotionOfFacesButton ();
+            buttonSwitch = new FacesButton ();
         }
     }
 }
