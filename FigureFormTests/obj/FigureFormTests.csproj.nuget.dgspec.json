@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "F:\\ProjectsVS\\risovalka\\FigureFormTests\\FigureFormTests.csproj": {}
+    "D:\\repos\\risovalka\\FigureFormTests\\FigureFormTests.csproj": {}
   },
   "projects": {
-    "F:\\ProjectsVS\\risovalka\\FigureFormTests\\FigureFormTests.csproj": {
+    "D:\\repos\\risovalka\\FigureFormTests\\FigureFormTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\ProjectsVS\\risovalka\\FigureFormTests\\FigureFormTests.csproj",
+        "projectUniqueName": "D:\\repos\\risovalka\\FigureFormTests\\FigureFormTests.csproj",
         "projectName": "FigureFormTests",
-        "projectPath": "F:\\ProjectsVS\\risovalka\\FigureFormTests\\FigureFormTests.csproj",
-        "packagesPath": "C:\\Users\\Олег\\.nuget\\packages\\",
-        "outputPath": "F:\\ProjectsVS\\risovalka\\FigureFormTests\\obj\\",
+        "projectPath": "D:\\repos\\risovalka\\FigureFormTests\\FigureFormTests.csproj",
+        "packagesPath": "C:\\Users\\raign\\.nuget\\packages\\",
+        "outputPath": "D:\\repos\\risovalka\\FigureFormTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "F:\\Microsoft\\Xamarin\\NuGet\\"
+          "D:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Олег\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\raign\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -31,8 +31,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "F:\\ProjectsVS\\risovalka\\risovalka.csproj": {
-                "projectPath": "F:\\ProjectsVS\\risovalka\\risovalka.csproj"
+              "D:\\repos\\risovalka\\risovalka.csproj": {
+                "projectPath": "D:\\repos\\risovalka\\risovalka.csproj"
               }
             }
           }
@@ -76,12 +76,12 @@
         }
       }
     },
-    "F:\\ProjectsVS\\risovalka\\risovalka.csproj": {
+    "D:\\repos\\risovalka\\risovalka.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\ProjectsVS\\risovalka\\risovalka.csproj",
+        "projectUniqueName": "D:\\repos\\risovalka\\risovalka.csproj",
         "projectName": "risovalka",
-        "projectPath": "F:\\ProjectsVS\\risovalka\\risovalka.csproj"
+        "projectPath": "D:\\repos\\risovalka\\risovalka.csproj"
       },
       "frameworks": {
         "net472": {}
