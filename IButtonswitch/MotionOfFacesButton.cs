@@ -130,7 +130,7 @@ namespace risovalka.IButtonswitch
                 //    currentPainter.points[p2Index] = new Point(p2.X + dx, p2.Y);
                 //}
                 //else if (tmpPoint.Y == p2.Y)
-                //{
+                //{\
                 //    int dy = tmpPoint.Y-p1.Y ;
                 //    currentPainter.points[tmpIndex] = new Point(p1.X, p1.Y+dy);
                 //    currentPainter.points[p2Index] = new Point(p2.X, p2.Y+dy);
