@@ -47,7 +47,7 @@ namespace risovalka
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Right)
+            if (e.Button == MouseButtons.Right && buttonSwitch is FigureChangingButton == false)
             {
                 currentColor = pictureBoxPrevColor.BackColor;
             }
