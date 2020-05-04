@@ -822,7 +822,7 @@ namespace risovalka
 
         private void buttonChangeEdge_Click(object sender, EventArgs e)
         {
-            buttonSwitch = new MotionOfFacesButton ();
+            buttonSwitch = new FacesButton ();
         }
     }
 }
